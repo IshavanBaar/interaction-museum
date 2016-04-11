@@ -1,17 +1,14 @@
 <?php snippet('header') ?>
-
-  <main class="main" role="main">
 	
+  <main class="main" role="main">
 	<!-- Search bar -->
-	<div id="search-bar">
-		<div class="center">
-			<form class="search" action="">
-			  <input type="search" placeholder="Search..." name="q" value="<?php echo esc($query) ?>" required>
-			  <button type="submit">
-				<img src="assets/images/search_white.png"/>
-			  </button>
-			</form>   
-		</div>
+	<div id="search-bar" class="center">	
+		<form class="search" action="">
+		  <input type="search" placeholder="Search..." name="q" value="<?php echo esc($query) ?>" required>
+		  <button type="submit">
+			<img src="assets/images/search_white.png"/>
+		  </button>
+		</form>   
 	</div>
 	
 	<!-- Search results -->

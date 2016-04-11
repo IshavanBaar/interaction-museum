@@ -272,7 +272,7 @@ h1 a, h2 a, h3 a, h4 a {
   list-style: none;
 }
 .teaser li {
-  margin-bottom: 1.5em;
+  margin-top: 1.5em;
   list-style: none;
 }
 @media screen and (min-width: 50em) {
@@ -325,19 +325,30 @@ h1 a, h2 a, h3 a, h4 a {
 -------------------------------------------------- */
 
 .center {
-  width: 60%;
+  width: 450px;
   margin: auto;
-  background-color: green;
 }
 
 .search input {
-  width: 80%;
-  line-height: 15px;
+  line-height: normal !important;
   padding: 9px 5px;
+  width: 84%;
   color: #222;
   background: #ddd;
   border: 2px solid #dadada;
   border-radius: 7px;
+}
+
+.search button {
+  line-height: normal;
+  padding: 9px 5px;
+  width: 15%;
+  cursor: pointer;
+  color: #fff;
+  background: red;
+  border: 2px solid red;
+  border-radius: 7px;
+  line-height: normal !important;
 }
 
 .search input:focus {
@@ -345,17 +356,8 @@ h1 a, h2 a, h3 a, h4 a {
   background: transparent;
 }
 
-.search button {
-  width: 19%;
-  padding: 9px 5px;
-  cursor: pointer;
-  color: #fff;
-  background: red;
-  border: 2px solid red;
-  border-radius: 7px;
-}
-
 .search button img {
 	width: 13px;
 	height: 13px;
+	margin: auto;
 }
