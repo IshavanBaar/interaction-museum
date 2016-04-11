@@ -330,7 +330,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .search input {
-  line-height: normal !important;
+  line-height: 15px !important;
   padding: 9px 5px;
   width: 84%;
   color: #222;
@@ -340,7 +340,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .search button {
-  line-height: normal;
+  line-height: 15px !important;
   padding: 9px 5px;
   width: 15%;
   cursor: pointer;
@@ -348,7 +348,6 @@ h1 a, h2 a, h3 a, h4 a {
   background: red;
   border: 2px solid red;
   border-radius: 7px;
-  line-height: normal !important;
 }
 
 .search input:focus {
@@ -357,7 +356,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .search button img {
-	width: 13px;
-	height: 13px;
+	width: 12px;
+	height: 12px;
 	margin: auto;
 }
