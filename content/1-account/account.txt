@@ -1,0 +1,11 @@
+Title: Account
+
+----
+
+Text: 
+
+Welcome to your account. Here you can manage your added interaction techniques.
+
+## My Techniques
+
+(image: mountain.jpg)
