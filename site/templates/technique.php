@@ -1,23 +1,25 @@
 <?php snippet('header') ?>
 
   <main class="main" role="main">
-
+	<!-- HEADER IMAGE -->
+	<?php $image = $page->images()->sortBy('sort', 'asc')->first(); ?>
+	<figure>
+		<img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
+		<!-- TODO: resize image to full width -->
+	</figure>
+	
+	<!-- TITLE -->
     <h1><?php echo $page->title()->html() ?></h1>
 
     <ul class="meta cf">
       <li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
       <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-	  <!--<li><b>Added by</b> <?php echo $page->added() ?></li>-->
     </ul>
 
     <div class="text">
       <?php echo $page->text()->kirbytext() ?>
 
-      <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-      <figure>
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
-      </figure>
-      <?php endforeach ?>
+
     </div>
 
     <nav class="nextprev cf" role="navigation">

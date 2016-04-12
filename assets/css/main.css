@@ -84,7 +84,7 @@ body {
   font-size: 1.25em;
   line-height: 1.5em;
   padding: 1.5em;
-  max-width: 50em;
+  /*max-width: 50em;*/
   background: #fff;
   color: #222;
 }
@@ -229,9 +229,10 @@ h1 a, h2 a, h3 a, h4 a {
   height: 2px;
   background: #ddd;
 }
+
+/*.main ul,*/
 .main p,
 .main figure,
-.main ul,
 .main ol {
   margin-bottom: 1.5em;
 }
@@ -272,18 +273,36 @@ h1 a, h2 a, h3 a, h4 a {
   list-style: none;
 }
 .teaser li {
-  margin-top: 1.5em;
+  /*margin-bottom: 1.5em;*/
   list-style: none;
 }
+
+.teaser .search-results li {
+  margin-bottom: 0em;
+  list-style: none;
+}
+
 @media screen and (min-width: 50em) {
   .teaser li {
     float: left;
     width: 30%;
     margin-left: 5%;
+	margin-bottom: 5%
   }
+  
+  .teaser li img {
+	height: 300px;
+  }
+  
   /* For every item on the left, no margin*/
   .teaser li:nth-child(3n +1) {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 90em) {
+  .teaser li img {
+	height: 200px;
   }
 }
 
@@ -324,9 +343,10 @@ h1 a, h2 a, h3 a, h4 a {
 /* Search bar
 -------------------------------------------------- */
 
-.center {
+#search-bar {
   width: 450px;
   margin: auto;
+  margin-bottom: 1.5em;
 }
 
 .search input {
@@ -360,3 +380,5 @@ h1 a, h2 a, h3 a, h4 a {
 	height: 12px;
 	margin: auto;
 }
+
+

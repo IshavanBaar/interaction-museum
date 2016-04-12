@@ -1,0 +1,9 @@
+Title: Pie Menu
+
+----
+
+Tags: menu, pie menu, radial menu, Fitts's law
+
+----
+
+Text: A pie menu is a format where the items are placed along the circumference of a circle at equal radial distances from the center. Pie menus gain over traditional linear menus by reducing target seek time, lowering error rates by having a smaller distance to the target and increasing the target size.
