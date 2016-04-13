@@ -1,12 +1,18 @@
 <!-- Search bar -->
-<div id="search-bar" class="search-results">	
-	<form class="search" action="">
-	  <input type="search" placeholder="Search..." name="q" value="<?php echo esc($query) ?>" required>
-	  <button type="submit">
-		<img src="assets/images/search_white.png"/>
-	  </button>
-	</form>   
-</div>
+<div id="search-bar" class="col-lg-6 col-lg-offset-3 search-results">
+    <form class="search" action="">
+    <div class="input-group">
+    
+      <input action="" type="search" class="form-control" placeholder="Search..." name="q" value="<?php echo esc($query) ?>" required>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+        	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+     
+    </div><!-- /input-group -->
+     </form>   
+  </div><!-- /.col-lg-6 -->
 
 <!-- Search results -->
 <ul class="teaser search-results cf">
