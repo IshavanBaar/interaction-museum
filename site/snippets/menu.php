@@ -1,4 +1,5 @@
 <div id="navbar" class="collapse navbar-collapse">
+<!--  FOR ITEMS ON THE LEFT SIDE OF THE MENU
   <ul class="nav navbar-nav">
     <?php foreach($pages->visible() as $p): ?>
       <?php if($p->hasVisibleChildren()): ?>
@@ -21,6 +22,17 @@
       <?php if($p->hasVisibleChildren()): ?>
       <?php endif ?>
 
+    </li>
+    <?php endforeach ?>
+  </ul>
+  -->
+  <ul class="nav navbar-nav navbar-right">
+    <?php foreach($pages->visible() as $p): ?>
+     
+        <li<?php e($p->isOpen(), ' class="active"') ?>>
+          <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
+        </li>
+ 
     </li>
     <?php endforeach ?>
   </ul>
