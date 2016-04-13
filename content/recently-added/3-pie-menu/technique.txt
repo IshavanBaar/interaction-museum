@@ -6,4 +6,4 @@ Description: A pie menu is a format where the items are placed along the circumf
 
 ----
 
-Tags: menu, pie menu, radial menu, Fitts's law
+Keywords: menu, pie menu, radial menu, Fitts's law

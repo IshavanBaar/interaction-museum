@@ -7,4 +7,7 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/abc
+  - recently-added/bubbly
+  - recently-added/bubble-cursor
   - account
