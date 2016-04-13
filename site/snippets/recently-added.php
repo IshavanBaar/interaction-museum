@@ -14,11 +14,11 @@
       <div class="thumbnail">
       <a href="<?php echo $technique->url() ?>" >
         <img src="<?php echo file_exists($image) ? $image->url() : $alternative->url(); ?>" alt="">
-        <p class="panel-title"><?php echo $technique->title()->html() ?></p>
+        <p class="caption"><?php echo $technique->title()->html() ?></p>
       </a>
       </div>
       
-      
+
       </div>
       
 
