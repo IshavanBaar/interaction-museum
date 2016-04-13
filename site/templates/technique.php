@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+ <div class="container" role="main">
 	<div class="technique-page">
 		
 		<!-- HEADER IMAGE -->
@@ -25,7 +25,7 @@
 		</div>
 		
 		<!-- TRADE-OFFS/COMPARISON -->
-		<h3>Trade offs & Comparison</h3>
+		<h3>Trade offs  Comparison</h3>
 		
 		<!-- TAGS -->
 		<ul class="meta cf">
@@ -43,6 +43,6 @@
 		  <?php endif ?>
 		</nav>
 	</div>
-  </main>
+  </div>
 
 <?php snippet('footer') ?>
