@@ -8,6 +8,7 @@
 	<!-- NO AUTHOR <p><?php echo $technique->added_by()->html() ?><p>-->
 	
     <?php 
+		//TODO fix if no image is there
 		if($image = $technique->images()->sortBy('sort', 'asc')->first()): 
 	?>
     <a href="<?php echo $technique->url() ?>">

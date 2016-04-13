@@ -2,8 +2,8 @@ Title: Marking Menu
 
 ----
 
-Tags: menu, marking menu, radial menu, gestures
+Description: A marking menu allows a user to perform a menu selection by either popping-up a radial (or pie) menu, or by making a straight mark in the direction of the desired menu item without popping-up the menu. A hierarchic marking menu uses hierarchic radial menus and “zig-zag” marks to select from the hierarchy.
 
 ----
 
-Text: A marking menu allows a user to perform a menu selection by either popping-up a radial (or pie) menu, or by making a straight mark in the direction of the desired menu item without popping-up the menu. A hierarchic marking menu uses hierarchic radial menus and “zig-zag” marks to select from the hierarchy.
+Tags: menu, marking menu, radial menu, gestures
