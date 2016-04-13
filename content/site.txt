@@ -1,17 +1,17 @@
-Title: Kirby Starterkit
+Title: Interaction Museum
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Isha van Baar & Diana Lipcanu
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: This is the awesome museum of interaction.
 
 ----
 
-Keywords: Kirby, CMS, file-based
+Keywords: interaction, museum, techniques, hci
 
 ----
 
-Copyright: © 2016 (link: http://www.inria.fr/ text: Inria)
+Copyright: © 2016 (link: http://www.inria.fr/ text: ExSitu)

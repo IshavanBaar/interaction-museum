@@ -1,21 +1,24 @@
-<h2><?php echo page('recently-added')->title()->html() ?></h2>
-
-<ul class="teaser cf">
+<div class="row">
+<h2 class="col-xs-12"><?php echo page('recently-added')->title()->html() ?></h2>
   <?php foreach(page('recently-added')->children()->visible()->limit(100) as $technique): ?>
-  <li>
-
-    <!-- NO DESCRIPTION EXCERPT <p><?php echo $technique->text()->excerpt(80) ?> <a href="<?php echo $technique->url() ?>">read&nbsp;more&nbsp;→</a></p>-->
-	<!-- NO AUTHOR <p><?php echo $technique->added_by()->html() ?><p>-->
-	
-    <?php 
-		//TODO fix if no image is there
-		if($image = $technique->images()->sortBy('sort', 'asc')->first()): 
-	?>
-    <a href="<?php echo $technique->url() ?>">
-      <img src="<?php echo $image->url() ?>" alt="<?php echo $technique->title()->html() ?>" >
-	  <h5><a href="<?php echo $technique->url() ?>"><?php echo $technique->title()->html() ?></a></h5>
-    </a>
-    <?php endif ?>
-  </li>
+    <div class="col-sm-4">
+    <h2><?php echo $technique->title()->html() ?></h2>
+      <p><?php echo $technique->text()->excerpt(80) ?></p>
+      <p><a class="btn btn-default" href="<?php echo $technique->url() ?>" role="button">View details &raquo;</a></p>
+     
+      <?php if($image = $technique->images()->sortBy('sort', 'asc')->first()): ?>
+     
+        <a href="<?php echo $technique->url() ?>" class="thumbnail">
+          <img src="<?php echo $image->url() ?>" alt="<?php echo $technique->title()->html() ?>" >
+        </a>
+      <?php endif ?>
+    </div>
   <?php endforeach ?>
-</ul>
+</div>
+
+
+
+
+
+
+      
