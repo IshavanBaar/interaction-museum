@@ -2,16 +2,16 @@ Title: Interaction Museum
 
 ----
 
-Author: Isha van Baar & Diana Lipcanu
+
+Author: Diana & Isha
 
 ----
 
-Description: This is the awesome museum of interaction.
+Description: An online collection of interaction techniques.
 
 ----
 
-Keywords: interaction, museum, techniques, hci
+Keywords: Kirby,CMS,file-based
 
-----
 
 Copyright: © 2016 (link: http://www.inria.fr/ text: ExSitu)

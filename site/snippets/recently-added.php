@@ -17,14 +17,11 @@
         <p class="panel-title"><?php echo $technique->title()->html() ?></p>
       </a>
       </div>
+      
+      
       </div>
       
-      <div class="card">
-  <img class="card-img-top" data-src="..." alt="Card image cap">
-  <div class="card-block">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
+
     
   <?php endforeach ?>
 

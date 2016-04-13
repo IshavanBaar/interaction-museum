@@ -6,4 +6,4 @@ Description: A marking menu allows a user to perform a menu selection by either 
 
 ----
 
-Tags: menu, marking menu, radial menu, gestures
+Keywords: menu, marking menu, radial menu, gestures
