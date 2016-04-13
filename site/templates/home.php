@@ -1,12 +1,12 @@
 <?php snippet('header') ?>
 	
-  <main class="main" role="main">
+	<!-- <div class="container" role="main"> -->
 	<!-- Search bar -->
 	<?php snippet('search') ?>
 	
 	<!-- RECENTLY ADDED -->
     <?php snippet('recently-added') ?>
 
-  </main>
+</div>
 
   <?php snippet('footer') ?>
