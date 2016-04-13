@@ -1,9 +1,13 @@
+Header Image: bubble-cursor.gif
+
+----
+
 Title: Bubble Cursor
+
+----
+
+Description: The bubble cursor is a target acquisition technique based on area cursors that dynamically resizes its activation area depending on the proximity of surrounding targets, such that only one target is selectable at any time. Results show that the bubble cursor significantly outperforms the point cursor and the object pointing technique.
+
 ----
 
 Tags: pointing, bubble cursor, Fitts's law
-
-----
-
-Text: The bubble cursor is a target acquisition technique based on area cursors that dynamically resizes its activation area depending on the proximity of surrounding targets, such that only one target is selectable at any time. Results show that the bubble cursor significantly outperforms the point cursor and the object pointing technique.
-
