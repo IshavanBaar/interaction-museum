@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 	
-	<div class="container" role="main">
+	<!-- <div class="container" role="main"> -->
 	<!-- Search bar -->
 	<?php snippet('search') ?>
 	

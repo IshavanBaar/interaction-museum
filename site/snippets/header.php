@@ -13,7 +13,7 @@
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
-  <?php echo css('assets/css/bootstrap.min.css') ?>
+  <?php echo css('assets/css/bootstrap.css') ?>
   <?php echo css('assets/css/main.css') ?>
   
   <?php echo js('assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') ?>
@@ -26,7 +26,7 @@
 
 
       <nav class="navbar navbar-default navbar-top">
-        <div class="container">
+        <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>

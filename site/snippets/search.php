@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <!-- Search bar -->
 <div id="search-bar" class="col-lg-6 col-lg-offset-3 search-results">
     <form class="search" action="">
@@ -16,7 +17,7 @@
 
 <!-- Search results -->
 
-<div class="row search-results teaser">
+<div class="search-results teaser">
   
    <?php foreach($results as $result): ?>
     <div class="col-md-4, col-sm-4">      
@@ -35,4 +36,6 @@
       
     </div>
   <?php endforeach ?>
+</div>
+
 </div>
