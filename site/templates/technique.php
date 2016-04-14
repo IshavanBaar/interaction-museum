@@ -18,10 +18,12 @@
 			/* OTHER */
 			$tags = $page->tags();
 			$tagArray = explode(',', $tags);
+			$try_out = $page->try_out();
+			$code_pen = "://codepen.io/";
 		?>
 		
 		<!-- HEADER IMAGE -->
-		<?php if(file_exists($header_image)): ?>
+		<?php if($page->header_image()->isNotEmpty()): ?>
 			<figure>
 				<img src="<?php echo file_exists($header_image) ? $header_image->url() : $alternative->url(); ?>" alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 			</figure>
@@ -35,9 +37,23 @@
 			<div class="text">
 				<?php echo $description ?>
 			</div>
-
+			
+			<!-- TRY OUT -->
+			<?php if($try_out->isNotEmpty()): ?>
+				<h2>Try It Out</h2>
+				<?php 
+				if(strpos($try_out, $code_pen) !== false): 
+					echo "<p data-height='268' data-theme-id='0' data-slug-hash='hlzFg' data-default-tab='result' class='codepen'>See the Pen 
+					<a href='<?php $try_out ?>'> </a>(<a href='<?php $try_out ?>'></a>) on 
+					<a href='http://codepen.io'>CodePen</a>.</p><script async src='//assets.codepen.io/assets/embed/ei.js'></script> ";
+				else:	
+					echo "<iframe src='http://ieor.berkeley.edu/~anandk/bubbleCursor.html' style='width: 100%; height: 300px' ></iframe> ";
+				endif; ?>
+			<?php endif ?>
+			<!-- TODO fix this shitty "" and src -->
+			
 			<!-- TRADE-OFFS/COMPARISON -->
-			<?php if(file_exists($trade_off_image)): ?>
+			<?php if($page->trade_offs()->isNotEmpty()): ?>
 				<h2>Trade offs & Comparison</h2>
 			
 				<figure>
