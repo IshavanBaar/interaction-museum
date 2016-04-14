@@ -52,11 +52,14 @@ a:hover{
 /*TECHNOQUE*/
 .trade-img{
 	display: block;
-	margin-bottom: 1em;
+	margin: 1.5em 0;
 }
 .tags{
 	padding: 0 15px;
 }
+ h2{
+ 	font-size: 26px;
+ }
 /*publications*/
 .publication{
 	padding: 0.5em 0;
