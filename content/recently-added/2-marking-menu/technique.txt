@@ -1,3 +1,7 @@
+Header Image: marking_menu.gif
+
+----
+
 Title: Marking Menu
 
 ----
@@ -6,4 +10,8 @@ Description: A marking menu allows a user to perform a menu selection by either 
 
 ----
 
-Keywords: menu, marking menu, radial menu, gestures
+Trade Offs: marking_menu_table.jpg
+
+----
+
+Tags: menu, marking menu, radial menu, gestures

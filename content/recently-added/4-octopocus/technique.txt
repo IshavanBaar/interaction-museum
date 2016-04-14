@@ -1,3 +1,7 @@
+Header Image: hightide.jpg
+
+----
+
 Title: Octopocus
 
 ----
@@ -6,5 +10,5 @@ Description: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean co
 
 ----
 
-Keywords: octopus, the little mermaid, finding nemo
+Tags: octopus, the little mermaid, finding nemo
 
