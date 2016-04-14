@@ -1,4 +1,4 @@
-Header-image: bubble_cursor.gif
+Header Image: bubble_cursor.gif
 
 ----
 
@@ -10,8 +10,8 @@ Description: The bubble cursor is a target acquisition technique based on area c
 
 ----
 
-Tags: pointing, bubble cursor, Fitts's law
+Trade Offs: bubble_cursor_graph.jpg
 
 ----
 
-Text: kkk
+Tags: pointing, bubble cursor, Fitts's law

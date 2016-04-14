@@ -1,3 +1,7 @@
+Header Image: pie_menu.gif
+
+----
+
 Title: Pie Menu
 
 ----
@@ -6,4 +10,8 @@ Description: A pie menu is a format where the items are placed along the circumf
 
 ----
 
-Keywords: menu, pie menu, radial menu, Fitts's law
+Trade Offs: pie_menu_graph.jpg
+
+----
+
+Tags: menu, pie menu, radial menu, Fitts's law

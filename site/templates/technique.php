@@ -5,15 +5,14 @@
 		
 		<!-- HEADER IMAGE -->
 		<?php 
-		$header_image = (string)$page->header_image();
-		$image = $page->image($header_image);
-		$alternative = $page->images()->sortBy('sort', 'asc')->first(); 
+			$header_image = (string)$page->header_image();
+			$image = $page->image($header_image);
+			$alternative = $page->images()->sortBy('sort', 'asc')->first(); 
 			//TODO fix if no image is there
 		?>
 
 		<figure>
-			<img src="<?php echo file_exists($image) ? $image->url() : $alternative->url(); ?>" 
-			alt="" class="col-xs-12">
+			<img src="<?php echo file_exists($image) ? $image->url() : $alternative->url(); ?>" alt="" class="col-xs-12">
 		</figure>
 		
 		<div class="col-lg-8 col-lg-offset-2">
@@ -26,13 +25,22 @@
 			</div>
 
 			<!-- TRADE-OFFS/COMPARISON -->
-			<h3>Trade offs  Comparison</h3>
-
+			<h3>Trade offs & Comparison</h3>
+			
+			<?php 
+				$trade_offs = $page->image((string)$page->trade_offs());
+			?>
+			<figure>
+				<img src="<?php echo file_exists($trade_offs) ? $trade_offs->url() : $alternative->url(); ?>" alt="" class="col-xs-12">
+			</figure>
+			
+			
 			<!-- TAGS -->
-			<ul class="meta ">
-				<!--<li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>-->
-				<li><b>Tags:</b> <?php echo $page->tags() ?></li>
-			</ul>
+			<!--<li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>-->
+			
+			<h3>Tags</h3>
+			<?php echo $page->tags() ?>
+			
 		</div>
 
 <!-- NEXT / PREV 
