@@ -20,8 +20,11 @@
 	max-width: 1490px;
 
 }
-
-/* thumbnail  */
+/*links*/
+a:hover{
+	text-decoration: none;
+}
+/* technique cards  */
 .thumbnail {
     border: none;
 }
@@ -33,26 +36,32 @@
 	padding-left: 1em;
 }
 
-a:hover{
-	text-decoration: none;
-}
-
 .technique-img{
 	display: block;
 }
 
 .label{
 	font-size: 1em;
-
 }
 
+/*search */
 #search-bar{
 	margin-bottom: 20px;
 }
 
-
-
-
-
-
-
+/*TECHNOQUE*/
+.trade-img{
+	display: block;
+	margin-bottom: 1em;
+}
+.tags{
+	padding: 0 15px;
+}
+/*publications*/
+.publication{
+	padding: 0.5em 0;
+}
+.publication h3{
+	margin: 0;
+	font-size: 20px;
+}
