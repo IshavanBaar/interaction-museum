@@ -13,8 +13,6 @@
 .text img {
 	max-width: 100%;
 }
-
-
 /* Container  */
 .container-fluid{
 	max-width: 1490px;
@@ -30,16 +28,19 @@ a:hover{
 }
 
 .thumbnail .caption{
-	background: #FFEFEA;
-	font-size: 1.7em;
+	background: #F2F1EF;
+	font-size: 1.5em;
 	color: #bf3e11;
-	padding-left: 1em;
+	text-align: center;
 }
 
 .technique-img{
 	display: block;
 }
 
+.thumbnail a > img{
+	min-height: 260px;
+}
 .label{
 	font-size: 1em;
 }
@@ -52,11 +53,14 @@ a:hover{
 /*TECHNOQUE*/
 .trade-img{
 	display: block;
-	margin-bottom: 1em;
+	margin: 1.5em 0;
 }
 .tags{
 	padding: 0 15px;
 }
+ h2{
+ 	font-size: 26px;
+ }
 /*publications*/
 .publication{
 	padding: 0.5em 0;
