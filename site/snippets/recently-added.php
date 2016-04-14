@@ -10,7 +10,7 @@
       ?>
  <!-- HEADER IMAGE -->
       <!-- THUMBNAIL LINK -->
-      <div class="col-md-4 ">
+      <div class="col-md-4 col-sm-6">
       <div class="thumbnail">
       <a href="<?php echo $technique->url() ?>" >
         <img src="<?php echo file_exists($image) ? $image->url() : $alternative->url(); ?>" alt="">

@@ -6,7 +6,7 @@
     
       <input action="" type="search" class="form-control" placeholder="Search..." name="q" value="<?php echo esc($query) ?>" required>
       <span class="input-group-btn">
-        <button class="btn btn-default" type="submit">
+        <button class="btn btn-default btn-primary" type="submit">
         	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
       </span>

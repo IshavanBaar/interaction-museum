@@ -17,7 +17,7 @@
 
 /* Container  */
 .container-fluid{
-	padding: 0 3%;
+	max-width: 1490px;
 
 }
 
@@ -27,15 +27,27 @@
 }
 
 .thumbnail .caption{
-	
+	background: #FFEFEA;
+	font-size: 2em;
+	color: #bf3e11;
 }
 
+a:hover{
+	text-decoration: none;
+}
 
 .technique-img{
 	display: block;
 }
 
+.label{
+	font-size: 1em;
 
+}
+
+#search-bar{
+	margin-bottom: 20px;
+}
 
 
 
