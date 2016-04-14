@@ -28,8 +28,9 @@
 
 .thumbnail .caption{
 	background: #FFEFEA;
-	font-size: 2em;
+	font-size: 1.7em;
 	color: #bf3e11;
+	padding-left: 1em;
 }
 
 a:hover{
