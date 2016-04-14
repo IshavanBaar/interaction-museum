@@ -64,7 +64,7 @@
 			<!-- TAGS -->
 			<div class="row tags">
 				<?php foreach($tagArray as $tag): ?>
-					<span class="label label-info"><?php echo $tag ?></span>
+					<a href="http://localhost/interaction-museum/?q=<?php echo $tag ?>" class="label label-info"><?php echo $tag ?></a>
 				<?php endforeach ?>
 			</div>
 			

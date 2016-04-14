@@ -38,9 +38,7 @@ a:hover{
 	display: block;
 }
 
-.thumbnail a > img{
-	min-height: 260px;
-}
+
 .label{
 	font-size: 1em;
 }
@@ -68,4 +66,10 @@ a:hover{
 .publication h3{
 	margin: 0;
 	font-size: 20px;
+}
+
+@media (min-width: 1240px) {
+	.thumbnail a > img{
+		min-height: 260px;
+	}
 }
