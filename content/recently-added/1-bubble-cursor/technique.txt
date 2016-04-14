@@ -15,3 +15,15 @@ Trade Offs: bubble_cursor_graph.jpg
 ----
 
 Tags: pointing, bubble cursor, Fitts's law
+
+----
+
+Related Publications:
+
+-
+  Title: Enhancing Target Acquisition by Dynamic Resizing of the Cursor’s Activation Area
+  Link: http://dl.acm.org/citation.cfm?doid=1054972.1055012
+  Type: CHI '05 Proceedings
+  Authors: Tovi Grossman, Ravin Balakrishnan 
+  Year: 2005
+  
