@@ -11,9 +11,9 @@
 			//TODO fix if no image is there
 		?>
 
-		<figure>
+		<figure class="technique-img">
 			<img src="<?php echo file_exists($image) ? $image->url() : $alternative->url(); ?>" 
-			alt="" class="col-xs-12">
+			alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 		</figure>
 		
 		<div class="col-lg-8 col-lg-offset-2">
@@ -29,10 +29,10 @@
 			<h3>Trade offs  Comparison</h3>
 
 			<!-- TAGS -->
-			<ul class="meta ">
+			<div class="meta ">
 				<!--<li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>-->
-				<li><b>Tags:</b> <?php echo $page->tags() ?></li>
-			</ul>
+				<span class="label label-info"><?php echo $page->tags() ?></span>
+			</div>
 		</div>
 
 <!-- NEXT / PREV 
