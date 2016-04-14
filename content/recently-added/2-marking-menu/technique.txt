@@ -15,3 +15,21 @@ Trade Offs: marking_menu_table.jpg
 ----
 
 Tags: menu, marking menu, radial menu, gestures
+
+----
+
+Related Publications:
+
+-
+  Title: The limits of expert performance using hierarchic marking menus
+  Link: http://www.billbuxton.com/MMExpert.html
+  Type: CHI '93 Proceedings
+  Authors: Gordon Kurtenbach, Bill Buxton
+  Year: 1993
+-
+  Title: The design and evaluation of marking menus 
+  URL: http://www.autodeskresearch.org/pdf/theses/kurtenbach-phd.pdf
+  Type: PhD thesis
+  Authors: Gordon Kurtenbach
+  Year: 1993
+  

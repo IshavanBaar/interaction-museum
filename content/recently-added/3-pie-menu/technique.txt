@@ -15,3 +15,21 @@ Trade Offs: pie_menu_graph.jpg
 ----
 
 Tags: menu, pie menu, radial menu, Fitts's law
+
+----
+
+Related Publications:
+
+-
+  Title: An empirical comparison of pie VS linear menus
+  Link: http://www.art.net/~hopkins/Don/piemenus/ddj/piemenus.html
+  Type: CHI '88 Proceedings
+  Authors: Jack Callahan, Don Hopkins, Mark Weiser, Ben Shneiderman 
+  Year: 1988
+-
+  Title: The Design and Implementation of Pie Menus 
+  Link: http://donhopkins.com/drupal/node/100
+  Type: Dr. Dobb's Journal
+  Authors: Don Hopkins
+  Year: 1991
+  
