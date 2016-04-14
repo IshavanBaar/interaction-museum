@@ -1,0 +1,26 @@
+Header Image: boomerang.gif
+
+----
+
+Title: Boomerang
+
+----
+
+Description: This is a “boomerang” technique, which makes it possible to suspend and resume drag-and-drop operations. A throwing gesture while dragging an object suspends the operation, anytime and anywhere. A drag-and-drop interaction enhanced with Boomerang allows users to switch windows, invoke commands, and even drag other objects during a drag-and-drop operation without using the keyboard or menus.
+
+
+----
+
+Tags: Drag-and-Drop, Throw-and-Catch, Gestures
+
+----
+
+Related Publications:
+
+-
+  Title: Suspendable Drag-and-Drop Interactions Based on a Throw-and-Catch Metaphor
+  Link: http://www-ui.is.s.u-tokyo.ac.jp/~takeo/papers/kobayashi_uist2007_boomerang.pdf
+  Type: UIST Proceedings
+  Authors: Masatomo Kobayashi, Takeo Igarashi
+  Year: 2007
+  
