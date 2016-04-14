@@ -6,7 +6,7 @@
 						<?php echo $site->copyright()->kirbytext() ?>				
 					</div>
 					<div class="col-sm-6 colophon text-right">
-						<a href="http://getkirby.com/made-with-kirby-and-love">Made by <b>Diana</b> & <b>Isha</b></a>
+						<?php echo $site->authors()->kirbytext() ?>		
 					</div>
 				</div>
  	 		</div>
