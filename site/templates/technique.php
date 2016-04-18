@@ -8,7 +8,6 @@
 			/* IMAGES */
 			$header_image = $page->image((string)$page->header_image());
 			$trade_off_image = $page->image((string)$page->trade_offs());
-			$alternative = $page->images()->sortBy('sort', 'asc')->first(); 
 			//TODO fix alternative if the folder does not include any image
 			
 			/* TEXT */
@@ -25,7 +24,7 @@
 		<!-- HEADER IMAGE -->
 		<?php if($page->header_image()->isNotEmpty()): ?>
 			<figure>
-				<img src="<?php echo file_exists($header_image) ? $header_image->url() : $alternative->url(); ?>" alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<img src="<?php echo $header_image->url(); ?>" alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 			</figure>
 		<?php endif ?>
 		
@@ -42,29 +41,32 @@
 			<?php if($try_out->isNotEmpty()): ?>
 				<h2>Try It Out</h2>
 				<?php 
-				if(strpos($try_out, $code_pen) !== false): 
-					echo "<p data-height='268' data-theme-id='0' data-slug-hash='hlzFg' data-default-tab='result' class='codepen'>See the Pen 
-					<a href='<?php $try_out ?>'> </a>(<a href='<?php $try_out ?>'></a>) on 
-					<a href='http://codepen.io'>CodePen</a>.</p><script async src='//assets.codepen.io/assets/embed/ei.js'></script> ";
-				else:	
-					echo "<iframe src='http://ieor.berkeley.edu/~anandk/bubbleCursor.html' style='width: 100%; height: 300px' ></iframe> ";
-				endif; ?>
+					// If the try out is a code pen, use a different link to embed it nicely.
+					if(strpos($try_out, $code_pen) !== false): 
+						$try_out = str_replace("/pen/", "/embed/", $try_out);
+					endif;
+					
+					print("
+						<iframe src=" . $try_out . " 
+								style='width: 100%;' height='300' 
+								frameborder='no' scrolling='no' allowtransparency='true' allowfullscreen='true'>
+						</iframe>
+					");
+				?>
 			<?php endif ?>
-			<!-- TODO fix this shitty "" and src -->
 			
 			<!-- TRADE-OFFS/COMPARISON -->
 			<?php if($page->trade_offs()->isNotEmpty()): ?>
 				<h2>Trade offs & Comparison</h2>
-			
 				<figure>
-					<img src="<?php echo file_exists($trade_off_image) ? $trade_off_image->url() : $alternative->url(); ?>" alt="" class="col-xs-12 trade-img">
+					<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
 				</figure>
 			<?php endif ?>
 			
 			<!-- TAGS -->
 			<div class="row tags">
 				<?php foreach($tagArray as $tag): ?>
-					<a href="http://localhost/interaction-museum/?q=<?php echo $tag ?>" class="label label-info"><?php echo $tag ?></a>
+					<a href="../?q=<?php echo $tag ?>" class="label label-info"><?php echo $tag ?></a>
 				<?php endforeach ?>
 			</div>
 			
