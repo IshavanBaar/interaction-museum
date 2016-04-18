@@ -6,12 +6,11 @@ return function($site, $pages, $page) {
   
   /*For now it searches in recently-added only*/
   $results = page('recently-added')->search($query, 'title|text|tags');
-  $results = $results->paginate(20);
+  //$results = $results->paginate(20);
 	
   return array(
     'query'      => $query,
-    'results'    => $results, 
-    'pagination' => $results->pagination()
+    'results'    => $results
   );
 
 };
