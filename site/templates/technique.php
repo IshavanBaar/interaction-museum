@@ -108,8 +108,4 @@
     <?php echo htmlspecialchars($header_image->url()); ?>
 </div>
 
-<?php echo js(array(
-  'assets/js/imageHover.js',
-), true)?>
-
 <?php snippet('footer') ?>
