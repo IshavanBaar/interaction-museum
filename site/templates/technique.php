@@ -109,7 +109,6 @@
 </div>
 
 <?php echo js(array(
-  'assets/js/jquery-1.12.3.js',
   'assets/js/imageHover.js',
 ), true)?>
 
