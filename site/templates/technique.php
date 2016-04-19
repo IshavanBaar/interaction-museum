@@ -24,7 +24,9 @@
 		<!-- HEADER IMAGE -->
 		<?php if($page->header_image()->isNotEmpty()): ?>
 			<figure>
-				<img src="<?php echo $header_image->url(); ?>" alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<img id="header-image" 
+				src="<?php echo $header_image->url();?>" 
+				alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 			</figure>
 		<?php endif ?>
 		
@@ -99,6 +101,11 @@
 	
 		</div>
 	</div>
+</div>
+
+<!-- SCRIPT + HIDDEN DIV TO PASS VARIABLES -->
+<div id="dom-target" style="display: none;">
+    <?php echo htmlspecialchars($header_image->url()); ?>
 </div>
 
 <?php snippet('footer') ?>
