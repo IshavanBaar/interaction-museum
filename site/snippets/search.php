@@ -15,8 +15,8 @@
 	</div>
 
 	<!-- TITLE OF COLLECTION PAGE -->
-	<!-- TODO Styling -->
-	<?php if(count($results->toArray()) >= 0): ?>
+	<!-- TODO Styling + What happens if there are no results? -->
+	<?php if(count($results->toArray()) > 0): ?>
 		<h2 class="col-xs-12"><?php echo count($results->toArray())?> Results For "<?php echo esc($query)?>"</h2>
 	<?php endif ?>
 	
