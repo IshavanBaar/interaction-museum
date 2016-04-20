@@ -22,11 +22,10 @@
 		?>
 		
 		<!-- HEADER IMAGE -->
-		<?php if($page->header_image()->isNotEmpty()): ?>
+		<?php if($page->header_image()->isNotEmpty()): ?>	
 			<figure>
-				<img id="header-image" 
-				src="<?php echo $header_image->url();?>" 
-				alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<img src="<?php echo $header_image->url();?>" alt="" class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12"
+				onmouseover="play(this);" onmouseout="stop(this);">
 			</figure>
 		<?php endif ?>
 		
