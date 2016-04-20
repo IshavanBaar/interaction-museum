@@ -17,7 +17,6 @@
 		'assets/js/lib/bootstrap.min.js',
 		'assets/js/main.js',
 	))?>
-
-		
+	
   </body>
 </html>
