@@ -5,13 +5,43 @@ pages:
   template: technique
 files: true
 fields:
-  title:
-    label: Title
-    type:  text
-  description:
-    label: Description
-    type: textarea
-  tags:
-    label: Tags
-    type: tags
-	
+	header-image:
+		label: Header Image
+		type:  text
+	title:
+		label: Title
+		type:  text
+	description:
+		label: Description
+		type: textarea
+	try-out:
+		label: Try Out
+		type: url
+	tags:
+		label: Tags
+		type: tags
+	related-publications:
+		label: Related Publications
+		type: structure
+		entry: >
+			{{title}} <br />
+			{{link}} <br />
+			{{type}} <br />
+			{{authors}} <br />
+			{{year}}
+		fields:
+			title:
+				label: Title
+				type: text
+			link:
+				label: Link
+				type: url
+			type:
+				label: Type
+				type: text
+			authors:
+				label: Authors
+				type: text
+			year:
+				label: Year
+				type: text
