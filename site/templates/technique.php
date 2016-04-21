@@ -102,9 +102,4 @@
 	</div>
 </div>
 
-<!-- SCRIPT + HIDDEN DIV TO PASS VARIABLES -->
-<div id="dom-target" style="display: none;">
-    <?php echo htmlspecialchars($header_image->url()); ?>
-</div>
-
 <?php snippet('footer') ?>
