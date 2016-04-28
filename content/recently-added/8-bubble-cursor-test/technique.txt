@@ -1,4 +1,4 @@
-Header image: bubble_cursor.jpg
+Header-image: bubble_cursor.jpg
 
 ----
 
@@ -10,11 +10,11 @@ Description: The bubble cursor is a target acquisition technique based on area c
 
 ----
 
-Try out: http://ieor.berkeley.edu/~anandk/bubbleCursor.html
+Try-out: http://ieor.berkeley.edu/~anandk/bubbleCursor.html
 
 ----
 
-Related page: recently-added/free-hand-gestures
+Related-page: recen
 
 ----
 
@@ -22,7 +22,7 @@ Tags: pointing,bubble cursor,Fitts's law
 
 ----
 
-Related publications: 
+Related-publications: 
 
 - 
   title: >
@@ -34,3 +34,11 @@ Related publications:
   type: "CHI '05 Proceedings"
   authors: Tovi Grossman, Ravin Balakrishnan
   year: "2005"
+
+----
+
+Trade-offs: k
+
+----
+
+Trade-off-image: 
