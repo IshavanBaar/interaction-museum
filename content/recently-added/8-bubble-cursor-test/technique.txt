@@ -1,0 +1,36 @@
+Header image: bubble_cursor.jpg
+
+----
+
+Title: Bubble Cursor Test
+
+----
+
+Description: The bubble cursor is a target acquisition technique based on area cursors that dynamically resizes its activation area depending on the proximity of surrounding targets, such that only one target is selectable at any time. Results show that the bubble cursor significantly outperforms the point cursor and the object pointing technique.
+
+----
+
+Try out: http://ieor.berkeley.edu/~anandk/bubbleCursor.html
+
+----
+
+Related page: recently-added/free-hand-gestures
+
+----
+
+Tags: pointing,bubble cursor,Fitts's law
+
+----
+
+Related publications: 
+
+- 
+  title: >
+    Enhancing Target Acquisition by Dynamic
+    Resizing of the Cursor’s Activation
+    Area
+  link: >
+    http://dl.acm.org/citation.cfm?doid=1054972.1055012
+  type: "CHI '05 Proceedings"
+  authors: Tovi Grossman, Ravin Balakrishnan
+  year: "2005"

@@ -7,5 +7,6 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/bubble-cursor-test
   - recently-added/bubble-cursor
   - account

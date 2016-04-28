@@ -15,8 +15,8 @@ for more information: http://getkirby.com/license
 
 */
 
-// TODO get license key.
-c::set('license', 'put your license key here');
+// License key.
+c::set('license', 'K2-PERSONAL-057b18ed282611f69fc8b050beebc5b2');
 
 /* 
 ---------------------------------------
