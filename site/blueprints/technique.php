@@ -17,6 +17,9 @@ fields:
 	try-out:
 		label: Try Out
 		type: url
+	related_page:
+		label: Related Page
+		type: page
 	tags:
 		label: Tags
 		type: tags
