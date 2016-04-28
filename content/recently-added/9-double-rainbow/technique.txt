@@ -1,0 +1,40 @@
+Title: Double Rainbow
+
+----
+
+Description: fffff
+
+----
+
+Tags: double,rainbow
+
+----
+
+Header-image: img_6793.jpg
+
+----
+
+Trade-off-image: img_6793.jpg
+
+----
+
+Try-out: http://google.com
+
+----
+
+Related-page: recently-added/boomerang
+
+----
+
+Related-publications: 
+
+- 
+  title: dfejfkfjefkefef
+  link: http://google.com
+  type: dd
+  authors: ee
+  year: "1999"
+
+----
+
+Name: Double Rainbow

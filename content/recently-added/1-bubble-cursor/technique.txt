@@ -2,7 +2,11 @@ Header Image: bubble_cursor.jpg
 
 ----
 
-Title: Bubble Cursor
+Trade Off Image: bubble_cursor_graph.jpg
+
+----
+
+Name: Bubble Cursor
 
 ----
 
@@ -11,10 +15,6 @@ Description: The bubble cursor is a target acquisition technique based on area c
 ----
 
 Try Out: http://ieor.berkeley.edu/~anandk/bubbleCursor.html
-
-----
-
-Trade Offs: bubble_cursor_graph.jpg
 
 ----
 

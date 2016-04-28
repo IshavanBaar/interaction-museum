@@ -7,11 +7,11 @@
 			<?php 
 				/* IMAGES */
 				$header_image = $page->image((string)$page->header_image());
-				$trade_off_image = $page->image((string)$page->trade_offs());
+				$trade_off_image = $page->image((string)$page->trade_off_image());
 				//TODO fix alternative if the folder does not include any image
 				
 				/* TEXT */
-				$title = $page->title()->html(); 
+				$name = $page->name()->html(); 
 				$description = $page->description()->kirbytext();
 				
 				/* OTHER */
@@ -22,8 +22,8 @@
 			?>
 			
 			<div class="col-lg-12">
-				<!-- TITLE -->
-				<h1 style="text-align: center"><?php echo $title ?></h1>
+				<!-- NAME -->
+				<h1 style="text-align: center"><?php echo $name ?></h1>
 				
 				<!-- HEADER IMAGE -->
 				<?php if($page->header_image()->isNotEmpty()): ?>	
@@ -44,7 +44,7 @@
 			
 			<div class="col-lg-6">
 				<!-- TRADE-OFFS/COMPARISON -->
-				<?php if($page->trade_offs()->isNotEmpty()): ?>
+				<?php if($page->trade_off_image()->isNotEmpty()): ?>
 					<!--<h3>Trade offs & Comparison</h3>-->
 					<figure>
 						<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
@@ -73,8 +73,8 @@
 			</div>	
 			
 			<div class="col-lg-12">
+				<!-- TAGS -->
 				<?php if($tags->isNotEmpty()): ?>
-					<!-- TAGS -->
 					<h3>Tags</h3>
 					<div class="row tags">
 						<?php foreach($tagArray as $tag): ?>
@@ -86,33 +86,33 @@
 			
 			<div class="col-lg-12">
 				<!-- RELATED PUBLICATIONS-->
-				<h3>Related Publications</h3>
-				<?php foreach($page->related_publications()->toStructure() as $publication): ?>
-					
-					<div class="row publication">
-						<div class="col-lg-8">
-							<!-- TODO fix: title cannot have : inside -->
-							<h3><a href="<?php echo $publication->link() ?>" target="_blank"> <?php echo $publication->title() ?> </a> </h3>		
-							<span><em><?php echo $publication->type() ?></em></span>
+				<?php if($page->related_publications()->isNotEmpty()): ?>
+					<h3>Related Publications</h3>
+					<?php foreach($page->related_publications()->toStructure() as $publication): ?>
+						<div class="row publication">
+							<div class="col-lg-8">
+								<!-- TODO fix: title cannot have : inside -->
+								<h3><a href="<?php echo $publication->link() ?>" target="_blank"> <?php echo $publication->title() ?> </a> </h3>		
+								<span><em><?php echo $publication->type() ?></em></span>
+							</div>
+							<div class="col-lg-4">
+								<?php
+								$authors = $publication->authors();
+								$authorsArray = explode(',', $authors);
+								?>
+								<strong>Authors:</strong><br/>
+									<?php foreach($authorsArray as $author): ?>
+										<span><?php echo $author ?></span> <br/>
+									<?php endforeach ?>
+								<span>
+									<strong>Year:</strong>
+									<?php echo $publication->year() ?>
+								</span>
+							</div>
 						</div>
-						<div class="col-lg-4">
-							<?php
-							$authors = $publication->authors();
-							$authorsArray = explode(',', $authors);
-							?>
-							<strong>Authors:</strong><br/>
-								<?php foreach($authorsArray as $author): ?>
-									<span><?php echo $author ?></span> <br/>
-								<?php endforeach ?>
-							<span>
-								<strong>Year:</strong>
-								<?php echo $publication->year() ?>
-							</span>
-						</div>
-					</div>
-				<?php endforeach ?>
+					<?php endforeach ?>
+				<?php endif ?>
 			</div>
-			
 		</div>
 	</div>
 </div>
