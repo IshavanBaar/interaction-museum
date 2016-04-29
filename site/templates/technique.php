@@ -11,7 +11,7 @@
 				//TODO fix alternative if the folder does not include any image
 				
 				/* TEXT */
-				$name = $page->name()->html(); 
+				$name = $page->title()->html(); 
 				$description = $page->description()->kirbytext();
 				
 				/* OTHER */

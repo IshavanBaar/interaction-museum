@@ -13,7 +13,7 @@
 				<!-- TODO fix if there is no gif file in the folder -->
 				<img src="<?php echo $image->url();?>" alt=""
 				onmouseover="play(this);" onmouseout="stop(this);">
-				<p class="caption"><?php echo $technique->name()->html() ?></p>
+				<p class="caption"><?php echo $technique->title()->html() ?></p>
 			</a>
 		</div>
 	</div>

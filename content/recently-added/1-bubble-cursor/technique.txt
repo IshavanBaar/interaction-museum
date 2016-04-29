@@ -2,7 +2,11 @@ Info:
 
 ----
 
-Name: Bubble Cursor
+Name: 
+
+----
+
+Title: Bubble Cursor
 
 ----
 
@@ -46,7 +50,3 @@ Related-publications:
   type: "CHI '05 Proceedings"
   authors: Tovi Grossman, Ravin Balakrishnan
   year: "2005"
-
-----
-
-Title: Bubble Cursor

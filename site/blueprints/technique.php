@@ -18,7 +18,7 @@ fields:
 			
 			
 			To publish, change the *Page Status* to visible (choose the highest number).
-	name:
+	title:
 		label: Name 
 		type:  text
 		placeholder: Enter the name of the technique... 
@@ -28,7 +28,7 @@ fields:
 		type: textarea
 		validate:
 			min: 4
-			max: 350
+			max: 500
 		required: true
 		help: Improve the writing style with the http://hemingwayapp.com/
 	tags:
