@@ -7,8 +7,6 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/double-rainbow
-  - recently-added/bubble-cursor-test
-  - recently-added
   - recently-added/bubble-cursor
+  - recently-added
   - account
