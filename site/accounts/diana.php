@@ -9,4 +9,7 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/drag-and-pop
+  - recently-added/crossing
+  - recently-added/semantic-pointing
   - recently-added/dynaspot
