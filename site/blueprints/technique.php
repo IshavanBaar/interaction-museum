@@ -29,7 +29,6 @@ fields:
 		validate:
 			min: 4
 			max: 350
-			- alphanum
 		required: true
 		help: Improve the writing style with the http://hemingwayapp.com/
 	tags:
