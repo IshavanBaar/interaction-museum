@@ -7,7 +7,6 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/new-technique
   - recently-added/bubble-cursor
   - recently-added/orthozoom
   - recently-added/boomerang
