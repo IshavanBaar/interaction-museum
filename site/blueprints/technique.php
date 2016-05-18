@@ -4,7 +4,7 @@ title: Technique
 pages:
 	template: technique
 files: 
-	type:
+    type:
 		- image
 		- video
 		max: 5
@@ -37,12 +37,10 @@ fields:
 		required: true
 	header-image:
 		label: Select a header image
-		type: select
-		options: images
+		type: image
 	trade-off-image:
 		label: Select an image to illustrate trade-offs/comparisons
-		type: select
-		options: images
+		type: image
 	try-out:
 		label: Paste a link to a website with a working demo
 		type: url
