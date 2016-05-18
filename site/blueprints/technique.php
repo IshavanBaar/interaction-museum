@@ -20,7 +20,7 @@ fields:
 			To publish, change the *Page Status* to visible (choose the highest number).
 	title:
 		label: Name 
-		type:  text
+		type:  papersearch
 		placeholder: Enter the name of the technique... 
 		required: true
 	description:
@@ -46,9 +46,9 @@ fields:
 	try-out:
 		label: Paste a link to a website with a working demo
 		type: url
-	related_page:
-		label: Related Technique
-		type: page
+	related-work:
+		label: Search for related work
+		type: papersearch
 	related-publications:
 		label: Related Publications
 		type: structure
