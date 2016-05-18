@@ -11,4 +11,5 @@
 	$publications = $jsonData["message"]["items"];		
 	
 	// Return the JSON to the script.
+	echo jsonString;
 ?>
