@@ -1,6 +1,7 @@
 <?php snippet('header') ?>
 
-<?php snippet('search-papers') ?>
+<!-- TO TEST, SEARCH PAPERS -->
+<!--<?php snippet('search-papers') ?>-->
 
   <div class="main container" role="main">
 
