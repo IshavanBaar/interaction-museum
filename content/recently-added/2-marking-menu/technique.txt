@@ -57,3 +57,7 @@ Related-publications:
   type: PhD Thesis
   authors: Gordon Kurtenbach
   year: "1993"
+
+----
+
+Related-work: 
