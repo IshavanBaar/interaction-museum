@@ -54,3 +54,7 @@ Related-publications:
   type: CHI Proceedings
   authors: Caroline Appert, Olivier Bau
   year: "2010"
+
+----
+
+Related-work: 

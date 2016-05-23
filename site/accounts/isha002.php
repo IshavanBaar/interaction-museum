@@ -7,7 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/bubble-cursor
-  - recently-added/orthozoom
-  - recently-added/boomerang
+  - recently-added/free-hand-gestures
+  - recently-added/octopocus
+  - recently-added/pie-menu
   - recently-added/marking-menu
+  - recently-added/bubble-cursor
