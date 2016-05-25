@@ -22,7 +22,7 @@ Tags: menu,marking menu,pie menu,gestures
 
 ----
 
-Header-image: marking_menu.jpg
+Header-image: marking_menu.gif
 
 ----
 

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
 /* Header image*/
 #header_image {
 	margin-bottom: 1.5em; 
@@ -11,6 +13,10 @@ footer {
 .navbar-brand>img {
 	max-height: 100%;
 }
+.navbar-brand {
+	font-family: 'Slabo 27px', serif;
+}
+
 
 /* Text blocks */
 .text img {
@@ -33,9 +39,11 @@ a:hover{
 }
 
 .thumbnail .caption{
-	background: #F2F1EF;
+	font-family: Roboto, sans-serif;
+	background: #333333;
 	font-size: 1.5em;
-	color: #bf3e11;
+	font-weight: 300;
+	color: #E5E5E5;
 	text-align: center;
 }
 
@@ -61,10 +69,20 @@ a:hover{
 .tags{
 	padding: 0 15px;
 }
+h1{
+	font-family: 'Slabo 27px', serif;
+	text-align: center;
+}
  h2{
+ 	font-family: 'Slabo 27px', serif;
  	font-size: 26px;
+ 	text-align: center;
  }
- 
+
+ p{
+ 	font-size: 17px;
+ 	line-height: 1.5;
+ }
 /* Publications */
 .publication{
 	padding: 0.5em 0;

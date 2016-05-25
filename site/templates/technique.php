@@ -21,9 +21,9 @@
 				$code_pen = "://codepen.io/";
 			?>
 			
-			<div class="col-lg-12">
+			
 				<!-- NAME -->
-				<h1 style="text-align: center"><?php echo $name ?></h1>
+				
 				
 				<!-- HEADER IMAGE -->
 				<?php if($page->header_image()->isNotEmpty()): ?>	
@@ -32,30 +32,21 @@
 						onmouseover="play(this);" onmouseout="stop(this);">
 					</figure>
 				<?php endif ?>
-			</div>
+				<h1><?php echo $name ?></h1>
 			
-			<div class="col-lg-6">
+			
+			
 				<!-- DESCRIPTION -->
 				<!--<h3>Description</h3>-->
-				<div class="text">
+				<div class="text col-md-8 col-md-offset-2">
 					<?php echo $description ?>
+				
 				</div>
-			</div>
-			
-			<div class="col-lg-6">
-				<!-- TRADE-OFFS/COMPARISON -->
-				<?php if($page->trade_off_image()->isNotEmpty()): ?>
-					<!--<h3>Trade offs & Comparison</h3>-->
-					<figure>
-						<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
-					</figure>
-				<?php endif ?>
-			</div>
 			
 			<div class="col-lg-12">
 				<!-- TRY OUT -->
 				<?php if($try_out->isNotEmpty()): ?>
-					<h3>Try It Out</h3>
+					<h2>Try It Out</h2>
 					<?php 
 						// If the try out is a code pen, use a different link to embed it nicely.
 						if(strpos($try_out, $code_pen) !== false): 
@@ -71,11 +62,21 @@
 					?>
 				<?php endif ?>
 			</div>	
-			
+
+			<div class="text col-md-8 col-md-offset-2">
+						<!-- TRADE-OFFS/COMPARISON -->
+				
+				<?php if($page->trade_off_image()->isNotEmpty()): ?>
+					<h2>Trade offs & Comparison</h2>
+					<figure>
+						<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
+					</figure>
+				<?php endif ?>
+			</div>
 			<div class="col-lg-12">
 				<!-- TAGS -->
 				<?php if($tags->isNotEmpty()): ?>
-					<h3>Tags</h3>
+					<!-- <h3>Tags</h3> -->
 					<div class="row tags">
 						<?php foreach($tagArray as $tag): ?>
 							<a href="../?q=<?php echo $tag ?>" class="label label-info"><?php echo $tag ?></a>
