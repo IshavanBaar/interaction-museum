@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/free-hand-gestures
-  - recently-added/octopocus
-  - recently-added/pie-menu
-  - recently-added/marking-menu
-  - recently-added/bubble-cursor
+  - recently-added/speech-as-search-input
+  - recently-added/toolglass
+  - recently-added/toolglass-virtual-scene
+  - recently-added/virtual-pointing-ray
+  - recently-added/anchored-menu-virtual-scene
