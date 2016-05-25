@@ -14,7 +14,7 @@ Tags: area cursor,Fitts’ Law,pointing
 
 ----
 
-Header-image: dynaspot.jpg
+Header-image: dynaspot.gif
 
 ----
 
@@ -45,3 +45,7 @@ Related-publications:
 ----
 
 Title: DynaSpot
+
+----
+
+Related-work: 

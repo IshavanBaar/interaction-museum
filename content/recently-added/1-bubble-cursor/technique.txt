@@ -22,7 +22,7 @@ Tags: pointing,bubble cursor,Fitts's law
 
 ----
 
-Header-image: bubble_cursor.jpg
+Header-image: bubble_cursor.gif
 
 ----
 

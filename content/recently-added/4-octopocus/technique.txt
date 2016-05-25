@@ -18,7 +18,7 @@ Tags: dynamic guides,feedback,feedforward,mouse input,pen input
 
 ----
 
-Header-image: octopocus.jpg
+Header-image: octopocus.gif
 
 ----
 

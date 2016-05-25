@@ -14,7 +14,7 @@ Tags: Fitts’ Law,selecting,pointing
 
 ----
 
-Header-image: semantic_pointing.jpg
+Header-image: semantic_pointing.gif
 
 ----
 
@@ -45,3 +45,7 @@ Related-publications:
 ----
 
 Title: Semantic Pointing
+
+----
+
+Related-work: 

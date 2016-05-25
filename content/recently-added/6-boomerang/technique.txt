@@ -20,7 +20,7 @@ Tags: Drag-and-Drop,Throw-and-Catch,gestures
 
 ----
 
-Header-image: boomerang.jpg
+Header-image: boomerang.gif
 
 ----
 
@@ -51,3 +51,7 @@ Related-publications:
 ----
 
 Title: Boomerang
+
+----
+
+Related-work: 
