@@ -4,9 +4,6 @@ title: Technique
 pages:
 	template: technique
 files: 
-    type:
-		- image
-		- video
 		max: 5
 		sortable: true
 fields:
@@ -15,8 +12,7 @@ fields:
 		type: info
 		text: >
 			Each technique should have at least a title, description, some tags and a header image. If possible, please add more.
-			
-			
+						
 			To publish, change the *Page Status* to visible (choose the highest number).
 	title:
 		label: Name 
@@ -38,6 +34,9 @@ fields:
 	header-image:
 		label: Select a header image
 		type: image
+	video:
+		label: Video (YouTube or Vimeo)
+		type: url
 	trade-off-image:
 		label: Select an image to illustrate trade-offs/comparisons
 		type: image

@@ -91,6 +91,19 @@ h1{
 	margin: 0;
 	font-size: 20px;
 }
+.form-control{
+	border-style: solid !important;
+	border-width: 1px !important;
+	border-color: #2196f3 !important;
+	height: 35px;
+
+}
+.btn{
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
+}
+#searchBar{
+	padding-left: 15px;
+}
 
 @media (min-width: 1240px) {
 	.thumbnail a > img{
