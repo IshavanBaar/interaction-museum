@@ -60,17 +60,21 @@
 						// For now, horizontal line.
 						$response = $response . "<hr>" . "</li>";
 					}
-					$response = $response . "</ul>";
+					$response = $response . "</ul> ";
 				}
-			} else {
-				$response = "no results";
-			}
 
+			} else {
+				$response = "<h2>We didn't find anything</h2>";
+			}
+			$response = $response . "<h2>Other Interaction Techniques</h2>";
 			echo $response; 
 			?>
 			</div>
 		</form>   
 	</div>
+
 </div>
+
+
 
 

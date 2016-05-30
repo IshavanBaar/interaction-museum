@@ -62,12 +62,14 @@
 					?>
 				<?php endif ?>
 			</div>	
-
+			<div class="col-lg-12">
+				<p><?php echo $page->video(); ?></p>
+			</div>
 			<div class="text col-md-8 col-md-offset-2">
 						<!-- TRADE-OFFS/COMPARISON -->
 				
 				<?php if($page->trade_off_image()->isNotEmpty()): ?>
-					<h2>Trade offs & Comparison</h2>
+					<h2>Extra pictures</h2>
 					<figure>
 						<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
 					</figure>
@@ -95,20 +97,22 @@
 								<!-- TODO fix: title cannot have : inside -->
 								<h3><a href="<?php echo $publication->link() ?>" target="_blank"> <?php echo $publication->title() ?> </a> </h3>		
 								<span><em><?php echo $publication->type() ?></em></span>
+								<br>
+								<span>
+									<strong>Year:</strong>
+									<?php echo $publication->year() ?>
+								</span>
 							</div>
 							<div class="col-lg-4">
 								<?php
 								$authors = $publication->authors();
 								$authorsArray = explode(',', $authors);
 								?>
-								<strong>Authors:</strong><br/>
+								<!-- <strong>Authors:</strong><br/> -->
 									<?php foreach($authorsArray as $author): ?>
 										<span><?php echo $author ?></span> <br/>
 									<?php endforeach ?>
-								<span>
-									<strong>Year:</strong>
-									<?php echo $publication->year() ?>
-								</span>
+								
 							</div>
 						</div>
 					<?php endforeach ?>
