@@ -38,5 +38,11 @@ Related-publications:
     Retrieval
   link: 'http://repository.cmu.edu/cgi/viewcontent.cgi?article=2407&context=compsci'
   type: "UIST Proceedings '95"
-  authors: A. Hauptmann, M. Witbrock, A. Rudnicky
+  authors: >
+    Alexander Hauptmann, Michael Witbrock,
+    Alexander Rudnicky, Stephen Reed
   year: "1995"
+
+----
+
+Video: 

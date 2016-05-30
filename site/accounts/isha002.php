@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/speech-as-search-input
+  - recently-added/fix-and-float
   - recently-added/toolglass
-  - recently-added/toolglass-virtual-scene
-  - recently-added/virtual-pointing-ray
-  - recently-added/anchored-menu-virtual-scene
+  - recently-added/interactive-beautification
+  - recently-added/pick-and-drop
+  - recently-added/speech-as-search-input
