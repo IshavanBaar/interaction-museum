@@ -18,6 +18,7 @@
 				$tags = $page->tags();
 				$tagArray = explode(',', $tags);
 				$try_out = $page->try_out();
+				$video = $page->movie();
 				$code_pen = "://codepen.io/";
 			?>
 			
@@ -45,6 +46,7 @@
 			
 			<div class="col-lg-12">
 				<!-- TRY OUT -->
+				
 				<?php if($try_out->isNotEmpty()): ?>
 					<h2>Try It Out</h2>
 					<?php 
@@ -62,14 +64,28 @@
 					?>
 				<?php endif ?>
 			</div>	
-			<div class="col-lg-12">
-				<p><?php echo $page->video(); ?></p>
-			</div>
+			<!-- VIDEO -->
+			
+				<?php if($video->isNotEmpty()){
+						if(stripos($video, "youtube") !== false)
+					 		{
+					 			echo "<div class='col-lg-12 videoWrapper'>" . youtube($video) . "</div>";
+					 		}
+					 	elseif (stripos($video, "vimeo") !== false)
+					 		{
+					 			echo "<div class='col-lg-12 videoWrapper'>" . vimeo($video) . "</div>";
+					 		}	
+			 		} 
+			 		?>
+			
+
+			
+
 			<div class="text col-md-8 col-md-offset-2">
-						<!-- TRADE-OFFS/COMPARISON -->
+			<!-- TRADE-OFFS/COMPARISON -->
 				
 				<?php if($page->trade_off_image()->isNotEmpty()): ?>
-					<h2>Extra pictures</h2>
+					<h2>Extra images</h2>
 					<figure>
 						<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
 					</figure>

@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/dynaspot
+  - recently-added/marking-menu
+  - recently-added/bubble-cursor
   - recently-added/knotty-gestures
   - recently-added/crossing
-  - recently-added/drag-and-pop
-  - recently-added/tiltouch
-  - recently-added/multi-touch-gestures
