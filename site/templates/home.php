@@ -6,7 +6,6 @@
 	
 	<!-- RECENTLY ADDED -->
     <?php snippet('recently-added') ?>
-
 </div>
 
-  <?php snippet('footer') ?>
+<?php snippet('footer') ?>

@@ -2,7 +2,7 @@ Title: Interaction Museum
 
 ----
 
-Author: Diana & Isha
+Authors: By Diana & Isha
 
 ----
 
@@ -14,4 +14,8 @@ Keywords: Kirby,CMS,file-based
 
 ----
 
-Copyright: © 2016 (link: http://www.inria.fr/ text: ExSitu)
+Copyright: © 2016 (link: http://www.inria.fr/ text: Inria)
+
+----
+
+Source Code: (link: https://github.com/IshavanBaar/interaction-museum)

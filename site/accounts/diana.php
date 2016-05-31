@@ -8,3 +8,9 @@ password: >
   $2a$10$oe4hU5O6FTKh4CrFnOxq2umoLgyqowDS5hyos8Wq1vpzReuxA9WAu
 language: en
 role: admin
+history:
+  - recently-added/dynaspot
+  - recently-added/marking-menu
+  - recently-added/bubble-cursor
+  - recently-added/knotty-gestures
+  - recently-added/crossing
