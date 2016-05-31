@@ -21,7 +21,7 @@
 <div class="container" role="main">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="left-column col-lg-2">
+			<!-- <div class="left-column col-lg-2"> -->
 			
 			<!-- TITLE -->
 			<h1><?php echo $name ?></h1>
@@ -69,7 +69,7 @@
 				<?php endforeach ?>
 			<?php endif ?>
 			
-			</div>
+			<!-- </div> -->
 		</div> <!-- end first column -->
 		<div class="col-md-8">
 			<div class="row">

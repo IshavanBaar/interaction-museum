@@ -162,11 +162,11 @@ p {
     padding-left: 15px;
 }
 
-.left-column{
+/*.left-column{
 	position: fixed;
 	display: block;
 	height: auto;
-}
+}*/
 
 @media (min-width: 1240px) {
     .thumbnail a > img {
