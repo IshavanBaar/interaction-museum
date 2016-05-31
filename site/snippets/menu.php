@@ -1,4 +1,5 @@
 <div id="navbar" class="collapse navbar-collapse">
+	
   <ul class="nav navbar-nav navbar-right">
     <!-- SHOW VISIBLE PAGES -->
 	<?php foreach($pages->visible() as $p): ?>
@@ -6,7 +7,8 @@
           <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
         </li>
     <?php endforeach ?>
-	
+
+    
 	<!-- ACCOUNT NAME / LOGOUT -->
 	<?php if($user = $site->user()): ?>
 		<li>
