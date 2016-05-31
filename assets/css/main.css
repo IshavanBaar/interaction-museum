@@ -106,13 +106,13 @@ h1 {
     font-family: 'Slabo 27px', serif;
     font-size: 40px;
     margin-top: 5px;
-    /*text-align: center;*/
+    text-align: center;
 }
 
 h2 {
     font-family: 'Slabo 27px', serif;
     font-size: 26px;
-    /*text-align: center;*/
+    text-align: center;
 }
 
 p {
