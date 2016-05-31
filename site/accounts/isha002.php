@@ -7,5 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/bubble-cursor
-  - account
+  - recently-added/fix-and-float
+  - recently-added/toolglass
+  - recently-added/interactive-beautification
+  - recently-added/pick-and-drop
+  - recently-added/speech-as-search-input

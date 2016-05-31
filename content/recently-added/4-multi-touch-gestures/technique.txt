@@ -1,0 +1,42 @@
+Info: 
+
+----
+
+Title: Multi-Touch Gestures
+
+----
+
+Description: Multi-touch gestures enable interaction with touch screens through multiple fingers at once. They are especially useful because they permit numerous finger combinations and stroke gestures. This empowers touch screens to be some of the most useful input-output devices available.
+
+----
+
+Tags: multi-touch,gestures,touch screen,smart phone,tablet,tabletop
+
+----
+
+Header-image: multi-touch-gestures.gif
+
+----
+
+Trade-off-image: multitouch-relaxed.jpg
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: >
+    Multi-Touch Gestures for Discrete and
+    Continuous Control
+  link: 'http://dl.acm.org/citation.cfm?id=2598169&CFID=758120638&CFTOKEN=26555240'
+  type: "AVI '14 Proceedings"
+  authors: Halla Olafsdottir, Caroline Appert
+  year: "2014"
