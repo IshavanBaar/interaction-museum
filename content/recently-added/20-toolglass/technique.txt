@@ -36,8 +36,12 @@ Related-publications:
   title: 'Toolglass and Magic Lenses: The See-Through Interface'
   link: >
     http://www.aviz.fr/wiki/uploads/Teaching2013/Bier_MagicLenses.pdf
-  type: "Graph '93"
+  type: "GRAPH Proceedings '93"
   authors: >
-    E. Bier, M. Stone, K. Pier, W. Buxton,
-    T. DeRose
+    Eric Bier, Maureen Stone, Ken Pier,
+    William Buxton, Tony DeRose
   year: "1993"
+
+----
+
+Video: 
