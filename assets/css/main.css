@@ -6,8 +6,12 @@
     margin-bottom: 1.5em;
     display: block;
     height: 100%;
+   
 }
 
+.mini{
+	 padding: 0;
+}
 footer {
     background-color: #D3D3D3;
 }
