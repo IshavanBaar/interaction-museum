@@ -21,13 +21,7 @@
 <div class="container" role="main">
 	<div class="row">
 		<div class="col-md-4">
-			<!-- <div class="left-column col-lg-2"> -->
-			<?php if($video->isNotEmpty() && $page->header_image()->isNotEmpty()): ?>
-				<figure>
-					<img id="header_image" src="<?php echo $header_image->url();?>" alt="" class="col-xs-12 mini"
-					onmouseover="play(this);" onmouseout="stop(this);">
-				</figure>
-			<?php endif ?>
+		
 			<!-- TITLE -->
 			<h1><?php echo $name ?></h1>
 
@@ -80,7 +74,7 @@
 			<div class="row">
 			<!-- <h2>Media</h2> -->
 			<!-- HEADER IMAGE -->
-			<?php if($page->header_image()->isNotEmpty() && !($video->isNotEmpty())): ?>	
+			<?php if($page->header_image()->isNotEmpty()): ?>	
 				<figure>
 					<img id="header_image" src="<?php echo $header_image->url();?>" alt="" class="col-xs-12"
 					onmouseover="play(this);" onmouseout="stop(this);">
