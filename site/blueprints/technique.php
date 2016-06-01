@@ -3,8 +3,11 @@
 title: Technique
 pages:
 	template: technique
-files: 
-		max: 5
+files:
+    type: 
+        - image
+        - video
+        max: 5
 		sortable: true
 fields:
 	info:
@@ -34,7 +37,7 @@ fields:
 	header-image:
 		label: Select a header image
 		type: image
-	video:
+	movie:
 		label: Video (YouTube or Vimeo)
 		type: url
 	trade-off-image:

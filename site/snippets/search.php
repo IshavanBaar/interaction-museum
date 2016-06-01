@@ -1,19 +1,5 @@
 <div class="container-fluid">
 
-	<!-- SEARCH BAR -->
-	<div id="search-bar" class="col-lg-6 col-lg-offset-3 search-results">
-		<form class="search" action="">
-			<div class="input-group">
-				<input action="" type="search" class="form-control" id="searchBar" placeholder="Search..." name="q" value="" required>
-				<span class="input-group-btn">
-				  <button class="btn btn-default btn-primary" type="submit">
-				   <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-				  </button>
-				</span>
-			</div>
-		</form>   
-	</div>
-
 	<!-- TITLE OF COLLECTION PAGE -->
 	<?php if(count($results->toArray()) > 0) 
 	{
