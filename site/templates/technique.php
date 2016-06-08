@@ -22,9 +22,6 @@
 				$code_pen = "://codepen.io/";
 			?>
 
-	
-				<!-- NAME -->
-				
 				<!-- HEADER IMAGE -->
 				<?php if($page->header_image()->isNotEmpty()): ?>	
 					<figure>
@@ -32,19 +29,18 @@
 						onmouseover="play(this);" onmouseout="stop(this);">
 					</figure>
 				<?php endif ?>
+            	
+				<!-- NAME -->
 				<h1><?php echo $name ?></h1>
 	
 				<!-- DESCRIPTION -->
 				<!--<h3>Description</h3>-->
 				<div class="text col-md-8 col-md-offset-2">
 					<?php echo $description ?>
-				
-
 				</div>
 			
 			<div class="col-lg-12">
 				<!-- TRY OUT -->
-				
 				<?php if($try_out->isNotEmpty()): ?>
 					<h2>Try It Out</h2>
 					<?php 
@@ -62,19 +58,18 @@
 					?>
 				<?php endif ?>
 			</div>	
+            
 			<!-- VIDEO -->
-			
-				<?php if($video->isNotEmpty()){
-						if(stripos($video, "youtube") !== false)
-					 		{
-					 			echo "<div class='col-lg-12 videoWrapper'>" . youtube($video) . "</div>";
-					 		}
-					 	elseif (stripos($video, "vimeo") !== false)
-					 		{
-					 			echo "<div class='col-lg-12 videoWrapper'>" . vimeo($video) . "</div>";
-					 		}	
-			 		} 
-			 		?>
+            <?php 
+                if($video->isNotEmpty()){
+                    if(stripos($video, "youtube") !== false) {
+                        echo "<div class='col-lg-12 videoWrapper'>" . youtube($video) . "</div>";
+                    } elseif (stripos($video, "vimeo") !== false) {
+                       echo "<div class='col-lg-12 videoWrapper'>" . vimeo($video) . "</div>";
+                    }	
+                }
+            ?>
+            
 			<div class="text col-md-8 col-md-offset-2">
 			<!-- TRADE-OFFS/COMPARISON -->
 				
@@ -115,13 +110,13 @@
 							</div>
 							<div class="col-lg-4">
 								<?php
-								$authors = $publication->authors();
-								$authorsArray = explode(',', $authors);
+								    $authors = $publication->authors();
+								    $authorsArray = explode(',', $authors);
 								?>
 								<!-- <strong>Authors:</strong><br/> -->
-									<?php foreach($authorsArray as $author): ?>
-										<span><?php echo $author ?></span> <br/>
-									<?php endforeach ?>
+                                <?php foreach($authorsArray as $author): ?>
+                                    <span><?php echo $author ?></span> <br/>
+                                <?php endforeach ?>
 								
 							</div>
 						</div>
