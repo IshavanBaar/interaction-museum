@@ -2,12 +2,15 @@
 
 return function($site, $pages, $page) {
 
-  $query = get('q');
-  $results = $site->search($query);
+    $query = get('q');
+    
+    // Only search the techniques
+    // TODO search the collections
+    $results = page('recently-added')->search($query);
 
-  return array(
+    return array(
     'query'      => $query,
     'results'    => $results
-  );
+    );
 
 };
