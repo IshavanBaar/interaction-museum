@@ -10,7 +10,7 @@ Description: Multi-touch gestures enable interaction with touch screens through 
 
 ----
 
-Tags: multi-touch,gestures,touch screen,smart phone,tablet,tabletop
+Tags: multi-touch,gestures,touch screen,smart phone,tablet,tabletop,recognition
 
 ----
 
@@ -40,3 +40,11 @@ Related-publications:
   type: "AVI '14 Proceedings"
   authors: Halla Olafsdottir, Caroline Appert
   year: "2014"
+
+----
+
+Extra-images: multitouch-relaxed.jpg,multitouch-tense.jpg
+
+----
+
+Movie: 

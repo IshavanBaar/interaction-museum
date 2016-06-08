@@ -10,7 +10,7 @@ Description: A toolglass is a movable see-through panel that appears above the a
 
 ----
 
-Tags: Toolglass,Manipulation,Visualization,Magic Lens
+Tags: toolglass,manipulation,visualization,magic lens
 
 ----
 
@@ -45,3 +45,7 @@ Related-publications:
 ----
 
 Video: 
+
+----
+
+Movie: 

@@ -36,19 +36,24 @@ fields:
 		required: true
 	header-image:
 		label: Select a header image
-		type: image
+		type: selector
+		mode: single
+		autoselect: none
+		types: 
+			- image
+	extra-images:
+		label: Extra Images
+		type: selector
+		mode: multiple
+		autoselect: none
+		types: 
+			- image
 	movie:
 		label: Video (YouTube or Vimeo)
 		type: url
-	trade-off-image:
-		label: Select an image to illustrate trade-offs/comparisons
-		type: image
 	try-out:
 		label: Paste a link to a website with a working demo
 		type: url
-	related-work:
-		label: Search for related work
-		type: papersearch
 	related-publications:
 		label: Related Publications
 		type: structure
@@ -81,4 +86,3 @@ fields:
 				required: true
 				validate: 
 					num
-				

@@ -53,3 +53,7 @@ Related-work:
 ----
 
 Movie: https://www.youtube.com/watch?v=itb1y5PMEOc
+
+----
+
+Extra-images: dynaspot_anatomy.jpg

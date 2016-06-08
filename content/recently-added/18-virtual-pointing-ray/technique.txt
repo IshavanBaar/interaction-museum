@@ -10,7 +10,7 @@ Description: A virtual pointing ray is a pointing technique that can also be use
 
 ----
 
-Tags: Pointing,Ray,VR,Selecting,Laser,Pointer
+Tags: pointing,ray,VR,selection,pointer
 
 ----
 
@@ -42,3 +42,7 @@ Related-publications:
 ----
 
 Video: 
+
+----
+
+Movie: 
