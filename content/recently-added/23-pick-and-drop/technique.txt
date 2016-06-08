@@ -47,3 +47,11 @@ Related-publications:
   type: "UIST Proceedings '97"
   authors: Jun Rekimoto
   year: "1997"
+
+----
+
+Extra-images: pick-and-drop-explanation.png
+
+----
+
+Movie: 

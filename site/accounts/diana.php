@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/pick-and-drop
+  - recently-added/interactive-beautification
   - recently-added/semantic-pointing
   - recently-added/dynaspot
   - recently-added/multi-touch-gestures
-  - recently-added/drag-and-pop
-  - recently-added/crossing

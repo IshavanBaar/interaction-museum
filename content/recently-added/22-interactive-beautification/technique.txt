@@ -57,3 +57,11 @@ Related-publications:
     Takeo Igarashi, Satoshi Matsuoka,
     Sachiko Kawachiya, Hidehiko Tanaka
   year: "1997"
+
+----
+
+Extra-images: interactive-beautification-explanation.png
+
+----
+
+Movie: 
