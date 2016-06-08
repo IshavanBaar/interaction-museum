@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-
+<?php snippet('menu') ?>
 			<!-- ENTRY FIELDS -->
 			<?php 
 				/* IMAGES */
@@ -125,5 +125,4 @@
 		</div>
 	</div>
 </div>
-
 <?php snippet('footer') ?>

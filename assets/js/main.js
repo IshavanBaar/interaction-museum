@@ -14,9 +14,15 @@ function stop(image) {
     // image.src = JPG;
 }
 
-// console.log("i'm here now");
-$(document).ready(function() {
+$(document).ready(function(){
+    /* Sidebar toggle on/off */
+    $("#sidebar_toggle").click(function(e) {
+        console.log("here");
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
 	
+    /* Video / GIF hover */
 	$("#video-hover").hide();
 
 	$("#header_image").hover(function() {
