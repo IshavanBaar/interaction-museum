@@ -57,6 +57,30 @@ c::set('routes', array(
   )
 ));
 
+
+/* Omit 'recently-added' in the page URL */
+c::set('routes', array(
+  array(
+    'pattern' => '(:any)',
+    'action'  => function($uid) {
+
+      $page = page($uid);
+
+      if(!$page) $page = page('recently-added/' . $uid);
+      if(!$page) $page = site()->errorPage();
+
+      return site()->visit($page);
+
+    }
+  ),
+  array(
+    'pattern' => 'recently-added/(:any)',
+    'action'  => function($uid) {
+      go($uid);
+    }
+  )
+));
+
 /*
 
 ---------------------------------------
