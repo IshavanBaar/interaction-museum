@@ -13,3 +13,11 @@ function stop(image){
 	// var JPG = image.src.replace('.gif', '.jpg');
 	// image.src = JPG;
 }
+
+$(document).ready(function(){
+    $("#sidebar_toggle").click(function(e) {
+        console.log("here");
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+});
