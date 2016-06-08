@@ -17,6 +17,12 @@
 				$try_out = $page->try_out();
 				$video = $page->movie();
 				$code_pen = "://codepen.io/";
+
+				// extra images
+				 // Transform the comma-separated list of filenames into a file collection
+			    $filenames = $page->extra_images()->split(',');
+				if(count($filenames) < 2) $filenames = array_pad($filenames, 2, '');
+				$files = call_user_func_array(array($page->files(), 'find'), $filenames);
 			?>
 
 <div class="container" role="main">
@@ -106,12 +112,13 @@
 				?>
 			<?php endif ?>
 			<!-- EXTRA IMAGES -->			
-				<?php if($page->trade_off_image()->isNotEmpty()): ?>
-					<h2>Extra images</h2>
+				<h2>Extra images</h2>
+				<?php  foreach($files as $file): ?>
+					
 					<figure>
-						<img src="<?php echo $trade_off_image->url(); ?>" alt="" class="col-xs-12 trade-img">
+						<img src="<?php echo $file->url(); ?>" alt="" class="col-xs-12 trade-img">
 					</figure>
-				<?php endif ?>
+				<?php endforeach ?>
 			</div>
 			
 			

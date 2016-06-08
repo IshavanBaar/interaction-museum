@@ -6,7 +6,7 @@ Name:
 
 ----
 
-Description: OrthoZoom is a scrolling technique that improves panning and zooming a large dataset. It is a slider that you control with the mouse. You can pan along the slider dimension, and zoom along the orthogonal dimension
+Description: OrthoZoom is a scrolling technique that improves panning and zooming in large datasets. It is a slider that you control with the mouse. You can pan along the slider dimension, and zoom along the orthogonal dimension
 
 ----
 
@@ -46,3 +46,11 @@ Title: OrthoZoom
 ----
 
 Related-work: 
+
+----
+
+Movie: 
+
+----
+
+Extra-images: orthozoom.png

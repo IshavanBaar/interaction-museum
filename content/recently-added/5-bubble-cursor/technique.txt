@@ -58,3 +58,7 @@ Related-work: bla
 ----
 
 Movie: https://www.youtube.com/watch?v=JUBXkD_8ZeQ
+
+----
+
+Extra-images: bubble_cursor_graph.jpg

@@ -10,7 +10,7 @@ Description: In a virtual environment you can control the toolglass with 3D gest
 
 ----
 
-Tags: Toolglass,gestures,VR,virtual,real
+Tags: gestures,VR,virtual,real,toolglass
 
 ----
 
@@ -42,3 +42,7 @@ Related-publications:
 ----
 
 Video: 
+
+----
+
+Movie: 

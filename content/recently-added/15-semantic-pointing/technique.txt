@@ -49,3 +49,11 @@ Title: Semantic Pointing
 ----
 
 Related-work: 
+
+----
+
+Extra-images: semantic_pointing_example.jpg
+
+----
+
+Movie: 

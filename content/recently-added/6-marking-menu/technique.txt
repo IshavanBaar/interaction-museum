@@ -65,3 +65,7 @@ Related-work:
 ----
 
 Movie: https://www.youtube.com/watch?v=dtH9GdFSQaw
+
+----
+
+Extra-images: table.jpg
