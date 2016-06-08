@@ -1,0 +1,37 @@
+Info: 
+
+----
+
+Title: Some technique
+
+----
+
+Description: lalallalalallala
+
+----
+
+Tags: sad,sdf
+
+----
+
+Header-image: 
+
+----
+
+Extra-images: 
+
+----
+
+Movie: 
+
+----
+
+Try-out: 
+
+----
+
+Related-publications: 
+
+----
+
+Status: published
