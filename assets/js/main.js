@@ -16,10 +16,33 @@ function stop(image) {
 
 $(document).ready(function(){
     /* Sidebar toggle on/off */
-    $("#sidebar_toggle").click(function(e) {
-        console.log("here");
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    $(".sidebar_toggle").click(function(e) {
+        console.log($("#wrapper").toggleClass());
+        
+        if ($("#wrapper").toggleClass() != "toggled") { 
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        }
+        
+        var thumbnail = $(this).parent();
+        var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");
+        var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
+        var thumbnail_title = thumbnail.find("#thumbnail-title").html();
+        
+        console.log(thumbnail_URL);
+        
+        $("#sidebar").append(
+       
+            "<li>" +
+                "<div class='thumbnail'>" +
+                    "<a href='" + thumbnail_URL + "'>" +
+                        "<img src='" + thumbnail_image + "' alt=''" +
+                        "onmouseover='play(this);' onmouseout='stop(this);'>" +
+                        "<p class='caption'>" + thumbnail_title + "</p>" +
+                    "</a>" +
+                "</div>" +
+            "</li>"
+        );
     });
 	
     /* Video / GIF hover */
@@ -27,7 +50,6 @@ $(document).ready(function(){
 
 	$("#header_image").hover(function() {
         $("#video-hover").toggle();
-        console.log("i'm in here");
     });
 
     $("#video-hover").hover(function() {
@@ -43,3 +65,16 @@ $(document).ready(function(){
         $("#gif").hide();
     });
 });
+
+    /*
+        <li>
+            <div class="thumbnail">
+                <a href="../../recently-added/knotty-gestures">
+                    <img src="<?php echo $image->url();?>" alt=""
+                    onmouseover="play(this);" onmouseout="stop(this);">
+
+                    <p class="caption"><?php echo $technique->title()->html() ?></p>
+                </a>
+            </div>
+        </li>
+    */

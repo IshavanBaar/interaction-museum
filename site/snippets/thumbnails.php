@@ -10,16 +10,16 @@
 	<div class="col-md-4 col-sm-6">
 		<div class="thumbnail">
             <!-- Button to add to collection -->
-            <button style="position:absolute; right:20px;" id="sidebar_toggle" class="btn btn-default btn-primary" type="submit">
+            <button style="position:absolute; right:20px;" class="sidebar_toggle" class="btn btn-default btn-primary" type="submit">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
             
-            <a href="<?php echo $technique->url() ?>">
+            <a id="thumbnail-technique" href="<?php echo $technique->url() ?>">
                 <!-- TODO fix if there is no gif file in the folder -->
-				<img src="<?php echo $image->url();?>" alt=""
+				<img id="thumbnail-image" src="<?php echo $image->url();?>" alt=""
 				onmouseover="play(this);" onmouseout="stop(this);">
 
-				<p class="caption"><?php echo $technique->title()->html() ?></p>
+				<p id="thumbnail-title" class="caption"><?php echo $technique->title()->html() ?></p>
 			</a>
 		</div>
 	</div>
