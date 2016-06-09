@@ -92,3 +92,13 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
+c::set('routes', array(
+    // https://github.com/blankogmbh/kirby-cropper
+    array(
+        'pattern' => 'ajax-cropper',
+        'action' => function () {
+            include('site/fields/cropper/ajax_cropper.php');
+        },
+        'method' => 'POST'
+    )
+));

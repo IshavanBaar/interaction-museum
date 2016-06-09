@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/boomerang
+  - recently-added/toolglass-virtual-scene
+  - recently-added/anchored-menu-virtual-scene
+  - recently-added/knotty-gestures
   - recently-added/pick-and-drop
-  - recently-added/interactive-beautification
-  - recently-added/semantic-pointing
-  - recently-added/dynaspot
-  - recently-added/multi-touch-gestures

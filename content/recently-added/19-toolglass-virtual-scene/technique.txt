@@ -2,7 +2,7 @@ Info:
 
 ----
 
-Title: Toolglass (Virtual Scene)
+Title: Toolglass (VR)
 
 ----
 
@@ -46,3 +46,11 @@ Video:
 ----
 
 Movie: 
+
+----
+
+Cropper: 
+
+----
+
+Extra-images: 

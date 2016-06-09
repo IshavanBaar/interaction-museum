@@ -2,7 +2,7 @@ Info:
 
 ----
 
-Title: Anchored Menu (Virtual Scene)
+Title: Anchored Menu (VR)
 
 ----
 
@@ -42,3 +42,15 @@ Related-publications:
 ----
 
 Video: 
+
+----
+
+Cropper: 
+
+----
+
+Extra-images: 
+
+----
+
+Movie: 

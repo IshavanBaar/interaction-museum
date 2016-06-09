@@ -20,7 +20,7 @@ Tags: Drag-and-Drop,Throw-and-Catch,gestures
 
 ----
 
-Header-image: boomerang.gif
+Header-image: ezgif.com-crop-1.gif
 
 ----
 
@@ -55,3 +55,15 @@ Title: Boomerang
 ----
 
 Related-work: 
+
+----
+
+Cropper: 
+
+----
+
+Extra-images: 
+
+----
+
+Movie: 

@@ -41,6 +41,13 @@ fields:
 		autoselect: none
 		types: 
 			- image
+	cropper:
+		label: Cropping Area
+		type: cropper
+		ratios:
+			- 16/9
+			label: portrait image
+			value: 2/3
 	extra-images:
 		label: Extra Images
 		type: selector
