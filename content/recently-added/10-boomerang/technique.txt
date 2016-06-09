@@ -16,7 +16,7 @@ The direction of the throwing gesture can also invoke commands. For example, it 
 
 ----
 
-Tags: Drag-and-Drop,Throw-and-Catch,gestures
+Tags: gestures,throw-and-catch,drag-and-drop
 
 ----
 

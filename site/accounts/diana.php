@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/drag-and-pop
   - recently-added/boomerang
   - recently-added/toolglass-virtual-scene
   - recently-added/anchored-menu-virtual-scene
   - recently-added/knotty-gestures
-  - recently-added/pick-and-drop

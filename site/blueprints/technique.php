@@ -35,12 +35,8 @@ fields:
 		type: tags
 		required: true
 	header-image:
-		label: Select a header image
-		type: selector
-		mode: single
-		autoselect: none
-		types: 
-			- image
+		label: Select a header image (GIF)
+		type: image
 	cropper:
 		label: Cropping Area
 		type: cropper

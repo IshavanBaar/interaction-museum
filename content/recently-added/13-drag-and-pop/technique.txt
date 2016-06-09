@@ -10,7 +10,7 @@ Description: Drag-and-pop is an extension of traditional drag-and-drop. As the u
 
 ----
 
-Tags: drag-and-drop,pen input,touch screen
+Tags: drag-and-drop,pen input,touch screen,wall sized display
 
 ----
 
@@ -59,3 +59,7 @@ Extra-images:
 ----
 
 Movie: 
+
+----
+
+Cropper: 
