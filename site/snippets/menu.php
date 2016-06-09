@@ -20,8 +20,14 @@
                   <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
                 </li>
             <?php endforeach ?>
-
-
+            
+            <!-- ADD A COLLECTION -->  
+            <?php if($user = $site->user()): ?>  
+                <li>
+                  <a class="create_collection" href="">Add collection</a>
+                </li>
+            <?php endif; ?>  
+              
             <!-- ACCOUNT NAME / LOGOUT -->
             <?php if($user = $site->user()): ?>
                 <li>

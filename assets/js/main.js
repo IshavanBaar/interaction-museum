@@ -15,15 +15,19 @@ function stop(image) {
 }
 
 $(document).ready(function(){
+    var new_collection = {};
+    
+    $(".create_collection").click(function(e) {
+        console.log("Here");
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $(".add_to_collection_btn").css("display", "inline-block");
+    });
+    
     /* Sidebar toggle on/off */
-    $(".sidebar_toggle").click(function(e) {
+    $(".add_to_collection_btn").click(function(e) {
         console.log($("#wrapper").toggleClass());
-        
-        if ($("#wrapper").toggleClass() != "toggled") { 
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        }
-        
+
         var thumbnail = $(this).parent();
         var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");
         var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
@@ -31,6 +35,8 @@ $(document).ready(function(){
         
         console.log(thumbnail_URL);
         
+        new_collection.push(thumbnail_title);
+        //$(".add_to_collection_btn")
         $("#sidebar").append(
        
             "<li>" +
