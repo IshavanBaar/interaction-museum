@@ -10,7 +10,7 @@
 	<div class="col-md-4 col-sm-6">
 		<div class="thumbnail">
             <!-- Button to add to collection -->
-            <button style="position:absolute; right:20px;" class="sidebar_toggle" class="btn btn-default btn-primary" type="submit">
+            <button style="position:absolute; right:20px; display: none;" class="add_to_collection_btn" class="btn btn-default btn-primary" type="submit">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
             
