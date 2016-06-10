@@ -29,11 +29,11 @@ footer {
 
 /* Text blocks */
 
-.text img {
+.media img {
     max-width: 100%;
 }
 
-.text{
+.media{
 	display: block;
 }
 
@@ -97,8 +97,9 @@ a:hover {
 }
 
 .tags {
-    padding: 0 15px;
+    padding: 0 15px; 
 }
+
 
 h1 {
     font-family: 'Slabo 27px', serif;
@@ -143,6 +144,7 @@ p {
 
 #searchBar {
     padding-left: 15px;
+    /*margin-left: 10%;*/
 }
 
 /*.left-column{
@@ -194,7 +196,7 @@ p {
     font-family: Roboto, serif;
     font-size: 17px;
     color: white;
-    opacity: 0.5;
+    opacity: 0.9;
     text-transform: none;
 }
 .glyphicon-play-circle{
@@ -213,6 +215,10 @@ p {
         font-size: 18px;
         top:120px;
     }
+}
+
+@media(max-width: 993px){
+
 }
 
 @media (max-width: 600px) {

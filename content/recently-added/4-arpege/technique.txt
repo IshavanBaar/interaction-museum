@@ -1,0 +1,52 @@
+Title: Arpège
+
+----
+
+Info: 
+
+----
+
+Description: Arpège is a progressive multi-touch input technique for learning chords. With the help of feedback and feedforward, Arpège teaches the user in which order they should place their fingers on the touch surface. This will create a gesture recognizable for the computer as a specific command. Arpège is comparable to a cheat sheet, and encourages the creation of effective mnemonics.
+
+----
+
+Tags: multi-touch,gestures,feedback,feedforward,learning,touch screen
+
+----
+
+Header-image: arpege.gif
+
+----
+
+Trade-off-image: storyboard.jpg
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: 'Arpège: Learning Multitouch Chord Gestures Vocabularies'
+  link: 'http://dl.acm.org/citation.cfm?id=2512795&CFID=758120638&CFTOKEN=26555240'
+  type: "ITS '13 Proceedings"
+  authors: 'Emilien Ghomi, Stephane Huot, Olivier Bau,  Michel Beaudouin-Lafon, Wendy Mackay'
+  year: "2013"
+
+----
+
+Movie: 
+
+----
+
+Attachments: storyboard.jpg
+
+----
+
+Extra-images: storyboard.jpg

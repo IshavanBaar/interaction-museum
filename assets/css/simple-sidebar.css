@@ -40,7 +40,7 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    padding: 15px 0 !important;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -96,7 +96,7 @@
     background: none;
 }
 
-@media(min-width:768px) {
+@media(min-width:1px) {
     #wrapper {
         padding-left: 250px;
     }

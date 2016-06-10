@@ -1,4 +1,5 @@
 <?php snippet('header') ?>
+<div id="page-content-wrapper">
 <?php snippet('menu') ?>
 			<!-- ENTRY FIELDS -->
 			<?php 
@@ -20,7 +21,7 @@
 
 				// extra images
 				 // Transform the comma-separated list of filenames into a file collection
-			    $filenames = $page->extra_images()->split(',');
+				$filenames = $page->extra_images()->split(',');
 				if(count($filenames) < 2) $filenames = array_pad($filenames, 2, '');
 				$files = call_user_func_array(array($page->files(), 'find'), $filenames);
 			?>
@@ -93,36 +94,41 @@
 							echo '<figure><img id="header_image_noclick" src="'. $header_image->url(). '" alt="" class="col-xs-12"></figure></div>';
 						}
 		 		}?>		
-			<div class="text">
+			<div class="media">
 			<!-- TRY OUT -->
 			<?php if($try_out->isNotEmpty()): ?>
 				<h2>Try It Out</h2>
 				<?php 
 					// If the try out is a code pen, use a different link to embed it nicely.
-					if(strpos($try_out, $code_pen) !== false): 
+					if(strpos($try_out, $code_pen) !== false){ 
 						$try_out = str_replace("/pen/", "/embed/", $try_out);
-					endif;
-					
-					print("
-						<iframe src=" . $try_out . " 
+						print("<iframe src=" . $try_out . " 
+								style='width: 100%;' height='300' 
+								frameborder='no' scrolling='no' allowtransparency='true' allowfullscreen='true'>
+						</iframe>");
+					}else {
+					print("<iframe src=" . $try_out . " 
 								style='width: 100%;' height='500' 
 								frameborder='no' scrolling='no' allowtransparency='true' allowfullscreen='true'>
-						</iframe>
-					");
+							</iframe>");
+					}
+			endif ?>
+						
+			<!-- EXTRA IMAGES -->	
+			<?php if ($page->extra_images()->isNotEmpty()) {
+				
+				echo '<h2>Extra images</h2>';
+				  foreach($files as $file){
+					echo '<figure><img src="'. $file->url() . '"alt="" class="col-xs-12 trade-img"></figure>';
+					}
+				} 
 				?>
-			<?php endif ?>
-			<!-- EXTRA IMAGES -->			
-				<h2>Extra images</h2>
-				<?php  foreach($files as $file): ?>
-					
-					<figure>
-						<img src="<?php echo $file->url(); ?>" alt="" class="col-xs-12 trade-img">
-					</figure>
-				<?php endforeach ?>
 			</div>
 			
 			
 		</div>
 	</div>
 </div>
+
 <?php snippet('footer') ?>
+</div>
