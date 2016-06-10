@@ -15,40 +15,76 @@ function stop(image) {
 }
 
 $(document).ready(function(){
-    var new_collection = {};
     
+    /* Toggle sidebar */
     $(".create_collection").click(function(e) {
-        console.log("Here");
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
         $(".add_to_collection_btn").css("display", "inline-block");
     });
     
-    /* Sidebar toggle on/off */
+    /* Add technique to sidebar */
     $(".add_to_collection_btn").click(function(e) {
-        console.log($("#wrapper").toggleClass());
-
+        // Get information of clicked thumbnail.
         var thumbnail = $(this).parent();
-        var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");
-        var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
         var thumbnail_title = thumbnail.find("#thumbnail-title").html();
+        var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");      
+        var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
+
+        var identifier = thumbnail_title.replace(/\s/g, "-") + "-sidebar";
         
-        console.log(thumbnail_URL);
+        // If not already in HTML, add it.
+        if ($("#" + identifier).length === 0) {
+            $("#sidebar").append(
+                "<li id='" + identifier + "'>" +
+                    "<div class='thumbnail'>" +
+                        "<a href='" + thumbnail_URL + "'>" +
+                            "<img src='" + thumbnail_image + "' alt=''" +
+                            "onmouseover='play(this);' onmouseout='stop(this);'>" +
+                            "<p class='caption'>" + thumbnail_title + "</p>" +
+                        "</a>" +
+                    "</div>" +
+                "</li>"
+            );   
+        } 
+        // If already in there, remove it.
+        else {
+            $("#" + identifier).remove();
+        }
         
-        new_collection.push(thumbnail_title);
-        //$(".add_to_collection_btn")
-        $("#sidebar").append(
-       
-            "<li>" +
-                "<div class='thumbnail'>" +
-                    "<a href='" + thumbnail_URL + "'>" +
-                        "<img src='" + thumbnail_image + "' alt=''" +
-                        "onmouseover='play(this);' onmouseout='stop(this);'>" +
-                        "<p class='caption'>" + thumbnail_title + "</p>" +
-                    "</a>" +
-                "</div>" +
-            "</li>"
-        );
+        // Change add/remove button
+        $(this).find("span").toggleClass("glyphicon-ok");
+        $(this).toggleClass("btn-primary"); 
+    });
+    
+    /* Save techniques in sidebar in a php collection */
+    $("#save_collection_btn").click(function(e) {
+        var sidebar_title = $(".sidebar-brand").html();
+        
+        var sidebar_techniques = "";
+        var counter = 0;
+        $('#sidebar li').each(function() {
+            if (counter !== 0) {
+                sidebar_techniques = sidebar_techniques + ",";
+            }
+            var technique = $(this).find(".caption").html();
+            sidebar_techniques = sidebar_techniques + technique;
+            counter = counter + 1;
+        });
+        
+        // TODO if no selected techniques: error message.
+        
+        // Send to php collection
+        var arguments = sidebar_title + "!@!" + sidebar_techniques;
+        $.ajax({
+            url: 'collection-creator',
+            data: arguments,
+            success : function(response) {  
+                // TODO if (response === "Collection exists already"): error message.
+                console.log(response);
+            }
+        });
+        
     });
 	
     /* Video / GIF hover */
@@ -72,15 +108,22 @@ $(document).ready(function(){
     });
 });
 
-    /*
-        <li>
-            <div class="thumbnail">
-                <a href="../../recently-added/knotty-gestures">
-                    <img src="<?php echo $image->url();?>" alt=""
-                    onmouseover="play(this);" onmouseout="stop(this);">
+function addToSidebar(collection) {
+    collection.forEach(function(thumbnail) {
+        var thumbnail_title = thumbnail.find("#thumbnail-title").html();
+        var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");
+        var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
 
-                    <p class="caption"><?php echo $technique->title()->html() ?></p>
-                </a>
-            </div>
-        </li>
-    */
+        $("#sidebar").append(
+            "<li>" +
+                "<div class='thumbnail'>" +
+                    "<a href='" + thumbnail_URL + "'>" +
+                        "<img src='" + thumbnail_image + "' alt=''" +
+                        "onmouseover='play(this);' onmouseout='stop(this);'>" +
+                        "<p class='caption'>" + thumbnail_title + "</p>" +
+                    "</a>" +
+                "</div>" +
+            "</li>"
+        );
+    });
+}

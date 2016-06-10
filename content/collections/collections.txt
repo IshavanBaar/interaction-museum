@@ -1,5 +1,1 @@
 Title: Collections
-
------
-
-Tags: gestures,pen input,interactive paper,tangible interfaces

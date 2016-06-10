@@ -19,7 +19,7 @@ fields:
 			To publish, change the *Page Status* to visible (choose the highest number).
 	title:
 		label: Name 
-		type:  papersearch
+		type:  text
 		placeholder: Enter the name of the technique... 
 		required: true
 	description:
