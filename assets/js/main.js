@@ -31,7 +31,7 @@ $(document).ready(function(){
         var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");      
         var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
 
-        var identifier = thumbnail_title.replace(/\s/g, "-") + "-sidebar";
+        var identifier = normalizeString(thumbnail_title).toLowerCase() + "-sidebar";
         
         // If not already in HTML, add it.
         if ($("#" + identifier).length === 0) {
@@ -59,34 +59,35 @@ $(document).ready(function(){
     
     /* Save techniques in sidebar in a php collection */
     $("#save_collection_btn").click(function(e) {
-        var sidebar_title = $(".sidebar-brand").html();
-        var collection_title = sidebar_title.toLowerCase().replace(/\s/g,'-');
+        // Get collection title
+        var collection_title = normalizeString($(".sidebar-brand").html());
         
-        var sidebar_techniques = "";
-        var counter = 0;
+        // Get collection technique
+        var collection_techniques = new Array();
         $('#sidebar li').each(function() {
-            if (counter !== 0) {
-                sidebar_techniques = sidebar_techniques + ",";
-            }
-            var technique = $(this).find(".caption").html();
-            sidebar_techniques = sidebar_techniques + technique;
-            counter = counter + 1;
+            var technique = normalizeString($(this).find(".caption").html());
+            collection_techniques.push(technique);
         });
         
         // TODO if no selected techniques: error message.
         
-        // Send to php collection
-        var arguments = sidebar_title + "!@!" + sidebar_techniques;
+        // Send to php as a normalized string with two arguments.
+        var collection = {
+            collection_title : collection_title, 
+            collection_techniques: collection_techniques
+        };
+        
+        console.log(collection);
         $.ajax({
             url: 'collection-creator',
-            data: arguments,
+            data: collection,
             success : function(response) {  
                 // TODO if (response === "Collection exists already"): error message.
                 console.log(response);
                 
                 if (response === "New collection was created.") {
                     console.log("here");
-                    window.location.href = "/interaction-museum/collections/" + collection_title;
+                    window.location.href = "/interaction-museum/collections/" + collection_title.toLowerCase();
                 }
             }
         });
@@ -113,3 +114,10 @@ $(document).ready(function(){
         $("#gif").hide();
     });
 });
+
+// String can contain characters and dashes (from spaces). No commas, or special characters.
+function normalizeString(inputString) {
+    inputString = inputString.replace(/[^a-zA-Z0-9 ]/g,"");
+    inputString = inputString.replace(/\s/g, "-");
+    return inputString;
+}

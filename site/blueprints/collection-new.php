@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Collection
+title: New Collection
 pages: false
 fields:
   title:
@@ -9,6 +9,9 @@ fields:
   creator:
     label: Created by
     type: user
+  test:
+    label: Test
+    type: relatedpage
   techniques:
     label: Techniques in this collection
     type: structure
@@ -17,4 +20,4 @@ fields:
     fields:
         technique:
             label: Technique
-            type: text
+            type: relatedpage

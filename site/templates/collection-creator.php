@@ -9,26 +9,30 @@ if(kirby()->request()->ajax()) {
     
     // Get the collection arguments
     $data = kirby()->request()->data();
-    reset($data);
-    $data = key($data);
-    $arguments = explode("!@!", $data);
     
-    // Modify the arguments to use in Kirby
-    $collection_title_spaces = (string) str_replace("_", " ", $arguments[0]); 
-    $collection_title = (string) strtr(strtolower(str_replace("_", "-", $arguments[0])), $unwanted_accents);
-    $technique_titles = (string) str_replace("_", " ", $arguments[1]); 
+    // Modify the title argument for use in Kirby
+    $collection_title = kirby()->request()->get('collection_title');
+    $collection_title_file = strtolower(strtr($collection_title, $unwanted_accents));      // No capitals and unwanted accents for the page file
+    $collection_title_panel = str_replace("-"," ", $collection_title);                  // Spaces for the panel content file
+    
+    // Modify the techniques argument for use in Kirby 
+    $collection_techniques = kirby()->request()->get('collection_techniques');
+    $collection_techniques_panel = "";                                       
+    foreach ($collection_techniques as $technique) {
+        $structure_entry = "- technique: " . str_replace("-"," ", $technique) . "\n";   // Spaces for the panel content file
+        $collection_techniques_panel = $collection_techniques_panel . $structure_entry; 
+    }
     
     // Add to collection, if not existing
     try {
-    
-        if (page('collections')->children()->has('collections/' . $collection_title)) {
+        if (page('collections')->children()->has('collections/' . $collection_title_file)) {
             echo "Collection exists already";
         } else {
             // Create new page with the new technique.
-            $page->create('collections/' .$collection_title, 'collection', array(
-                'title' => $collection_title_spaces,
+            $page->page('collections')->children()->create($collection_title_file, 'collection', array(
+                'title' => $collection_title_panel,
                 'creator' => $site->user()->current(),
-                'techniques' => $technique_titles
+                'techniques' => $collection_techniques_panel
             ));
             echo "New collection was created.";
         }
