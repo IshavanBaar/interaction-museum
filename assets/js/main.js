@@ -21,6 +21,8 @@ $(document).ready(function(){
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
         $(".add_to_collection_btn").css("display", "inline-block");
+        $("#save_collection_btn").toggle();
+        $("#discard_collection_btn").toggle();
     });
     
     /* Add technique to sidebar */
@@ -36,8 +38,8 @@ $(document).ready(function(){
         // If not already in HTML, add it.
         if ($("#" + identifier).length === 0) {
             $("#sidebar").append(
-                "<li id='" + identifier + "'>" +
-                    "<div class='thumbnail'>" +
+                "<li id='" + identifier + "' class='col-xs-12'>" +
+                    "<div class='thumbnail'> <button class='btn btn-danger remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
                         "<a href='" + thumbnail_URL + "'>" +
                             "<img src='" + thumbnail_image + "' alt=''" +
                             "onmouseover='play(this);' onmouseout='stop(this);'>" +
@@ -53,10 +55,13 @@ $(document).ready(function(){
         }
         
         // Change add/remove button
-        $(this).find("span").toggleClass("glyphicon-ok");
-        $(this).toggleClass("btn-primary"); 
+        $(this).find("span").toggleClass("glyphicon-remove");
+        $(this).toggleClass("btn-danger"); 
     });
-    
+    $(".remove_from_collection_btn").click(function(e) {
+        $(this).parent().remove();
+      
+    });
     /* Save techniques in sidebar in a php collection */
     $("#save_collection_btn").click(function(e) {
         // Get collection title
