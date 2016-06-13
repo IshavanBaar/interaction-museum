@@ -57,7 +57,6 @@ c::set('routes', array(
   )
 ));
 
-
 /* Omit 'recently-added' in the page URL */
 c::set('routes', array(
   array(

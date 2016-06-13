@@ -10,7 +10,7 @@
 	<div class="col-md-4 col-sm-6">
 		<div class="thumbnail">
             <!-- Button to add to collection -->
-            <button style="position:absolute; right:20px; display: none;" class="add_to_collection_btn" class="btn btn-default btn-primary" type="submit">
+            <button style="position:absolute; right:20px; display: none;" class="btn btn-default add_to_collection_btn" type="submit">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
             
@@ -18,8 +18,7 @@
                 <!-- TODO fix if there is no gif file in the folder -->
 
 				<img id="thumbnail-image" src="<?php echo $image->url();?>" alt=""
-				onmouseover="play(this);" onmouseout="stop(this);" class="thumbnailImage">
-
+				onmouseover="play(this);" onmouseout="stop(this);" class="
 				<p id="thumbnail-title" class="caption"><?php echo $technique->title()->html() ?></p>
 			</a>
 		</div>
