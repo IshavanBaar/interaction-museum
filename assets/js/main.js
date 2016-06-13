@@ -65,6 +65,7 @@ $(document).ready(function(){
     /* Save techniques in sidebar in a php collection */
     $("#save_collection_btn").click(function(e) {
         var sidebar_title = $(".sidebar-brand").html();
+        var collection_title = sidebar_title.toLowerCase().replace(/\s/g,'-');
         
         var sidebar_techniques = "";
         var counter = 0;
@@ -87,6 +88,11 @@ $(document).ready(function(){
             success : function(response) {  
                 // TODO if (response === "Collection exists already"): error message.
                 console.log(response);
+                
+                if (response === "New collection was created.") {
+                    console.log("here");
+                    window.location.href = "/interaction-museum/collections/" + collection_title;
+                }
             }
         });
         
@@ -112,23 +118,3 @@ $(document).ready(function(){
         $("#gif").hide();
     });
 });
-
-function addToSidebar(collection) {
-    collection.forEach(function(thumbnail) {
-        var thumbnail_title = thumbnail.find("#thumbnail-title").html();
-        var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");
-        var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
-
-        $("#sidebar").append(
-            "<li>" +
-                "<div class='thumbnail'>" +
-                    "<a href='" + thumbnail_URL + "'>" +
-                        "<img src='" + thumbnail_image + "' alt=''" +
-                        "onmouseover='play(this);' onmouseout='stop(this);'>" +
-                        "<p class='caption'>" + thumbnail_title + "</p>" +
-                    "</a>" +
-                "</div>" +
-            "</li>"
-        );
-    });
-}
