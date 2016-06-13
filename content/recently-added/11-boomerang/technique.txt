@@ -39,9 +39,7 @@ Related-page:
 Related-publications: 
 
 - 
-  title: >
-    Suspendable Drag-and-Drop Interactions
-    Based on a Throw-and-Catch Metaphor
+  title: 'Boomerang: Suspendable Drag-and-Drop Interactions Based on a Throw-and-Catch Metaphor'
   link: >
     http://www-ui.is.s.u-tokyo.ac.jp/~takeo/papers/kobayashi_uist2007_boomerang.pdf
   type: UIST Proceedings

@@ -41,10 +41,7 @@ Related-page:
 Related-publications: 
 
 - 
-  title: >
-    Enhancing Target Acquisition by Dynamic
-    Resizing of the Cursor’s Activation
-    Area
+  title: 'The Bubble Cursor: Enhancing Target Acquisition by Dynamic Resizing of the Cursor’s Activation Area'
   link: >
     http://dl.acm.org/citation.cfm?doid=1054972.1055012
   type: "CHI '05 Proceedings"
@@ -62,3 +59,7 @@ Movie: https://www.youtube.com/watch?v=JUBXkD_8ZeQ
 ----
 
 Extra-images: bubble_cursor_graph.jpg
+
+----
+
+Cropper: 

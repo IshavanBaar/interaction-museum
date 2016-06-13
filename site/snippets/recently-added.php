@@ -4,6 +4,6 @@
 
     <!-- RECENTLY ADDED TECHNIQUES -->
     <!-- TODO sort by created/modified date -->
-    <?php $recently_added = page('recently-added')->children()->visible()->sortBy('modified', 'asc')->limit(100);?>
+    <?php $recently_added = page('recently-added')->children()->visible()->sortBy('modified', 'desc')->limit(100);?>
     <?php snippet('thumbnails', array('entries' => $recently_added))?>
 </div>
