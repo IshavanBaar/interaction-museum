@@ -7,9 +7,6 @@ $unwanted_accents = array(  'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A
 
 if(kirby()->request()->ajax()) {
     
-    // Get the collection arguments
-    $data = kirby()->request()->data();
-    
     // Modify the title argument for use in Kirby
     $collection_title = kirby()->request()->get('collection_title');
     $collection_title_file = strtolower(strtr($collection_title, $unwanted_accents));      // No capitals and unwanted accents for the page file
@@ -29,7 +26,7 @@ if(kirby()->request()->ajax()) {
             echo "Collection exists already";
         } else {
             // Create new page with the new technique.
-            $page->page('collections')->children()->create($collection_title_file, 'collection', array(
+            page('collections')->children()->create($collection_title_file, 'collection', array(
                 'title' => $collection_title_panel,
                 'creator' => $site->user()->current(),
                 'techniques' => $collection_techniques_panel
