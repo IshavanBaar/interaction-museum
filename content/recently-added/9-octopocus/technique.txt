@@ -37,9 +37,7 @@ Related-page:
 Related-publications: 
 
 - 
-  title: >
-    A Dynamic Guide for Learning
-    Gesture-Based Command Sets
+  title: 'OctoPocus: A Dynamic Guide for Learning Gesture-Based Command Sets'
   link: >
     https://www.lri.fr/~mbl/Stanford/CS477/papers/Octopocus-UIST2008.pdf
   type: UIST Proceedings
@@ -66,3 +64,7 @@ Movie:
 ----
 
 Extra-images: comparison.jpg
+
+----
+
+Cropper: 

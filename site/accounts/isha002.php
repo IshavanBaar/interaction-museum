@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/anchored-menu-vr
+  - recently-added/boomerang
+  - recently-added/bubble-cursor
+  - recently-added/octopocus
   - recently-added/fix-and-float
-  - recently-added/toolglass
-  - recently-added/interactive-beautification
-  - recently-added/pick-and-drop
-  - recently-added/speech-as-search-input
