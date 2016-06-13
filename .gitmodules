@@ -1,0 +1,3 @@
+[submodule "kirby-cropper"]
+	path = site/fields/cropper
+	url = https://github.com/blankogmbh/kirby-cropper.git
