@@ -74,7 +74,7 @@ $(document).ready(function(){
     /* Save techniques in sidebar in a php collection */
     $("#save_collection_btn").click(function(e) {
         // Get collection title
-        var collection_title = normalizeString($(".sidebar-brand").html());
+        var collection_title = normalizeString($(".sidebar-brand").val());
         
         // Get collection technique
         var collection_techniques = new Array();
@@ -91,16 +91,13 @@ $(document).ready(function(){
             collection_techniques: collection_techniques
         };
         
-        console.log(collection);
         $.ajax({
             url: 'collection-creator',
             data: collection,
             success : function(response) {  
                 // TODO if (response === "Collection exists already"): error message.
-                console.log(response);
                 
                 if (response === "New collection was created.") {
-                    console.log("here");
                     window.location.href = "/interaction-museum/collections/" + collection_title.toLowerCase();
                 }
             }

@@ -1,4 +1,4 @@
-Title: New Collection
+Title: Collection Title
 
 ----
 
@@ -9,4 +9,4 @@ Creator: isha002
 Techniques: 
 
 - technique: Anchored Menu VR
-- technique: Boomerang
+- technique: Toolglass VR
