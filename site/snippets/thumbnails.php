@@ -17,8 +17,10 @@
             <a id="thumbnail-technique" href="<?php echo $technique->url() ?>">
                 <!-- TODO fix if there is no gif file in the folder -->
 
-				<img id="thumbnail-image" src="<?php echo $image->url();?>" alt=""
-				onmouseover="play(this);" onmouseout="stop(this);" class="
+				<img id="thumbnail-image" src="<?php echo $image->url() ?>" alt=""
+				onmouseover="play(this);" onmouseout="stop(this);">
+
+
 				<p id="thumbnail-title" class="caption"><?php echo $technique->title()->html() ?></p>
 			</a>
 		</div>
