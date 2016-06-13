@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - recently-added/semantic-pointing
-  - recently-added/dynaspot
-  - recently-added/multi-touch-gestures
+  - recently-added/thumbrock
   - recently-added/drag-and-pop
-  - recently-added/crossing
+  - recently-added/boomerang
+  - recently-added/toolglass-virtual-scene
+  - recently-added/anchored-menu-virtual-scene

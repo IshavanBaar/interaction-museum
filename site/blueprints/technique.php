@@ -35,12 +35,15 @@ fields:
 		type: tags
 		required: true
 	header-image:
-		label: Select a header image
-		type: selector
-		mode: single
-		autoselect: none
-		types: 
-			- image
+		label: Select a header image (GIF)
+		type: image
+	cropper:
+		label: Cropping Area
+		type: cropper
+		ratios:
+			- 16/9
+			label: portrait image
+			value: 2/3
 	extra-images:
 		label: Extra Images
 		type: selector

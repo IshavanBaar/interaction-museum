@@ -14,7 +14,7 @@
                 <!-- Menu -->
                 <?php snippet('menu')?>
 
-                <!-- Search bar -->
+                <!-- Search results -->
                 <?php snippet('search') ?>
 
                 <!-- All techniques -->
