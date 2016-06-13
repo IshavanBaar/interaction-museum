@@ -13,7 +13,7 @@ foreach($entries as $technique):
 	endif;
 ?>
 	<!-- THUMBNAIL LINK -->
-	<div class="col-md-4 col-sm-6">
+	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 		<div class="thumbnail">
             <!-- Button to add to collection -->
             <button class="btn btn-default add_to_collection_btn" type="submit">

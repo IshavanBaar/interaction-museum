@@ -109,7 +109,7 @@
     width: 300px;
     /*bottom: 25px;*/
     display: none;
-    padding-bottom: 25px;
+   line-height: 40px;
     z-index: 5;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .sidebar-brand[type=text]:focus {
-    border-bottom: 1px soldi white;
+    border-bottom: 1px solid white;
     border-right: 0px;
     border-left: 0px;
     border-top: 0px;

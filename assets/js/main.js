@@ -13,8 +13,15 @@ function stop(image) {
     // var JPG = image.src.replace('.gif', '.jpg');
     // image.src = JPG;
 }
+function windowSizeCheck(){
+    if($("#page-content-wrapper").width() < 1420){
+        $("#search-bar").removeClass("pull-right");
+        console.log("I'm here");
+    }
+}
 
 $(document).ready(function(){
+    
     
     /* Toggle sidebar */
     $(".create_collection").click(function(e) {
@@ -23,6 +30,8 @@ $(document).ready(function(){
         $(".add_to_collection_btn").css("display", "inline-block");
         $("#save_collection_btn").toggle();
         $("#discard_collection_btn").toggle();
+        windowSizeCheck();
+        console.log($("#page-content-wrapper").width());
     });
     
     /* Add technique to sidebar */
@@ -39,7 +48,7 @@ $(document).ready(function(){
         if ($("#" + identifier).length === 0) {
             $("#sidebar").append(
                 "<li id='" + identifier + "' class='col-xs-12'>" +
-                    "<div class='thumbnail'> <button class='btn btn-danger remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
+                    "<div class='thumbnail'> <button class='btn btn-warning remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
                         "<a href='" + thumbnail_URL + "'>" +
                             "<img src='" + thumbnail_image + "' alt=''" +
                             "onmouseover='play(this);' onmouseout='stop(this);'>" +
@@ -56,7 +65,7 @@ $(document).ready(function(){
         
         // Change add/remove button
         $(this).find("span").toggleClass("glyphicon-remove");
-        $(this).toggleClass("btn-danger"); 
+        $(this).toggleClass("btn-warning"); 
     });
     $(".remove_from_collection_btn").click(function(e) {
         $(this).parent().remove();

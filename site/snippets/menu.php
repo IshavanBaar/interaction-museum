@@ -1,44 +1,28 @@
 <nav class="navbar navbar-default navbar-top">
     <div class="container-fluid">
-        <div class="navbar-header col-md-10 col-sm-10">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <div class="navbar-header col-lg-10 col-md-9 col-sm-10">
+        <!-- hamburger menu -->
+           <!--  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>				
+            </button> -->
+        <!-- Interaction museum brand 		 -->
             <a class="navbar-brand" href="<?php echo url() ?>">Interaction Museum</a>
-            <!-- SEARCH BAR -->
+        <!-- menu if on mobile  -->
+            <div class="navbar-toggle collapsed"  data-toggle="collapse" id="mobile-menu" >
+              <ul class="nav navbar-nav" >
+                <?php snippet('menu-items')?>
+              </ul>
+            </div>
+        <!-- SEARCH BAR -->
             <?php snippet('search-bar')?>
         </div>
 
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <!-- SHOW VISIBLE PAGES -->
-            <?php foreach($pages->visible() as $p): ?>
-                <li>
-                  <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
-                </li>
-            <?php endforeach ?>
-            
-            <!-- ADD A COLLECTION -->  
-            <?php if($user = $site->user()): ?>  
-                <li>
-                  <a class="create_collection" href="">Add collection</a>
-                </li>
-            <?php endif; ?>  
-              
-            <!-- ACCOUNT NAME / LOGOUT -->
-            <?php if($user = $site->user()): ?>
-                <li>
-                  <a href="<?php echo url('account') ?>"><?php echo $user?></a>
-                </li>
-            <?php else: ?>
-                <li>
-                  <a href="<?php echo url('login') ?>">Login</a>
-                </li>
-            <?php endif; ?>
-
+            <?php snippet('menu-items')?>
           </ul>
         </div>
     </div>

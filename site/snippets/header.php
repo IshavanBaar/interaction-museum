@@ -23,7 +23,8 @@
             'assets/js/lib/jquery-1.12.3.js',
             'assets/js/lib/bootstrap.min.js',
             'assets/js/main.js',
+            'assets/js/lib/ResizeSensor.js',
+            'assets/js/lib/ElementQueries.js',
         ))?>
     </head>
     
-

@@ -217,12 +217,21 @@ p {
     position:absolute; 
     right:20px; 
 }
-@media (min-width: 1240px) {    
+#mobile-menu{
+    float: right;
+    margin: 0;
+    padding:  0 15px 0 0;
+
+}
+#mobile-menu ul > li{
+    float: left;
+}
+
+/*#page-content-wrapper[min-width~="400px"] {}*/
+
     .thumbnail a > img {
         min-height: 260px;
     }
-
-}
 
 @media (max-width: 1200px) {
     #video-hover{
