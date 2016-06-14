@@ -13,10 +13,10 @@
             <!-- BLUEPRINT TEXT -->
             <?php echo $page->text()->kirbytext() ?>
             
-            <!-- LOGOUT -->
-            <form action="<?php echo url('logout') ?>">
-                <input type="submit" value="Logout">
-            </form>
+             <!-- LOGOUT -->
+            <button class="btn btn-default btn-primary logout-btn">
+               Logout <span class="glyphicon glyphicon-log-out"></span>
+           </button>
         </div>
     </div>
 </body>

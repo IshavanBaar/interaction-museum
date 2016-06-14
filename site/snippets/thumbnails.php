@@ -1,9 +1,6 @@
 <!-- Puts entries in thumbnails-->
 <?php 
-if ($limit != -1) {
-    // TODO fix limit;
-    //$entries = $entries->limit($limit);
-}
+
 
 foreach($entries as $technique): 
 	if($technique->header_image()->isNotEmpty()):

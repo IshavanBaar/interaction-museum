@@ -1,9 +1,6 @@
 <!-- Header -->
 <?php snippet('header') ?>
 
-<body>
-
-    <div id="wrapper" class="toggled">
 
         <div id="sidebar-wrapper">
             <!-- Side bar -->
@@ -22,21 +19,24 @@
                 foreach ($collections as $collection) :
                 ?>
                     <div class="row">
-                        <!-- COLLECTION NAME -->
-                        <h1><?php echo $collection->title() ?></h1>
-            
-                        <!-- CREATED BY -->
-                        <p>Created by: <?php echo $collection->creator() ?></p>
+                        <div class="collectionText">
+                            <!-- COLLECTION NAME -->
+                            <h1><a href="<?php echo $collection->url() ?>"><?php echo $collection->title() ?></a></h1>
                 
-                        <?php snippet('techniques-in-collection', array('collection' => $collection, 'limit' => 3)); ?>
+                            <!-- CREATED BY -->
+                            <p>Created by: <?php echo $collection->creator() ?></p>
+                        </div>
+                     <ul id="light-slider-<?php echo $collection->uid()?>" class="slider">
+                     <?php snippet('techniques-in-collection', array('collection' => $collection, 'view' => "sliders")); ?>
+                     </ul>
                     </div>
+
                 <?php endforeach ?>
             
             </div>
 
         </div>
-    </div>
-</body>
+
 
 <!-- Footer -->
 <?php snippet('footer') ?>

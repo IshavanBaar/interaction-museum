@@ -256,6 +256,18 @@ p {
 .halfWidth{
     width: 50%;
 }
+/*login*/
+.loginField{
+    line-height: 2.5em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    padding: 0;
+}
+
+/*colleciton page*/
+.collectionText{
+    padding-left: 15px;
+}
 @media (max-width: 1200px) {
     #video-hover{
         font-size: 18px;

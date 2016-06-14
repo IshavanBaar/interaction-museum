@@ -14,10 +14,21 @@ function stop(image) {
     // image.src = JPG;
 }
 
+function activateSliders(){
+    
+    $('.slider').each(function(){
+        console.log("Sliders Activated");
+       var sliderId =  $(this).attr('id');
+       $("#" + sliderId).lightSlider({
+        pager: false, 
+        loop: true
+       });
+    });
+}
 
 function windowSizeCheck(sidebarSize){
-    if(($("#page-content-wrapper").outerWidth() - sidebarSize) <= 852){   
-         console.log($("#page-content-wrapper").width());
+    if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 852)){
+         // console.log($("#page-content-wrapper").width());
         console.log("I'm here");
         $('#menu').insertBefore('#search-bar');
         $('#menu').addClass('mobile-menu');
@@ -28,7 +39,7 @@ function windowSizeCheck(sidebarSize){
 }
 
 $(document).ready(function(){
-    
+    activateSliders();
     windowSizeCheck(0);
     /* Toggle sidebar */
     $(".create_collection").click(function(e) {
@@ -97,8 +108,9 @@ $(document).ready(function(){
             collection_title : collection_title, 
             collection_techniques: collection_techniques
         };
-        
+        console.log(collection);
         $.ajax({
+
             url: 'collection-creator',
             data: collection,
             success : function(response) {  
@@ -131,11 +143,18 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
+    // Log out routine
+    $(".logout-btn").click(function(e) {
+       window.location.href = "/interaction-museum/Logout"
+   });
+
+   
 });
 
 // String can contain characters and dashes (from spaces). No commas, or special characters.
 function normalizeString(inputString) {
     inputString = inputString.replace(/[^a-zA-Z0-9 ]/g,"");
+    inputString = inputString.toLowerCase();
     inputString = inputString.replace(/\s/g, "-");
     return inputString;
 }
