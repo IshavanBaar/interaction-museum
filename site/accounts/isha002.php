@@ -11,4 +11,3 @@ history:
   - recently-added/boomerang
   - recently-added/bubble-cursor
   - recently-added/octopocus
-  - recently-added/fix-and-float

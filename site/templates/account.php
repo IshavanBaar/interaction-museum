@@ -1,3 +1,6 @@
+<!-- Protect site for users that are not logged in -->
+<?php if(!$site->user()) go('/') ?>
+
 <?php snippet('header') ?>
 
 <!-- Menu -->
@@ -14,9 +17,10 @@
             <?php echo $page->text()->kirbytext() ?>
             
             <!-- LOGOUT -->
-            <form action="<?php echo url('logout') ?>">
-                <input type="submit" value="Logout">
-            </form>
+            <button class="btn btn-default btn-primary logout-btn">
+                Logout <span class="glyphicon glyphicon-log-out"></span>
+            </button>
+            
         </div>
     </div>
 </body>

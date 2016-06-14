@@ -45,20 +45,18 @@ c::set('roles', array(
   )
 ));
 
-// When logout URL is opened, call logout action method. 
 c::set('routes', array(
+  // When Logout URL is opened, call logout action method. Capitals for safety.
   array(
-    'pattern' => 'logout',
+    'pattern' => 'Logout',
     'action'  => function() {
       if($user = site()->user()) $user->logout();
       // Goes to home page now, but can be set to login.
 	  go('/');
     }
-  )
-));
-
-/* Omit 'recently-added' in the page URL */
-c::set('routes', array(
+  ),
+    
+  // Omit 'recently-added' in the page URL 
   array(
     'pattern' => '(:any)',
     'action'  => function($uid) {
@@ -76,16 +74,6 @@ c::set('routes', array(
     'pattern' => 'recently-added/(:any)',
     'action'  => function($uid) {
       go($uid);
-    }
-  )
-));
-
-// You can't access the collection-creator page
-c::set('routes', array(
-  array(
-    'pattern' => 'interaction-museum/collection-creator',
-    'action'  => function() {
-      return go('error');
     }
   )
 ));
