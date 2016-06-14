@@ -14,15 +14,15 @@ function stop(image) {
     // image.src = JPG;
 }
 function windowSizeCheck(){
-    if($("#page-content-wrapper").width() < 1420){
-        $("#search-bar").removeClass("pull-right");
-        console.log("I'm here");
+    if($("#page-content-wrapper").width() < 769){    
+        $('#menu').insertBefore('#search-bar');
+        $('#menu').addClass('mobile-menu');
     }
 }
 
 $(document).ready(function(){
     
-    
+    windowSizeCheck();
     /* Toggle sidebar */
     $(".create_collection").click(function(e) {
         e.preventDefault();
