@@ -128,7 +128,8 @@
 			
 		</div>
 	</div>
+
 </div>
+</div><!--  end page content wrapper -->
 
 <?php snippet('footer') ?>
-</div>

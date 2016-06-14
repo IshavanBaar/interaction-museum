@@ -1,0 +1,13 @@
+Title: Fitts Law
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: Crossing
+- technique: DragandPop
+- technique: DynaSpot
