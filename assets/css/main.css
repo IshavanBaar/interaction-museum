@@ -267,7 +267,9 @@ p {
 /*colleciton page*/
 .collectionText{
     padding-left: 15px;
+
 }
+
 @media (max-width: 1200px) {
     #video-hover{
         font-size: 18px;
