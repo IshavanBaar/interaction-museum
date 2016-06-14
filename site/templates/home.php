@@ -1,32 +1,30 @@
-    <!-- Header -->
-    <?php snippet('header') ?>
+<!-- Header -->
+<?php snippet('header') ?>
 
-    <body>
+<body>
 
-        <div id="wrapper" class="toggled">
-            
-            <div id="sidebar-wrapper">
-                <!-- Side bar -->
-                <?php snippet('sidebar')?>
-            </div>   
+    <div id="wrapper" class="toggled">
 
-            <div id="page-content-wrapper">
-                <!-- Menu -->
-                <?php snippet('menu')?>
+        <div id="sidebar-wrapper">
+            <!-- Side bar -->
+            <?php snippet('sidebar')?>
+        </div>   
 
-                <!-- Search results -->
-                <?php snippet('search') ?>
+        <div id="page-content-wrapper">
+            <!-- Menu -->
+            <?php snippet('menu')?>
 
-                <!-- All techniques -->
-                <?php snippet('recently-added') ?>
-            </div>
+            <!-- Search results -->
+            <?php snippet('search') ?>
+
+            <!-- All techniques -->
+            <?php snippet('recently-added') ?>
         </div>
-    </body>
+    </div>
+</body>
 
-    <!-- Footer -->
-    <?php snippet('footer') ?>
-
-</div>
+<!-- Footer -->
+<?php snippet('footer') ?>
 
 
 
