@@ -5,10 +5,10 @@
     </li>
 <?php endforeach ?>
 
-<!-- ADD A COLLECTION -->  
+<!-- CREATE A NEW COLLECTION -->  
 <?php if($user = $site->user()): ?>  
     <li>
-      <a class="create_collection" href="">New collection</a>
+      <a class="new_collection" href="">New collection</a>
     </li>
 <?php endif; ?>  
   

@@ -18,12 +18,7 @@ foreach($entries as $technique):
 	            </button>
 	            
 	            <a id="thumbnail-technique" href="<?php echo $technique->uid() ?>">
-	                <!-- TODO fix if there is no gif file in the folder -->
-
-					<img id="thumbnail-image" src="<?php echo $image->url() ?>" alt=""
-					onmouseover="play(this);" onmouseout="stop(this);">
-
-
+					<img id="thumbnail-image" src="<?php echo $image->url() ?>" alt="">
 					<p id="thumbnail-title" class="caption"><?php echo $technique->title()->html() ?></p>
 				</a>
 			</div>
