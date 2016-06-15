@@ -1,18 +1,3 @@
-/* Replaces the JPG image for a GIF. */
-function play(image) {
-    // var GIF = image.src.replace('.jpg', '.gif');
-    // image.src = GIF;
-
-    // I tried a border, but it is not working.
-    //image.classList.remove('stopping');
-    //image.classList.add('playing');
-}
-
-/* Replaces the GIF image for a JPG. */
-function stop(image) {
-    // var JPG = image.src.replace('.gif', '.jpg');
-    // image.src = JPG;
-}
 
 function activateSliders(){
     
@@ -28,8 +13,6 @@ function activateSliders(){
 
 function windowSizeCheck(sidebarSize){
     if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 852)){
-         // console.log($("#page-content-wrapper").width());
-        console.log("I'm here");
         $('#menu').insertBefore('#search-bar');
         $('#menu').addClass('mobile-menu');
         $('#search-bar').addClass('fullWidth');
@@ -39,8 +22,10 @@ function windowSizeCheck(sidebarSize){
 }
 
 $(document).ready(function(){
+
     activateSliders();
     windowSizeCheck(0);
+
     /* Toggle sidebar */
     $(".create_collection").click(function(e) {
         e.preventDefault();
@@ -49,81 +34,61 @@ $(document).ready(function(){
         $("#save_collection_btn").toggle();
         $("#discard_collection_btn").toggle();
         windowSizeCheck(300);
-        console.log($("#page-content-wrapper").width());
     });
     
-    /* Add technique to sidebar */
-    $(".add_to_collection_btn").click(function(e) {
-        // Get information of clicked thumbnail.
-        var thumbnail = $(this).parent();
-        var thumbnail_title = thumbnail.find("#thumbnail-title").html();
-        var thumbnail_URL = thumbnail.find("#thumbnail-technique").attr("href");      
-        var thumbnail_image = thumbnail.find("#thumbnail-image").attr("src");
-
-        var identifier = normalizeString(thumbnail_title).toLowerCase() + "-sidebar";
-        
-        // If not already in HTML, add it.
-        if ($("#" + identifier).length === 0) {
-            $("#sidebar").append(
-                "<li id='" + identifier + "' class='col-xs-12'>" +
-                    "<div class='thumbnail'> <button class='btn btn-warning remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
-                        "<a href='" + thumbnail_URL + "'>" +
-                            "<img src='" + thumbnail_image + "' alt=''" +
-                            "onmouseover='play(this);' onmouseout='stop(this);'>" +
-                            "<p class='caption'>" + thumbnail_title + "</p>" +
-                        "</a>" +
-                    "</div>" +
-                "</li>"
-            );   
-        } 
-        // If already in there, remove it.
-        else {
-            $("#" + identifier).remove();
-        }
-        
-        // Change add/remove button
-        $(this).find("span").toggleClass("glyphicon-remove");
-        $(this).toggleClass("btn-warning"); 
+    // Add to/Remove from sidebar 
+    $('body').on('click', '.add_to_collection_btn', function () {
+        addToCollection($(this));
     });
-    $(".remove_from_collection_btn").click(function(e) {
-        $(this).parent().remove();
-      
+    
+    $('body').on('click', '.remove_from_collection_btn', function () {
+        removeFromCollection($(this));
     });
+    
     /* Save techniques in sidebar in a php collection */
     $("#save_collection_btn").click(function(e) {
         // Get collection title
-        var collection_title = normalizeString($(".sidebar-brand").val());
+        var collection_title = $(".sidebar-brand").val();
         
         // Get collection technique
         var collection_techniques = new Array();
+        var moreThanZero = false;
         $('#sidebar li').each(function() {
-            var technique = normalizeString($(this).find(".caption").html());
-            collection_techniques.push(technique);
+            moreThanZero = true;
+            var identifier = $(this).find("div[id*='-sidebar']").attr("id").replace("-sidebar","");
+            collection_techniques.push(identifier);
         });
         
-        // TODO if no selected techniques: error message.
-        
-        // Send to php as a normalized string with two arguments.
+        // Send to php in an array
         var collection = {
             collection_title : collection_title, 
             collection_techniques: collection_techniques
         };
-        console.log(collection);
-        $.ajax({
 
-            url: 'collection-creator',
-            data: collection,
-            success : function(response) {  
-                // TODO if (response === "Collection exists already"): error message.
-                
-                if (response === "New collection was created.") {
-                    window.location.href = "/interaction-museum/collections/" + collection_title.toLowerCase();
-                }
-            }
-        });
         
+        if (moreThanZero === true) {
+            $.ajax({
+                url: 'collection-creator',
+                data: collection,
+                success : function(response) {  
+                    // TODO error message for response === "Collection exists already"
+                    console.log(response);
+                    if (response.indexOf("Created collection:") > -1) {
+                        var collection_uid = response.replace("Created collection:", "");
+                        window.location.href = "/interaction-museum/collections/" + collection_uid;
+                    }
+                }
+            });
+        } else {
+            // TODO error message for no selected technique
+        }
     });
 	
+    // Log out routine
+    $(".logout-btn").click(function(e) {
+        window.location.href = "/interaction-museum/Logout"
+    });
+    
     /* Video / GIF hover */
 	$("#video-hover").hide();
 
@@ -143,18 +108,80 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
-    // Log out routine
-    $(".logout-btn").click(function(e) {
-       window.location.href = "/interaction-museum/Logout"
-   });
 
-   
 });
 
-// String can contain characters and dashes (from spaces). No commas, or special characters.
-function normalizeString(inputString) {
-    inputString = inputString.replace(/[^a-zA-Z0-9 ]/g,"");
+// Add technique to sidebar
+function addToCollection(element) {
+    // Get information of clicked thumbnail.
+    var thumbnail = element.parent();
+    var identifier = thumbnail.attr("id").replace("-thumbnail","");
+    var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
+    var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();
+
+    // Add it to the HTML
+    $("#sidebar").append(
+        "<li class='col-xs-12'>" +
+            "<div id='" + identifier + "-sidebar' class='thumbnail'>" +    
+                "<button class='btn btn-warning remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
+                "<a href='" + identifier + "'>" +
+                    "<img src='" + thumbnail_image + "' alt='' >" +
+                    "<p class='caption'>" + thumbnail_title + "</p>" +
+                "</a>" +
+            "</div>" +
+        "</li>"
+    );   
+
+    toggleButton(element, "add");        
+};
+
+// Remove technique from sidebar
+function removeFromCollection(element) {
+    var identifier = element.parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+    $("#" + identifier + "-sidebar").remove();
+
+    toggleButton(element, "remove");
+}
+
+// Toggle add/remove button and classes for technique.
+function toggleButton(element, addOrRemove) {
+    if(addOrRemove === "add") {
+        element.removeClass("add_to_collection_btn"); 
+        element.addClass("remove_from_collection_btn"); 
+    } else if (addOrRemove === "remove") {
+        element.removeClass("remove_from_collection_btn"); 
+        element.addClass("add_to_collection_btn"); 
+    }
+
+    element.find("span").toggleClass("glyphicon-remove");
+    element.toggleClass("btn-warning"); 
+}
+
+// String can contain latin characters, apostrophes and dashes (also from spaces). No commas, or special characters.
+/*
+function normalizeString(inputString, lettercase) {
+    inputString = inputString.latinize();
+    inputString = inputString.replace(/[^a-zA-Z0-9\'\- ]/g,"");
+>>>>>>> refs/remotes/origin/master
     inputString = inputString.toLowerCase();
     inputString = inputString.replace(/\s/g, "-");
     return inputString;
 }
+*/
+
+/* --------------------- MOUSE HOVER --------------------- */
+/*// Replaces the JPG image for a GIF. 
+function play(image) {
+     var GIF = image.src.replace('.jpg', '.gif');
+     image.src = GIF;
+
+     I tried a border, but it is not working.
+    image.classList.remove('stopping');
+    image.classList.add('playing');
+}
+
+// Replaces the GIF image for a JPG. 
+function stop(image) {
+     var JPG = image.src.replace('.gif', '.jpg');
+     image.src = JPG;
+}*/

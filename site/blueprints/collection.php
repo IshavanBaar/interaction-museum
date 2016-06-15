@@ -9,11 +9,6 @@ fields:
   creator:
     label: Created by
     type: user
-  test:
-    label: Test
-    type: subpage
-    parent: recently-added
-    default: recently-added/
   techniques:
     label: Techniques in this collection
     type: structure
@@ -22,4 +17,5 @@ fields:
     fields:
         technique:
             label: Technique
-            type: text
+            type: subpage
+            parent: recently-added

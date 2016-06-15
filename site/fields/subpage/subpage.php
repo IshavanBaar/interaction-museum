@@ -21,7 +21,7 @@ class SubpageField extends PageField {
         'pattern' => 'autocomplete/(:all)',
         'method'  => 'post',
         'action'  => function($parent) {
-          $ids = page($parent)->children()->pluck('id');
+          $ids = page($parent)->children()->pluck('uid');
           
           return response::json(array('data' => $ids));
         }
