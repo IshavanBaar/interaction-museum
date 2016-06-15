@@ -15,6 +15,7 @@
             'assets/css/bootstrap.css',
             'assets/css/main.css',
             'assets/css/simple-sidebar.css',
+            'assets/css/lightslider.css',
         ))?>
 
         <!-- JS -->	
@@ -22,9 +23,11 @@
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
             'assets/js/lib/jquery-1.12.3.js',
             'assets/js/lib/bootstrap.min.js',
+            'assets/js/lib/lightslider.js',
             'assets/js/main.js',
-            'assets/js/lib/ResizeSensor.js',
-            'assets/js/lib/ElementQueries.js',
+            // 'assets/js/lib/ResizeSensor.js',
+            // 'assets/js/lib/ElementQueries.js',
         ))?>
     </head>
-    
+    <body>
+    <div id="wrapper" class="toggled">

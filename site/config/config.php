@@ -46,34 +46,34 @@ c::set('roles', array(
 ));
 
 c::set('routes', array(
-  // When Logout URL is opened, call logout action method. Capitals for safety.
-  array(
-    'pattern' => 'Logout',
-    'action'  => function() {
-      if($user = site()->user()) $user->logout();
-      // Goes to home page now, but can be set to login.
-	  go('/');
-    }
-  ),
-    
-  // Omit 'recently-added' in the page URL 
-  array(
-    'pattern' => '(:any)',
-    'action'  => function($uid) {
+ // When Logout URL is opened, call logout action method. Capitals for safety.
+ array(
+   'pattern' => 'Logout',
+   'action'  => function() {
+     if($user = site()->user()) $user->logout();
+     // Goes to home page now, but can be set to login.
+      go('/');
+   }
+ ),
+   
+ // Omit 'recently-added' in the page URL 
+ array(
+   'pattern' => '(:any)',
+   'action'  => function($uid) {
 
-      $page = page($uid);
+     $page = page($uid);
 
-      if(!$page) $page = page('recently-added/' . $uid);
-      if(!$page) $page = site()->errorPage();
+     if(!$page) $page = page('recently-added/' . $uid);
+     if(!$page) $page = site()->errorPage();
 
-      return site()->visit($page);
+     return site()->visit($page);
 
-    }
-  ),
-  array(
-    'pattern' => 'recently-added/(:any)',
-    'action'  => function($uid) {
-      go($uid);
-    }
-  )
+   }
+ ),
+ array(
+   'pattern' => 'recently-added/(:any)',
+   'action'  => function($uid) {
+     go($uid);
+   }
+ )
 ));

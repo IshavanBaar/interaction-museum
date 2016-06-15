@@ -1,42 +1,41 @@
 <!-- Header -->
 <?php snippet('header') ?>
 
-<body>
 
-    <div id="wrapper" class="toggled">
+<div id="sidebar-wrapper">
+    <!-- Side bar -->
+    <?php snippet('sidebar')?>
+</div>   
 
-        <div id="sidebar-wrapper">
-            <!-- Side bar -->
-            <?php snippet('sidebar')?>
-        </div>   
+<div id="page-content-wrapper">
+    <!-- Menu -->
+    <?php snippet('menu')?>
 
-        <div id="page-content-wrapper">
-            <!-- Menu -->
-            <?php snippet('menu')?>
-
-            <!-- All collections -->
-            <div class="container-fluid">
+    <!-- All collections -->
+    <div class="container-fluid">
+        
+        <?php 
+        $collections = page('collections')->children()->sortBy('modified', 'desc')->limit(15);            
+        foreach ($collections as $collection) :
+        ?>
+            <div class="row">
                 
-                <?php 
-                $collections = page('collections')->children()->sortBy('modified', 'desc')->limit(15);            
-                foreach ($collections as $collection) :
-                ?>
-                    <div class="row">
-                        <!-- COLLECTION NAME -->
-                        <h1><?php echo $collection->title() ?></h1>
+                <a href="<?php echo $collection->url() ?>">  
+                <h1 class="collectionText col-lg-10"><?php echo $collection->title() ?> ( <?php echo $collection->techniques()->toStructure()->count()?> )</h1>
+                <button class="btn btn-primary col-lg-2">Show All</button></a>
+                </div>
+                 <ul id="light-slider-<?php echo $collection->uid()?>" class="slider">
+                    <?php snippet('techniques-in-collection', array('collection' => $collection, 'view' => "sliders")); ?>
+                 </ul>
             
-                        <!-- CREATED BY -->
-                        <p>Created by: <?php echo $collection->creator() ?></p>
-                
-                        <?php snippet('techniques-in-collection', array('collection' => $collection, 'limit' => 3)); ?>
-                    </div>
-                <?php endforeach ?>
-            
-            </div>
+            <hr>
 
-        </div>
+        <?php endforeach ?>
+    
     </div>
-</body>
+
+</div>
+
 
 <!-- Footer -->
 <?php snippet('footer') ?>

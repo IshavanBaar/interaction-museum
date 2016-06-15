@@ -1,4 +1,4 @@
-    <hr>
+
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="row">
@@ -9,6 +9,8 @@
                     <?php echo $site->authors()->kirbytext() ?>		
                 </div>
             </div>
-        </div>
+        </div> <!-- end container footer -->
     </footer>
+    </div> <!-- end wrapper-->
+    </body>
 </html>

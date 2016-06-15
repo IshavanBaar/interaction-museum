@@ -1,6 +1,3 @@
-<!-- Protect site for users that are not logged in -->
-<?php if(!$site->user()) go('/') ?>
-
 <?php snippet('header') ?>
 
 <!-- Menu -->
@@ -16,11 +13,10 @@
             <!-- BLUEPRINT TEXT -->
             <?php echo $page->text()->kirbytext() ?>
             
-            <!-- LOGOUT -->
+             <!-- LOGOUT -->
             <button class="btn btn-default btn-primary logout-btn">
-                Logout <span class="glyphicon glyphicon-log-out"></span>
-            </button>
-            
+               Logout <span class="glyphicon glyphicon-log-out"></span>
+           </button>
         </div>
     </div>
 </body>
