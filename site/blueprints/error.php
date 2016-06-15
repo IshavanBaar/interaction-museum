@@ -3,6 +3,9 @@
 title: Error
 pages: false
 files: false
+options:
+  deletable: false
+  hide: true
 fields:
   title:
     label: Title
