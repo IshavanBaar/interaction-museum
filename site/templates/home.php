@@ -16,7 +16,7 @@
         <?php snippet('search') ?>
 
         <!-- All techniques -->
-        <?php snippet('recently-added') ?>
+        <?php snippet('all-techniques') ?>
     </div>
 
 

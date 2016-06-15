@@ -11,7 +11,7 @@
         <!-- CREATED BY -->
         <p>Created by: <?php echo $page->creator() ?></p>
         <!-- number of techniques -->
-        <p><?php echo $page->techniques()->toStructure()->count()?> techniques</p>
+        <p>Includes: <?php echo $page->techniques()->toStructure()->count()?> techniques</p>
     </div>
     <!-- GET TECHNIQUES -->       
     <?php snippet('techniques-in-collection', array('collection' => $page, 'view' => "columns"))?>

@@ -15,7 +15,7 @@
     <div class="container-fluid">
         
         <?php 
-        $collections = page('collections')->children()->sortBy('modified', 'desc')->limit(15);            
+        $collections = page('all-collections')->children()->sortBy('modified', 'desc')->limit(15);            
         foreach ($collections as $collection) :
         ?>
             <!-- TITLE, CREATOR, SHOW ALL -->

@@ -21,11 +21,11 @@ if(kirby()->request()->ajax()) {
     
     // Add to collection, if not existing
     try {
-        if (page('collections')->children()->has('collections/' . $collection_uid)) {
+        if (page('all-collections')->children()->has('all-collections/' . $collection_uid)) {
             echo "Collection exists already";
         } else {
             // Create new page with the new technique.
-            page('collections')->children()->create($collection_uid, 'collection', array(
+            page('all-collections')->children()->create($collection_uid, 'collection', array(
                 'title' => $collection_title,
                 'creator' => $site->user()->current(),
                 'techniques' => $collection_techniques_structure
