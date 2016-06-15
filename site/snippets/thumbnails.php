@@ -1,7 +1,5 @@
 <!-- Puts entries in thumbnails-->
 <?php 
-
-
 foreach($entries as $technique): 
 	$identifier = $technique->uid(); 
     if($technique->header_image()->isNotEmpty()):
