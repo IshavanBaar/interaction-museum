@@ -1,5 +1,4 @@
 <?php snippet('header') ?>
-<div id="page-content-wrapper">
 <?php snippet('menu') ?>
 			<!-- ENTRY FIELDS -->
 			<?php 
@@ -128,7 +127,7 @@
 			
 		</div>
 	</div>
+
 </div>
 
 <?php snippet('footer') ?>
-</div>

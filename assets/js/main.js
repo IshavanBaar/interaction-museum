@@ -1,14 +1,31 @@
-function windowSizeCheck(){
-    if($("#page-content-wrapper").width() < 769){    
+
+function activateSliders(){
+    
+    $('.slider').each(function(){
+        console.log("Sliders Activated");
+       var sliderId =  $(this).attr('id');
+       $("#" + sliderId).lightSlider({
+        pager: false, 
+        loop: true
+       });
+    });
+}
+
+function windowSizeCheck(sidebarSize){
+    if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 852)){
         $('#menu').insertBefore('#search-bar');
         $('#menu').addClass('mobile-menu');
+        $('#search-bar').addClass('fullWidth');
+        $('#menu').addClass('halfWidth');
+        $('.navbar-header').addClass('halfWidth');
     }
 }
 
 $(document).ready(function(){
-    
-    windowSizeCheck();
-    
+
+    activateSliders();
+    windowSizeCheck(0);
+
     /* Toggle sidebar */
     $(".create_collection").click(function(e) {
         e.preventDefault();
@@ -16,7 +33,7 @@ $(document).ready(function(){
         $(".add_to_collection_btn").css("display", "inline-block");
         $("#save_collection_btn").toggle();
         $("#discard_collection_btn").toggle();
-        windowSizeCheck();
+        windowSizeCheck(300);
     });
     
     // Add to/Remove from sidebar 
@@ -47,6 +64,7 @@ $(document).ready(function(){
             collection_title : collection_title, 
             collection_techniques: collection_techniques
         };
+
         
         if (moreThanZero === true) {
             $.ajax({
@@ -90,6 +108,7 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
+
 });
 
 // Add technique to sidebar
@@ -143,6 +162,7 @@ function toggleButton(element, addOrRemove) {
 function normalizeString(inputString, lettercase) {
     inputString = inputString.latinize();
     inputString = inputString.replace(/[^a-zA-Z0-9\'\- ]/g,"");
+>>>>>>> refs/remotes/origin/master
     inputString = inputString.toLowerCase();
     inputString = inputString.replace(/\s/g, "-");
     return inputString;

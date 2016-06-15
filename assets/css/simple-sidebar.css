@@ -158,9 +158,9 @@
     font-size: 1em;
 }
 
-.placeholder-fix:focus::-webkit-input-placeholder  {color:transparent;}
-.placeholder-fix:focus::-moz-placeholder   {color:transparent;}
-.placeholder-fix:-moz-placeholder   {color:transparent;}
+.placeholder-fix:focus::-webkit-input-placeholder  {color:transparent !important;}
+.placeholder-fix:focus::-moz-placeholder   {color:transparent !important;}
+.placeholder-fix:-moz-placeholder   {color:transparent !important;}
 
 @media(min-width:1px) {
     #wrapper {
