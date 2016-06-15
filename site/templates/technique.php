@@ -1,4 +1,10 @@
 <?php snippet('header') ?>
+<div id="sidebar-wrapper">
+    <!-- Side bar -->
+    <?php snippet('sidebar')?>
+</div>   
+
+<div id="page-content-wrapper">
 <?php snippet('menu') ?>
 			<!-- ENTRY FIELDS -->
 			<?php 
@@ -128,6 +134,7 @@
 		</div>
 	</div>
 
+</div>
 </div>
 
 <?php snippet('footer') ?>

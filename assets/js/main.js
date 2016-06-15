@@ -22,7 +22,7 @@ function windowSizeCheck(sidebarSize){
     }
 }
 var techniques = {}; 
-sessionStorage.techniquesNumber = 0;
+
 $(document).ready(function(){
     
     activateSliders();
@@ -31,7 +31,9 @@ $(document).ready(function(){
     /* Toggle sidebar */
 
     $('body').on('click', '.new_collection', function (e) {
-        toggleSidebar(e);
+        e.preventDefault();
+        sessionStorage.title = "";
+        toggleSidebar();
     });
     
     // Add to/Remove from sidebar 
@@ -49,7 +51,10 @@ $(document).ready(function(){
     
     $('body').on('click', '#discard_collection_btn', function (e) {
         // TODO Reset
-        toggleSidebar(e);
+        for ( key in techniques){
+            removeFromCollection(key);
+        }
+
     });
 	
     // Log out routine
@@ -76,6 +81,16 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
+    //if a collection was in the making
+    if(!isEmpty(JSON.parse(sessionStorage['techniques']))){
+        techniques = JSON.parse(sessionStorage['techniques']);      
+        for ( key in techniques){
+            appendTechnique(key, techniques[key].image, techniques[key].title);
+        }
+        toggleSidebar();
+    }else{
+        console.log("no techniques");
+    }
 
 });
 
@@ -86,43 +101,31 @@ function addToCollection(element) {
     var identifier = thumbnail.attr("id").replace("-thumbnail","");
     var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
     var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();
-    sessionStorage.techniquesNumber++;
+    
     // sessionStorage.setItem(sessionStorage.length, JSON.stringify(parsedResult.ListaPermessi));
-    techniques[identifier + "-" + sessionStorage.techniquesNumber] = {
+    techniques[identifier] = {
         id: identifier,
         image: thumbnail_image,
         title: thumbnail_title
     }
     sessionStorage['techniques'] = JSON.stringify(techniques);
-
     console.log(JSON.parse(sessionStorage['techniques']));
     // Add it to the HTML
-    $("#sidebar").append(
-        "<li class='col-xs-12'>" +
-            "<div id='" + identifier + "-sidebar' class='thumbnail'>" +    
-                "<button class='btn btn-warning remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
-                "<a href='" + identifier + "'>" +
-                    "<img src='" + thumbnail_image + "' alt='' >" +
-                    "<p class='caption'>" + thumbnail_title + "</p>" +
-                "</a>" +
-            "</div>" +
-        "</li>"
-    );   
-
+    appendTechnique(identifier, thumbnail_image, thumbnail_title);
     // Toggle thumbnail button
     toggleButton(element, "remove");        
 };
 
 // Remove technique from sidebar
-function removeFromCollection(element) {
-    var element_id = element.parent().attr('id');
-    var identifier = element_id.replace("-thumbnail","").replace("-sidebar","");
-    
+function removeFromCollection(id) {
+    //deletes it from session storage 
+    delete techniques[id];
+    sessionStorage['techniques'] = JSON.stringify(techniques);
     // Toggle thumbnail button
-    toggleButton($("#" + identifier + "-btn"), "add");
+    toggleButton($("#" + id + "-btn"), "add");
     
     // Remove from sidebar
-    $("#" + identifier + "-sidebar").remove();
+    $("#" + id + "-sidebar").remove();
 }
 
 // Toggle button to be set to the addOrRemove value.
@@ -131,7 +134,7 @@ function toggleButton(element, addOrRemove) {
         element.removeClass("add_to_collection_btn"); 
         element.addClass("remove_from_collection_btn"); 
     } else if (addOrRemove === "add") {
-        console.log(element);
+        // console.log(element);
         element.removeClass("remove_from_collection_btn"); 
         element.addClass("add_to_collection_btn"); 
     }
@@ -140,10 +143,7 @@ function toggleButton(element, addOrRemove) {
     element.toggleClass("btn-warning"); 
 }
 
-function toggleSidebar(e) {
-    e.preventDefault();
-    sessionStorage.title = "";
-    console.log(sessionStorage);
+function toggleSidebar() {
     $("#wrapper").toggleClass("toggled");
     $(".add_to_collection_btn").css("display", "inline-block");
     $("#save_collection_btn").toggle();
@@ -186,4 +186,38 @@ function saveCollection(element) {
     } else {
         // TODO error message for no selected technique
     }
+}
+ 
+function appendTechnique(id, image, title){
+    $("#sidebar").append(
+        "<li class='col-xs-12'>" +
+            "<div id='" + id + "-sidebar' class='thumbnail'>" +    
+                "<button class='btn btn-warning remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
+                "<a href='" + id + "'>" +
+                    "<img src='" + image + "' alt='' >" +
+                    "<p class='caption'>" + title + "</p>" +
+                "</a>" +
+            "</div>" +
+        "</li>"
+    ); 
+}
+
+function isEmpty(obj) {
+
+    // null and undefined are "empty"
+    if (obj == null) return true;
+
+    // Assume if it has a length property with a non-zero value
+    // that that property is correct.
+    if (obj.length > 0)    return false;
+    if (obj.length === 0)  return true;
+
+    // Otherwise, does it have any properties of its own?
+    // Note that this doesn't handle
+    // toString and valueOf enumeration bugs in IE < 9
+    for (var key in obj) {
+        if (hasOwnProperty.call(obj, key)) return false;
+    }
+
+    return true;
 }
