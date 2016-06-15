@@ -26,10 +26,6 @@ Try-out: http://www.patrickbaudisch.com/projects/dragandpop/demo/dragandpop.swf
 
 ----
 
-Related-page: recently-added/
-
-----
-
 Related-publications: 
 
 - 

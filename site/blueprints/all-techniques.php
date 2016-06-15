@@ -3,7 +3,7 @@
 title: Page
 pages: true
 files: false
-hide: true
+icon: hand-pointer-o
 options:
   preview: false
   status: false
@@ -14,3 +14,4 @@ fields:
   title:
     label: Title
     type:  text
+    readonly: true

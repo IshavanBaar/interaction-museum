@@ -26,10 +26,6 @@ Try-out:
 
 ----
 
-Related-page: recently-added/bubble-cursor
-
-----
-
 Related-publications: 
 
 - 

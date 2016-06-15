@@ -1,4 +1,5 @@
-
+var techniques = {}; 
+sessionStorage.techniquesNumber = 0;
 
 function activateSliders(){
     
@@ -21,13 +22,12 @@ function windowSizeCheck(sidebarSize){
         $('.navbar-header').addClass('halfWidth');
     }
 }
-var techniques = {}; 
-sessionStorage.techniquesNumber = 0;
+
 $(document).ready(function(){
     
     activateSliders();
     windowSizeCheck(0);
-    console.log(sessionStorage);
+    
     /* Toggle sidebar */
 
     $('body').on('click', '.new_collection', function (e) {
@@ -180,7 +180,7 @@ function saveCollection(element) {
                 console.log(response);
                 if (response.indexOf("Created collection:") > -1) {
                     var collection_uid = response.replace("Created collection:", "");
-                    window.location.href = "/interaction-museum/collections/" + collection_uid;
+                    window.location.href = "/interaction-museum/all-collections/" + collection_uid;
                 }
             }
         });
