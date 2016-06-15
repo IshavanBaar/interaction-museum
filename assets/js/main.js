@@ -40,6 +40,7 @@ $(document).ready(function(){
         removeFromCollection($(this));
     });
     
+    // Save/Discard collection
     $('body').on('click', '#save_collection_btn', function () {
         saveCollection($(this));
     });
