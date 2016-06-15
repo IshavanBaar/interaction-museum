@@ -10,8 +10,14 @@
 
                 <!-- ERROR MESSAGE -->
                 <?php if($error): ?>
-                    <div class="alert"><?php echo $page->alert()->html() ?></div>
+                    <div class="alert alert-danger" role="alert">
+                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                      <span class="sr-only">Error:</span>
+                      <?php echo $page->alert()->html() ?>
+                    </div>
                 <?php endif ?>
+
+                
                 <!-- TODO styling of the form -->
                 <form method="post">
                     <div class="col-xs-12 loginField">

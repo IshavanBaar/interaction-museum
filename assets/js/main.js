@@ -1,4 +1,5 @@
 
+
 function activateSliders(){
     
     $('.slider').each(function(){
@@ -20,15 +21,18 @@ function windowSizeCheck(sidebarSize){
         $('.navbar-header').addClass('halfWidth');
     }
 }
-
+var techniques = {}; 
+sessionStorage.techniquesNumber = 0;
 $(document).ready(function(){
-
+    
     activateSliders();
     windowSizeCheck(0);
-
+    console.log(sessionStorage);
     /* Toggle sidebar */
     $(".create_collection").click(function(e) {
         e.preventDefault();
+        sessionStorage.title = "";
+        console.log(sessionStorage);
         $("#wrapper").toggleClass("toggled");
         $(".add_to_collection_btn").css("display", "inline-block");
         $("#save_collection_btn").toggle();
@@ -118,7 +122,16 @@ function addToCollection(element) {
     var identifier = thumbnail.attr("id").replace("-thumbnail","");
     var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
     var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();
+    sessionStorage.techniquesNumber++;
+    // sessionStorage.setItem(sessionStorage.length, JSON.stringify(parsedResult.ListaPermessi));
+    techniques[identifier + "-" + sessionStorage.techniquesNumber] = {
+        id: identifier,
+        image: thumbnail_image,
+        title: thumbnail_title
+    }
+    sessionStorage['techniques'] = JSON.stringify(techniques);
 
+    console.log(JSON.parse(sessionStorage['techniques']));
     // Add it to the HTML
     $("#sidebar").append(
         "<li class='col-xs-12'>" +
@@ -139,7 +152,6 @@ function addToCollection(element) {
 function removeFromCollection(element) {
     var identifier = element.parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
     $("#" + identifier + "-sidebar").remove();
-
     toggleButton(element, "remove");
 }
 
