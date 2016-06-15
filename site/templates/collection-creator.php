@@ -13,7 +13,7 @@ if(kirby()->request()->ajax()) {
     
     // TITLE + UID
     $collection_title = kirby()->request()->get('collection_title');
-    $collection_uid = str_replace(" ","-", strtolower(strtr($collection_title, $unwanted_accents))); 
+    $collection_uid = preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(" ","-", strtolower(strtr($collection_title, $unwanted_accents)))); 
     
     // TECHNIQUES + STRUCTURE 
     $collection_techniques = kirby()->request()->get('collection_techniques');

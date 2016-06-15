@@ -77,8 +77,7 @@
 			<!-- HEADER IMAGE -->
 			<?php if($page->header_image()->isNotEmpty()): ?>	
 				<figure>
-					<img id="header_image" src="<?php echo $header_image->url();?>" alt="" class="col-xs-12"
-					onmouseover="play(this);" onmouseout="stop(this);">
+					<img id="header_image" src="<?php echo $header_image->url();?>" alt="" class="col-xs-12">
 				</figure>
 			<?php endif ?>
 			</div>
