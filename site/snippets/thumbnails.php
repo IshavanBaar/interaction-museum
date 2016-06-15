@@ -12,7 +12,7 @@ foreach($entries as $technique):
 	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 		<div class="thumbnail" id="<?php echo $identifier?>-thumbnail">
             <!-- Button to add to collection -->
-            <button class="btn btn-default add_to_collection_btn" type="submit">
+            <button id="<?php echo $identifier?>-btn" class="btn btn-default add_to_collection_btn" type="submit">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
             

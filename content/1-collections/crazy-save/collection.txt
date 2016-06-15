@@ -1,0 +1,12 @@
+Title: crazy save
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- technique: anchored-menu-vr
+- technique: toolglass-vr

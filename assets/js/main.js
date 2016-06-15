@@ -27,13 +27,8 @@ $(document).ready(function(){
     windowSizeCheck(0);
 
     /* Toggle sidebar */
-    $(".create_collection").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $(".add_to_collection_btn").css("display", "inline-block");
-        $("#save_collection_btn").toggle();
-        $("#discard_collection_btn").toggle();
-        windowSizeCheck(300);
+    $('body').on('click', '.new_collection', function (e) {
+        toggleSidebar(e);
     });
     
     // Add to/Remove from sidebar 
@@ -45,43 +40,13 @@ $(document).ready(function(){
         removeFromCollection($(this));
     });
     
-    /* Save techniques in sidebar in a php collection */
-    $("#save_collection_btn").click(function(e) {
-        // Get collection title
-        var collection_title = $(".sidebar-brand").val();
-        
-        // Get collection technique
-        var collection_techniques = new Array();
-        var moreThanZero = false;
-        $('#sidebar li').each(function() {
-            moreThanZero = true;
-            var identifier = $(this).find("div[id*='-sidebar']").attr("id").replace("-sidebar","");
-            collection_techniques.push(identifier);
-        });
-        
-        // Send to php in an array
-        var collection = {
-            collection_title : collection_title, 
-            collection_techniques: collection_techniques
-        };
-
-        
-        if (moreThanZero === true) {
-            $.ajax({
-                url: 'collection-creator',
-                data: collection,
-                success : function(response) {  
-                    // TODO error message for response === "Collection exists already"
-                    console.log(response);
-                    if (response.indexOf("Created collection:") > -1) {
-                        var collection_uid = response.replace("Created collection:", "");
-                        window.location.href = "/interaction-museum/collections/" + collection_uid;
-                    }
-                }
-            });
-        } else {
-            // TODO error message for no selected technique
-        }
+    $('body').on('click', '#save_collection_btn', function () {
+        saveCollection($(this));
+    });
+    
+    $('body').on('click', '#discard_collection_btn', function (e) {
+        // TODO Reset
+        toggleSidebar(e);
     });
 	
     // Log out routine
@@ -132,23 +97,29 @@ function addToCollection(element) {
         "</li>"
     );   
 
-    toggleButton(element, "add");        
+    // Toggle thumbnail button
+    toggleButton(element, "remove");        
 };
 
 // Remove technique from sidebar
 function removeFromCollection(element) {
-    var identifier = element.parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+    var element_id = element.parent().attr('id');
+    var identifier = element_id.replace("-thumbnail","").replace("-sidebar","");
+    
+    // Toggle thumbnail button
+    toggleButton($("#" + identifier + "-btn"), "add");
+    
+    // Remove from sidebar
     $("#" + identifier + "-sidebar").remove();
-
-    toggleButton(element, "remove");
 }
 
-// Toggle add/remove button and classes for technique.
+// Toggle button to be set to the addOrRemove value.
 function toggleButton(element, addOrRemove) {
-    if(addOrRemove === "add") {
+    if(addOrRemove === "remove") {
         element.removeClass("add_to_collection_btn"); 
         element.addClass("remove_from_collection_btn"); 
-    } else if (addOrRemove === "remove") {
+    } else if (addOrRemove === "add") {
+        console.log(element);
         element.removeClass("remove_from_collection_btn"); 
         element.addClass("add_to_collection_btn"); 
     }
@@ -157,31 +128,49 @@ function toggleButton(element, addOrRemove) {
     element.toggleClass("btn-warning"); 
 }
 
-// String can contain latin characters, apostrophes and dashes (also from spaces). No commas, or special characters.
-/*
-function normalizeString(inputString, lettercase) {
-    inputString = inputString.latinize();
-    inputString = inputString.replace(/[^a-zA-Z0-9\'\- ]/g,"");
->>>>>>> refs/remotes/origin/master
-    inputString = inputString.toLowerCase();
-    inputString = inputString.replace(/\s/g, "-");
-    return inputString;
+function toggleSidebar(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    $(".add_to_collection_btn").css("display", "inline-block");
+    $("#save_collection_btn").toggle();
+    $("#discard_collection_btn").toggle();
+    windowSizeCheck(300);
 }
-*/
+    
+function saveCollection(element) {
+    // Get collection title
+    var collection_title = $(".sidebar-brand").val();
 
-/* --------------------- MOUSE HOVER --------------------- */
-/*// Replaces the JPG image for a GIF. 
-function play(image) {
-     var GIF = image.src.replace('.jpg', '.gif');
-     image.src = GIF;
+    // Get collection technique
+    var collection_techniques = new Array();
+    var moreThanZero = false;
+    $('#sidebar li').each(function() {
+        moreThanZero = true;
+        var identifier = $(this).find("div[id*='-sidebar']").attr("id").replace("-sidebar","");
+        collection_techniques.push(identifier);
+    });
 
-     I tried a border, but it is not working.
-    image.classList.remove('stopping');
-    image.classList.add('playing');
+    // Send to php in an array
+    var collection = {
+        collection_title : collection_title, 
+        collection_techniques: collection_techniques
+    };
+
+
+    if (moreThanZero === true) {
+        $.ajax({
+            url: 'collection-creator',
+            data: collection,
+            success : function(response) {  
+                // TODO error message for response === "Collection exists already"
+                console.log(response);
+                if (response.indexOf("Created collection:") > -1) {
+                    var collection_uid = response.replace("Created collection:", "");
+                    window.location.href = "/interaction-museum/collections/" + collection_uid;
+                }
+            }
+        });
+    } else {
+        // TODO error message for no selected technique
+    }
 }
-
-// Replaces the GIF image for a JPG. 
-function stop(image) {
-     var JPG = image.src.replace('.gif', '.jpg');
-     image.src = JPG;
-}*/
