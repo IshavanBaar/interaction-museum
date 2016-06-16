@@ -46,14 +46,14 @@ c::set('routes', array(
    }
  ),
    
- // Omit 'recently-added' in the page URL 
+ // Omit 'all-techniques' in the page URL 
  array(
    'pattern' => '(:any)',
    'action'  => function($uid) {
 
      $page = page($uid);
 
-     if(!$page) $page = page('recently-added/' . $uid);
+     if(!$page) $page = page('all-techniques/' . $uid);
      if(!$page) $page = site()->errorPage();
 
      return site()->visit($page);
@@ -61,9 +61,9 @@ c::set('routes', array(
    }
  ),
  array(
-   'pattern' => 'recently-added/(:any)',
+   'pattern' => 'all-techniques/(:any)',
    'action'  => function($uid) {
      go($uid);
    }
- )
+ ),
 ));

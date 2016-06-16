@@ -3,8 +3,6 @@
 title: Collection
 pages: false
 files: false
-options:
-  deletable: false
 fields:
   title:
     label: Title
@@ -21,4 +19,4 @@ fields:
         technique:
             label: Technique
             type: subpage
-            parent: recently-added
+            parent: all-techniques

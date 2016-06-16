@@ -6,7 +6,7 @@ return function($site, $pages, $page) {
     
     // Only search the techniques
     // TODO search the collections
-    $results = page('recently-added')->search($query);
+    $results = page('all-techniques')->search($query);
 
     return array(
     'query'      => $query,
