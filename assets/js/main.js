@@ -1,5 +1,3 @@
-
-
 function activateSliders(){
     
     $('.slider').each(function(){
@@ -38,11 +36,13 @@ $(document).ready(function(){
     
     // Add to/Remove from sidebar 
     $('body').on('click', '.add_to_collection_btn', function () {
+        console.log($(this));
         addToCollection($(this));
     });
     
     $('body').on('click', '.remove_from_collection_btn', function () {
-        removeFromCollection($(this));
+        var id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+        removeFromCollection(id);
     });
     
     // Save/Discard collection
@@ -82,6 +82,10 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
+
+    $('.sidebar-brand').bind('input', function(){
+        sessionStorage.title = $(this).val();
+    });
     //if a collection was in the making
     if(!isEmpty(JSON.parse(sessionStorage['techniques']))){
         techniques = JSON.parse(sessionStorage['techniques']);      
@@ -92,6 +96,15 @@ $(document).ready(function(){
     }else{
         console.log("no techniques");
     }
+
+    if(!(!sessionStorage.title.trim())){
+        $(".sidebar-brand").val(sessionStorage.title);
+    }
+
+
+
+
+
 
 });
 
@@ -154,24 +167,24 @@ function toggleSidebar() {
     
 function saveCollection(element) {
     // Get collection title
-    var collection_title = $(".sidebar-brand").val();
+    var collection_title = $(".collection-title").val();
 
-    // Get collection technique
-    var collection_techniques = new Array();
-    var moreThanZero = false;
-    $('#sidebar li').each(function() {
-        moreThanZero = true;
-        var identifier = $(this).find("div[id*='-sidebar']").attr("id").replace("-sidebar","");
-        collection_techniques.push(identifier);
-    });
+    // Get technique UID
+    var collection_techniques = [];
+
+    techniques = JSON.parse(sessionStorage['techniques']);      
+    for (key in techniques){
+        collection_techniques.push(key);
+    }
 
     // Send to php in an array
     var collection = {
         collection_title : collection_title, 
         collection_techniques: collection_techniques
     };
+    console.log(collection);
 
-    if (moreThanZero === true) {
+    if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
             url: 'collection-creator',
             data: collection,
@@ -185,7 +198,8 @@ function saveCollection(element) {
             }
         });
     } else {
-        // TODO error message for no selected technique
+        console.log(sessionStorage);
+        console.log("no techniques or no title");
     }
 }
  

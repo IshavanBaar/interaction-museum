@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - recently-added/pie-menu
   - recently-added/thumbrock
-  - recently-added/drag-and-pop
-  - recently-added/boomerang
-  - recently-added/toolglass-virtual-scene
-  - recently-added/anchored-menu-virtual-scene
+  - recently-added/octopocus
+  - recently-added/bubble-cursor
+  - recently-added/free-hand-gestures

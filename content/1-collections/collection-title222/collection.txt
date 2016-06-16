@@ -1,0 +1,14 @@
+Title: Collection Title222
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: thumbrock
+- technique: free-hand-gestures
+- technique: bubble-cursor
+- technique: pie-menu
