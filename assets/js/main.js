@@ -132,7 +132,6 @@ function toggleButton(element, addOrRemove) {
         element.removeClass("add_to_collection_btn"); 
         element.addClass("remove_from_collection_btn"); 
     } else if (addOrRemove === "add") {
-        console.log(element);
         element.removeClass("remove_from_collection_btn"); 
         element.addClass("add_to_collection_btn"); 
     }

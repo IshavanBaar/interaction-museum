@@ -1,7 +1,9 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Page
-pages: true
+pages: collection
+  limit: 50
+  num: zero
 files: false
 icon: folder-open
 options:
