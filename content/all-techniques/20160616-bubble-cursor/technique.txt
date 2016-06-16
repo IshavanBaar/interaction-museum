@@ -18,7 +18,7 @@ The bubble cursor is faster than point cursors and other object pointing techniq
 
 ----
 
-Tags: pointing,bubble cursor,Fitts's law
+Tags: pointing,bubble cursor,Fitts's law,target aware
 
 ----
 

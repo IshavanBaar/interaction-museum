@@ -6,7 +6,7 @@ Info:
 
 ----
 
-Description: Arpège is a progressive multi-touch input technique for learning chords. With the help of feedback and feedforward, Arpège teaches the user in which order they should place their fingers on the touch surface. This will create a gesture recognizable for the computer as a specific command. Arpège is comparable to a cheat sheet, and encourages the creation of effective mnemonics.
+Description: Arpège is a progressive multi-touch input technique for learning chords. With the help of feedback and feedforward, Arpège teaches the user in which order they should place their fingers on the touch surface. This will create a gesture recognisable for the computer as a specific command. Arpège is comparable to a cheat sheet, and encourages the creation of effective mnemonics.
 
 ----
 
@@ -50,3 +50,7 @@ Attachments: storyboard.jpg
 ----
 
 Extra-images: storyboard.jpg
+
+----
+
+Cropper: 
