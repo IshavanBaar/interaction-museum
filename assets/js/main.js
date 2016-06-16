@@ -51,11 +51,12 @@ $(document).ready(function(){
     });
     
     $('body').on('click', '#discard_collection_btn', function (e) {
-        // TODO Reset
         for ( key in techniques){
             removeFromCollection(key);
         }
-
+        sessionStorage.title = "";
+        $(".sidebar-brand").val(sessionStorage.title);
+        toggleSidebar();
     });
 	
     // Log out routine
@@ -91,8 +92,10 @@ $(document).ready(function(){
         techniques = JSON.parse(sessionStorage['techniques']);      
         for ( key in techniques){
             appendTechnique(key, techniques[key].image, techniques[key].title);
+            toggleButton($("#"+key+"-btn"), "remove");
         }
         toggleSidebar();
+
     }else{
         console.log("no techniques");
     }
@@ -100,11 +103,6 @@ $(document).ready(function(){
     if(!(!sessionStorage.title.trim())){
         $(".sidebar-brand").val(sessionStorage.title);
     }
-
-
-
-
-
 
 });
 
@@ -127,7 +125,8 @@ function addToCollection(element) {
     // Add it to the HTML
     appendTechnique(identifier, thumbnail_image, thumbnail_title);
     // Toggle thumbnail button
-    toggleButton(element, "remove");        
+    toggleButton(element, "remove"); 
+    console.log(element);       
 };
 
 // Remove technique from sidebar
@@ -147,6 +146,7 @@ function toggleButton(element, addOrRemove) {
     if(addOrRemove === "remove") {
         element.removeClass("add_to_collection_btn"); 
         element.addClass("remove_from_collection_btn"); 
+        element.addClass("displayInline");
     } else if (addOrRemove === "add") {
         // console.log(element);
         element.removeClass("remove_from_collection_btn"); 
@@ -159,19 +159,15 @@ function toggleButton(element, addOrRemove) {
 
 function toggleSidebar() {
     $("#wrapper").toggleClass("toggled");
-    $(".add_to_collection_btn").css("display", "inline-block");
+    $(".add_to_collection_btn").toggleClass("displayInline");
     $("#save_collection_btn").toggle();
     $("#discard_collection_btn").toggle();
     windowSizeCheck(300);
 }
     
-function saveCollection(element) {
-    // Get collection title
-    var collection_title = $(".collection-title").val();
-
-    // Get technique UID
+function saveCollection(element) {    
     var collection_techniques = [];
-
+    // Get technique UID
     techniques = JSON.parse(sessionStorage['techniques']);      
     for (key in techniques){
         collection_techniques.push(key);
@@ -179,10 +175,9 @@ function saveCollection(element) {
 
     // Send to php in an array
     var collection = {
-        collection_title : collection_title, 
+        collection_title : sessionStorage.title, 
         collection_techniques: collection_techniques
     };
-    console.log(collection);
 
     if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
@@ -197,6 +192,11 @@ function saveCollection(element) {
                 }
             }
         });
+        //remove all techniques from collection and reset session Storage
+        for ( key in techniques){
+            removeFromCollection(key);
+        }
+        sessionStorage.title = "";
     } else {
         console.log(sessionStorage);
         console.log("no techniques or no title");

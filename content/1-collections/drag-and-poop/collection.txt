@@ -1,0 +1,13 @@
+Title: Drag and poop
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: bubble-cursor
+- technique: drag-and-pop
+- technique: dynaspot

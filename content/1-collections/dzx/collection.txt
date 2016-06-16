@@ -1,0 +1,12 @@
+Title: dzx
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: bubble-cursor
+- technique: marking-menu

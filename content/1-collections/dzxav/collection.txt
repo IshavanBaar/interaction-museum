@@ -1,0 +1,13 @@
+Title: dzxav
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: bubble-cursor
+- technique: marking-menu
+- technique: pie-menu

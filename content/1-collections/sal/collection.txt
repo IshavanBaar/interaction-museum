@@ -1,0 +1,13 @@
+Title: sal
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: bubble-cursor
+- technique: octopocus
+- technique: pie-menu
