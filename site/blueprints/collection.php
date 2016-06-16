@@ -3,6 +3,13 @@
 title: Collection
 pages: false
 files: false
+icon: folder-open
+options:
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: true
 fields:
   title:
     label: Title

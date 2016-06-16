@@ -1,7 +1,11 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Page
-pages: true
+pages: technique
+  limit: 50
+  num:
+    mode: date
+    field: modified
 files: false
 icon: hand-pointer-o
 options:

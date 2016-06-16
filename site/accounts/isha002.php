@@ -6,4 +6,5 @@ password: >
   $2a$10$YF.TMGehAjC5LmZPW13fNOlsnv1WHunym36AjZJ2q4ThaU1ZhVYLq
 language: en
 role: admin
-history: [ ]
+history:
+  - all-collections/omg-so-cool
