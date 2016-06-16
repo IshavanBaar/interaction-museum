@@ -22,7 +22,7 @@ if(kirby()->request()->ajax()) {
     // Add to collection, if not existing
     try {
         if (page('all-collections')->children()->has('all-collections/' . $collection_uid)) {
-            echo "Collection exists already";
+            echo "'" . $collection_title . "' exists already. Change the name!";
         } else {
             // Create new page with the new technique.
             page('all-collections')->children()->create($collection_uid, 'collection', array(
@@ -33,7 +33,8 @@ if(kirby()->request()->ajax()) {
             echo "Created collection:" . $collection_uid;
         }
     } catch(Exception $e) {
-        echo "Something went wrong. Try again."; //or echo $e->getMessage();
+        echo "Something went wrong. Try again."; 
+        //or echo $e->getMessage();
     }
 }
 else {

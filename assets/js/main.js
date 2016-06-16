@@ -123,7 +123,7 @@ function removeFromCollection(element) {
     toggleButton($("#" + identifier + "-btn"), "add");
     
     // Remove from sidebar
-    $("#" + identifier + "-sidebar").remove();
+    $("#" + identifier + "-sidebar").parent().remove();
 }
 
 // Toggle button to be set to the addOrRemove value.
@@ -141,6 +141,7 @@ function toggleButton(element, addOrRemove) {
     element.toggleClass("btn-warning"); 
 }
 
+// Toggle sidebar on/off.
 function toggleSidebar(e) {
     e.preventDefault();
     sessionStorage.title = "";
@@ -151,7 +152,8 @@ function toggleSidebar(e) {
     $("#discard_collection_btn").toggle();
     windowSizeCheck(300);
 }
-    
+
+// Save collection as a new page. 
 function saveCollection(element) {
     // Get collection title
     var collection_title = $(".sidebar-brand").val();
@@ -170,21 +172,36 @@ function saveCollection(element) {
         collection_title : collection_title, 
         collection_techniques: collection_techniques
     };
-
+    
+    // Send to ajax if collection size > 1
     if (moreThanZero === true) {
         $.ajax({
             url: 'collection-creator',
             data: collection,
             success : function(response) {  
-                // TODO error message for response === "Collection exists already"
                 console.log(response);
                 if (response.indexOf("Created collection:") > -1) {
                     var collection_uid = response.replace("Created collection:", "");
                     window.location.href = "/interaction-museum/all-collections/" + collection_uid;
-                }
+                } 
+                // Show tooltip if something went wrong
+                else if (response.indexOf("exists already") > -1 
+                           || response === "Something went wrong. Try again.") {
+                    showTooltip(response);
+                } 
             }
         });
     } else {
-        // TODO error message for no selected technique
+        showTooltip("There are no techniques in this collection!");
     }
+}
+
+// Show tooltip on error.
+function showTooltip(title) {
+    $('#save_collection_btn').tooltip({title: title});
+    $('#save_collection_btn').tooltip('show');
+
+     setTimeout(function(){
+        $('#save_collection_btn').tooltip('destroy');
+    }, 4000);
 }
