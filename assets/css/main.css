@@ -50,6 +50,7 @@ footer {
 }
 
 
+
 /* Container  */
 
 .container-fluid {
@@ -269,6 +270,10 @@ p {
     padding-left: 15px;
 
 }
+.displayInline{
+    display: inline-block;
+}
+
 
 @media (max-width: 1200px) {
     #video-hover{

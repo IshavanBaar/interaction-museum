@@ -14,7 +14,7 @@ Free hand gestures are one of the most natural forms of gestural interaction. Th
 
 ----
 
-Tags: free hand,gestures,hand,gesticulation
+Tags: free hand,gestures,hand,gesticulation,wall sized display
 
 ----
 
@@ -63,3 +63,15 @@ Title: Free Hand Gestures
 ----
 
 Related-work: 
+
+----
+
+Cropper: 
+
+----
+
+Extra-images: 
+
+----
+
+Movie: 

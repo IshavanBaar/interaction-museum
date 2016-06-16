@@ -14,7 +14,7 @@ Compared to traditional menus, a pie menu has a shorter seeking time and lower e
 
 ----
 
-Tags: menu,pie menu,radial menu,Fitts's law
+Tags: menu,pie menu,radial menu,Fitts's law,navigation
 
 ----
 
@@ -71,3 +71,7 @@ Extra-images: pie_menu_graph.jpg
 ----
 
 Movie: 
+
+----
+
+Cropper: 
