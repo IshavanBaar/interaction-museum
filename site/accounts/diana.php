@@ -8,9 +8,4 @@ password: >
   $2a$10$oe4hU5O6FTKh4CrFnOxq2umoLgyqowDS5hyos8Wq1vpzReuxA9WAu
 language: en
 role: admin
-history:
-  - recently-added/pie-menu
-  - recently-added/thumbrock
-  - recently-added/octopocus
-  - recently-added/bubble-cursor
-  - recently-added/free-hand-gestures
+history: [ ]
