@@ -1,22 +1,21 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Technique
-pages:
-	template: technique
+pages: false
 files:
     type: 
         - image
         - video
         max: 5
 		sortable: true
+icon: hand-pointer-o
+options:
+  preview: true
+  status: true
+  template: false
+  url: false
+  delete: true
 fields:
-	info:
-		label: Add an interaction technique
-		type: info
-		text: >
-			Each technique should have at least a title, description, some tags and a header image. If possible, please add more.
-						
-			To publish, change the *Page Status* to visible (choose the highest number).
 	title:
 		label: Name 
 		type:  text
@@ -25,11 +24,7 @@ fields:
 	description:
 		label: Description
 		type: textarea
-		validate:
-			min: 4
-			max: 500
-		required: true
-		help: Improve the writing style with the http://hemingwayapp.com/
+        size: large
 	tags:
 		label: Tags
 		type: tags
