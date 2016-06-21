@@ -4,7 +4,6 @@ html,body{
     height: 100%
 }
 
-
 #wrapper{
   min-height: 100%;
   position:relative;
@@ -24,7 +23,6 @@ footer {
      line-height: 50px !important;
      margin-bottom: 0;
 }
-
 
 /* Navbar */
 
@@ -59,7 +57,7 @@ footer {
 	display: block;
 }
 
-
+/* TODO submenu styling */
 
 /* Container  */
 
