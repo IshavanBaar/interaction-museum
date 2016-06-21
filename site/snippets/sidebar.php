@@ -3,10 +3,12 @@
 		<span class="input-group-addon glyphicon glyphicon-pencil"></span>   
 	    <input type="text" class="form-control sidebar-brand placeholder-fix" placeholder="Collection Title">
     </div>
-    <button data-toggle="tooltip" title="" id="save_collection_btn" class="btn btn-default btn-primary" type="submit">
+</ul>
+<div id="sidebar-buttons">
+    <button data-toggle="tooltip" id="save_collection_btn" class="btn btn-default btn-primary" type="submit">
         <span>Save</span>
     </button>
     <button id="discard_collection_btn" class="btn btn-default btn-warning" type="submit">
         <span>Discard</span>
     </button>
-</ul>
+</div>
