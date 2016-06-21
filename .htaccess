@@ -45,5 +45,5 @@ RewriteRule ^(.*) index.php [L]
 # php_flag short_open_tag on
 
 # increase the maximum file size
-php_value post_max_size 30M
-php_value upload_max_filesize 30M
+# php_value post_max_size 30M
+# php_value upload_max_filesize 30M
