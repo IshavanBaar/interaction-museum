@@ -59,7 +59,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 .sidebar-nav li {
@@ -106,18 +105,24 @@
     background: none;
 }
 
-#save_collection_btn{
+#sidebar-buttons {
     position: fixed;
+    bottom: 0px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#save_collection_btn{
     bottom: 34px;
     width: 300px;
-    /*bottom: 25px;*/
     display: none;
-   line-height: 40px;
+    line-height: 40px;
     z-index: 5;
 }
 
 #discard_collection_btn{
-    position: fixed;
     bottom: 0px;
     width: 300px;
     /*bottom: 25px;*/
