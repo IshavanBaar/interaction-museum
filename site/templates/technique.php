@@ -72,33 +72,36 @@
 				<?php endforeach ?>
 			<?php endif ?>			
 		</div> <!-- end first column -->
+        
 		<div class="col-md-8">	
-			<!-- VIDEO -->
-			<?php if($video->isNotEmpty()){
-					if(stripos($video, "youtube") !== false)
-				 		{
-				 			echo "<div class='videoWrapper'>" . youtube($video) . "</div>";
-				 		}
-				 	elseif (stripos($video, "vimeo") !== false)
-				 		{
-				 			echo "<div class='videoWrapper '>" . vimeo($video) . "</div>";
-				 		}	
-				 		// <!-- HEADER IMAGE -->
-						echo "<div class='row' id='gif'>";
-						if($page->header_image()->isNotEmpty()){
-							echo '<figure><img id="header_image" src="'. $header_image->url(). '" alt="" class="col-xs-12"  ></figure> </div>';
-							echo '<div class="col-sm-2  col-sm-offset-5 btn" id="video-hover">
-									<span>play full video</span><br/>
-									<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>	
-							     </div>';
-						}
-		 		} else {
-		 			// <!-- HEADER IMAGE -->
-						echo "<div class='row'>";
-						if($page->header_image()->isNotEmpty()){
-							echo '<figure><img id="header_image_noclick" src="'. $header_image->url(). '" alt="" class="col-xs-12"></figure></div>';
-						}
-		 		}?>		
+			<?php if($video->isNotEmpty()): ?>
+			    <!-- VIDEO -->
+                <?php if(stripos($video, "youtube") !== false): ?>
+                    <div class='videoWrapper'><?php echo youtube($video)?></div>
+                <?php elseif (stripos($video, "vimeo") !== false): ?>
+                    <div class='videoWrapper '><?php echo vimeo($video)?></div>
+                <?php endif; ?>
+
+                <!-- HEADER IMAGE -->
+                <?php if($page->header_image()->isNotEmpty()): ?>
+                    <div class='row' id='gif'>
+                        <figure><img id="header_image" src="<?php echo $header_image->url() ?>" alt="" class="col-xs-12" ></figure> 
+                    </div>
+                    <!-- TODO fix play button position + autoplay video -->
+                    <div class="col-sm-1 col-sm-offset-5 btn" id="video-hover">
+                        <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>	
+                    </div>
+                <?php endif; ?>
+            
+            <?php else: ?> 
+                <!-- HEADER IMAGE -->
+                <?php if($page->header_image()->isNotEmpty()): ?>
+                    <div class='row'>
+                        <figure><img id="header_image_noclick" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>		
+            
 			<div class="media">
 			<!-- TRY OUT -->
 			<?php if($try_out->isNotEmpty()): ?>

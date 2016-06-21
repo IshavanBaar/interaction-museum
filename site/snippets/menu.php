@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button> -->
         <!-- Interaction museum brand 		 -->
-            <a class="navbar-brand" href="<?php echo url() ?>">Interaction Museum</a>
+            <a class="navbar-brand" href="<?php echo url() ?>" title="Home">Interaction Museum</a>
          </div>
 
         <!-- SEARCH BAR -->
