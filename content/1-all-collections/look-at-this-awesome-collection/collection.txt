@@ -1,0 +1,15 @@
+Title: Look at this awesome collection
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: arpege
+- technique: anchored-menu-vr
+- technique: bubble-cursor
+- technique: crossing
+- technique: drag-and-pop
