@@ -26,7 +26,7 @@
 
         <!-- <div class="collapse navbar-collapse"> -->
         <div id="menu" class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-          <ul class="nav navbar-nav navbar-right" id="menuList">
+          <ul class="nav navbar-nav navbar-right menu cf" id="menuList">
             <?php snippet('menu-items')?>
           </ul>
         </div>

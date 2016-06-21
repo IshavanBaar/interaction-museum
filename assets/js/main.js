@@ -21,6 +21,10 @@ function windowSizeCheck(sidebarSize){
     }
 }
 
+function toggleSubmenu(){
+    $(".submenu").toggle();      
+}
+
 var techniques = {}; 
 
 $(document).ready(function(){
@@ -34,6 +38,11 @@ $(document).ready(function(){
         e.preventDefault();
         sessionStorage.title = "";
         toggleSidebar();
+    });
+
+    $('body').on('hover', '#userMenu', function (e) {
+        $(".submenu").show();
+        console.log("i'm ehere");
     });
     
     // Add to/Remove from sidebar 

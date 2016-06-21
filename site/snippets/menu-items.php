@@ -8,8 +8,8 @@
 <!-- ACCOUNT NAME / LOGOUT -->
 <?php if($user = $site->user()): ?>
     <li>
-        <a href="<?php echo url('account') ?>"><?php echo $user?></a>
-        <ul class="submenu">
+        <a href="<?php echo url('account') ?>" onmouseenter="toggleSubmenu()"><?php echo $user?></a>
+        <ul class="submenu" >
             <!-- CREATE A NEW COLLECTION -->  
             <li>
                 <a class="new_collection" href="">New collection</a>
