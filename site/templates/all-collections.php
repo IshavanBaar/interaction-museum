@@ -21,8 +21,7 @@
             <!-- TITLE, CREATOR, SHOW ALL -->
             <div class="row"> 
                 <a href="<?php echo $collection->url() ?>">  
-                <h1 class="collectionText col-lg-10"><?php echo $collection->title() ?> ( <?php echo $collection->techniques()->toStructure()->count()?> )</h1>
-                <button class="btn btn-primary col-lg-2">Show All</button></a>
+                <h1 class="collectionText col-xs-12 collectionLink"><?php echo $collection->title() ?> ( <?php echo $collection->techniques()->toStructure()->count()?> )</h1></a>
             </div>
             
             <!-- THUMBNAILS SLIDER -->
