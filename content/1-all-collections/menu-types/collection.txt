@@ -1,0 +1,13 @@
+Title: Menu types
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- technique: marking-menu
+- technique: pie-menu
+- technique: anchored-menu-vr
