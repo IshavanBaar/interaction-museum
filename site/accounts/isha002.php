@@ -7,4 +7,4 @@ password: >
 language: en
 role: admin
 history:
-  - all-collections/omg-so-cool
+  - about
