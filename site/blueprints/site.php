@@ -6,8 +6,8 @@ fields:
   title:
     label: Title
     type:  text
-  author:
-    label: Author
+  authors:
+    label: Authors
     type:  text
   description:
     label: Description
@@ -18,3 +18,6 @@ fields:
   copyright:
     label: Copyright
     type:  textarea
+  source-code:
+    label: Source Code
+    type: url

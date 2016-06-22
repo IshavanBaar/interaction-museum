@@ -1,0 +1,14 @@
+Title: Ways to move objects
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- technique: boomerang
+- technique: fix-and-float
+- technique: pick-and-drop
+- technique: thumbrock

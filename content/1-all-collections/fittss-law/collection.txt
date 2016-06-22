@@ -1,0 +1,14 @@
+Title: Fitts's Law
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- technique: bubble-cursor
+- technique: drag-and-pop
+- technique: dynaspot
+- technique: semantic-pointing
