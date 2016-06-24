@@ -122,17 +122,19 @@
     z-index: 5;
 }
 
-#discard_collection_btn{
+#empty_collection_btn{
     bottom: 0px;
     width: 300px;
     /*bottom: 25px;*/
     display: none;
     z-index: 5;
 }
+
 .collection-title{
     line-height: 60px !important;
     color: white;
     margin-bottom: 0;
+    width: 90%;
 }
 
 .sidebar-brand[type=text]:focus {
@@ -146,6 +148,16 @@
     padding: 0 10px;
     color: white;
 }
+
+/* TODO do this in a nicer way*/
+.close_sidebar_btn {
+    position: fixed;
+    left: 275px;
+    top: 25px;
+    color: white;
+    cursor: pointer;
+}
+
 /*thumbnail*/
 .sidebar-nav > li .thumbnail{
     background-color: rgba(0, 0, 0, 0) !important; 
