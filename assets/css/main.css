@@ -242,7 +242,7 @@ a:hover{
 
 /* Header image*/
 
-#header_image, #header_image_noclick{
+.header_image, .header_image_noclick{
     margin-bottom: 1.5em;
     display: block;
     height: 100%;
@@ -340,6 +340,17 @@ a:hover{
 .btn-warning:hover{
     background-color: #f2a679;
 }
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
 hr{
      border-top: 1px solid rgba(51, 110, 123, 0.5);
 }
