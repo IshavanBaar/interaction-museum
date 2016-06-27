@@ -22,8 +22,13 @@ fields:
 		placeholder: Enter the name of the technique... 
 		required: true
 	description:
-		label: Description
-		type: textarea
+      label: Description
+      type: textarea
+      validate:
+        min: 4
+        max: 550
+      required: true
+      help: Improve the writing style with the http://hemingwayapp.com/   
 	tags:
 		label: Tags
 		type: tags

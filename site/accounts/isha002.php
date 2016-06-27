@@ -7,4 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - about
+  - all-techniques/swiss-army-menu
+  - all-techniques/thumbrock
+  - all-techniques/free-hand-gestures
+  - all-techniques/marking-menu
+  - all-techniques/ephemeral-menu
