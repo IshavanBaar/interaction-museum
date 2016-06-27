@@ -8,7 +8,7 @@ Name:
 
 Description: 
 
-Free hand gestures are techniques where the position and movement of the hand are not limited.
+Free hand gestures are techniques where the position and movement of the hand are not bound to any surface. They happen in mid-air.
 
 Free hand gestures are one of the most natural forms of gestural interaction. They are often used in combination with speech techniques.
 

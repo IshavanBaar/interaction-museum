@@ -8,9 +8,9 @@ Title: ThumbRock
 
 Description: 
 
-ThumbRock is a ready-to-use micro gesture that consists in rolling the thumb back and forth on the touchscreen. It can be recognized with 96% accuracy without calibration. ThumbRock can be either a quick gesture or a continuous roll on the touch surface. 
+ThumbRock is a ready-to-use micro gesture that consists in rolling the thumb back and forth on the touchscreen. It can be recognized with 96% accuracy without calibration. ThumbRock can be either a quick, discrete gesture or a continuous roll on the touch surface. 
 
-As a discrete event, ThumbRock can be used to navigate between screens while dragging and dropping a file or to navigate pages in a document. As a continuous event it can be used to scroll a document or to zoom in and out of Maps interfaces.
+As a discrete gesture, ThumbRock can be used to navigate between screens while dragging and dropping a file or to navigate pages in a document. As a continuous roll, it can be used to scroll a document or to zoom in and out of Maps interfaces.
 
 ----
 

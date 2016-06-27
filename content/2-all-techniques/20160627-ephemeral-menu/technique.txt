@@ -1,0 +1,42 @@
+Title: Ephemeral Menu
+
+----
+
+Description: 
+
+An ephemeral menu is a (link: ../drop-down-menu text: Drop-Down Menu) with ephemeral adaptation. The interface predicts what menu items will be chosen, and displays those first. Remaining items gradually fade in. The menu guides your visual attention and reduces the search time.
+
+When the prediction accuracy is high, ephemeral adaptive menus provide a faster selection. When it's low, the ephemeral menu is not significantly slower. Compared to menus with adaptive highlighting, it also performs faster.
+
+----
+
+Tags: ephemeral,menu,drop-down,ephemeral adaptation,adaptive
+
+----
+
+Header-image: ezgif.com-crop-1.gif
+
+----
+
+Extra-images: 
+
+----
+
+Movie: https://www.youtube.com/watch?v=U47w70N59qE
+
+----
+
+Try-out: http://ericadu.com/rs1/src/index.html
+
+----
+
+Related-publications: 
+
+- 
+  title: 'Ephemeral adaptation: the use of gradual onset to improve menu selection performance'
+  link: 'http://delivery.acm.org.focus.lib.kth.se/10.1145/1520000/1518956/p1655-findlater.pdf?ip=130.237.29.138&id=1518956&acc=ACTIVE%20SERVICE&key=74F7687761D7AE37%2EE53E9A92DC589BF3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=806387332&CFTOKEN=19157023&__acm__=1467036253_7623a8872ea1e46f8ae494bfa7bcc3c8'
+  type: "CHI '09"
+  authors: >
+    Leah Findlater, Karyn Moffatt, Joanna
+    McGrenere, Jessica Dawson
+  year: "2009"
