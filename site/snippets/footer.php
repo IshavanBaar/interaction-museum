@@ -6,7 +6,7 @@
                             <?php echo $site->copyright()->kirbytext() ?>				
                         </div>
                         <div class="col-sm-6 colophon text-right">
-                            <p><a href="<?php echo $site->url() ?>/about">About</a></p>	
+                            <p><a href="<?php echo url('about') ?>">About</a></p>	
                         </div>
                         
                         <!--<div class="col-sm-6 colophon text-right">

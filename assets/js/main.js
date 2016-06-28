@@ -46,7 +46,7 @@ $(document).ready(function(){
     
     
     /* Toggle sidebar */
-    $('body').on('click', '.new_collection', function (e) {
+    $('body').on('click', '#new_collection', function (e) {
         e.preventDefault();
         toggleSidebar();
     });

@@ -4,6 +4,10 @@ html,body{
     height: 100%
 }
 
+.editable:focus {
+    outline-width: 0;
+}
+
 #wrapper{
   min-height: 100%;
   position:relative;

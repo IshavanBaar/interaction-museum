@@ -12,7 +12,11 @@
         <ul class="submenu" >
             <!-- CREATE A NEW COLLECTION -->  
             <li>
-                <a class="new_collection" href="">New collection</a>
+                <a id="new_collection" href="">New collection</a>
+            </li>
+            <!-- CREATE A NEW EXHIBIT -->  
+            <li>
+                <a id="new_exhibit" href="<?php echo url('exhibit-creator') ?>">New exhibit</a>
             </li>
         </ul>
     </li>
