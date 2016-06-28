@@ -4,17 +4,15 @@ html,body{
     height: 100%
 }
 
-.editable:focus {
-    outline-width: 0;
-}
-
 #wrapper{
   min-height: 100%;
   position:relative;
 }
+
 .mini{
 	 padding: 0;
 }
+
 footer {
     position:absolute;
     bottom:0;
@@ -26,6 +24,35 @@ footer {
 .copyright p, .colophon p{
      line-height: 50px !important;
      margin-bottom: 0;
+}
+
+/* General */
+
+h1 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 40px;
+    margin-top: 5px;
+
+}
+
+h2 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 26px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+a {
+    color: #336E7B;
+}
+
+a:hover d{
+    color: #4ba0b3;
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -51,6 +78,7 @@ footer {
 .navbar-right{
     font-weight: 300;
 }
+
 /* Text blocks */
 
 .media img {
@@ -61,7 +89,7 @@ footer {
 	display: block;
 }
 
-/* TODO submenu styling */
+/* Submenu */
 
 .submenu {
   position: absolute;
@@ -79,7 +107,6 @@ footer {
   border-bottom: .5em solid transparent;
   border-left: .5em solid #336E7B;
 }
-
 
 .submenu li {
   border-bottom: 1px solid #444;
@@ -99,14 +126,14 @@ footer {
   background: #333;
   color: #fff;
 }
+
 /* Container  */
 
 .container-fluid {
     max-width: 1490px;
 }
 
-
-/* Technique cards  */
+/* Thumbnails  */
 
 .thumbnail {
     border: none;
@@ -126,17 +153,9 @@ footer {
     height: 100%;
 }
 
-
-/* TODO what is still used? */
-
-.technique-img {
-    display: block;
-}
-
 .label {
     font-size: 1em;
 }
-
 
 /* Search */
 
@@ -148,8 +167,6 @@ footer {
 	width: 100%;
 }
 
-/* Technique */
-
 .trade-img {
     display: block;
     margin: 1.5em 0 42px;
@@ -157,32 +174,6 @@ footer {
 
 .tags {
     padding: 0 15px; 
-}
-
-
-h1 {
-    font-family: 'Slabo 27px', serif;
-    font-size: 40px;
-    margin-top: 5px;
-
-}
-
-h2 {
-    font-family: 'Slabo 27px', serif;
-    font-size: 26px;
-}
-
-p {
-    font-size: 17px;
-    line-height: 1.5;
-    font-weight: 300;
-}
-a{
-    color: #336E7B;
-}
-a:hover{
-    color: #4ba0b3;
-    text-decoration: none;
 }
 
 /* Publications */
@@ -207,6 +198,7 @@ a:hover{
 .form-control:focus{
     border-color: #336E7B;
 }
+
 .btn {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0);
 }
@@ -222,7 +214,6 @@ a:hover{
 	height: auto;
 }*/
 
-/*viedo wrapper*/
 .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -237,12 +228,6 @@ a:hover{
     height: 100%;
     /*padding: 0 15px;*/
 }
-/*thumbnail image*/
-.thumbnailImage{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 
 /* Header image*/
 
@@ -251,6 +236,7 @@ a:hover{
     display: block;
     height: 100%;
 }
+
 #gif{
     position: absolute;
     padding: 0;
@@ -259,6 +245,7 @@ a:hover{
     top: 0;
     left: 15px;
 }
+
 #video-hover{
     position: absolute;
     top:150px;
@@ -278,28 +265,27 @@ a:hover{
     right:20px; 
     display: none;
 }
+
 .remove_from_collection_btn{
     position:absolute; 
     right:20px; 
 }
+
 .mobile-menu{
     float: right;
     margin: 0;
     padding:  0 15px 0 0;
 
 }
+
 .mobile-menu ul > li{
     float: left;
 }
+
 .input-group-btn{
     max-width: 13px;
 }
-/*#page-content-wrapper[max-width~="769px"] {
-    #menu{
-        
-    }
-}
-*/
+
 .thumbnail a > img {
     min-height: 260px;
 }
@@ -309,7 +295,8 @@ a:hover{
 .halfWidth{
     width: 50%;
 }
-/*login*/
+
+/* Login */
 .loginField{
     line-height: 2.5em;
     font-size: 1.5em;
@@ -317,21 +304,23 @@ a:hover{
     padding: 0;
 }
 
-/*colleciton page*/
+/* Collection page*/
 .collectionText{
     /*padding-left: 15px;*/
     text-align: center;
 
 }
+
 .collectionLink:hover{
     color: #4ba0b3;
     /*text-decoration: underline;*/
 }
+
 .displayInline{
     display: inline-block;
 }
 
-/*buttons*/
+/* Buttons */
 .btn-primary{
     background-color: #336E7B;
 }
@@ -358,6 +347,16 @@ a:hover{
 hr{
      border-top: 1px solid rgba(51, 110, 123, 0.5);
 }
+
+/* Exhibit Creator */
+:focus {
+    outline: none;
+}
+
+#editor {
+    text-align: center;
+}
+
 @media (max-width: 1200px) {
     #video-hover{
         font-size: 18px;
