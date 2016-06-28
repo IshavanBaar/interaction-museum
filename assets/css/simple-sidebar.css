@@ -152,6 +152,7 @@
 /* TODO do this in a nicer way*/
 .close_sidebar_btn {
     position: fixed;
+    display: none;
     left: 275px;
     top: 25px;
     color: white;

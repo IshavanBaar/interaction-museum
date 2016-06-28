@@ -1,4 +1,5 @@
 var addedViaThumbnail = true;
+var sidebarOpen = false;
 var techniques = {}; 
 
 function activateSliders(){
@@ -45,7 +46,7 @@ $(document).ready(function(){
     
     
     /* Toggle sidebar */
-    $('body').on('click', '.new_collection', function (e) {
+    $('body').on('click', '#new_collection', function (e) {
         e.preventDefault();
         toggleSidebar();
     });
@@ -134,11 +135,13 @@ $(document).ready(function(){
             appendTechnique(key, techniques[key].image, techniques[key].title);
             toggleButton($("#"+key+"-btn"), "remove");
         }
+        // TODO change this with the help of boolean sidebarOpen.
         toggleSidebar();
 
     } 
     
-    if(!(!sessionStorage.title.trim())){
+    // Changed this line since sessionStorage.title was in some cases null.
+    if(!isEmpty(sessionStorage.title) && !(!sessionStorage.title.trim())){
         $(".sidebar-brand").val(sessionStorage.title);
     }
 
@@ -213,6 +216,7 @@ function closeSidebar() {
     $("#wrapper").addClass("toggled");
     $("#save_collection_btn").toggle();
     $("#empty_collection_btn").toggle();
+    $(".close_sidebar_btn").toggle();
     windowSizeCheck(300); 
 }
 
@@ -221,8 +225,11 @@ function toggleSidebar() {
         $("#wrapper").toggleClass("toggled");
         $("#save_collection_btn").toggle();
         $("#empty_collection_btn").toggle();
+        $(".close_sidebar_btn").toggle();
         windowSizeCheck(300); 
+        sidebarOpen = true;
     }
+    sidebarOpen = false;
 }
     
 function saveCollection(element) {    
@@ -238,7 +245,8 @@ function saveCollection(element) {
         collection_title : sessionStorage.title, 
         collection_techniques: collection_techniques
     };
-
+    
+    //TODO if user not logged in, give error?
     if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
             url: 'collection-creator',

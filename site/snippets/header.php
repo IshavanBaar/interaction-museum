@@ -16,8 +16,10 @@
             'assets/css/main.css',
             'assets/css/simple-sidebar.css',
             'assets/css/lightslider.css',
+            'assets/css/medium-editor.css',
+            'assets/css/medium-editor-themes/beagle.css'
         ))?>
-
+        
         <!-- JS -->	
         <?php echo js(array(
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
@@ -25,9 +27,9 @@
             'assets/js/lib/bootstrap.min.js',
             'assets/js/lib/lightslider.js',
             'assets/js/main.js',
-            // 'assets/js/lib/ResizeSensor.js',
-            // 'assets/js/lib/ElementQueries.js',
-        ))?>
+            'assets/js/medium-editor.js',
+            'assets/js/medium-editor-custom-html.js'
+        ))?> 
     </head>
     <body>
     <div id="wrapper" class="toggled">
