@@ -14,10 +14,10 @@
         <?php echo css(array(
             'assets/css/bootstrap.css',
             'assets/css/main.css',
-            'assets/css/simple-sidebar.css',
-            'assets/css/lightslider.css',
-            'assets/css/medium-editor.css',
-            'assets/css/medium-editor-themes/beagle.css'
+            'assets/css/sidebar/simple-sidebar.css',
+            'assets/css/slider/lightslider.css',
+            'assets/css/medium-editor/medium-editor.css',
+            'assets/css/medium-editor/medium-editor-themes/beagle.css'
         ))?>
         
         <!-- JS -->	
@@ -25,11 +25,12 @@
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
             'assets/js/lib/jquery-1.12.3.js',
             'assets/js/lib/bootstrap.min.js',
-            'assets/js/lib/lightslider.js',
+            'assets/js/slider/lightslider.js',
             'assets/js/main.js',
-            'assets/js/medium-editor.js',
-            'assets/js/medium-editor-custom-html.js'
+            'assets/js/medium-editor/medium-editor.min.js',
+            'assets/js/medium-editor/custom-html.js',
+            'assets/js/medium-editor/insert-technique.js'
         ))?> 
     </head>
     <body>
-    <div id="wrapper" class="toggled">
+        <div id="wrapper" class="toggled">
