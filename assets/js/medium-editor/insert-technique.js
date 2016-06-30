@@ -11,17 +11,7 @@ window.onload = function () {
         "</div>" +
         "<br>";
     
-    var editor = new MediumEditor(".container", {
-        buttons: [
-            "bold", "italic", "underline", "anchor", "header1", "header2", "quote", "customHtml",
-        ]
-      , extensions: {
-            "customHtml": new CustomHtml({
-                buttonText: "IT"
-              , htmlToInsert: thumbnail
-            })
-        }
-    });
+    var editor = new MediumEditor(".editable");
     
     
 };
