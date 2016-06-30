@@ -32,7 +32,6 @@ h1 {
     font-family: 'Slabo 27px', serif;
     font-size: 40px;
     margin-top: 5px;
-
 }
 
 h2 {
@@ -354,6 +353,12 @@ hr{
 }
 
 #editor {
+    text-align: center;
+}
+
+.exhibit-title {
+    font-family: 'Slabo 27px', serif;
+    font-size: 40px !important;
     text-align: center;
 }
 
