@@ -16,68 +16,77 @@ options:
   url: false
   delete: true
 fields:
-	title:
-		label: Name 
-		type:  text
-		placeholder: Enter the name of the technique... 
-		required: true
-	description:
-      label: Description
-      type: textarea
-      validate:
-        min: 4
-        max: 550
+  basics:
+    label: Basics
+    type: headline
+  title:
+    label: Name 
+    type:  text
+    placeholder: Enter the name of the technique... 
+    required: true
+  description:
+    label: Description
+    type: textarea
+    validate:
+      min: 4
+      max: 550
+    required: true
+    help: Improve the writing style with the http://hemingwayapp.com/   
+  tags:
+    label: Tags
+    type: tags
+    required: true
+  media:
+    label: Media
+    type: headline
+  header-image:
+    label: Select a header image (GIF, 16:9)
+    type: image
+  extra-images:
+    label: Extra Images
+    type: selector
+    mode: multiple
+    autoselect: none
+    types: 
+      - image
+  movie:
+    label: Video (YouTube or Vimeo)
+    type: url
+  extra:
+    label: Extra
+    type: headline
+  try-out:
+    label: Paste a link to a website with a working demo
+    type: url
+  related-publications:
+    label: Related Publications
+    type: structure
+    entry: >
+      {{title}}<br />
+      {{link}}<br />
+      {{type}}<br />
+      {{authors}}<br />
+      {{year}}
+    fields:
+      title:
+        label: Title
+        type: text
       required: true
-      help: Improve the writing style with the http://hemingwayapp.com/   
-	tags:
-		label: Tags
-		type: tags
-		required: true
-	header-image:
-		label: Select a header image (GIF)
-		type: image
-	extra-images:
-		label: Extra Images
-		type: selector
-		mode: multiple
-		autoselect: none
-		types: 
-			- image
-	movie:
-		label: Video (YouTube or Vimeo)
-		type: url
-	try-out:
-		label: Paste a link to a website with a working demo
-		type: url
-	related-publications:
-		label: Related Publications
-		type: structure
-		entry: >
-			{{title}}<br />
-			{{link}}<br />
-			{{type}}<br />
-			{{authors}}<br />
-			{{year}}
-		fields:
-			title:
-				label: Title
-				type: text
-				required: true
-			link:
-				label: Link
-				type: url
-				required: true
-			type:
-				label: Type
-				type: text
-				required: true
-			authors:
-				label: Authors
-				type: text
-				required: true
-			year:
-				label: Year
-				type: text
-				required: true
-				validate: 
-					num
+      link:
+        label: Link
+        type: url
+        required: true
+      type:
+        label: Type
+        type: text
+        required: true
+      authors:
+        label: Authors
+        type: text
+        required: true
+      year:
+        label: Year
+        type: text
+        required: true
+        validate: 
+          num
