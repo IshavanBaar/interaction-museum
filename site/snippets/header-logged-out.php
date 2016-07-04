@@ -30,5 +30,3 @@
 
     </head>
     <body>
-        <div id="wrapper" class="toggled">
-        <span class="open_sidebar_btn glyphicon glyphicon-chevron-right btn"></span> 

@@ -6,7 +6,7 @@ Title: Drag-and-Drop
 
 ----
 
-Description: Drang-and-Drop is one of the most popular direct manipulation techniques. The user can select a virtual object by grabbing it and then dragging it to a different location or onto another virtual object. This can trigger a command linked to target object.  This technique is especially useful on touch-screen devices.
+Description: Drang-and-Drop is one of the most popular direct manipulation techniques. The user can select an object by grabbing it and then dragging it to a different location or onto another object. It is commonly used for re-positioning objects and creating commands (e.g. set the color of the headphones). Drag-and-Drop is especially useful on touch-screen devices.
 
 ----
 
@@ -34,7 +34,7 @@ Extra:
 
 ----
 
-Try-out: http://codepen.io/ettrics/pen/QbPEeg
+Try-out: http://codepen.io/acauamontiel/pen/NPBWyM
 
 ----
 

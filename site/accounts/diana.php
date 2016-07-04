@@ -10,3 +10,4 @@ language: en
 role: admin
 history:
   - all-techniques/drag-and-drop
+  - all-techniques/marking-menu
