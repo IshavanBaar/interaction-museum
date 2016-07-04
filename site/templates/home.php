@@ -20,7 +20,7 @@
     </div>
 
 
-    <!-- Footer -->
+<!-- Footer -->
 <?php snippet('footer') ?>
 
 

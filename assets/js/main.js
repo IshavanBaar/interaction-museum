@@ -1,6 +1,8 @@
+var addedViaThumbnail = true;
+var sidebarOpen = false;
+var techniques = {}; 
 
 function activateSliders(){
-    
     $('.slider').each(function(){
         console.log("Sliders Activated");
        var sliderId =  $(this).attr('id');
@@ -21,25 +23,57 @@ function windowSizeCheck(sidebarSize){
     }
 }
 
-var techniques = {}; 
+function toggleSubmenu(){
+    $(".submenu").toggle();      
+}
+
 
 $(document).ready(function(){
     
     activateSliders();
     windowSizeCheck(0);
     
-    /* Toggle sidebar */
-
-    $('body').on('click', '.new_collection', function (e) {
-        e.preventDefault();
-        sessionStorage.title = "";
-        toggleSidebar();
+        /* Toggle sidebar */
+    $('body').on('mouseover', '.thumbnail', function () {
+        var identifier = $(this).attr('id').replace("-thumbnail","");
+        $(this).find("#" + identifier + "-btn").css("display", "inline-block");
     });
     
-    // Add to/Remove from sidebar 
-    $('body').on('click', '.add_to_collection_btn', function () {
-        console.log($(this));
+    $('body').on('mouseout', '.thumbnail', function () {
+        var identifier = $(this).attr('id').replace("-thumbnail","");
+        $(this).find("#" + identifier + "-btn").css("display", "none");
+    });
+    
+    
+    /* Toggle sidebar */
+    $('body').on('click', '#new_collection', function (e) {
+        e.preventDefault();
+        toggleSidebar();
+    });
+
+    $('body').on('hover', '#userMenu', function (e) {
+        $(".submenu").show();
+    });
+    
+    // Add to/Remove from sidebar from thumbnail
+    $('body').on('click', '.add_to_collection_btn', function (e) {
+        e.preventDefault();
+        toggleSidebar();
+        addedViaThumbnail = true;
         addToCollection($(this));
+    });
+    
+    // Add to/Remove from sidebar from technique
+    $('body').on('click', '.add_to_collection_btn_technique', function (e) {
+        addedViaThumbnail = false;
+        e.preventDefault();
+        toggleSidebar();
+        addToCollection($(this));
+    });
+    
+    $('body').on('click', '.remove_from_collection_btn_technique', function () {
+        var id = $(this).attr("id").replace("btn_","");
+        removeFromCollection(id);
     });
     
     $('body').on('click', '.remove_from_collection_btn', function () {
@@ -47,20 +81,24 @@ $(document).ready(function(){
         removeFromCollection(id);
     });
     
-    // Save/Discard collection
+    // Save/Empty collection
     $('body').on('click', '#save_collection_btn', function () {
         saveCollection($(this));
     });
     
-    $('body').on('click', '#discard_collection_btn', function (e) {
+    $('body').on('click', '#empty_collection_btn', function (e) {
         for ( key in techniques){
             removeFromCollection(key);
         }
         sessionStorage.title = "";
         $(".sidebar-brand").val(sessionStorage.title);
-        toggleSidebar();
     });
 	
+    $('body').on('click', '.close_sidebar_btn', function (e) {
+        e.preventDefault();
+        closeSidebar();
+    });
+    
     // Log out routine
     $(".logout-btn").click(function(e) {
         window.location.href = "/interaction-museum/Logout"
@@ -69,7 +107,7 @@ $(document).ready(function(){
     /* Video / GIF hover */
 	$("#video-hover").hide();
 
-	$("#header_image").hover(function() {
+	$(".header_image").hover(function() {
         $("#video-hover").toggle();
     });
 
@@ -78,7 +116,7 @@ $(document).ready(function(){
 
     });
 
-    $("#header_image").click(function() {
+    $(".header_image").click(function() {
         $("#gif").hide();
     });
 
@@ -89,55 +127,63 @@ $(document).ready(function(){
     $('.sidebar-brand').bind('input', function(){
         sessionStorage.title = $(this).val();
     });
-    //if a collection was in the making
+    // If a collection was in the making
+    // TODO line below gives error in console on technique page.
     if(!isEmpty(JSON.parse(sessionStorage['techniques']))){
         techniques = JSON.parse(sessionStorage['techniques']);      
-        for ( key in techniques){
+        for (key in techniques){
             appendTechnique(key, techniques[key].image, techniques[key].title);
             toggleButton($("#"+key+"-btn"), "remove");
         }
+        // TODO change this with the help of boolean sidebarOpen.
         toggleSidebar();
 
-    }else{
-        console.log("no techniques");
-    }
-
-    if(!(!sessionStorage.title.trim())){
+    } 
+    
+    // Changed this line since sessionStorage.title was in some cases null.
+    if(!isEmpty(sessionStorage.title) && !(!sessionStorage.title.trim())){
         $(".sidebar-brand").val(sessionStorage.title);
     }
 
 });
 
-// Add technique to sidebar
+// Add technique to sidebar from thumbnail/technique page.
 function addToCollection(element) {
     // Get information of clicked thumbnail.
-    var thumbnail = element.parent();
-    var identifier = thumbnail.attr("id").replace("-thumbnail","");
-    var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
-    var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();
+    if (addedViaThumbnail === true) {
+        var thumbnail = element.parent();
+        var identifier = thumbnail.attr("id").replace("-thumbnail","");
+        var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
+        var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();
+    } else if (addedViaThumbnail === false) {
+        var identifier = element.attr("id").replace("btn_","");
+        var thumbnail_image = $("#header_image_" + identifier).attr("src");
+        var thumbnail_title = $("#title_" + identifier).html();
+    } 
     
-    // sessionStorage.setItem(sessionStorage.length, JSON.stringify(parsedResult.ListaPermessi));
     techniques[identifier] = {
         id: identifier,
         image: thumbnail_image,
         title: thumbnail_title
     }
     sessionStorage['techniques'] = JSON.stringify(techniques);
-    console.log(JSON.parse(sessionStorage['techniques']));
+    
     // Add it to the HTML
     appendTechnique(identifier, thumbnail_image, thumbnail_title);
     // Toggle thumbnail button
-    toggleButton(element, "remove"); 
-    console.log(element);       
+    toggleButton(element, "remove");     
 };
 
-// Remove technique from sidebar
+// Remove technique from session storage and sidebar
 function removeFromCollection(id) {
-    //deletes it from session storage 
     delete techniques[id];
     sessionStorage['techniques'] = JSON.stringify(techniques);
-    // Toggle thumbnail button
-    toggleButton($("#" + id + "-btn"), "add");
+    
+    var removeButtonId = "#" + id + "-btn";
+    if (addedViaThumbnail === false) {
+        removeButtonId = "#btn_" + id;  
+    }
+    toggleButton($(removeButtonId), "add");
     
     // Remove from sidebar
     $("#" + id + "-sidebar").remove();
@@ -146,28 +192,45 @@ function removeFromCollection(id) {
 
 // Toggle button to be set to the addOrRemove value.
 function toggleButton(element, addOrRemove) {
+    var addButtonClass = "add_to_collection_btn";
+    var removeButtonClass = "remove_from_collection_btn";
+    if (addedViaThumbnail === false) {
+        addButtonClass = addButtonClass + "_technique";
+        removeButtonClass = removeButtonClass + "_technique";
+    }
+    
     if(addOrRemove === "remove") {
-        element.removeClass("add_to_collection_btn"); 
-        element.addClass("remove_from_collection_btn"); 
+        element.removeClass(addButtonClass); 
+        element.addClass(removeButtonClass); 
         element.addClass("displayInline");
     } else if (addOrRemove === "add") {
-        element.removeClass("remove_from_collection_btn"); 
-        element.addClass("add_to_collection_btn"); 
+        element.removeClass(removeButtonClass); 
+        element.addClass(addButtonClass); 
     }
 
-    element.find("span").toggleClass("glyphicon-remove");
-    element.toggleClass("btn-warning"); 
+    element.find("i").toggleClass("glyphicon-minus");
+    element.toggleClass("btn-danger"); 
+}
+
+function closeSidebar() {
+    $("#wrapper").addClass("toggled");
+    $("#save_collection_btn").toggle();
+    $("#empty_collection_btn").toggle();
+    $(".close_sidebar_btn").toggle();
+    windowSizeCheck(300); 
 }
 
 function toggleSidebar() {
-
-    $("#wrapper").toggleClass("toggled");
-    $(".add_to_collection_btn").toggleClass("displayInline");
-    $("#save_collection_btn").toggle();
-    $("#discard_collection_btn").toggle();
-    windowSizeCheck(300);
+    if($("#wrapper").hasClass("toggled")) {
+        $("#wrapper").toggleClass("toggled");
+        $("#save_collection_btn").toggle();
+        $("#empty_collection_btn").toggle();
+        $(".close_sidebar_btn").toggle();
+        windowSizeCheck(300); 
+        sidebarOpen = true;
+    }
+    sidebarOpen = false;
 }
-
     
 function saveCollection(element) {    
     var collection_techniques = [];
@@ -182,7 +245,8 @@ function saveCollection(element) {
         collection_title : sessionStorage.title, 
         collection_techniques: collection_techniques
     };
-
+    
+    //TODO if user not logged in, give error?
     if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
             url: 'collection-creator',
@@ -190,28 +254,29 @@ function saveCollection(element) {
             success : function(response) {  
                 console.log(response);
                 if (response.indexOf("Created collection:") > -1) {
+                    //remove all techniques from collection and reset session Storage
+                    for (key in techniques){
+                        removeFromCollection(key);
+                    }
+                    sessionStorage.title = "";
+                    
                     var collection_uid = response.replace("Created collection:", "");
                     window.location.href = "/interaction-museum/all-collections/" + collection_uid;
                 } 
                 // Show tooltip if something went wrong
                 else if (response.indexOf("exists already") > -1 
-                           || response === "Something went wrong. Try again.") {
+                        || response === "Something went wrong. Try again.") {
+                    console.log("show tooltip with: " + response);
                     showTooltip(response);
                 } 
             }
         });
-        //remove all techniques from collection and reset session Storage
-        for ( key in techniques){
-            removeFromCollection(key);
-        }
-        sessionStorage.title = "";
+        
     } else if (isEmpty(techniques)){
-
         showTooltip("There are no techniques in this collection!");
-    }else {
-       
+    } else {
         $(".sidebar-brand").focus();
-         showTooltip("Your collection doesn't have a title");
+        showTooltip("Your collection doesn't have a title");
     }
 }
  
@@ -219,7 +284,9 @@ function appendTechnique(id, image, title){
     $("#sidebar").append(
         "<li class='col-xs-12'>" +
             "<div id='" + id + "-sidebar' class='thumbnail'>" +    
-                "<button class='btn btn-warning remove_from_collection_btn' type='submit'> <span class='glyphicon glyphicon-remove'></span></button>" + 
+                "<button class='btn btn-circle btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
+                    "<i class='glyphicon glyphicon-minus'></i>" +
+                "</button>" + 
                 "<a href='" + id + "'>" +
                     "<img src='" + image + "' alt='' >" +
                     "<p class='caption'>" + title + "</p>" +

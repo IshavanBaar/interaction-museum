@@ -14,20 +14,20 @@
         <?php echo css(array(
             'assets/css/bootstrap.css',
             'assets/css/main.css',
-            'assets/css/simple-sidebar.css',
-            'assets/css/lightslider.css',
+            'assets/css/sidebar/simple-sidebar.css',
+            'assets/css/slider/lightslider.css'
         ))?>
-
+        
         <!-- JS -->	
         <?php echo js(array(
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
-            'assets/js/lib/jquery-1.12.3.js',
+            'assets/js/lib/jquery/dist/jquery.min.js',
             'assets/js/lib/bootstrap.min.js',
-            'assets/js/lib/lightslider.js',
-            'assets/js/main.js',
-            // 'assets/js/lib/ResizeSensor.js',
-            // 'assets/js/lib/ElementQueries.js',
-        ))?>
+            'assets/js/slider/lightslider.js',
+            'assets/js/main.js'
+        ))?> 
+        
+
     </head>
     <body>
-    <div id="wrapper" class="toggled">
+        <div id="wrapper" class="toggled">

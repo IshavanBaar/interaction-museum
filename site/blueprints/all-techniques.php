@@ -1,7 +1,8 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Page
-pages: technique
+pages:
+  template: technique
   limit: 50
   num:
     mode: date

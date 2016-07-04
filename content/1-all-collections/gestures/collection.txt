@@ -1,0 +1,18 @@
+Title: Gestures
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- technique: arpege
+- technique: free-hand-gestures
+- technique: grabbing-the-air
+- technique: knotty-gestures
+- technique: marking-menu
+- technique: multi-touch-gestures
+- technique: octopocus
+- technique: tiltouch

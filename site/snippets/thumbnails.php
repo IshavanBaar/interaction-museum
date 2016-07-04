@@ -12,8 +12,8 @@ foreach($entries as $technique):
 	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 		<div class="thumbnail" id="<?php echo $identifier?>-thumbnail">
             <!-- Button to add to collection -->
-            <button id="<?php echo $identifier?>-btn" class="btn btn-default add_to_collection_btn" type="submit">
-                <span class="glyphicon glyphicon-plus"></span>
+            <button id="<?php echo $identifier?>-btn" class="btn btn-default btn-circle add_to_collection_btn" title="Add to collection" type="submit">
+                <i class="glyphicon glyphicon-plus"></i>
             </button>
             
             <a id="<?php echo $identifier ?>-link" href="<?php echo $identifier ?>">

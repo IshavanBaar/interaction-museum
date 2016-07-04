@@ -1,0 +1,215 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 300px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 300px;
+    width: 0;
+    height: 100%;
+    margin-left: -300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #333333;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 300px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px 0 !important;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -300px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+    padding-left: 15px;
+}
+.sidebar-brand{
+    height: 60px;
+    color: white;
+    padding-left: 10px !important;
+    border: 0 !important;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: white;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+#sidebar-buttons {
+    position: fixed;
+    bottom: 0px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#save_collection_btn{
+    bottom: 34px;
+    width: 300px;
+    display: none;
+    line-height: 40px;
+    z-index: 5;
+}
+
+#empty_collection_btn{
+    bottom: 0px;
+    width: 300px;
+    /*bottom: 25px;*/
+    display: none;
+    z-index: 5;
+}
+
+.collection-title{
+    line-height: 60px !important;
+    color: white;
+    margin-bottom: 0;
+    width: 90%;
+}
+
+.sidebar-brand[type=text]:focus {
+    border-bottom: 1px solid white;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+}
+
+.input-group-addon{
+    padding: 0 10px;
+    color: white;
+}
+
+/* TODO do this in a nicer way*/
+.close_sidebar_btn {
+    position: fixed;
+    display: none;
+    left: 275px;
+    top: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/*thumbnail*/
+.sidebar-nav > li .thumbnail{
+    background-color: rgba(0, 0, 0, 0) !important; 
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 5px;
+    min-height: 0 !important;
+}
+
+.sidebar-nav > li .thumbnail a > img {
+    min-height: 0px;
+}
+.sidebar-nav > li .thumbnail a > p{
+    margin-bottom: 0px;
+    color: #333333;
+    background-color: white;
+    font-size: 1em;
+}
+
+.placeholder-fix:focus::-webkit-input-placeholder  {color:transparent !important;}
+.placeholder-fix:focus::-moz-placeholder   {color:transparent !important;}
+.placeholder-fix:-moz-placeholder   {color:transparent !important;}
+
+.noTransition{
+    
+}
+@media(min-width:1px) {
+    #wrapper {
+        padding-left: 300px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 300px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

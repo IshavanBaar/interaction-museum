@@ -3,11 +3,11 @@
 title: Technique
 pages: false
 files:
-    type: 
-        - image
-        - video
-        max: 5
-		sortable: true
+  type: 
+    - image
+    - video
+  max: 5
+  sortable: true
 icon: hand-pointer-o
 options:
   preview: true
@@ -22,9 +22,13 @@ fields:
 		placeholder: Enter the name of the technique... 
 		required: true
 	description:
-		label: Description
-		type: textarea
-        size: large
+      label: Description
+      type: textarea
+      validate:
+        min: 4
+        max: 550
+      required: true
+      help: Improve the writing style with the http://hemingwayapp.com/   
 	tags:
 		label: Tags
 		type: tags
@@ -32,13 +36,6 @@ fields:
 	header-image:
 		label: Select a header image (GIF)
 		type: image
-	cropper:
-		label: Cropping Area
-		type: cropper
-		ratios:
-			- 16/9
-			label: portrait image
-			value: 2/3
 	extra-images:
 		label: Extra Images
 		type: selector

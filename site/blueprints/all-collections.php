@@ -1,7 +1,9 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Page
-pages: collection
+pages:
+  template:
+    - collection
   limit: 50
   num: zero
 files: false

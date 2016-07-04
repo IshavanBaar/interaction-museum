@@ -1,0 +1,14 @@
+Title: Drawing
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- technique: crossing
+- technique: interactive-beautification
+- technique: knotty-gestures
+- technique: octopocus
