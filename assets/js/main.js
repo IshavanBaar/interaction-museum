@@ -104,11 +104,12 @@ $(document).ready(function(){
         window.location.href = "/interaction-museum/Logout"
     });
     
-    /* Video / GIF hover */
-	$("#video-hover").hide();
+   /* Video / GIF hover */
+    $("#video-hover").hide();
 
-	$(".header_image").hover(function() {
+    $("#header_image").hover(function() {
         $("#video-hover").toggle();
+        console.log("i'm in here");
     });
 
     $("#video-hover").hover(function() {
@@ -116,7 +117,7 @@ $(document).ready(function(){
 
     });
 
-    $(".header_image").click(function() {
+    $("#header_image").click(function() {
         $("#gif").hide();
     });
 
