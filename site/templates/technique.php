@@ -86,9 +86,9 @@
                 <?php if($video->isNotEmpty()): ?>
                     <!-- VIDEO -->
                     <?php if(stripos($video, "youtube") !== false): ?>
-                        <div class='videoWrapper'><?php echo youtube($video)?></div>
+                        <div class='videoWrapper'><?php echo youtube($video);?></div>
                     <?php elseif (stripos($video, "vimeo") !== false): ?>
-                        <div class='videoWrapper '><?php echo vimeo($video)?></div>
+                        <div class='videoWrapper '><?php echo vimeo($video);?></div>
                     <?php endif; ?>
 
                     <!-- HEADER IMAGE -->
@@ -106,7 +106,7 @@
                     <!-- HEADER IMAGE -->
                     <?php if($page->header_image()->isNotEmpty()): ?>
                         <div class='row'>
-                            <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
+                            <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
                         </div>
                     <?php endif; ?>
                 <?php endif; ?>		
