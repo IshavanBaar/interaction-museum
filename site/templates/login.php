@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?php snippet('header-logged-out') ?>
 <?php snippet('menu') ?>
 
 <div class="container" role="main">

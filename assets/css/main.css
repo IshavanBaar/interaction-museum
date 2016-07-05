@@ -38,7 +38,9 @@ h2 {
     font-family: 'Slabo 27px', serif;
     font-size: 26px;
 }
-
+h3 a:hover{
+    color: #4ba0b3;
+}
 p {
     font-size: 17px;
     line-height: 1.5;
@@ -62,6 +64,7 @@ a:hover d{
 
 .navbar-brand {
     font-family: 'Slabo 27px', serif;
+    color: #336E7B;
 }
 
 .navbar .navbar-form{
@@ -87,7 +90,12 @@ a:hover d{
 .media{
 	display: block;
 }
-
+.menu{
+    padding-right: 3em;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #336E7B;
+}
 /* Submenu */
 
 .submenu {
@@ -95,6 +103,7 @@ a:hover d{
   z-index: 1;
   display: none;
   left: 1em;
+  padding-left: 0;
 }
 .submenu:before {
   position: absolute;
@@ -108,18 +117,22 @@ a:hover d{
 }
 
 .submenu li {
-  border-bottom: 1px solid #444;
+   /*border-bottom: 1px solid;*/
    list-style: none;
+   min-width: 200px;
+   padding-bottom: 2px;
 }
 .submenu a {
-  padding: .5em 1.5em;
-  font-size: .9em;
-  font-weight: 300;
-  color: #fff;
-  background: #336E7B;
-  white-space: nowrap;
-  margin-left: -40px;
-    margin-top: 20px;
+    display: block;
+    padding: .5em 1.5em;
+    font-size: .9em;
+    font-weight: 300;
+    color: #fff;
+    background: #336E7B;
+    white-space: nowrap;
+    margin-top: -1px;
+    width: 110px !important;
+
 }
 .submenu a:hover {
   background: #333;
@@ -154,7 +167,13 @@ a:hover d{
 
 .label {
     font-size: 1em;
+    margin: 4px 4px;
+    display: block;
+    float: left;
+    padding: 5px 10px 7px;
 }
+
+
 
 /* Search */
 
@@ -172,7 +191,7 @@ a:hover d{
 }
 
 .tags {
-    padding: 0 15px; 
+    padding: 0 1em; 
 }
 
 /* Publications */
@@ -289,7 +308,8 @@ a:hover d{
     min-height: 260px;
 }
 .fullWidth{
-    width: 100%;
+    width: 80%;
+    padding-left: 10%;
 }
 .halfWidth{
     width: 50%;
@@ -341,6 +361,17 @@ a:hover d{
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
+}
+
+.glyphicon-chevron-right{
+    position: absolute;
+    top: 1.5em;
+    z-index: 5;
+    padding: 1em;
+    color: #336E7B;
+}
+.glyphicon-chevron-right:hover{
+    color: #4ba0b3;
 }
 
 hr{

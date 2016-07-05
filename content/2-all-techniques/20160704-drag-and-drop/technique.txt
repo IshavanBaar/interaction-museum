@@ -1,0 +1,41 @@
+Basics: 
+
+----
+
+Title: Drag-and-Drop
+
+----
+
+Description: Drang-and-Drop is one of the most popular direct manipulation techniques. The user can select an object by grabbing it and then dragging it to a different location or onto another object. It is commonly used for re-positioning objects and creating commands (e.g. set the color of the headphones). Drag-and-Drop is especially useful on touch-screen devices.
+
+----
+
+Tags: drag-and-drop,Fitts' law,feedback,touch screen,direct manipulation
+
+----
+
+Media: 
+
+----
+
+Header-image: drag-and-drop.gif
+
+----
+
+Extra-images: drag-and-drop-2.gif
+
+----
+
+Movie: 
+
+----
+
+Extra: 
+
+----
+
+Try-out: http://codepen.io/acauamontiel/pen/NPBWyM
+
+----
+
+Related-publications: 

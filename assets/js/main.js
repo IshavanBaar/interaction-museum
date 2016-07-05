@@ -13,8 +13,8 @@ function activateSliders(){
     });
 }
 
-function windowSizeCheck(sidebarSize){
-    if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 852)){
+function windowSizeCheck(sidebarSize){1
+    if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 891)){
         $('#menu').insertBefore('#search-bar');
         $('#menu').addClass('mobile-menu');
         $('#search-bar').addClass('fullWidth');
@@ -47,8 +47,11 @@ $(document).ready(function(){
     
     /* Toggle sidebar */
     $('body').on('click', '#new_collection', function (e) {
+        // if it's on the collections page, go to techniques 
         e.preventDefault();
+        emptyCollecton();
         toggleSidebar();
+
     });
 
     $('body').on('hover', '#userMenu', function (e) {
@@ -87,16 +90,18 @@ $(document).ready(function(){
     });
     
     $('body').on('click', '#empty_collection_btn', function (e) {
-        for ( key in techniques){
-            removeFromCollection(key);
-        }
-        sessionStorage.title = "";
-        $(".sidebar-brand").val(sessionStorage.title);
+      emptyCollecton();
     });
 	
+
     $('body').on('click', '.close_sidebar_btn', function (e) {
         e.preventDefault();
         closeSidebar();
+    });
+    $('body').on('click', '.open_sidebar_btn', function (e) {
+        e.preventDefault();
+        toggleSidebar();
+
     });
     
     // Log out routine
@@ -104,11 +109,12 @@ $(document).ready(function(){
         window.location.href = "/interaction-museum/Logout"
     });
     
-    /* Video / GIF hover */
-	$("#video-hover").hide();
+   /* Video / GIF hover */
+    $("#video-hover").hide();
 
-	$(".header_image").hover(function() {
+    $("#header_image").hover(function() {
         $("#video-hover").toggle();
+        console.log("i'm in here");
     });
 
     $("#video-hover").hover(function() {
@@ -116,7 +122,7 @@ $(document).ready(function(){
 
     });
 
-    $(".header_image").click(function() {
+    $("#header_image").click(function() {
         $("#gif").hide();
     });
 
@@ -147,6 +153,13 @@ $(document).ready(function(){
 
 });
 
+function emptyCollecton(){
+  for ( key in techniques){
+        removeFromCollection(key);
+    }
+    sessionStorage.title = "";
+    $(".sidebar-brand").val(sessionStorage.title);
+}
 // Add technique to sidebar from thumbnail/technique page.
 function addToCollection(element) {
     // Get information of clicked thumbnail.
@@ -217,6 +230,7 @@ function closeSidebar() {
     $("#save_collection_btn").toggle();
     $("#empty_collection_btn").toggle();
     $(".close_sidebar_btn").toggle();
+    $(".open_sidebar_btn").toggle();
     windowSizeCheck(300); 
 }
 
@@ -226,6 +240,7 @@ function toggleSidebar() {
         $("#save_collection_btn").toggle();
         $("#empty_collection_btn").toggle();
         $(".close_sidebar_btn").toggle();
+        $(".open_sidebar_btn").toggle();
         windowSizeCheck(300); 
         sidebarOpen = true;
     }
