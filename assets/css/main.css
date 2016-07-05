@@ -76,11 +76,29 @@ a:hover d{
 .navbar{
     -webkit-box-shadow: 0 1px 2px rgba(51, 110, 123, 0.3);
     box-shadow: 0 1px 2px rgba(51, 110, 123, 0.3);
+
 }
 .navbar-right{
     font-weight: 300;
 }
 
+/*intro text*/
+.intro p, h1{
+    text-align: center;
+    color: #EFEFEF;
+}
+.intro h1{
+    padding-top: 80px;
+}
+.intro p{
+    font-size: 20px
+}
+.intro{
+    height: 204px;
+    background-image: url("../images/dark_geometric.png");
+    background-repeat: repeat;
+    margin: -23px 0 23px;
+}
 /* Text blocks */
 
 .media img {
