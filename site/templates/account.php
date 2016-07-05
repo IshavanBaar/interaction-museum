@@ -1,11 +1,11 @@
-<?php snippet('header') ?>
+<?php snippet('header-logged-out') ?>
 
 <!-- Menu -->
 <!-- TODO no option for creating collections here -->
 <?php snippet('menu')?>
 
 <div class="main container" role="main">
-    <div class="text">
+    <div class="text col-md-3 col-xs-6 col-md-offset-5 col-xs-offset-3">
         <!-- USER NAME -->
         <h1><?php echo $site->user()?></h1>
 
