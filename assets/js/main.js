@@ -261,8 +261,11 @@ function saveCollection(element) {
         collection_techniques: collection_techniques
     };
     
-    //TODO if user not logged in, give error?
-    console.log($(".user").length );
+    
+    if($(".user").length === 0 && $(".login").length > 0) {
+        showTooltip("Login to save this collection");
+    } 
+    //TODO gives error on trim() when no title
     else if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
             url: 'collection-creator',
