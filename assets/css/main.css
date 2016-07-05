@@ -83,7 +83,7 @@ a:hover d{
 }
 
 /*intro text*/
-.intro p, h1{
+.intro p, .intro h1{
     text-align: center;
     color: #EFEFEF;
 }
