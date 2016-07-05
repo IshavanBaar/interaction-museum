@@ -8,7 +8,7 @@
 <!-- ACCOUNT NAME / LOGOUT -->
 <?php if($user = $site->user()): ?>
     <li>
-        <a href="<?php echo url('account') ?>" onmouseenter="toggleSubmenu()"><?php echo $user?></a>
+        <a class="user" href="<?php echo url('account') ?>" onmouseenter="toggleSubmenu()"><?php echo $user?></a>
         <ul class="submenu" >
             <!-- CREATE A NEW COLLECTION -->  
             <li>
@@ -22,6 +22,6 @@
     </li>
 <?php else: ?>
     <li>
-      <a href="<?php echo url('login') ?>">Login</a>
+      <a class="login" href="<?php echo url('login') ?>">Login</a>
     </li>
 <?php endif; ?>

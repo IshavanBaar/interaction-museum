@@ -262,7 +262,8 @@ function saveCollection(element) {
     };
     
     //TODO if user not logged in, give error?
-    if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
+    console.log($(".user").length );
+    else if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
             url: 'collection-creator',
             data: collection,
