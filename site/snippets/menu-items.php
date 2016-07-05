@@ -15,9 +15,9 @@
                 <a id="new_collection" href="">New collection</a>
             </li>
             <!-- CREATE A NEW EXHIBIT -->  
-            <li>
+            <!--<li>
                 <a id="new_exhibit" href="<?php echo url('exhibit-creator') ?>">New exhibit</a>
-            </li>
+            </li>-->
         </ul>
     </li>
 <?php else: ?>
