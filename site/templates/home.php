@@ -15,6 +15,12 @@
         <!-- Search results -->
         <?php snippet('search') ?>
 
+        <div class="intro row">
+            <div class="col-sm-12 ">
+            <h1>A Collection of Interaction Techniques</h1>
+            </div>
+        </div>
+
         <!-- All techniques -->
         <?php snippet('all-techniques') ?>
     </div>
