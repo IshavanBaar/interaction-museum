@@ -44,9 +44,10 @@ Related-publications:
   title: 'The Bubble Cursor: Enhancing Target Acquisition by Dynamic Resizing of the Cursor’s Activation Area'
   link: >
     http://dl.acm.org/citation.cfm?doid=1054972.1055012
-  type: "CHI '05 Proceedings"
+  type: CHI
   authors: Tovi Grossman, Ravin Balakrishnan
   year: "2005"
+  conference: CHI
 
 ----
 

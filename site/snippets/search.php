@@ -8,8 +8,8 @@
     
     <!-- If no results, show that we didn't find anything -->
     <?php elseif(count($results->toArray()) === 0 && strlen($query) > 0): ?> 
-        <h2 class='col-xs-12'>We did not find anything</h2>;
-		<h2 class='col-xs-12'>Other Interaction Techniques</h2>;
+        <h2 class='col-xs-12'>We did not find anything</h2>
+		<h2 class='col-xs-12'>Other Interaction Techniques</h2>
     <?php endif ?>
     
 </div>
