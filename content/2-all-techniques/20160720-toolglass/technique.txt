@@ -6,7 +6,7 @@ Title: Toolglass
 
 ----
 
-Description: A toolglass is a movable see-through panel that appears above the application window. It is a manipulation technique to control the properties of an object. It can also reveal the properties in a filtered visual layer called Magic Lens.
+Description: A toolglass is a movable see-through panel that appears above the application window. It is a manipulation technique to control the properties of an object. It can also reveal a subset of properties in a visual layer, called a Magic Lens.
 
 ----
 
@@ -49,3 +49,7 @@ Video:
 ----
 
 Movie: 
+
+----
+
+Extra-images: 

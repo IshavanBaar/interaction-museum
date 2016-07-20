@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - all-techniques/multi-touch-gestures
-  - all-techniques/swiss-army-menu
-  - all-techniques/thumbrock
-  - all-techniques/free-hand-gestures
-  - all-techniques/marking-menu
+  - all-techniques/selective-undo
+  - all-techniques/paperlens
+  - all-techniques/bubble-cursor
+  - all-techniques/drag-and-drop
+  - all-techniques/toolglass
