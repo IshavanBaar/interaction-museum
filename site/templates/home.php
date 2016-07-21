@@ -1,7 +1,5 @@
-<!-- Header -->
-<?php snippet('header') ?>
-
-
+    <!-- Header -->
+    <?php snippet('header') ?>
 
     <div id="sidebar-wrapper">
         <!-- Side bar -->
@@ -17,7 +15,8 @@
 
         <div class="intro row">
             <div class="col-sm-12 ">
-            <h1>A Collection of Interaction Techniques</h1>
+                <h1>A Collection of Innovative Interactions</h1>
+                <p>Find interaction techniques that inspire new designs. Design with cutting edge interactions, developed by Human-Computer Interaction research.</p>
             </div>
         </div>
 

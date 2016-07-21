@@ -98,15 +98,15 @@ $(document).ready(function(){
         e.preventDefault();
         closeSidebar();
     });
+    
     $('body').on('click', '.open_sidebar_btn', function (e) {
         e.preventDefault();
         toggleSidebar();
-
     });
     
     // Log out routine
     $(".logout-btn").click(function(e) {
-        window.location.href = "/interaction-museum/Logout"
+        window.location.href = "/interaction-museum/Logout";
     });
     
    /* Video / GIF hover */
@@ -262,7 +262,7 @@ function saveCollection(element) {
     };
     
     
-    if($(".user").length === 0 && $(".login").length > 0) {
+    if($("#user").length === 0 && $("#login").length > 0) {
         showTooltip("Login to save this collection");
     } 
     //TODO gives error on trim() when no title
