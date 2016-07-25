@@ -36,6 +36,13 @@ fields:
     label: Tags
     type: tags
     required: true
+  styles:
+    label: Interaction Styles
+    type: checkboxes
+    required: true
+    options: query
+    query:
+      page: all-styles
   media:
     label: Media
     type: headline

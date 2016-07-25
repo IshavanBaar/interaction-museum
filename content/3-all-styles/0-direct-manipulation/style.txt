@@ -1,0 +1,5 @@
+Title: Direct Manipulation
+
+----
+
+Description: Techniques that involve continuous representation of objects of interest and rapid, reversible, and incremental actions and feedback.

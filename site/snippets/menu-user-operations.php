@@ -1,5 +1,5 @@
 <?php if($user = $site->user()): ?>    
-    <!--<ul class="submenu">-->
+    <!-- TODO Diana: position these items on same height as the rest -->
     <!-- CREATE A NEW COLLECTION -->  
     <li>
         <a id="new_collection" class="btn btn-primary menu-operation" href="">New collection</a>

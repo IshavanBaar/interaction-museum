@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - all-techniques/selective-undo
-  - all-techniques/paperlens
-  - all-techniques/bubble-cursor
-  - all-techniques/drag-and-drop
-  - all-techniques/toolglass
+  - all-collections/drawing
+  - all-techniques/link-jumping
+  - all-techniques/anchored-menu-vr
+  - all-techniques/virtual-pointing-ray
+  - all-techniques/toolglass-vr
