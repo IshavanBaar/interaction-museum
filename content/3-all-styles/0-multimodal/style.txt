@@ -1,0 +1,5 @@
+Title: Multimodal
+
+----
+
+Description: Techniques with multiple modes of interacting with a system, usually with several distinct tools for input and output of data.

@@ -1,0 +1,60 @@
+Info: 
+
+----
+
+Title: Speech as Search Input
+
+----
+
+Description: Speech as Search Input is the use of speech technology to input a search query.
+
+----
+
+Tags: Text,Input,Speech,Recognition,Entry
+
+----
+
+Header-image: speech-as-search-input.gif
+
+----
+
+Trade-off-image: 
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: >
+    Speech for Multimedia Information
+    Retrieval
+  link: 'http://repository.cmu.edu/cgi/viewcontent.cgi?article=2407&context=compsci'
+  type: "UIST Proceedings '95"
+  authors: >
+    Alexander Hauptmann, Michael Witbrock,
+    Alexander Rudnicky, Stephen Reed
+  year: "1995"
+
+----
+
+Video: 
+
+----
+
+Styles: conversational, multimodal
+
+----
+
+Extra-images: 
+
+----
+
+Movie: 

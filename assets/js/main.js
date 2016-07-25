@@ -4,12 +4,12 @@ var techniques = {};
 
 function activateSliders(){
     $('.slider').each(function(){
-        console.log("Sliders Activated");
-       var sliderId =  $(this).attr('id');
-       $("#" + sliderId).lightSlider({
-        pager: false, 
-        loop: true
-       });
+        //console.log("Sliders Activated");
+        var sliderId =  $(this).attr('id');
+        $("#" + sliderId).lightSlider({
+            pager: false, 
+            loop: true
+        });
     });
 }
 

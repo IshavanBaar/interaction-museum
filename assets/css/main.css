@@ -425,6 +425,15 @@ hr{
     text-align: center;
 }
 
+/* All styles */
+.style-thumbnail {
+    font-size: 1em;
+    margin: 4px 4px;
+    display: block;
+    float: left;
+    padding: 100px 100px 100px;
+}
+
 @media (max-width: 1200px) {
     #video-hover{
         font-size: 18px;

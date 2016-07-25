@@ -15,8 +15,9 @@
          </div>
 
         <!-- SEARCH BAR -->
+        <!-- TODO Diana: Put somewhere else -->
         <!--<div id="search-bar" class="col-lg-6 col-md-5 col-sm-5 col-xs-12 search-results">
-            <form class="navbar-form search row" role="search" action="<?php echo page('home')->url() ?>" method="get" >
+            <form class="navbar-form search row" role="search" action="<?php echo url('home')?>" method="get" >
               <div class="input-group col-xs-12">
                 <input type="search" class="form-control" placeholder="Search..." name="q" id="searchBar" value="" action="">
                 <div class="input-group-btn">
