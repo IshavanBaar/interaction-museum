@@ -29,7 +29,6 @@ function toggleSubmenu(){
 
 
 $(document).ready(function(){
-    
     activateSliders();
     windowSizeCheck(0);
     
@@ -129,10 +128,53 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
+    
+    $("#publish_exhibit_btn").click(function() {
+        var button = $(this);
+        
+        var title = $('#editor-title').val();
+        
+        // Only proceed if not empty
+        var contents = $('#editor-content').clone().text().replace(/ /g,'').replace(/(\r\n|\n|\r)/gm,'');
+        if (title.length > 0 && contents != "+") {            
+            //$('#editor-content').children('.medium-insert-buttons').remove();
+            
+            $('#editor-content').children('.medium-insert-buttons').empty().remove();
+            var content = $('#editor-content').html();
+            console.log(content);
+            // Send to php in an array
+            var exhibit = {
+                exhibit_title : title,
+                exhibit_content: content
+            };  
+
+            // TODO use session storage
+            // TODO rewrite so that this is a function for both collection/exhibit creator.dd
+            $.ajax({
+                url: 'exhibit-creator',
+                data: exhibit,
+                success : function(response) {
+                    console.log(response);
+                    if (response.indexOf("Created exhibit:") > -1) {
+                        // TODO Empty title and content of editor here
+                        var exhibit_uid = response.replace("Created exhibit:", "");
+                        window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
+                    } 
+                    // Show tooltip if something went wrong
+                    else {
+                        showTooltip("#publish_exhibit_btn", response);
+                    } 
+                }
+            });
+        } else {
+            showTooltip("#publish_exhibit_btn", "Please fill in a title and text");
+        }
+    });
 
     $('.sidebar-brand').bind('input', function(){
         sessionStorage.title = $(this).val();
     });
+    
     // If a collection was in the making
     // TODO line below gives error in console on technique page.
     if(!isEmpty(JSON.parse(sessionStorage['techniques']))){
@@ -160,6 +202,7 @@ function emptyCollecton(){
     sessionStorage.title = "";
     $(".sidebar-brand").val(sessionStorage.title);
 }
+
 // Add technique to sidebar from thumbnail/technique page.
 function addToCollection(element) {
     // Get information of clicked thumbnail.
@@ -200,7 +243,6 @@ function removeFromCollection(id) {
     
     // Remove from sidebar
     $("#" + id + "-sidebar").remove();
-
 }
 
 // Toggle button to be set to the addOrRemove value.
@@ -259,19 +301,20 @@ function saveCollection(element) {
     var collection = {
         collection_title : sessionStorage.title, 
         collection_techniques: collection_techniques
-    };
+    };  
     
-    
-    if($("#user").length === 0 && $("#login").length > 0) {
-        showTooltip("Login to save this collection");
-    } 
     //TODO gives error on trim() when no title
-    else if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
+    if (isEmpty(techniques)){
+        showTooltip("#save_collection_btn", "There are no techniques in this collection!");
+    } else if(!sessionStorage.title.trim()) {
+        $(".sidebar-brand").focus();
+        showTooltip("#save_collection_btn", "Your collection doesn't have a title");
+    }
+    else {
         $.ajax({
             url: 'collection-creator',
             data: collection,
-            success : function(response) {  
-                console.log(response);
+            success : function(response) {
                 if (response.indexOf("Created collection:") > -1) {
                     //remove all techniques from collection and reset session Storage
                     for (key in techniques){
@@ -282,21 +325,16 @@ function saveCollection(element) {
                     var collection_uid = response.replace("Created collection:", "");
                     window.location.href = "/interaction-museum/all-collections/" + collection_uid;
                 } 
-                // Show tooltip if something went wrong
-                else if (response.indexOf("exists already") > -1 
-                        || response === "Something went wrong. Try again.") {
-                    console.log("show tooltip with: " + response);
-                    showTooltip(response);
+                // If not logged in, log in.
+                else if(response === "Login to save collections") {
+                     window.location.href = "/interaction-museum/login";
+                } else {
+                    showTooltip("#save_collection_btn", response);
                 } 
             }
         });
         
-    } else if (isEmpty(techniques)){
-        showTooltip("There are no techniques in this collection!");
-    } else {
-        $(".sidebar-brand").focus();
-        showTooltip("Your collection doesn't have a title");
-    }
+    } 
 }
  
 function appendTechnique(id, image, title){
@@ -316,7 +354,6 @@ function appendTechnique(id, image, title){
 }
 
 function isEmpty(obj) {
-
     // null and undefined are "empty"
     if (obj == null) return true;
 
@@ -326,8 +363,6 @@ function isEmpty(obj) {
     if (obj.length === 0)  return true;
 
     // Otherwise, does it have any properties of its own?
-    // Note that this doesn't handle
-    // toString and valueOf enumeration bugs in IE < 9
     for (var key in obj) {
         if (hasOwnProperty.call(obj, key)) return false;
     }
@@ -335,12 +370,12 @@ function isEmpty(obj) {
     return true;
 }
 
-// Show tooltip on error.
-function showTooltip(title) {
-    $('#save_collection_btn').tooltip({title: title});
-    $('#save_collection_btn').tooltip('show');
+// Show tooltip on button button, with title title.
+function showTooltip(button, title) {
+    $(button).tooltip({title: title});
+    $(button).tooltip('show');
 
      setTimeout(function(){
-        $('#save_collection_btn').tooltip('destroy');
+        $(button).tooltip('destroy');
     }, 4000);
 }
