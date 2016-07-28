@@ -149,7 +149,7 @@ $(document).ready(function(){
             };  
 
             // TODO use session storage
-            // TODO rewrite so that this is a function for both collection/exhibit creator.dd
+            // TODO rewrite so that this is a function for both collection/exhibit creator
             $.ajax({
                 url: 'exhibit-creator',
                 data: exhibit,
@@ -157,6 +157,10 @@ $(document).ready(function(){
                     console.log(response);
                     if (response.indexOf("Created exhibit:") > -1) {
                         // TODO Empty title and content of editor here
+                        $(exhibit_uid + "-writings").contents().filter(function() {
+                            return (this.nodeType !== 3) ;
+                        }).wrap( "<b></b>");
+                        
                         var exhibit_uid = response.replace("Created exhibit:", "");
                         window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
                     } 

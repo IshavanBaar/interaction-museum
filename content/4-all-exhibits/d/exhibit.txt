@@ -6,4 +6,4 @@ Creator: isha002
 
 ----
 
-Content: <p class="">d</p>
+Writings: <p class="">a (technique: blabla) b<br></p>
