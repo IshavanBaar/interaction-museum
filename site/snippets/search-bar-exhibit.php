@@ -1,9 +1,9 @@
  <!-- SEARCH BAR -->
 <div class="row">
 
-  <div id="search-bar" class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+  <div id="search-bar-exhibit" class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
 
-      <form class="navbar-form search row" role="search" action="<?php echo url('search-results')?>" method="get" >
+      <form class="navbar-form search row" role="search" action="<?php echo url('exhibit-editor')?>" method="get" >
        <!-- <label for="#search-bar">Search for interaction techniques</label> -->
         <div class="input-group col-xs-12">
           <input type="search" class="form-control" placeholder="For example: menu, gestures, Fitts' Law..." name="q" id="searchBar" value="" action="">
