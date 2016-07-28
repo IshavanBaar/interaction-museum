@@ -1,12 +1,12 @@
 <?php if($user = $site->user()): ?>    
     <!-- TODO Diana: position these items on same height as the rest -->
     <!-- CREATE A NEW COLLECTION -->  
-    <li>
+    <li class="multiple-buttons">
         <a id="new_collection" class="btn btn-primary menu-operation" href="">New collection</a>
     </li>
     
     <!-- CREATE A NEW EXHIBIT -->  
-    <li>
+    <li class="multiple-buttons">
         <a id="new_exhibit" class="btn btn-primary menu-operation" href="<?php echo url('exhibit-creator') ?>">New exhibit</a>
     </li>
 
