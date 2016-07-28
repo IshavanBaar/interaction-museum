@@ -31,15 +31,15 @@
         <div class="text-center section">
             <h1>Picked Techniques</h1>
             <?php snippet('show-techniques', array('limit' => 6)) ?>
-            <a class="btn btn-primary" href="<?php echo url('all-techniques') ?>">View more</a>
+            <a class="btn btn-primary view-more" href="<?php echo url('all-techniques') ?>">See more techniques</a>
             <hr>
         </div>
        
         <!-- Picked collections, for now the 3 most recent -->   
         <div class="text-center">
             <h1>Picked Collections</h1>
-            <?php snippet('show-collections', array('limit' => 3)) ?>
-            <a class="btn btn-primary" href="<?php echo url('all-collections') ?>">View more</a>
+            <?php snippet('show-collections', array('limit' => 4)) ?>
+            <a class="btn btn-primary view-more" href="<?php echo url('all-collections') ?>">See more collections</a>
             <hr>
         </div>
         
@@ -47,7 +47,7 @@
         <div class="text-center">
             <h1>Filter on Interaction Style</h1>
             <?php snippet('show-styles', array('limit' => 100)) ?>
-            <a class="btn btn-primary" href="<?php echo url('all-styles') ?>">View more</a>
+           
             <hr>
         </div>
     </div>

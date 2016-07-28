@@ -7,10 +7,15 @@
 </div> 
 <!-- Menu -->
 <div id="page-content-wrapper">
-    <?php snippet('menu')?>
+     <div class="header">
+                <!-- Menu -->
+            <?php snippet('menu')?>
+
+            <?php snippet('search-bar') ?>
+        </div>
 
     <div class="container-fluid">
-        <div class="collectionText">
+        <div class="collectionText section">
             <!-- COLLECTION NAME -->
             <h1><?php echo $page->title() ?></h1>          
             <!-- CREATED BY -->

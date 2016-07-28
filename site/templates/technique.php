@@ -5,7 +5,12 @@
 </div>   
 
 <div id="page-content-wrapper">
-    <?php snippet('menu') ?>
+     <div class="header">
+                <!-- Menu -->
+            <?php snippet('menu')?>
+
+            <?php snippet('search-bar') ?>
+        </div>
     
     <!-- ENTRY FIELDS -->
     <?php 
@@ -34,7 +39,7 @@
     ?>
 
     <div class="container" role="main">
-        <div class="row">
+        <div class="row section">
             <div class="col-md-4">
                 <!-- TITLE -->
                 <h1 id="title_<?php echo $identifier?>"><?php echo $name ?></h1>
@@ -83,6 +88,13 @@
             </div> <!-- end first column -->
 
             <div class="col-md-8">	
+                <!-- HEADER IMAGE -->
+                <?php if($page->header_image()->isNotEmpty()): ?>
+                    <div class='row'>
+                        <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
+                    </div>
+                <?php endif; ?>
+
                 <?php if($video->isNotEmpty()): ?>
                     <!-- VIDEO -->
                     <?php if(stripos($video, "youtube") !== false): ?>
@@ -91,25 +103,10 @@
                         <div class='videoWrapper '><?php echo vimeo($video);?></div>
                     <?php endif; ?>
 
-                    <!-- HEADER IMAGE -->
-                    <?php if($page->header_image()->isNotEmpty()): ?>
-                        <div class='row' id='gif'>
-                            <figure><img id="header_image" src="<?php echo $header_image->url() ?>" alt="" class="col-xs-12" ></figure> 
-                        </div>
-                        <!-- TODO fix play button position + autoplay video -->
-                        <div class="col-sm-1 col-sm-offset-5 btn" id="video-hover">
-                            <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>	
-                        </div>
-                    <?php endif; ?>
-
-                <?php else: ?> 
-                    <!-- HEADER IMAGE -->
-                    <?php if($page->header_image()->isNotEmpty()): ?>
-                        <div class='row'>
-                            <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
-                        </div>
-                    <?php endif; ?>
-                <?php endif; ?>		
+                 
+                 <?php endif; ?>    
+                   
+               	
 
                 <div class="media">
                 <!-- TRY OUT -->
