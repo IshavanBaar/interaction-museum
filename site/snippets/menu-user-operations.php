@@ -7,7 +7,7 @@
     
     <!-- CREATE A NEW EXHIBIT -->  
     <li>
-        <a id="new_exhibit" class="btn btn-primary menu-operation" href="<?php echo url('exhibit-creator') ?>">New exhibit</a>
+        <a id="new_exhibit" class="btn btn-primary menu-operation" href="<?php echo url('exhibit-editor') ?>">New exhibit</a>
     </li>
 
     <li>

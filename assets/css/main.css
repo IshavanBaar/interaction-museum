@@ -430,7 +430,7 @@ hr{
      border-top: 1px solid rgba(51, 110, 123, 0.5);
 }
 
-/* Exhibit Creator */
+/* Exhibit Editor */
 :focus {
     outline: none;
 }
@@ -439,10 +439,9 @@ hr{
     text-align: center;
 }
 
-.exhibit-title {
+#editor-title {
     font-family: 'Slabo 27px', serif;
     font-size: 40px !important;
-    text-align: center;
 }
 
 /* All styles */
