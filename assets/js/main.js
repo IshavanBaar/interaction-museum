@@ -13,13 +13,9 @@ function activateSliders(){
     });
 }
 
-function windowSizeCheck(sidebarSize){1
+function windowSizeCheck(sidebarSize){
     if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 891)){
-        $('#menu').insertBefore('#search-bar');
-        $('#menu').addClass('mobile-menu');
-        $('#search-bar').addClass('fullWidth');
-        $('#menu').addClass('halfWidth');
-        $('.navbar-header').addClass('halfWidth');
+        //to do
     }
 }
 

@@ -42,7 +42,7 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px 0 !important;
+    padding: 0 0 15px !important;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -164,7 +164,7 @@
     position: absolute;
     background-color: #333333; /*or #336E7B ?*/
     cursor: pointer;
-    top: 6.5em;
+    top: 15px;
     z-index: 5;
     padding: 1em;
 }

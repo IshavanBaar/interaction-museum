@@ -8,6 +8,9 @@ html,body{
   min-height: 100%;
   position:relative;
 }
+.section{
+    margin-top: 20px;
+}
 
 .mini{
 	 padding: 0;
@@ -64,7 +67,10 @@ a:hover d{
 
 .navbar-brand {
     font-family: 'Slabo 27px', serif;
-    color: #336E7B;
+    color: white;
+}
+.navbar-brand:hover{
+    color: #4ba0b3;
 }
 
 .navbar .navbar-form{
@@ -76,29 +82,31 @@ a:hover d{
 .navbar{
     -webkit-box-shadow: 0 1px 2px rgba(51, 110, 123, 0.3);
     box-shadow: 0 1px 2px rgba(51, 110, 123, 0.3);
+    height: 80px;
 
 }
 .navbar-right{
     font-weight: 300;
 }
+.header{
+    background-image: url("../images/dark_geometric.png");
+    background-repeat: repeat;
 
+}
 /*intro text*/
 .intro p, .intro h1{
     text-align: center;
     color: #EFEFEF;
 }
 .intro h1{
-    padding-top: 60px;
+    padding-top: 30px;
 }
 .intro p{
     font-size: 20px
 }
-.intro{
+/*.intro{
     height: 204px;
-    background-image: url("../images/dark_geometric.png");
-    background-repeat: repeat;
-    margin: -23px 0 23px;
-}
+    /*margin: -23px 0 23px;*/
 /* Text blocks */
 
 .media img {
@@ -121,25 +129,33 @@ a:hover d{
 }
 
 .section_inactive {
-    color: #000000 !important;
+    color: white !important;
     font-weight: normal;
     font-style: normal;
+}
+.section_inactive:hover{
+    background-color: #191919 !important;
+    color: #4ba0b3 !important;
 }
 
 .navbar-default .navbar-nav > li > a {
     color: #336E7B;
 }
-
+.navbar-top{
+   height: 80px;
+   line-height: 80px;
+   padding-top: 10px;
+}
 .menu-operation {
-    padding: 5px !important;
-    margin-left: 10px;
+    padding: 10px !important;
+    margin: 10px 0 15px 15px;
     border-radius: 3px;
     color: #ffffff !important;
 }
 
 .menu-operation:hover {
     color: #ffffff !important;
-    background-color: #2196f3 !important;
+    background-color: #4ba0b3 !important;
 }
 
 /*.submenu {
@@ -223,7 +239,9 @@ a:hover d{
 #search-bar {
     margin-bottom: 20px;
 }
-
+label{
+    text-align: center !important;
+}
 .input-group{
 	width: 100%;
 }
@@ -253,6 +271,7 @@ a:hover d{
     border-style: solid !important;
     border-width: 1px !important;
     border-color: #336E7B !important;
+    background-color: white;
     height: 35px;
 }
 
@@ -328,7 +347,7 @@ a:hover d{
     right:20px; 
 }
 
-.mobile-menu{
+/*.mobile-menu{
     float: right;
     margin: 0;
     padding:  0 15px 0 0;
@@ -337,7 +356,8 @@ a:hover d{
 
 .mobile-menu ul > li{
     float: left;
-}
+    color: white;
+}*/
 
 .input-group-btn{
     max-width: 13px;
@@ -346,14 +366,14 @@ a:hover d{
 .thumbnail a > img {
     min-height: 260px;
 }
-.fullWidth{
+/*.fullWidth{
     width: 80%;
     padding-left: 10%;
-}
-.halfWidth{
+}*/
+/*.halfWidth{
     width: 50%;
 }
-
+*/
 /* Login */
 .loginField{
     line-height: 2.5em;

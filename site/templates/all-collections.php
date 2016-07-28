@@ -8,11 +8,16 @@
 </div>   
 
 <div id="page-content-wrapper">
-    <!-- Menu -->
-    <?php snippet('menu')?>
+    <div class="header">
+                <!-- Menu -->
+            <?php snippet('menu')?>
+
+            <?php snippet('search-bar') ?>
+    </div>
+
     
     <!-- Title TODO Diana: do this more neatly in css?-->
-    <div class="text-center">
+    <div class="text-center section">
         <h1>All <?php echo $page->title()?></h1>
     </div>
     
