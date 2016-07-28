@@ -4,22 +4,18 @@ var techniques = {};
 
 function activateSliders(){
     $('.slider').each(function(){
-        console.log("Sliders Activated");
-       var sliderId =  $(this).attr('id');
-       $("#" + sliderId).lightSlider({
-        pager: false, 
-        loop: true
-       });
+        //console.log("Sliders Activated");
+        var sliderId =  $(this).attr('id');
+        $("#" + sliderId).lightSlider({
+            pager: false, 
+            loop: true
+        });
     });
 }
 
-function windowSizeCheck(sidebarSize){1
+function windowSizeCheck(sidebarSize){
     if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 891)){
-        $('#menu').insertBefore('#search-bar');
-        $('#menu').addClass('mobile-menu');
-        $('#search-bar').addClass('fullWidth');
-        $('#menu').addClass('halfWidth');
-        $('.navbar-header').addClass('halfWidth');
+        //to do
     }
 }
 
@@ -98,15 +94,15 @@ $(document).ready(function(){
         e.preventDefault();
         closeSidebar();
     });
+    
     $('body').on('click', '.open_sidebar_btn', function (e) {
         e.preventDefault();
         toggleSidebar();
-
     });
     
     // Log out routine
     $(".logout-btn").click(function(e) {
-        window.location.href = "/interaction-museum/Logout"
+        window.location.href = "/interaction-museum/Logout";
     });
     
    /* Video / GIF hover */
@@ -261,8 +257,12 @@ function saveCollection(element) {
         collection_techniques: collection_techniques
     };
     
-    //TODO if user not logged in, give error?
-    if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
+    
+    if($("#user").length === 0 && $("#login").length > 0) {
+        showTooltip("Login to save this collection");
+    } 
+    //TODO gives error on trim() when no title
+    else if(!isEmpty(techniques) && !(!sessionStorage.title.trim())) {
         $.ajax({
             url: 'collection-creator',
             data: collection,

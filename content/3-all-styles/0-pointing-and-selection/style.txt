@@ -1,0 +1,5 @@
+Title: Pointing and Selection
+
+----
+
+Description: All techniques that involve pointing and selecting domain objects.

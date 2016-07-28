@@ -36,6 +36,13 @@ fields:
     label: Tags
     type: tags
     required: true
+  styles:
+    label: Interaction Styles
+    type: checkboxes
+    required: true
+    options: query
+    query:
+      page: all-styles
   media:
     label: Media
     type: headline
@@ -59,34 +66,34 @@ fields:
     label: Paste a link to a website with a working demo
     type: url
   related-publications:
-    label: Related Publications
+    label: Related Publications  
     type: structure
     entry: >
       {{title}}<br />
       {{link}}<br />
       {{type}}<br />
       {{authors}}<br />
-      {{year}}
+      {{year}}<br />
     fields:
       title:
         label: Title
         type: text
-      required: true
+        required: true
       link:
         label: Link
         type: url
         required: true
-      type:
-        label: Type
-        type: text
-        required: true
       authors:
         label: Authors
+        type: text
+        required: true
+      type:
+        label: Conference
         type: text
         required: true
       year:
         label: Year
         type: text
         required: true
-        validate: 
-          num
+        validate:
+          - num

@@ -9,7 +9,8 @@
             enabled: true,
             addons: {
                 images: true, // boolean or object containing configuration
-                embeds: true
+                embeds: true,
+                test: true
             }
         };
 
@@ -281,12 +282,13 @@
 
         $.each(this.options.addons, function (addon, options) {
             var addonName = pluginName + ucfirst(addon);
-
+            
             if (options === false) {
                 delete that.options.addons[addon];
                 return;
             }
-
+            
+            // TODO here it goes wrong for custom addons.
             that.$el[addonName](options);
             that.options.addons[addon] = that.$el.data('plugin_' + addonName).options;
         });

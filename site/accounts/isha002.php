@@ -7,8 +7,8 @@ password: >
 language: en
 role: admin
 history:
-  - all-techniques/multi-touch-gestures
-  - all-techniques/swiss-army-menu
-  - all-techniques/thumbrock
-  - all-techniques/free-hand-gestures
-  - all-techniques/marking-menu
+  - all-collections/drawing
+  - all-techniques/link-jumping
+  - all-techniques/anchored-menu-vr
+  - all-techniques/virtual-pointing-ray
+  - all-techniques/toolglass-vr

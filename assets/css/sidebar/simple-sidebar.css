@@ -42,7 +42,7 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px 0 !important;
+    padding: 0 0 15px !important;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -151,12 +151,29 @@
 
 /* TODO do this in a nicer way*/
 .close_sidebar_btn {
-    position: fixed;
     display: none;
-    left: 275px;
-    top: 25px;
-    color: white;
+    position: absolute;
+    background-color: #333333;
+    cursor: pointer;    
+    top: 0.8em;
+    z-index: 5;
+    padding: 1em;
+}
+
+.open_sidebar_btn {
+    position: absolute;
+    background-color: #333333; /*or #336E7B ?*/
     cursor: pointer;
+    top: 15px;
+    z-index: 5;
+    padding: 1em;
+}
+
+.glyphicon-chevron-left, .glyphicon-chevron-right{
+    color: #E5E5E5;
+}
+.glyphicon-chevron-left:hover, .glyphicon-chevron-right:hover{
+    color: #ffffff;
 }
 
 /*thumbnail*/

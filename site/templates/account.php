@@ -1,8 +1,11 @@
 <?php snippet('header-logged-out') ?>
 
-<!-- Menu -->
-<!-- TODO no option for creating collections here -->
-<?php snippet('menu')?>
+<div class="header">
+                <!-- Menu -->
+            <?php snippet('menu')?>
+
+            <?php snippet('search-bar') ?>
+    </div>
 
 <div class="main container" role="main">
     <div class="text col-md-3 col-xs-6 col-md-offset-5 col-xs-offset-3">
