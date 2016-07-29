@@ -8,19 +8,15 @@
 <div class="main container" role="main">
     <?php snippet('pop-up') ?>
     <div id="editor" class="container">
-        <input type="text" id="editor-title" class="col-md-6 col-md-offset-2" placeholder="Title">
+        <input type="text" id="editor-title" class="col-md-6 col-md-offset-3" placeholder="Title">
 
-        <div id="editor-content" class="editable col-xs-12"></div>
+        <div id="editor-content" class="editable col-md-6 col-md-offset-3"></div>
+        <a id="add_interaction_btn" class="btn btn-primary col-md-2">Save</a>
         <a id="publish_exhibit_btn" class="btn btn-primary col-md-2">Publish</a>
-        <a id="add_interaction_btn" class="btn btn-primary col-md-2">Add Interaction</a>
     </div>
 
 
     <script>
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/master
         var AddTechniqueButton = MediumEditor.Extension.extend({
             name: 'addtechnique',
 
@@ -64,7 +60,8 @@
         }
         
         function showPopUp(text) {
-            $('#search-bar-exhibit').text(text); 
+            $('#search-input-exhibit').val(text); 
+            $('#search-form-exhibit').submit();
             $('#pop-up').show();
         }
         
