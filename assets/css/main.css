@@ -474,8 +474,7 @@ hr{
 }
 
 #editor-content {
-  min-height: 500px;
-
+    min-height: 500px;
 }
 
 #editor-title {
@@ -483,6 +482,10 @@ hr{
     font-size: 40px !important;
     overflow: none;
     display: block;
+}
+
+.medium-insert-buttons {
+    left: -30px !important;
 }
 
 /* All styles */
