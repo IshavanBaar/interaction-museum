@@ -473,13 +473,16 @@ hr{
     outline: none;
 }
 
-#editor {
-    text-align: center;
+#editor-content {
+  min-height: 500px;
+  
 }
 
 #editor-title {
     font-family: 'Slabo 27px', serif;
     font-size: 40px !important;
+    overflow: none;
+    display: block;
 }
 
 /* All styles */
@@ -502,6 +505,14 @@ hr{
         color: white;
         font-size: 28px;
 }
+
+#pop-up{
+    height: 600px;
+    background-color: #333333;
+    overflow-y: scroll;
+    display: none;
+}
+
 @media (max-width: 1407px) {
     .navbar-header{
         padding-left: 50px;
