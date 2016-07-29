@@ -468,19 +468,21 @@ hr{
      border-top: 1px solid rgba(51, 110, 123, 0.5);
 }
 
-/* Exhibit Creator */
+/* Exhibit Editor */
 :focus {
     outline: none;
 }
 
-#editor {
-    text-align: center;
+#editor-content {
+  min-height: 500px;
+
 }
 
-.exhibit-title {
+#editor-title {
     font-family: 'Slabo 27px', serif;
     font-size: 40px !important;
-    text-align: center;
+    overflow: none;
+    display: block;
 }
 
 /* All styles */
@@ -503,6 +505,28 @@ hr{
         color: white;
         font-size: 28px;
 }
+
+#pop-up{
+    position: absolute;
+    z-index: 5;
+    min-height: 600px;
+    width: 60%;
+    background-image: url("../images/dark_geometric.png");
+    background-repeat: repeat;
+    overflow-y: scroll;
+    overflow-x: none;
+    display: none;
+}
+#pop-up h2{
+    color: white;
+}
+#close_pop_up i{
+    color: red;
+}
+#pop-up .thumbnail{
+    background-color: hsla(50, 33%, 25%, 0);
+}
+
 @media (max-width: 1407px) {
     .navbar-header{
         padding-left: 50px;

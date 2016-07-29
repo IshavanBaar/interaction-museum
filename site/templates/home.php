@@ -24,8 +24,7 @@
             <?php snippet('search-bar') ?>
 
         </div>
-        <!-- Search results -->
-            <?php snippet('search') ?>
+
         <!-- TODO Diana: style these items in the included snippets, and style the line break-->
         <!-- Picked techniques, for now the 6 most recent -->     
         <div class="text-center section">

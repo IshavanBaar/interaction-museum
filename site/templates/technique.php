@@ -88,13 +88,14 @@
             </div> <!-- end first column -->
 
             <div class="col-md-8">	
+
                 <!-- HEADER IMAGE -->
                 <?php if($page->header_image()->isNotEmpty()): ?>
                     <div class='row'>
                         <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
                     </div>
                 <?php endif; ?>
-
+                
                 <?php if($video->isNotEmpty()): ?>
                     <!-- VIDEO -->
                     <?php if(stripos($video, "youtube") !== false): ?>
@@ -102,11 +103,7 @@
                     <?php elseif (stripos($video, "vimeo") !== false): ?>
                         <div class='videoWrapper '><?php echo vimeo($video);?></div>
                     <?php endif; ?>
-
-                 
-                 <?php endif; ?>    
-                   
-               	
+                <?php endif; ?>    
 
                 <div class="media">
                 <!-- TRY OUT -->
@@ -143,5 +140,8 @@
         </div>
     </div>
 </div>
+<script>
+    var pageName = '<?php echo $name; ?>';
+</script>
 
 <?php snippet('footer') ?>

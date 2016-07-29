@@ -1,0 +1,9 @@
+Title: d
+
+----
+
+Creator: isha002
+
+----
+
+Writings: <p class="">a (technique: blabla) b<br></p>

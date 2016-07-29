@@ -23,6 +23,8 @@ if(kirby()->request()->ajax()) {
     try {
         if (page('all-collections')->children()->has('all-collections/' . $collection_uid)) {
             echo "'" . $collection_title . "' exists already. Change the name!";
+        } else if ($site->user() === false) {
+            echo "Login to save collections";
         } else {
             // Create new page with the new technique.
             page('all-collections')->children()->create($collection_uid, 'collection', array(
