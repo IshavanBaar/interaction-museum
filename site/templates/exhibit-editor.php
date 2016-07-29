@@ -17,6 +17,10 @@
 
 
     <script>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/master
         var AddTechniqueButton = MediumEditor.Extension.extend({
             name: 'addtechnique',
 
