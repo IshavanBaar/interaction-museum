@@ -7,7 +7,13 @@
 </div> 
 <!-- Menu -->
 <div id="page-content-wrapper">
-    <?php snippet('menu')?>
+    <div class="header">
+                <!-- Menu -->
+            <?php snippet('menu')?>
+
+            <?php snippet('search-bar') ?>
+    </div>
+
 
     <div class="container-fluid">
         <div class="collectionText">

@@ -153,6 +153,9 @@ $(document).ready(function(){
     $("#video-hover").click(function() {
         $("#gif").hide();
     });
+    $("#add_interaction_btn").click(function() {
+        $("#pop-up").show();
+    });
     
     $("#publish_exhibit_btn").click(function() {
         var button = $(this);

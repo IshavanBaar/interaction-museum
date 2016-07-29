@@ -10,7 +10,6 @@
             addons: {
                 images: true, // boolean or object containing configuration
                 embeds: true
-                //test: true
             }
         };
 
@@ -291,6 +290,7 @@
             // TODO here it goes wrong for custom addons.
             that.$el[addonName](options);
             that.options.addons[addon] = that.$el.data('plugin_' + addonName).options;
+            console.log(that.options.addons[addon]);
         });
     };
 
