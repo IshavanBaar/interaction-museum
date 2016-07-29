@@ -28,6 +28,35 @@ $(document).ready(function(){
     activateSliders();
     windowSizeCheck(0);
     
+    
+    /*var paragraph = $( "#a-writings p:contains('(technique:')" ).text();
+    var identifier = paragraph.match(/\(technique:([^)]+)\)/)[1];
+    var thumbnail = 
+    '<div class="thumbnail" id="'+identifier+'-thumbnail">'+
+        '<a id="'+identifier+'-link" href="'+identifier+'">'+
+            '<img id="' + identifier + '-image" src="'+ $("#header_image_"+identifier).attr("src") + '" alt="">'+
+            '<p id="'+$("#title_"+identifier).text()+'" class="caption"></p>'+
+        '</a>'+
+    '</div>';
+    
+    if ( $("#title_"+identifier).length ) {
+      console.log("element(s) found");
+    } else {
+      console.log("nothing found");
+    }
+
+    var preString = "(technique:";
+    var endString = ")";
+    var preIndex = paragraph.indexOf(preString);
+    var endIndex = preIndex + paragraph.substring(preIndex).indexOf(endString);
+    var preText = paragraph.substring(0, preIndex - 1);
+    var endText = paragraph.substring(endIndex + 1);
+    
+    $( "#a-writings p:contains('(technique:')" ).html(preText + "</p>" + thumbnail + "<p>" + endText);*/
+
+    //var image
+    //var title
+    
         /* Toggle sidebar */
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
@@ -153,9 +182,6 @@ $(document).ready(function(){
                     console.log(response);
                     if (response.indexOf("Created exhibit:") > -1) {
                         // TODO Empty title and content of editor here
-                        $(exhibit_uid + "-writings").contents().filter(function() {
-                            return (this.nodeType !== 3) ;
-                        }).wrap( "<b></b>");
                         
                         var exhibit_uid = response.replace("Created exhibit:", "");
                         window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
@@ -170,7 +196,16 @@ $(document).ready(function(){
             showTooltip("#publish_exhibit_btn", "Please fill in a title and text");
         }
     });
-
+    
+    /*$("#search-technique-btn").click(function() {
+        $("#medium-editor-toolbar-1").append(
+            '<div class="medium-editor-toolbar-form medium-editor-toolbar-form-active" id="medium-editor-toolbar-form-anchor-1">' +
+                '<input type="text" class="medium-editor-toolbar-input" placeholder="Paste or type a link">' +
+                '<a href="#" class="medium-editor-toolbar-save">✓</a><a href="#" class="medium-editor-toolbar-close">×</a>' +
+            '</div>');
+    });*/
+    
+    
     $('.sidebar-brand').bind('input', function(){
         sessionStorage.title = $(this).val();
     });

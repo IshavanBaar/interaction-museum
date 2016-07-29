@@ -7,7 +7,7 @@ password: >
 language: en
 role: admin
 history:
-  - all-exhibits/h
+  - all-exhibits/a
   - all-collections/drawing
   - all-techniques/link-jumping
   - all-techniques/anchored-menu-vr

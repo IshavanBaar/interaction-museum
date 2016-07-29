@@ -94,7 +94,7 @@
                     <!-- HEADER IMAGE -->
                     <?php if($page->header_image()->isNotEmpty()): ?>
                         <div class='row' id='gif'>
-                            <figure><img id="header_image" src="<?php echo $header_image->url() ?>" alt="" class="col-xs-12" ></figure> 
+                            <figure><img id="header_image_<?php echo $identifier?>" src="<?php echo $header_image->url() ?>" alt="" class="col-xs-12" ></figure> 
                         </div>
                         <!-- TODO fix play button position + autoplay video -->
                         <div class="col-sm-1 col-sm-offset-5 btn" id="video-hover">
@@ -146,5 +146,8 @@
         </div>
     </div>
 </div>
+<script>
+    var pageName = '<?php echo $name; ?>';
+</script>
 
 <?php snippet('footer') ?>
