@@ -475,7 +475,7 @@ hr{
 
 #editor-content {
   min-height: 500px;
-  
+
 }
 
 #editor-title {
@@ -507,10 +507,21 @@ hr{
 }
 
 #pop-up{
-    height: 600px;
-    background-color: #333333;
+    position: absolute;
+    z-index: 5;
+    min-height: 600px;
+    width: 60%;
+    background-image: url("../images/dark_geometric.png");
+    background-repeat: repeat;
     overflow-y: scroll;
+    overflow-x: none;
     display: none;
+}
+#pop-up h2{
+    color: white;
+}
+#pop-up .thumbnail{
+    background-color: hsla(50, 33%, 25%, 0);
 }
 
 @media (max-width: 1407px) {
