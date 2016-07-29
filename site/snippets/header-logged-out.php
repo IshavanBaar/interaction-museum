@@ -23,7 +23,7 @@
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
             'assets/js/lib/jquery/dist/jquery.min.js',
             'assets/js/lib/bootstrap.min.js',
-            'assets/js/slider/lightslider.js',
+            'assets/js/lib/slider/lightslider.js',
             'assets/js/main.js'
         ))?> 
         
