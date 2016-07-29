@@ -17,8 +17,7 @@
 
 
     <script>
-        rangy.init();
-
+        
         var AddTechniqueButton = MediumEditor.Extension.extend({
             name: 'addtechnique',
 
@@ -30,9 +29,14 @@
                 this.button.id = 'search-technique-btn';
                 this.button.addEventListener('click', function() {
                     //var selection = this.classApplier.toggleSelection();
-                    console.log("button clicked");
+                   
                     console.log(getSelectionText());
+                    // $("#medium-editor-toolbar-1").toggle();
+                    $("#search-bar-exhibit").value = getSelectionText();
+                    $("#search-bar-exhibit").placeholder = getSelectionText();
                     showPopUp(getSelectionText());
+
+
                 });
             },
 
