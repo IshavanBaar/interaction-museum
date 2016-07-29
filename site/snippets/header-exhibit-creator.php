@@ -28,7 +28,7 @@
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
             'assets/js/lib/jquery/dist/jquery.min.js',
             'assets/js/lib/bootstrap.min.js',
-            'assets/js/slider/lightslider.js',
+            'assets/js/lib/slider/lightslider.js',
             'assets/js/main.js',
             // Medium Editor
             'assets/js/lib/blueimp-file-upload/js/vendor/jquery.ui.widget.js',
@@ -38,7 +38,7 @@
             'assets/js/lib/handlebars/handlebars.runtime.min.js',
             'assets/js/lib/jquery-sortable/source/js/jquery-sortable-min.js',
 
-             // /dist/js/medium-editor-insert-plugin.min.js',-->
+             // /dist/js/medium-editor-insert-plugin.min.js'
             'assets/js/lib/medium-editor-insert-plugin/src/js/templates.js',
             'assets/js/lib/medium-editor-insert-plugin/src/js/core.js',
             'assets/js/lib/medium-editor-insert-plugin/src/js/embeds.js',
