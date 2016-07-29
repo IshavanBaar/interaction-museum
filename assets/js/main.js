@@ -127,7 +127,10 @@ $(document).ready(function(){
     $("#add_interaction_btn").click(function() {
         $("#pop-up").show();
     });
-    
+
+    $("#close_popup").click(function() {
+        $("#pop-up").hide();
+    });
     $("#publish_exhibit_btn").click(function() {
         var button = $(this);
         

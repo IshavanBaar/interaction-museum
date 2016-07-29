@@ -520,6 +520,9 @@ hr{
 #pop-up h2{
     color: white;
 }
+#close_pop_up i{
+    color: red;
+}
 #pop-up .thumbnail{
     background-color: hsla(50, 33%, 25%, 0);
 }
