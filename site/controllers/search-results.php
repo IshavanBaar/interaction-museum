@@ -2,7 +2,7 @@
 
 return function($site, $pages, $page) {
 
-    $query = get('q');
+    $query = post('q');
     
     // Only search the techniques
     // TODO search the collections
