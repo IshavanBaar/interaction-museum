@@ -14,7 +14,7 @@ Tags: gestures,pen input,interactive paper,tangible interfaces
 
 ----
 
-Header-image: ezgif.com-crop.gif
+Header-image: knotty-gestures-preview.gif
 
 ----
 
@@ -49,7 +49,7 @@ Movie: https://vimeo.com/8418158
 
 ----
 
-Extra-images: knotty-gestures.jpg
+Extra-images: knotty-gestures-preview.gif
 
 ----
 
@@ -58,3 +58,7 @@ Cropper:
 ----
 
 Styles: gesture-base
+
+----
+
+Movie-file: 
