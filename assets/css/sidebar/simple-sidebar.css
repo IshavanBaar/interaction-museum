@@ -162,9 +162,9 @@
 
 .open_sidebar_btn {
     position: absolute;
-    background-color: #333333; /*or #336E7B ?*/
+    background-color: #336E7B; /*or #336E7B ?*/
     cursor: pointer;
-    top: 15px;
+    top: 100px;
     z-index: 5;
     padding: 1em;
 }

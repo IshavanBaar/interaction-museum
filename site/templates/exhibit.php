@@ -5,7 +5,7 @@
 
 <body>
     <div class="main container" role="main">
-        <div class="text-center">
+        <div class="col-md-8 col-md-offset-2">
             <!-- TODO Diana: styling -->
             <h2 class="exhibit-title"><?php echo $page->title() ?></h2>
             <p>by: <?php echo $page->creator() ?></p>

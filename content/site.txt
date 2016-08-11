@@ -14,7 +14,7 @@ Keywords: Kirby,CMS,file-based
 
 ----
 
-Copyright: © 2016 (link: http://www.inria.fr/ text: Inria)
+Copyright: (link: http://www.inria.fr/ text: © 2016 Inria)
 
 ----
 

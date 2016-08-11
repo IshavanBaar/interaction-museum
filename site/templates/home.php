@@ -51,7 +51,6 @@
         </div>
     </div>
 
-
 <!-- Footer -->
 <?php snippet('footer') ?>
 
