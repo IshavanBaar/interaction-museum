@@ -18,8 +18,8 @@
     <div class="text-center section">
         <h1>All <?php echo $page->title()?></h1>
 
-        <!-- All collections -->
-        <?php snippet('show-collections', array('limit' => 100))?>
+        <!-- All exhibits -->
+        <?php snippet('show-exhibits', array('limit' => 100))?>
     </div>
 </div>
 

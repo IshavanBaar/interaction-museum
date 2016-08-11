@@ -17,17 +17,28 @@ html,body{
 }
 
 footer {
-    position:absolute;
-    bottom:0;
+    position: absolute;
     width: 100%;
-    height:50px;   /* Height of the footer */
-    border-top-width: 1px;
-    border-top-color:  rgba(51, 110, 123, 0.5);
+    height:30px;   /* Height of the footer */
+    background-image: url("../images/dark_geometric.png");
+    background-repeat: repeat;
 }
-.copyright p, .colophon p{
+
+footer p {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #666666 !important;
+    cursor: pointer;
+}
+
+/*.copyright p, .colophon p{
      line-height: 50px !important;
      margin-bottom: 0;
-}
+}*/
 
 /* General */
 
@@ -291,7 +302,7 @@ label{
     color: #336E7B;
 }
 
-.form-control {
+#searchBar {
     border-style: solid !important;
     border-width: 1px !important;
     border-color: #336E7B !important;
@@ -299,7 +310,7 @@ label{
     height: 35px;
 }
 
-.form-control:focus{
+#searchBar:focus{
     border-color: #336E7B;
 }
 
