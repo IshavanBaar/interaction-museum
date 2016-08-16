@@ -5,7 +5,7 @@ pages:
   template:
     - exhibit
   limit: 50
-  num: zero
+  num: date
 files: false
 icon: pencil
 options:

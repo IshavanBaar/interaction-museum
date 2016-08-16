@@ -5,9 +5,10 @@ html,body{
 }
 
 #wrapper{
-  min-height: 100%;
-  position:relative;
+    min-height: 100%;
+    position:relative;
 }
+
 .section{
     margin-top: 20px;
 }
@@ -18,6 +19,7 @@ html,body{
 
 footer {
     position: absolute;
+    bottom: 0px;
     width: 100%;
     height:30px;   /* Height of the footer */
     background-image: url("../images/dark_geometric.png");
@@ -55,10 +57,11 @@ h2 {
 h3 a:hover{
     color: #4ba0b3;
 }
+
 p {
     font-size: 17px;
     line-height: 1.5;
-    font-weight: 300;
+    /*font-weight: 300; //Harder to read */
 }
 
 a {
@@ -256,6 +259,7 @@ a:hover d{
     color: #E5E5E5;
     text-align: center;
 }
+
 #thumbnail-image{
     width: 100%;
     height: 100%;
@@ -488,6 +492,10 @@ hr{
     min-height: 500px;
 }
 
+#editor-content p a {
+    text-decoration: underline;
+}
+
 #editor-title {
     font-family: 'Slabo 27px', serif;
     font-size: 40px !important;
@@ -498,7 +506,6 @@ hr{
 .medium-insert-buttons {
     left: -30px !important;
 }
-
 
 /* All styles */
 .style-thumbnail {

@@ -8,11 +8,11 @@
 <!-- Menu -->
 <div id="page-content-wrapper">
      <div class="header">
-                <!-- Menu -->
-            <?php snippet('menu')?>
+        <!-- Menu -->
+        <?php snippet('menu')?>
 
-            <?php snippet('search-bar') ?>
-        </div>
+        <?php snippet('search-bar') ?>
+    </div>
 
     <div class="container-fluid">
         <div class="collectionText section">

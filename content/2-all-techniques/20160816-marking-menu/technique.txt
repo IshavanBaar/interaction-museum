@@ -12,7 +12,7 @@ Title: Marking Menu
 
 Description: 
 
-A marking menu is a pie menu where you select the items with straight stroke gestures. The menu only appears during the gesture.
+A marking menu is a (link: ../pie-menu text: Pie Menu) where you select the items with straight stroke gestures. The menu only appears during the gesture.
 
 A marking menu can be hierarchical, allowing zig-zag gestures to select nested items.
 
@@ -68,8 +68,12 @@ Movie: https://www.youtube.com/watch?v=dtH9GdFSQaw
 
 ----
 
-Extra-images: 
+Extra-images: table.jpg
 
 ----
 
 Styles: menus
+
+----
+
+Movie-file: 
