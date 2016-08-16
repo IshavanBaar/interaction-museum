@@ -1,9 +1,0 @@
-Title: Another test
-
-----
-
-Creator: michel-exsitu
-
-----
-
-Writings: <p class="">...</p>

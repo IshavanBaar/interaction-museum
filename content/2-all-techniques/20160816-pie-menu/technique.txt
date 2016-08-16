@@ -8,9 +8,9 @@ Name:
 
 Description: 
 
-A pie menu is a menu where the items are placed in a circle around the cursor. The items are closer to the cursor and have a bigger target size.
+A pie menu is a menu where the items are placed in a circle around the cursor, or around a fixed position. 
 
-Compared to traditional menus, a pie menu has a shorter seeking time and lower error rates.
+Compared to traditional menus, a pie menu has a shorter seeking time and lower error rates. Items are closer to the cursor and have a bigger target size.
 
 ----
 
@@ -79,3 +79,7 @@ Cropper:
 ----
 
 Styles: menus
+
+----
+
+Movie-file: 

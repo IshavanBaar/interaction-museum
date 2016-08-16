@@ -1,7 +1,6 @@
 <!-- Header -->
 <?php snippet('header') ?>
 
-
 <div id="sidebar-wrapper">
     <!-- Side bar -->
     <?php snippet('sidebar')?>

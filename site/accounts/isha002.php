@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - all-exhibits/an-overview-of-menus
+  - all-techniques/marking-menu
+  - all-techniques/pie-menu
+  - all-techniques/bubbling-menu
   - all-techniques/knotty-gestures
-  - all-techniques/anchored-menu-vr
-  - all-exhibits/bla
-  - all-exhibits/a
-  - all-collections/drawing
 firstname: Isha
 lastname: van Baar

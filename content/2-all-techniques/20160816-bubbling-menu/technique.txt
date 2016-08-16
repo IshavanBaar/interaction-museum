@@ -4,7 +4,7 @@ Title: Bubbling Menu
 
 Description: 
 
-A bubbling menu is a  (link: ../drop-down-menu text: Drop-Down Menus) menu with (link: ../bubble-cursor text: Bubble Cursor) selection. Additionally, there are directional mouse-gestures, so that it becomes faster to select frequently selected items, who are highlighted.
+A bubbling menu is a (link: ../drop-down-menu text: Drop-Down Menu) with (link: ../bubble-cursor text: Bubble Cursor) selection. Additionally, there are directional mouse-gestures, so that it becomes faster to select frequently selected items, who are highlighted.
 
 Unlike the Split Menu, the bubbling menu does not disrupt the original structure of menus.
 
@@ -39,3 +39,11 @@ Related-publications:
   type: "CHI '07"
   authors: Theophanis Tsandilas, M.C. Schraefel
   year: "2007"
+
+----
+
+Movie-file: 
+
+----
+
+Styles: 

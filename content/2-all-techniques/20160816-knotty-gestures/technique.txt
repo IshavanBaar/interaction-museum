@@ -49,7 +49,7 @@ Movie: https://vimeo.com/8418158
 
 ----
 
-Extra-images: knotty-gestures-preview.gif
+Extra-images: knotty-gestures-explanation.jpg
 
 ----
 
