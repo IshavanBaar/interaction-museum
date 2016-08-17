@@ -5,9 +5,10 @@ html,body{
 }
 
 #wrapper{
-  min-height: 100%;
-  position:relative;
+    min-height: 100%;
+    position:relative;
 }
+
 .section{
     margin-top: 20px;
 }
@@ -17,17 +18,29 @@ html,body{
 }
 
 footer {
-    position:absolute;
-    bottom:0;
+    position: absolute;
+    bottom: 0px;
     width: 100%;
-    height:50px;   /* Height of the footer */
-    border-top-width: 1px;
-    border-top-color:  rgba(51, 110, 123, 0.5);
+    height:30px;   /* Height of the footer */
+    background-image: url("../images/dark_geometric.png");
+    background-repeat: repeat;
 }
-.copyright p, .colophon p{
+
+footer p {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #666666 !important;
+    cursor: pointer;
+}
+
+/*.copyright p, .colophon p{
      line-height: 50px !important;
      margin-bottom: 0;
-}
+}*/
 
 /* General */
 
@@ -44,10 +57,11 @@ h2 {
 h3 a:hover{
     color: #4ba0b3;
 }
+
 p {
     font-size: 17px;
     line-height: 1.5;
-    font-weight: 300;
+    /*font-weight: 300; //Harder to read */
 }
 
 a {
@@ -245,6 +259,7 @@ a:hover d{
     color: #E5E5E5;
     text-align: center;
 }
+
 #thumbnail-image{
     width: 100%;
     height: 100%;
@@ -291,7 +306,7 @@ label{
     color: #336E7B;
 }
 
-.form-control {
+#searchBar {
     border-style: solid !important;
     border-width: 1px !important;
     border-color: #336E7B !important;
@@ -299,7 +314,7 @@ label{
     height: 35px;
 }
 
-.form-control:focus{
+#searchBar:focus{
     border-color: #336E7B;
 }
 
@@ -475,6 +490,10 @@ hr{
 
 #editor-content {
     min-height: 500px;
+}
+
+#editor-content p a {
+    text-decoration: underline;
 }
 
 #editor-title {

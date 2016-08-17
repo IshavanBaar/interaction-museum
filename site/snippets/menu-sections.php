@@ -7,7 +7,8 @@
             <?php else: ?>
                 class="section_inactive"
             <?php endif; ?>
-            href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?>
+            href="<?php echo $p->url() ?>">
+            <?php echo $p->title()->html() ?>
         </a>
     </li>
 <?php endforeach ?>

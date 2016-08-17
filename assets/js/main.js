@@ -185,7 +185,7 @@ $(document).ready(function(){
                 url: 'exhibit-creator',
                 data: exhibit,
                 success : function(response) {
-                    console.log(response);
+                    //console.log(response);
                     if (response.indexOf("Created exhibit:") > -1) {
                         // TODO Empty title and content of editor here
                         

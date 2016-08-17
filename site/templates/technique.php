@@ -14,15 +14,15 @@
     
     <!-- ENTRY FIELDS -->
     <?php 
-        /* IMAGES */
-        $header_image = $page->image((string)$page->header_image());
-        $trade_off_image = $page->image((string)$page->trade_off_image());
-        //TODO fix alternative if the folder does not include any image
-
+        /* PAGE ID */
+        $identifier = $page->uid();
+        
         /* TEXT */
         $name = $page->title()->html(); 
         $description = $page->description()->kirbytext();
-        $identifier = $page->uid();
+
+        /* IMAGE */
+        $header_image = $page->header_image()->toFile();
 
         /* OTHER */
         $tags = $page->tags();
@@ -55,11 +55,11 @@
                     </div>
                 <?php endif ?>	
                 
-                <!-- <h2>Options</h2> -->
+                <h2>Options</h2>
                 <!-- Button to add to collection -->
-               <!--  <button id="btn_<?php echo $identifier?>" class="btn add_to_collection_btn_technique" title="Add to collection" type="submit">
-                    <i class="glyphicon glyphicon-plus"></i>
-                </button> -->
+                <button id="btn_<?php echo $identifier?>" class="btn add_to_collection_btn_technique" title="Add to collection" type="submit">
+                    <i class="glyphicon glyphicon-plus"></i> Add to collection
+                </button>
                 
                 <!-- RELATED PUBLICATIONS-->
                 <?php if($page->related_publications()->isNotEmpty()): ?>
@@ -89,13 +89,7 @@
 
             <div class="col-md-8">	
 
-                <!-- HEADER IMAGE -->
-                <?php if($page->header_image()->isNotEmpty()): ?>
-                    <div class='row'>
-                        <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
-                    </div>
-                <?php endif; ?>
-                
+                <!-- VIDEO or PREVIEW IMAGE -->             
                 <?php if($video->isNotEmpty()): ?>
                     <!-- VIDEO -->
                     <?php if(stripos($video, "youtube") !== false): ?>
@@ -103,8 +97,13 @@
                     <?php elseif (stripos($video, "vimeo") !== false): ?>
                         <div class='videoWrapper '><?php echo vimeo($video);?></div>
                     <?php endif; ?>
-                <?php endif; ?>    
 
+                <?php else: ?>
+                    <div class='row'>
+                        <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
+                    </div>
+                <?php endif; ?> 
+                
                 <div class="media">
                 <!-- TRY OUT -->
                 <?php if($try_out->isNotEmpty()): ?>
@@ -128,7 +127,7 @@
                 <!-- EXTRA IMAGES -->	
                 <?php if ($page->extra_images()->isNotEmpty()) {
 
-                    echo '<h2>Extra images</h2>';
+                    echo '<h2>More images</h2>';
                       foreach($files as $file){
                         echo '<figure><img src="'. $file->url() . '"alt="" class="col-xs-12 trade-img"></figure>';
                         }
@@ -140,8 +139,5 @@
         </div>
     </div>
 </div>
-<script>
-    var pageName = '<?php echo $name; ?>';
-</script>
 
 <?php snippet('footer') ?>
