@@ -31,6 +31,7 @@
                     var selectedText = getSelectionText();
                     console.log("button clicked");
                     console.log(selectedText);
+                    searchTechniques(selectedText);
                     showPopUp(selectedText);
                 });
             },
@@ -41,6 +42,24 @@
 
         });
 
+        // $("#search-input-exhibit").change(function(){
+        //     var query = $("#search-input-exhibit").val();
+        //     searchTechniques(query);
+        // });
+         $("#startSearch").click(function(){
+            var query = $("#search-input-exhibit").val();
+            searchTechniques(query);
+        });
+
+         // Add to exhibit
+        $('body').on('click', '.add-to-exhibit-btn', function (e) {
+            e.preventDefault();
+            console.log($(this));
+            addToExhibit($(this));
+            $('#pop-up').hide();
+        });
+
+    
         var editor = new MediumEditor('.editable', {
             toolbar: {
                 buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote', 'addtechnique']
@@ -49,7 +68,16 @@
                 'addtechnique': new AddTechniqueButton()
             }
         });
-        
+        function searchTechniques(text){
+            $.ajax({
+                        url: 'exhibit-search',
+                        data: text,
+                        success : function(response) {
+                                            $("#search-results").empty();
+                                            $("#search-results").append(response);
+                                        } 
+                            });
+        }
         function getSelectionText() {
             var text = "";
             if (window.getSelection) {
@@ -61,18 +89,45 @@
         }
         
         function showPopUp(text) {
-            $('#search-input-exhibit').val(text); 
-            $('#search-form-exhibit').submit();
+            // $('#search-input-exhibit').val(text); 
+            // $('#search-form-exhibit').submit();
             $('#pop-up').show();
+        }
+        function addToExhibit(element){
+            // Get information of clicked thumbnail.
+            
+            var thumbnail = element.parent().parent();
+            var identifier = thumbnail.attr("id").replace("-thumbnail","");
+            var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
+            var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();       
+            
+            // Add it to the HTML
+            appendTechniqueExhibit(identifier, thumbnail_image, thumbnail_title);
+
+        }
+        function appendTechniqueExhibit(id, image, title){
+            $("#editor-content").append(
+                "<li class='col-xs-12'>" +
+                    "<div id='" + id + "-sidebar' class='thumbnail'>" +    
+                        "<button class='btn btn-circle btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
+                            "<i class='glyphicon glyphicon-minus'></i>" +
+                        "</button>" + 
+                        "<a href='" + id + "'>" +
+                            "<img src='" + image + "' alt='' >" +
+                            "<p class='caption'>" + title + "</p>" +
+                        "</a>" +
+                    "</div>" +
+                "</li>"
+            ); 
         }
         
         $(function () {
             $('.editable').mediumInsert({
                 editor: editor
             });
-        });
+        });        
+      
     </script>
 </div>
-
 
 <?php snippet('footer') ?> 

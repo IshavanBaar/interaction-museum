@@ -6,7 +6,7 @@
     </button>
 
     <?php snippet('search-bar-exhibit') ?>
-    <!-- Search results -->
-    <?php snippet('search') ?>
+
+    <div id="search-results"> </div>
 
 </div>
