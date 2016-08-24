@@ -31,39 +31,44 @@ fields:
       min: 4
       max: 550
     required: true
-    help: Improve the writing style with the http://hemingwayapp.com/   
+    help: Improve the writing style with the http://hemingwayapp.com/
+  header-image:
+    label: Preview Image
+    type: selector
+    mode: single
+    autoselect: first
+    help: Select an image file as preview image. An appropriate image represents the technique. Preferably it is a 16:9 GIF.
+    types: 
+      - image
+    required: true
   tags:
     label: Tags
     type: tags
     required: true
-  styles:
-    label: Interaction Styles
-    type: checkboxes
-    required: true
-    options: query
-    query:
-      page: all-styles
   media:
     label: Media
     type: headline
-  header-image:
-    label: Select a header image (GIF, 16:9)
-    type: image
-  extra-images:
-    label: Extra Images
-    type: selector
-    mode: multiple
-    autoselect: none
-    types: 
-      - image
   movie:
     label: Video (YouTube or Vimeo)
     type: url
-  extra:
-    label: Extra
-    type: headline
+  movie-file:
+    label: Video (from Files)
+    type: selector
+    mode: single
+    autoselect: none
+    help: Select a video file to turn it visible
+    types: 
+      - video
+  extra-images:
+    label: Additional Images
+    type: selector
+    mode: multiple
+    autoselect: last
+    help: Select an image file to turn it visible
+    types: 
+      - image
   try-out:
-    label: Paste a link to a website with a working demo
+    label: Link to Demo
     type: url
   related-publications:
     label: Related Publications  
@@ -97,13 +102,12 @@ fields:
         required: true
         validate:
           - num
-  related-techniques:
-    label: Rekated Techniques
-    type: structure
-    entry: >
-        {{technique}}
-    fields:
-        technique:
-            label: Technique
-            type: subpage
-            parent: 2-all-techniques
+  extra:
+    label: Extra
+    type: headline
+  styles:
+    label: Interaction Styles
+    type: checkboxes
+    options: query
+    query:
+      page: all-styles

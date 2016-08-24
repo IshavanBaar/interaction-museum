@@ -1,17 +1,27 @@
 <?php snippet('header') ?>
 
-<!-- Menu -->
-<?php snippet('menu')?>
+<div id="sidebar-wrapper">
+    <!-- Side bar -->
+    <?php snippet('sidebar')?>
 
-<body>
+</div> 
+<!-- Menu -->
+<div id="page-content-wrapper">
+     <div class="header">
+        <!-- Menu -->
+        <?php snippet('menu')?>
+
+        <?php snippet('search-bar') ?>
+    </div>
+
     <div class="main container" role="main">
-        <div class="text-center">
+        <div class="col-md-8 col-md-offset-2">
             <!-- TODO Diana: styling -->
-            <h2 class="exhibit-title"><?php echo $page->title() ?></h2>
+            <h1 class="exhibit-title"><?php echo $page->title() ?></h1>
             <p>by: <?php echo $page->creator() ?></p>
             <div id="<?php echo $page->uid()?>-writings" ><?php echo $page->writings()?></div> 
         </div>
     </div>
-</body>
+</div>
 
 <?php snippet('footer') ?> 

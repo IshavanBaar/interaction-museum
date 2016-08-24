@@ -1,0 +1,132 @@
+Title: An overview of menus
+
+----
+
+Creator: michel-exsitu
+
+----
+
+Writings: 
+
+<p><i>We have become very familiar with menus, and often simply take them from existing GUI frameworks. Yet, there are so many examples of badly designed menus. What menus are there, and how do we choose between them?</i></p><p>Menus are a way for a user to select between a set of operations. The set can have a fixed or a variable size, and can be hierarchical. Menus have been around for a long time. The NLS Augment system, showcased by Douglas Engelbart in the famous <a href="http://web.stanford.edu/dept/SUL/library/extra4/sloan/mousesite/1968Demo.html">Mother of All Demos</a>, already used menus (see: <a href="../all-techniques/link-jumping"><b>Link Jumping</b></a>).</p><p>Menus are part of the current standard that we call <a href="https://en.wikipedia.org/wiki/WIMP_(computing)">WIMP</a>&nbsp;interfaces: <b>W</b>indows, <b>I</b>cons, <b>M</b>enus and <b>P</b>ointers. While these were originally metaphors for physical objects, we now use their digital equivalents in our everyday language. WIMP interfaces are part of direct manipulation, of which <a href="../all-techniques/drag-and-drop"><b>Drag-and-Drop</b></a> is the most known example.</p>
+
+<p>So what different menus are there? The classical example is a hierarchical <a href="../all-techniques/drop-down-menu"><b>Drop-Down Menu</b></a>. But the more items, the worse this menu performs.</p>
+                
+
+     <div class="col-md-8 col-md-offset-2">
+        <div class="thumbnail" id="drop-down-menu-thumbnail">
+            <a id="drop-down-menu-link" href="../all-techniques/drop-down-menu">
+                <img id="drop-down-menu-image" src="http://localhost/interaction-museum/content/2-all-techniques/20160816-drop-down-menu/ezgif.com-video-to-gif.gif" alt="">
+                <p id="drop-down-menu-title" class="caption">Drop-Down Menu</p>
+            </a>
+        </div>
+    </div>               
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+                
+<p class="">Nielsen also points to this problem in <a href="https://www.nngroup.com/articles/mega-menus-gone-wrong/">his article</a>:</p><blockquote><i>"Mega drop-downs can enhance the usability of website navigation. But ... megas can have usability problems of their own."&nbsp;</i></blockquote><p>This is where GUI frameworks stop. However, HCI researchers have proposed number of improvements to this menu. Take the <a href="../all-techniques/bubbling-menu"><b>Bubbling Menu</b></a> for example. It guides the cursor faster to frequently used items, using <a href="../all-techniques/bubble-cursor"><b>Bubble Cursor</b></a> selection and <a href="https://en.wikipedia.org/wiki/Fitts%27s_law">Fitts' Law</a>. <a href="../all-techniques/ephemeral-menu"><b>Ephemeral Menus</b></a> predict what items will be chosen, and display those first. </p>
+                
+     <div class="col-md-8 col-md-offset-2">
+        <div class="thumbnail" id="bubbling-menu-thumbnail">
+            <a id="bubbling-menu-link" href="../all-techniques/bubbling-menu">
+                <img id="bubbling-menu-image" src="&#10;http://localhost/interaction-museum/content/2-all-techniques/20160816-bubbling-menu/ezgif.com-crop.gif" alt="">
+                <p id="bubbling-menu-title" class="caption">Bubbling Menu</p>
+            </a>
+        </div>
+    </div>               
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class="medium-insert-active"><br></p>
+                
+     <div class="col-md-8 col-md-offset-2">
+        <div class="thumbnail" id="ephemeral-menu-thumbnail">
+            <a id="ephemeral-menu-link" href="../all-techniques/ephemeral-menu">
+                <img id="ephemeral-menu-image" src="&#10;http://localhost/interaction-museum/content/2-all-techniques/20160816-ephemeral-menu/ezgif.com-crop-1.gif" alt="">
+                <p id="ephemeral-menu-title" class="caption">Ephemeral Menu</p>
+            </a>
+        </div>
+    </div>               
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+                
+<p class=""><a href="../all-techniques/pie-menu" style="line-height: 1.5; letter-spacing: 0.1px; background-color: rgb(255, 255, 255);"><b>Pie Menus</b></a><span style="line-height: 1.5; letter-spacing: 0.1px;"> (or: Radial Menus) are a faster alternative. Menu items are placed in a circle around the cursor, or around a fixed position. In the first case, the items are closer to the cursor and have a bigger target size than in traditional Drop-Down Menus, resulting in shorter seeking time and lower error rates. But even Pie Menus are limited to around 7 items since they take too much space.</span><br></p>
+
+     <div class="col-md-8 col-md-offset-2">
+        <div class="thumbnail" id="pie-menu-thumbnail">
+            <a id="pie-menu-link" href="../all-techniques/pie-menu">
+                <img id="pie-menu-image" src="&#10;http://localhost/interaction-museum/content/2-all-techniques/20160816-pie-menu/pie_menu.gif" alt="">
+                <p id="pie-menu-title" class="caption">Pie Menu</p>
+            </a>
+        </div>
+    </div>               
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+                
+<p>This is where <a href="../all-techniques/marking-menu">Marking Menus</a> come in. Marking Menus are Pie Menus with the use of straight stroke gestures to select the items. In this way, they allow for very fast selection, even when there is a hierarchy (this becomes a zig-zag gesture). Marking Menus are therefore very suitable for expert users, such as industrial or graphical designers. For example, Autodesk products such as <a href="http://www.autodesk.com/products/maya/overview">Maya </a>and <a href="http://www.autodesk.com/products/3ds-max/overview">3ds Max</a> use them in combination with keyboard and mouse buttons to quickly select important commands.</p>
+
+     <div class="col-md-8 col-md-offset-2">
+        <div class="thumbnail" id="marking-menu-thumbnail">
+            <a id="marking-menu-link" href="../all-techniques/marking-menu">
+                <img id="marking-menu-image" src="&#10;http://localhost/interaction-museum/content/2-all-techniques/20160816-marking-menu/marking_menu.gif" alt="">
+                <p id="marking-menu-title" class="caption">Marking Menu</p>
+            </a>
+        </div>
+    </div>               
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+
+<p>There are many more examples of menus, such menus that are optimized for the use on mobile phones (<a href="../all-techniques/swiss-army-menu"><b>Swiss Army Menu</b></a>). Also, Gilles Bailly owns <a href="http://gillesbailly.fr/menua/">a very useful collection</a> of menus developed by research. </p>
+                
+     <div class="col-md-8 col-md-offset-2">
+        <div class="thumbnail" id="swiss-army-menu-thumbnail">
+            <a id="swiss-army-menu-link" href="../all-techniques/swiss-army-menu">
+                <img id="swiss-army-menu-image" src="&#10;http://localhost/interaction-museum/content/2-all-techniques/20160816-swiss-army-menu/swiss-army.gif" alt="">
+                <p id="swiss-army-menu-title" class="caption">Swiss Army Menu</p>
+            </a>
+        </div>
+    </div>               
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+<p class=""><br></p>
+                
+<p>So, next time: take some time and <b>THINK </b>when you choose your menu! There are some really good alternatives :)</p><p><i>Do you have any suggestions? Please send them over to me <a href="mailto:isha.van-baar@inria.fr">here</a>.&nbsp;</i></p>
