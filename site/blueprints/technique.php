@@ -97,3 +97,13 @@ fields:
         required: true
         validate:
           - num
+  related-techniques:
+    label: Rekated Techniques
+    type: structure
+    entry: >
+        {{technique}}
+    fields:
+        technique:
+            label: Technique
+            type: subpage
+            parent: 2-all-techniques
