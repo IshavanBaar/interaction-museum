@@ -111,3 +111,12 @@ fields:
     options: query
     query:
       page: all-styles
+  techniques:
+    label: Techniques in this collection
+    type: structure
+    entry: >
+        {{technique}}
+  relatedPage:
+    label: Related Page
+    type: subpage
+    parent: all-techniques
