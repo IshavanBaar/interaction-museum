@@ -26,4 +26,4 @@ fields:
         technique:
             label: Technique
             type: subpage
-            parent: all-techniques
+            parent: 2-all-techniques
