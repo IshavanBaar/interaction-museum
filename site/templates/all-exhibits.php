@@ -18,7 +18,7 @@
         <h1>All <?php echo $page->title()?></h1>
 
         <!-- All exhibits -->
-        <?php snippet('show-exhibits', array('limit' => 100))?>
+        <?php snippet('show-exhibits', array('limit' => 100, 'user' => 'all'))?>
     </div>
 </div>
 
