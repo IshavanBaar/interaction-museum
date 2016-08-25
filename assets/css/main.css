@@ -387,13 +387,26 @@ label{
 
 .add_to_collection_btn{
     position:absolute; 
-    right:20px; 
+    right:25px; 
+    top: 10px;
     display: none;
+}
+.add_to_collection_btn i{
+    padding: 5px 0;
 }
 
 .remove_from_collection_btn{
     position:absolute; 
-    right:20px; 
+    right:25px; 
+    top: 10px;
+}
+
+#sidebar .remove_from_collection_btn{
+    background-color: rgba(0,0,0,0);
+    color: red;
+}
+.color-red{
+    color: red;
 }
 
 /*.mobile-menu{
