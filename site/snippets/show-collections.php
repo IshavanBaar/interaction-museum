@@ -1,19 +1,21 @@
 <div class="container-fluid">
-    <?php $collections = page('all-collections')->children()->visible();
+    <?php 
+    $collections = page('all-collections')->children()->visible();
     $counter = 0;
-    foreach($collections as $collection):
-        if ($counter < $limit) : ?>
-            <div class="col-sm-6">
-                <div class="col-xs-12">
-                    <a href="<?php echo url($collection) ?>" >
-                        <div class="collection">
-                            <h3><?php echo $collection->title() ?></h3>
-                            <p><?php echo $collection->techniques()->toStructure()->count()?> techniques</p>     
-                        </div>
-                    </a>
-                </div>
-            </div>
-        <?php endif; ?>
-    <?php $counter += 1; 
-    endforeach ?>
+
+    foreach($collections as $collection) {
+        if ($counter < $limit) {
+            // Filter on creator of the collection (account page) 
+            if ($user !== 'all') { 
+                if (strcmp($collection->creator(), $user) == 0) {     
+                    snippet('grid-item-collection', array('collection' => $collection));
+                } 
+            }
+            // Don't filter
+            else {
+                snippet('grid-item-collection', array('collection' => $collection));
+            }
+        }
+        $counter += 1; 
+    } ?>
 </div>  

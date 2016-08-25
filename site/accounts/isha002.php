@@ -7,7 +7,7 @@ password: >
 language: en
 role: admin
 history:
-  - all-exhibits/an-overview-of-menus
+  - all-collections/fittss-law
   - all-techniques/marking-menu
   - all-techniques/pie-menu
   - all-techniques/bubbling-menu
