@@ -1,8 +1,8 @@
 <?php if($user = $site->user()): ?>    
     <!-- TODO Diana: position these items on same height as the rest -->
-    
+    <!-- CREATE A NEW TECHNIQUE -->  
     <li>
-        <a id="user" class="btn btn-primary menu-operation" href="http://localhost/interaction-museum/panel/pages/all-techniques/add" onmouseenter="toggleSubmenu()">New technique</a>
+        <a id="new_technique" class="btn btn-primary menu-operation" href="panel/pages/all-techniques/add">New technique</a>
     </li>
 
     <!-- CREATE A NEW COLLECTION -->  
@@ -14,9 +14,10 @@
     <li class="multiple-buttons">
         <a id="new_exhibit" class="btn btn-primary menu-operation" href="<?php echo url('exhibit-editor') ?>">New exhibit</a>
     </li>
-
+    
+    <!-- USER -->
     <li>
-        <a id="user" class="btn btn-primary menu-operation" href="<?php echo url('account') ?>" onmouseenter="toggleSubmenu()"><?php echo $user?></a>
+        <a id="user" class="btn btn-primary menu-operation" href="<?php echo url('account') ?>"><?php echo $user?></a>
     </li>
 
 <!-- NOT LOGGED IN -->

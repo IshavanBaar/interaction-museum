@@ -19,6 +19,7 @@ if(kirby()->request()->ajax()) {
 	go('/');
 }
 ?>
+
 <div class="container-fluid">
     
     <!-- If results, show number of results and results in thumbnail -->

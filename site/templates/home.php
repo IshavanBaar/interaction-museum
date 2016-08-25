@@ -11,8 +11,6 @@
             <!-- Menu -->
             <?php snippet('menu')?>
 
-            
-
             <div class="intro row">
                 <div class="col-sm-12 ">
                     <h1>A Collection of Innovative Interactions</h1>
@@ -45,13 +43,10 @@
         <!-- Styles, for now all -->   
         <div class="text-center">
             <h1>Filter on Interaction Style</h1>
-            <?php snippet('show-styles', array('limit' => 100, 'user' => 'all')) ?>
-           
+            <?php snippet('show-styles', array('limit' => 100, 'user' => 'all')) ?>    
             <hr>
         </div>
     </div>
 
 <!-- Footer -->
 <?php snippet('footer') ?>
-
-
