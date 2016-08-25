@@ -4,7 +4,7 @@
 	    <?php $counter = 0;
 	    foreach($styles as $style): 
 	        if ($counter < $limit) : ?>
-	            <!-- TODO Diana: style this -->
+
 	            <div class="col-md-4 col-sm-6">
 	                <div class="col-xs-12">
 	                <a href="<?php echo url($style) ?>" >

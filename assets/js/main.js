@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
     
     $(".logout-btn").click(function(e) {
-        window.location.href = "/Logout";
+        window.location.href = "/interaction-museum/Logout";
     });
     
    /* Video / GIF hover */

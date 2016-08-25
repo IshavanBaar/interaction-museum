@@ -123,8 +123,8 @@ function appendTechnique(id, image, title){
     $("#sidebar").append(
         "<li class='col-xs-12'>" +
             "<div id='" + id + "-sidebar' class='thumbnail'>" +    
-                "<button class='btn btn-circle btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
-                    "<i class='glyphicon glyphicon-minus'></i>" +
+                "<button class='btn btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
+                    "<i class='glyphicon glyphicon-remove'></i>" +
                 "</button>" + 
                 "<a href='" + id + "'>" +
                     "<img src='" + image + "' alt='' >" +
@@ -153,8 +153,8 @@ function toggleButton(element, addOrRemove) {
         element.addClass(addButtonClass); 
     }
 
-    element.find("i").toggleClass("glyphicon-minus");
-    element.toggleClass("btn-danger"); 
+    element.find("i").toggleClass("color-red");
+    // element.toggleClass("btn-success"); 
 }
 
 // Shows tooltip on button button, with title title.

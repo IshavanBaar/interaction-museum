@@ -1,11 +1,11 @@
-
+            <br/><br/>
             <footer class="footer" role="contentinfo">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 copyright text-left">
+                    <div class="row footer-text">
+                        <div class="col-xs-6 copyright text-left">
                             <?php echo $site->copyright()->kirbytext() ?>				
                         </div>
-                        <div class="col-sm-6 colophon text-right">
+                        <div class="col-xs-6 colophon text-right">
                             <p><a href="<?php echo url('about') ?>">About</a></p>	
                         </div>
                         

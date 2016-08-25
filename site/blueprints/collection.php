@@ -31,8 +31,3 @@ fields:
     label: Related Page
     type: subpage
     parent: all-techniques
-  fruits:
-    label: Give Me Fruits
-    type: list
-    placeholder: Add a new fruit
-    parent: all-techniques
