@@ -17,6 +17,10 @@ fields:
   creator:
     label: Created by
     type: user
+  created_on:
+    label: Created on
+    type: date
+   format: YYYY/MM/DD
   writings:
     label: Content (HTML)
     type: textarea
