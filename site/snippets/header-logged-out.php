@@ -14,8 +14,7 @@
         <?php echo css(array(
             'assets/css/bootstrap.css',
             'assets/css/main.css',
-            'assets/css/sidebar/simple-sidebar.css',
-            'assets/css/slider/lightslider.css'
+            'assets/css/sidebar/simple-sidebar.css'
         ))?>
         
         <!-- JS -->	
@@ -23,7 +22,7 @@
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
             'assets/js/lib/jquery/dist/jquery.min.js',
             'assets/js/lib/bootstrap.min.js',
-            'assets/js/lib/slider/lightslider.js',
+            'assets/js/collectionSidebar.js',
             'assets/js/main.js'
         ))?> 
         

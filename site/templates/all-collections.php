@@ -18,7 +18,7 @@
         <h1>All <?php echo $page->title()?></h1>
 
         <!-- All collections -->
-        <?php snippet('show-collections', array('limit' => 100))?>
+        <?php snippet('show-collections', array('limit' => 100, 'user' => 'all'))?>
     </div>
 </div>
 

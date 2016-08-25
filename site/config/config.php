@@ -3,7 +3,7 @@
 // License key.
 c::set('license', 'K2-PERSONAL-057b18ed282611f69fc8b050beebc5b2');
 
-//Cache
+// Cache
 //c::set('cache', true);
 
 /* 
@@ -12,21 +12,19 @@ Roles for system
 ---------------------------------------
 */
 c::set('roles', array(
+  // Access to full panel.
   array(
     'id'      => 'admin',
-    'name'    => 'Admin',
+    'name'    => 'Curator',
     'default' => true,
     'panel'   => true
   ),
+  // Access to adding new techniques only (Future) 
   array(
-    'id'      => 'editor',
-    'name'    => 'Editor',
-    'panel'   => true
-  ),
-  array(
-    'id'      => 'client',
-    'name'    => 'Client',
+    'id'      => 'contributor',
+    'name'    => 'Contributor',
     'panel'   => false
+    //'panel/pages/blogs/add' => true //SOMETHING LIKE THIS
   )
 ));
 
@@ -42,7 +40,7 @@ c::set('routes', array(
    'action'  => function() {
      if($user = site()->user()) $user->logout();
      // Goes to home page now, but can be set to login.
-      go('/');
+     go('/');
    }
  ),
    

@@ -1,32 +1,22 @@
 <div class="container-fluid">
-    <?php $exhibits = page('all-exhibits')->children()->visible();
+    <?php 
+    $exhibits = page('all-exhibits')->children()->visible();
     $counter = 0;
+    // TODO get full name if available
     
-
-    
-    foreach($exhibits as $exhibit):
-        // TODO get full name if available
-        /*if ($site->user($exhibit->creator())->firstName()->content()->has('firstName')) { 
-        //if ($exhibit->creator()->firstName()->isNotEmpty() && $exhibit->creator()->lastName()->isNotEmpty()) {
-            echo "yo";
-            $name = $site->user($exhibit->creator())->firstName() . " " . $site->user($exhibit->creator())->lastName();
-        } else { 
-            $name = $exhibit->creator(); 
-        }*/
-        
-        // Display exhitits
-        if ($counter < $limit) : ?>
-            <div class="col-sm-6">
-                <div class="col-xs-12">
-                    <a href="<?php echo url($exhibit) ?>" >
-                        <div class="collection">
-                            <h3><?php echo $exhibit->title() ?></h3>
-                            <p>by <?php echo $exhibit->creator() ?></p>     
-                        </div>
-                    </a>
-                </div>
-            </div>
-        <?php endif; ?>
-    <?php $counter += 1; 
-    endforeach ?>
+    foreach($exhibits as $exhibit) {
+        if ($counter < $limit) {
+            // Filter on creator of the collection (account page) 
+            if ($user !== 'all') { 
+                if (strcmp($exhibit->creator(), $user) == 0) {     
+                    snippet('grid-item-exhibit', array('exhibit' => $exhibit));
+                } 
+            }
+            // Don't filter
+            else {
+                snippet('grid-item-exhibit', array('exhibit' => $exhibit));
+            }
+        }
+        $counter += 1; 
+    } ?>
 </div>  

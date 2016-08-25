@@ -2,13 +2,17 @@ Title: Fitts's Law
 
 ----
 
-Creator: isha002
+Creator: michel-exsitu
 
 ----
 
 Techniques: 
 
-- technique: bubble-cursor
-- technique: drag-and-pop
-- technique: dynaspot
-- technique: semantic-pointing
+- 
+  technique: bubble-cursor
+- 
+  technique: drag-and-pop
+- 
+  technique: dynaspot
+- 
+  technique: semantic-pointing
