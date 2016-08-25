@@ -21,9 +21,9 @@ foreach($entries as $technique):
                     <i class="glyphicon glyphicon-plus"></i>
                 </button>
 
-                <a id="<?php echo $identifier ?>-link" href="<?php echo $identifier ?>">
+                <a id="<?php echo $identifier ?>-link" href="<?php echo $identifier ?>" >
                     <!-- TODO fix if there is no gif file in the folder -->
-                    <img id="<?php echo $identifier ?>-image" src="<?php echo $image->url() ?>" alt="">
+                    <img id="<?php echo $identifier ?>-image" src="<?php echo $image->url() ?>" alt="" class="thumbnail-image">
                     <p id="<?php echo $identifier ?>-title" class="caption"><?php echo $technique->title()->html() ?></p>
                 </a>
             </div>

@@ -1,0 +1,16 @@
+Title: Drag-and-drop and Alternatives
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: pick-and-drop
+- technique: drag-and-drop
+- technique: drag-and-pop
+- technique: boomerang
+- technique: drop-down-menu
+- technique: thumbrock

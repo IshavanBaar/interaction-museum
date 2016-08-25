@@ -1,0 +1,14 @@
+Title: Outside the Desktop Interface
+
+----
+
+Creator: diana
+
+----
+
+Techniques: 
+
+- technique: free-hand-gestures
+- technique: knotty-gestures
+- technique: paperlens
+- technique: pick-and-drop

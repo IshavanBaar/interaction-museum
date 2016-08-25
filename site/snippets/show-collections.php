@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="text-center" >
     <?php 
     $collections = page('all-collections')->children()->visible();
     $counter = 0;

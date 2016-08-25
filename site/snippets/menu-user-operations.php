@@ -1,5 +1,4 @@
 <?php if($user = $site->user()): ?>    
-    <!-- TODO Diana: position these items on same height as the rest -->
     <!-- CREATE A NEW TECHNIQUE -->  
     <li>
         <a id="new_technique" class="btn btn-primary menu-operation" href="panel/pages/all-techniques/add">New technique</a>

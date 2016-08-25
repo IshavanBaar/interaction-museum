@@ -13,7 +13,6 @@
         <?php snippet('search-bar') ?>
     </div>
     
-    <!-- Title TODO Diana: do this more neatly in css?-->
     <div class="text-center section">
         <h1>All <?php echo $page->title()?></h1>
 
