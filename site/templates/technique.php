@@ -137,6 +137,11 @@
                 
             </div>
         </div>
+        <div class="row section">
+            <h2>Featured in</h2>
+            <hr>
+            <?php snippet('show-collections', array('limit' => 100, 'technique' => $page->uid(), 'user' => 'none'))?>
+        </div>
     </div>
 </div>
 

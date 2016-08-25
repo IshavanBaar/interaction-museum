@@ -13,8 +13,8 @@
             <div id="editor-content" class="editable col-md-8 col-md-offset-2"></div>
         </div>
         <div class="row">
-            <a id="add_interaction_btn" class="btn btn-primary col-md-2 col-md-offset-2">Save</a>
-            <a id="publish_exhibit_btn" class="btn btn-primary col-md-2 col-md-offset-4">Publish</a>
+            <a id="add_interaction_btn" class="btn btn-primary col-md-2 col-md-offset-2 exhibit-button">Save</a>
+            <a id="publish_exhibit_btn" class="btn btn-primary col-md-2 col-md-offset-4 exhibit-button">Publish</a>
         </div>
     </div>
     <script src="assets/js/exhibitEditor.js"></script>

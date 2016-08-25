@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="text-center">
     <?php 
     $exhibits = page('all-exhibits')->children()->visible();
     $counter = 0;

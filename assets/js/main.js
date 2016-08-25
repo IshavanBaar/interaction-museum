@@ -80,6 +80,10 @@ $(document).ready(function(){
         toggleSidebar();
     });
 
+    $(".logout-btn").click(function(e) {
+        window.location.href = "/interaction-museum/Logout";
+    });
+
     /* ------- Exhibit Editor ------- */
     
     $("#add_interaction_btn").click(function() {

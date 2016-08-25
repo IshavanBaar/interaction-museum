@@ -16,14 +16,14 @@ foreach($entries as $technique):
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="thumbnail" id="<?php echo $identifier?>-thumbnail">
                 <!-- Button to add to collection -->
-                <button id="<?php echo $identifier?>-btn" 
-                        class="btn btn-default btn-circle add_to_collection_btn" title="Add to collection" type="submit">
-                    <i class="glyphicon glyphicon-plus"></i>
+                <button title="Add to a Collection" id="<?php echo $identifier?>-btn" 
+                        class="btn btn-default add_to_collection_btn" title="Add to collection" type="submit">
+                    <i class="glyphicon glyphicon-heart"></i>
                 </button>
 
-                <a id="<?php echo $identifier ?>-link" href="<?php echo $identifier ?>">
+                <a id="<?php echo $identifier ?>-link" href="<?php echo $identifier ?>" >
                     <!-- TODO fix if there is no gif file in the folder -->
-                    <img id="<?php echo $identifier ?>-image" src="<?php echo $image->url() ?>" alt="">
+                    <img id="<?php echo $identifier ?>-image" src="<?php echo $image->url() ?>" alt="" class="thumbnail-image">
                     <p id="<?php echo $identifier ?>-title" class="caption"><?php echo $technique->title()->html() ?></p>
                 </a>
             </div>

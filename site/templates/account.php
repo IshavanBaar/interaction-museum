@@ -13,32 +13,28 @@
         <?php snippet('search-bar') ?>
     </div>
     
-    <div class="text-center section">
-        <!-- USER NAME -->
-        <h1><?php echo $site->user()?></h1>
-
-        <!-- BLUEPRINT TEXT -->
-        <?php echo $page->text()->kirbytext() ?>
-        
+    <div class="container-fluid">
+        <div class="row text-center">
+            <!-- USER NAME -->
+            <h1>Welcome, <?php echo $site->user()?></h1>
+        </div>
         <!-- LOGOUT -->
         <button class="btn btn-default btn-primary logout-btn">
            Logout <span class="glyphicon glyphicon-log-out"></span>
         </button>
    
         <!-- YOUR COLLECTIONS -->
-        <!-- Title TODO Diana: do this more neatly in css?-->
-        <div class="text-center section">
-            <h1>Your Collections</h1>
-        </div>
-        <?php snippet('show-collections', array('limit' => 100, 'user' => $site->user()))?>
-        
+        <div class="account-section">
+            <h2>My Collections</h2>
+            <hr>
+             <?php snippet('show-collections', array('limit' => 100, 'technique' => 'none',  'user' => $site->user()))?>
+
         <!-- YOUR COLLECTIONS -->
-        <!-- Title TODO Diana: do this more neatly in css?-->
-        <div class="text-center section">
-            <h1>Your Exhibits</h1>
+
+            <h2>My Exhibits</h2>  
+            <hr>
+            <?php snippet('show-exhibits', array('limit' => 100, 'user' => $site->user()))?>
         </div>
-        <?php snippet('show-exhibits', array('limit' => 100, 'user' => $site->user()))?>
-        
     </div>
 </div>
 
