@@ -15,7 +15,6 @@
             'assets/css/bootstrap.css',
             'assets/css/main.css',
             'assets/css/sidebar/simple-sidebar.css',
-            'assets/css/slider/lightslider.css',
             // Medium Editor
             'assets/js/lib/medium-editor/dist/css/medium-editor.min.css',
             'assets/js/lib/medium-editor/dist/css/themes/default.css',
@@ -28,17 +27,18 @@
             'assets/js/lib/modernizr-2.8.3-respond-1.4.2.min.js',
             'assets/js/lib/jquery/dist/jquery.min.js',
             'assets/js/lib/bootstrap.min.js',
-            'assets/js/lib/slider/lightslider.js',
+            'assets/js/collectionSidebar.js',
             'assets/js/main.js',
-            // Medium Editor
+            
+            // Medium Editor (https://github.com/yabwe/medium-editor)
             'assets/js/lib/blueimp-file-upload/js/vendor/jquery.ui.widget.js',
             'assets/js/lib/blueimp-file-upload/js/jquery.iframe-transport.js',
             'assets/js/lib/blueimp-file-upload/js/jquery.fileupload.js',
             'assets/js/lib/medium-editor/dist/js/medium-editor.js',
             'assets/js/lib/handlebars/handlebars.runtime.min.js',
             'assets/js/lib/jquery-sortable/source/js/jquery-sortable-min.js',
-
-             // /dist/js/medium-editor-insert-plugin.min.js'
+            
+            // Medium Editor insert plugin (https://github.com/orthes/medium-editor-insert-plugin)
             'assets/js/lib/medium-editor-insert-plugin/src/js/templates.js',
             'assets/js/lib/medium-editor-insert-plugin/src/js/core.js',
             'assets/js/lib/medium-editor-insert-plugin/src/js/embeds.js',

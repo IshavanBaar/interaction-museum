@@ -11,9 +11,7 @@ foreach($collection->techniques()->toStructure() as $structure_entry) {
     array_push($techniques, $technique);
 } 
 
-if($view === "sliders" ) {
-    snippet('thumbnails-slider', array('entries' => $techniques));
-} else if ($view === "columns") {
+if ($view === "columns") {
     snippet('thumbnails', array('entries' => $techniques));
 }
 
