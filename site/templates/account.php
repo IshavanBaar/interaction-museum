@@ -27,7 +27,7 @@
         <div class="account-section">
             <h2>My Collections</h2>
             <hr>
-             <?php snippet('show-collections', array('limit' => 100, 'user' => $site->user()))?>
+             <?php snippet('show-collections', array('limit' => 100, 'technique' => 'none',  'user' => $site->user()))?>
 
         <!-- YOUR COLLECTIONS -->
 
