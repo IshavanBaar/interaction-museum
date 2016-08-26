@@ -26,12 +26,12 @@ if(kirby()->request()->ajax()) {
         } else if ($site->user() === false) {
             echo "Login to save collections";
         } else {
-            // Create new page with the new technique.
+            // Create new visible page with the new technique.
             page('all-collections')->children()->create($collection_uid, 'collection', array(
                 'title' => $collection_title,
                 'creator' => $site->user()->current(),
                 'techniques' => $collection_techniques_structure
-            ));
+            ))->sort(0);
             echo "Created collection:" . $collection_uid;
         }
     } catch(Exception $e) {

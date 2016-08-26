@@ -1,18 +1,18 @@
+var selectedElement = "";
+
 var AddTechniqueButton = MediumEditor.Extension.extend({
     name: 'addtechnique',
 
     init: function () {
         this.button = this.document.createElement('button');
         this.button.classList.add('medium-editor-action');
-        this.button.innerHTML = '<i class="fa fa-search"></i> Add Technique';
+        this.button.innerHTML = '<i class="fa fa-plus"></i> Insert Technique';
         this.button.title = 'Add technique';
         this.button.id = 'search-technique-btn';
         this.button.addEventListener('click', function() {
             var selectedText = getSelectionText();
-            console.log("button clicked");
-            console.log(selectedText);
+            selectedElement = window.getSelection().anchorNode.parentNode;
             searchTechniques(selectedText);
-            showPopUp(selectedText);
         });
     },
 
@@ -20,24 +20,6 @@ var AddTechniqueButton = MediumEditor.Extension.extend({
         return this.button;
     }
 });
-
-// $("#search-input-exhibit").change(function(){
-//     var query = $("#search-input-exhibit").val();
-//     searchTechniques(query);
-// });
- $("#startSearch").click(function(){
-    var query = $("#search-input-exhibit").val();
-    searchTechniques(query);
-});
-
- // Add to exhibit
-$('body').on('click', '.add-to-exhibit-btn', function (e) {
-    e.preventDefault();
-    console.log($(this));
-    addToExhibit($(this));
-    $('#pop-up').hide();
-});
-
 
 var editor = new MediumEditor('.editable', {
     toolbar: {
@@ -48,13 +30,26 @@ var editor = new MediumEditor('.editable', {
     }
 });
 
-function searchTechniques(text) {
+ $("#startSearch").click(function(){
+    var query = $("#search-input-exhibit").val();
+    searchTechniques(query);
+});
+
+ // Add to exhibit
+$('body').on('click', '.add-to-exhibit-btn', function (e) {
+    e.preventDefault();
+    addToExhibit($(this));
+    $('#pop-up').hide();
+});
+
+function searchTechniques(selectedText) {
+    $("#search-results").empty();
     $.ajax({
         url: 'exhibit-search',
-        data: text,
+        data: selectedText,
         success : function(response) {
-            $("#search-results").empty();
             $("#search-results").append(response);
+            showPopUp(selectedText);
         } 
     });
 }
@@ -77,29 +72,19 @@ function showPopUp(text) {
 
 function addToExhibit(element){
     // Get information of clicked thumbnail.
-
     var thumbnail = element.parent().parent();
-    var identifier = thumbnail.attr("id").replace("-thumbnail","");
-    var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
-    var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();       
-
-    // Add it to the HTML
-    appendTechniqueExhibit(identifier, thumbnail_image, thumbnail_title);
-
-}
-function appendTechniqueExhibit(id, image, title){
-    $("#editor-content").append(
-        "<li class='col-xs-12'>" +
-            "<div id='" + id + "-sidebar' class='thumbnail'>" +    
-                "<button class='btn btn-circle btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
-                    "<i class='glyphicon glyphicon-minus'></i>" +
-                "</button>" + 
-                "<a href='" + id + "'>" +
-                    "<img src='" + image + "' alt='' >" +
-                    "<p class='caption'>" + title + "</p>" +
-                "</a>" +
-            "</div>" +
-        "</li>"
+    var techniqueId = thumbnail.attr("id").replace("-thumbnail","");
+    var techniqueImage = thumbnail.find("#" + techniqueId + "-image").attr("src");
+    var techniqueTitle = thumbnail.find("#" + techniqueId + "-title").html();       
+    
+    selectedElement.insertAdjacentHTML( 'afterEnd', 
+        "<div class='medium-insert-images medium-insert-active medium-insert-images-wide'>" +
+            "<figure contenteditable='false'>" +
+                "<img src='" + techniqueImage + "'>" +
+                "<p class='caption'>" + techniqueTitle + "</p>" + 
+                "<figcaption contenteditable='true' class='medium-insert-caption-placeholder' data-placeholder='Type caption for image (optional)'></figcaption>" +
+            "</figure>" +
+        "</div>" 
     ); 
 }
 
@@ -110,15 +95,14 @@ $(function () {
 });        
 
 function publishExhibit() {
-   var title = $('#editor-title').val();
-
-
-    // Only proceed if not empty
+    var title = $('#editor-title').val(); 
     var contents = $('#editor-content').clone().text().replace(/ /g,'').replace(/(\r\n|\n|\r)/gm,'');
+    
+    // Only proceed if not empty
     if (title.length > 0 && contents != "+") {            
         $('#editor-content').children('.medium-insert-buttons').empty().remove();
         var content = $('#editor-content').html();
-        console.log(content);
+        
         // Send to php in an array
         var exhibit = {
             exhibit_title : title,
@@ -129,13 +113,15 @@ function publishExhibit() {
         // TODO rewrite so that this is a function for both collection/exhibit creator
         $.ajax({
             url: 'exhibit-creator',
+            type: 'POST',
             data: exhibit,
             success : function(response) {
-                //console.log(response);
                 if (response.indexOf("Created exhibit:") > -1) {
+                    console.log('test');
                     // TODO Empty title and content of editor here
 
                     var exhibit_uid = response.replace("Created exhibit:", "");
+                    console.log(exhibit_uid);
                     window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
                 } 
                 // Show tooltip if something went wrong

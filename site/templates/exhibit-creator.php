@@ -27,8 +27,9 @@ if(kirby()->request()->ajax()) {
             page('all-exhibits')->children()->create($exhibit_uid, 'exhibit', array(
                 'title' => $exhibit_title,
                 'creator' => $site->user()->current(),
+                'created_on' => date("Ymd"),
                 'writings' => $exhibit_content
-            ));
+            ))->sort(date("Ymd"));
             echo "Created exhibit:" . $exhibit_uid;
         }
     } catch(Exception $e) {
