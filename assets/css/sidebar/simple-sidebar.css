@@ -106,12 +106,7 @@
 }
 
 #sidebar-buttons {
-    position: fixed;
-    bottom: 0px;
-    width: 300px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+
 }
 
 #save_collection_btn{
@@ -156,6 +151,7 @@
     background-color: #333333;
     cursor: pointer;    
     top: 0.8em;
+    right: -1em;
     z-index: 5;
     padding: 1em;
 }

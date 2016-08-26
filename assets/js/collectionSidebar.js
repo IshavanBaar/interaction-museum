@@ -29,13 +29,16 @@ function closeSidebar() {
 // Adds technique to sidebar from thumbnail/technique page.
 function addToCollection(element) {
     // Get information of clicked thumbnail.
+    console.log('im in addToCollection');
     if (addedViaThumbnail === true) {
+        console.log('im in addToCollection via thumbnail');
         var thumbnail = element.parent();
         var identifier = thumbnail.attr("id").replace("-thumbnail","");
         var thumbnail_image = thumbnail.find("#" + identifier + "-image").attr("src");
         var thumbnail_title = thumbnail.find("#" + identifier + "-title").html();
     } else if (addedViaThumbnail === false) {
-        var identifier = element.attr("id").replace("btn_","");
+        console.log('im in addToCollection via technique');
+        var identifier = element.attr("id").replace("-btn-technique","");
         var thumbnail_image = $("#header_image_" + identifier).attr("src");
         var thumbnail_title = $("#title_" + identifier).html();
     } 
@@ -50,7 +53,8 @@ function addToCollection(element) {
     // Add it to the HTML
     appendTechnique(identifier, thumbnail_image, thumbnail_title);
     // Toggle thumbnail button
-    toggleButton(element, "remove");     
+    toggleButton(element, "remove");    
+    console.log(sessionStorage);
 };
 
 // Removes technique from session storage and sidebar
@@ -60,7 +64,7 @@ function removeFromCollection(id) {
     
     var removeButtonId = "#" + id + "-btn";
     if (addedViaThumbnail === false) {
-        removeButtonId = "#btn_" + id;  
+        removeButtonId = "#" + id + "-btn-technique";  
     }
     toggleButton($(removeButtonId), "add");
     
@@ -172,21 +176,24 @@ function toggleButton(element, addOrRemove) {
     var addButtonClass = "add_to_collection_btn";
     var removeButtonClass = "remove_from_collection_btn";
     if (addedViaThumbnail === false) {
-        addButtonClass = addButtonClass + "_technique";
-        removeButtonClass = removeButtonClass + "_technique";
+        // addButtonClass = addButtonClass + "_technique";
+        // removeButtonClass = removeButtonClass + "_technique";
+        console.log(addButtonClass + ' '+ removeButtonClass)
     }
     
     if(addOrRemove === "remove") {
+        console.log('im in remove');
         element.removeClass(addButtonClass); 
         element.addClass(removeButtonClass); 
-        element.addClass("displayInline");
+        // element.addClass("displayInline");
     } else if (addOrRemove === "add") {
+        console.log('im in add');
         element.removeClass(removeButtonClass); 
         element.addClass(addButtonClass); 
     }
 
-    element.find("i").toggleClass("color-red");
-    // element.toggleClass("btn-success"); 
+    element.find("i").toggleClass("glyphicon-check");
+    element.toggleClass("btn-success"); 
 }
 
 // Shows tooltip on button button, with title title.

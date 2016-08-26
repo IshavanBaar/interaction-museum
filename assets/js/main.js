@@ -2,7 +2,7 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
-    
+
     /* ------- Menu & Account ------- */
     
     $('body').on('hover', '#user', function (e) {
@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
     
     /* ------- Add to Collection Buttons ------- */
-    
+
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
         $(this).find("#" + identifier + "-btn").css("display", "inline-block");
@@ -30,14 +30,16 @@ $(document).ready(function(){
     $('body').on('click', '.add_to_collection_btn', function (e) {
         e.preventDefault();
         toggleSidebar();
-        addedViaThumbnail = true;
+       if($(this).attr("id").indexOf("-technique")>-1){
+           addedViaThumbnail = false;
+           console.log('im in a technique');
+        }else{
+            addedViaThumbnail = true;
+            console.log('im not in a technique');
+        }
         addToCollection($(this));
     });
-    
-    $('body').on('click', '.remove_from_collection_btn', function () {
-        var id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
-        removeFromCollection(id);
-    });
+
     
     // Add to/Remove from sidebar from technique
     $('body').on('click', '.add_to_collection_btn_technique', function (e) {
@@ -47,17 +49,26 @@ $(document).ready(function(){
         addToCollection($(this));
     });
     
-    $('body').on('click', '.remove_from_collection_btn_technique', function () {
-        var id = $(this).attr("id").replace("btn_","");
-        removeFromCollection(id);
-    });
+    // $('body').on('click', '.remove_from_collection_btn_technique', function () {
+    //     var id = $(this).attr("id").replace("-btn-technique","");
+    //     console.log('id is'+id);
+    //     removeFromCollection(id);
+    // });
     
-    /* ------- New/Save/Empty Collections ------- */
-    $('body').on('click', '#new_collection', function (e) {
-        // if it's on the collections page, go to techniques 
-        e.preventDefault();
-        emptyCollecton();
-        toggleSidebar();
+
+    $('body').on('click', '.remove_from_collection_btn', function () {
+        var id;
+        if($(this).attr("id").indexOf("-technique")>-1){
+            id = $(this).attr("id").replace("-btn-technique","");
+            addedViaThumbnail = false;
+            console.log('im in a technique');
+        }else{
+            id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+            addedViaThumbnail = true;
+            console.log('im not in a technique');
+        }
+        removeFromCollection(id);
+
     });
     
     $('body').on('click', '#save_collection_btn', function () {
@@ -111,6 +122,7 @@ $(document).ready(function(){
         for (key in techniques){
             appendTechnique(key, techniques[key].image, techniques[key].title);
             toggleButton($("#"+key+"-btn"), "remove");
+            toggleButton($("#"+key+"-btn-technique"), "remove");
         }
         toggleSidebar();
     } 
