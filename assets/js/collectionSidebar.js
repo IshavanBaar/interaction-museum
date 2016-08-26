@@ -65,7 +65,8 @@ function removeFromCollection(id) {
     toggleButton($(removeButtonId), "add");
     
     // Remove from sidebar
-    $("#" + id + "-sidebar").remove();
+    // TODO Diana nice toggle visibility animation doesn't work
+    $("#" + id + "-sidebar").remove().toggle("fast");
 }
 
 // Empties collection
@@ -153,8 +154,8 @@ function currentlyOnCollection() {
  
 function appendTechnique(id, image, title){
     var techniqueInSidebar =
-        "<li class='col-xs-12' style='display:none'>" +
-            "<div id='" + id + "-sidebar' class='thumbnail'>" +    
+        "<li id='" + id + "-sidebar' class='col-xs-12' style='display:none'>" +
+            "<div class='thumbnail'>" +    
                 "<button class='btn btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
                     "<i class='glyphicon glyphicon-remove'></i>" +
                 "</button>" + 
@@ -164,7 +165,7 @@ function appendTechnique(id, image, title){
                 "</a>" +
             "</div>" +
         "</li>";
-    $(techniqueInSidebar).appendTo("#sidebar").fadeIn('fast');
+    $(techniqueInSidebar).appendTo("#sidebar").toggle("fast");
 }
 
 // Toggles +/- button to be set to the addOrRemove value.

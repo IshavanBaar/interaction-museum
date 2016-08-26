@@ -105,34 +105,39 @@
                 <?php endif; ?> 
                 
                 <div class="media">
-                <!-- TRY OUT -->
-                <?php if($try_out->isNotEmpty()): ?>
-                    <h2>Try It Out</h2>
-                    <?php 
-                        // If the try out is a code pen, use a different link to embed it nicely.
-                        if(strpos($try_out, $code_pen) !== false){ 
-                            $try_out = str_replace("/pen/", "/embed/", $try_out);
-                            print("<iframe src=" . $try_out . " 
-                                    style='width: 100%;' height='300'
+                    <!-- TRY OUT -->
+                    <?php if($try_out->isNotEmpty()): ?>
+                        <h2>Try It Out</h2>
+                        <!-- If the try out is a code pen, use a different link to embed it nicely. -->
+                        <?php if(strpos($try_out, $code_pen) !== false) : 
+                            $try_out = str_replace("/pen/", "/embed/", $try_out); ?>
+                            <iframe src='<?php echo $try_out ?>' style='width: 100%;' height='300'
                                     frameborder='no' scrolling='no' allowtransparency='true' allowfullscreen='true'>
-                            </iframe>");
-                        }else {
-                        print("<iframe src=" . $try_out . " 
-                                    style='width: 100%;' height='500' 
+                            </iframe>
+                        <?php else : ?>
+                            <iframe src="<?php echo $try_out ?>" style='width: 100%;' height='500' 
                                     frameborder='no' scrolling='no' allowtransparency='true' allowfullscreen='true'>
-                                </iframe>");
-                        }
-                endif ?>
+                            </iframe>
+                        <?php endif; 
+                    endif; ?>
 
-                <!-- EXTRA IMAGES -->	
-                <?php if ($page->extra_images()->isNotEmpty()) {
-
-                    echo '<h2>More images</h2>';
-                      foreach($files as $file){
-                        echo '<figure><img src="'. $file->url() . '"alt="" class="col-xs-12 trade-img"></figure>';
-                        }
-                    } 
-                    ?>
+                    <!-- EXTRA IMAGES -->	
+                    <?php if ($page->extra_images()->isNotEmpty()) : ?>
+                        <h2>More images</h2>
+                        <?php foreach($files as $file) : ?>
+                            <figure>
+                                <img src="<?php echo $file->url()?>" alt="" class="col-xs-12 trade-img">
+                                <?php if ($file->caption() != ''): ?>
+                                    <!-- TODO Diana styling of caption -->
+                                    <figcaption>
+                                        <span>
+                                          <?php echo html($file->caption()) ?>
+                                        </span>
+                                    </figcaption>
+                                <?php endif; ?>
+                            </figure>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
                 
             </div>
