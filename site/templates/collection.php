@@ -10,7 +10,6 @@
      <div class="header">
         <!-- Menu -->
         <?php snippet('menu')?>
-
         <?php snippet('search-bar') ?>
     </div>
 

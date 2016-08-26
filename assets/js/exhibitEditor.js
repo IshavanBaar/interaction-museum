@@ -1,3 +1,5 @@
+var selectedElement = "";
+
 var AddTechniqueButton = MediumEditor.Extension.extend({
     name: 'addtechnique',
 
@@ -9,10 +11,8 @@ var AddTechniqueButton = MediumEditor.Extension.extend({
         this.button.id = 'search-technique-btn';
         this.button.addEventListener('click', function() {
             var selectedText = getSelectionText();
-            console.log("button clicked");
-            console.log(selectedText);
+            selectedElement = window.getSelection().anchorNode.parentNode;
             searchTechniques(selectedText);
-            showPopUp(selectedText);
         });
     },
 
@@ -38,18 +38,18 @@ var editor = new MediumEditor('.editable', {
  // Add to exhibit
 $('body').on('click', '.add-to-exhibit-btn', function (e) {
     e.preventDefault();
-    console.log($(this));
     addToExhibit($(this));
     $('#pop-up').hide();
 });
 
-function searchTechniques(text) {
+function searchTechniques(selectedText) {
+    $("#search-results").empty();
     $.ajax({
         url: 'exhibit-search',
-        data: text,
+        data: selectedText,
         success : function(response) {
-            $("#search-results").empty();
             $("#search-results").append(response);
+            showPopUp(selectedText);
         } 
     });
 }
@@ -77,21 +77,14 @@ function addToExhibit(element){
     var techniqueImage = thumbnail.find("#" + techniqueId + "-image").attr("src");
     var techniqueTitle = thumbnail.find("#" + techniqueId + "-title").html();       
     
-    // TODO append after selected element
-    $("#editor-content").append(
+    selectedElement.insertAdjacentHTML( 'afterEnd', 
         "<div class='medium-insert-images medium-insert-active medium-insert-images-wide'>" +
             "<figure contenteditable='false'>" +
-                /*"<button id='" + techniqueId + "'" + 
-                    "class='btn btn-default btn-circle add_to_collection_btn' title='Add to collection' type='submit'>" +
-                    "<i class='glyphicon glyphicon-plus'></i>" +
-                "</button>" +*/
-
                 "<img src='" + techniqueImage + "'>" +
                 "<p class='caption'>" + techniqueTitle + "</p>" + 
                 "<figcaption contenteditable='true' class='medium-insert-caption-placeholder' data-placeholder='Type caption for image (optional)'></figcaption>" +
             "</figure>" +
-        "</div>" +
-        "<p><br></p>"
+        "</div>" 
     ); 
 }
 
@@ -109,7 +102,6 @@ function publishExhibit() {
     if (title.length > 0 && contents != "+") {            
         $('#editor-content').children('.medium-insert-buttons').empty().remove();
         var content = $('#editor-content').html();
-        console.log(content);
         
         // Send to php in an array
         var exhibit = {
@@ -121,14 +113,16 @@ function publishExhibit() {
         // TODO rewrite so that this is a function for both collection/exhibit creator
         $.ajax({
             url: 'exhibit-creator',
+            type: 'POST',
             data: exhibit,
             success : function(response) {
-                //console.log(response);
                 if (response.indexOf("Created exhibit:") > -1) {
+                    console.log('test');
                     // TODO Empty title and content of editor here
 
                     var exhibit_uid = response.replace("Created exhibit:", "");
-                    window.location.href = "all-exhibits/" + exhibit_uid;
+                    console.log(exhibit_uid);
+                    window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
                 } 
                 // Show tooltip if something went wrong
                 else {
