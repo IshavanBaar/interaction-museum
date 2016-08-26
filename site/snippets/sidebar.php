@@ -4,7 +4,7 @@
 	    <input type="text" class="form-control sidebar-brand placeholder-fix" placeholder="Collection Title">
 		<span class="close_sidebar_btn glyphicon glyphicon-chevron-left"></span>  
     </div>
-</ul>
+
 <div id="sidebar-buttons">
     <button data-toggle="tooltip" id="save_collection_btn" class="btn btn-default btn-primary" type="submit">
         <span>Save</span>
@@ -13,3 +13,4 @@
         <span>Empty</span>
     </button>
 </div>
+</ul>

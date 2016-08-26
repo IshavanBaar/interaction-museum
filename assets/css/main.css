@@ -414,10 +414,15 @@ label{
 
 #sidebar .remove_from_collection_btn{
     background-color: rgba(0,0,0,0);
-    color: red;
+    color: #ff9800;
 }
 .color-red{
     color: red;
+}
+.technique_btn{
+    position: relative;
+    display: inline-block;
+
 }
 
 /*.mobile-menu{
@@ -465,10 +470,6 @@ label{
 .collectionLink:hover{
     color: #4ba0b3;
     /*text-decoration: underline;*/
-}
-
-.displayInline{
-    display: inline-block;
 }
 
 .collection{

@@ -55,3 +55,15 @@ Related-publications:
 ----
 
 Styles: direct-manipulation, gesture-base, navigation
+
+----
+
+Movie-file: thumbrock.mp4
+
+----
+
+Techniques: 
+
+----
+
+Relatedpage: 

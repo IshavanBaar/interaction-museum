@@ -9,7 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - all-collections/drawing
+  - all-techniques/thumbrock
   - all-techniques/anchored-menu-vr
+  - all-collections/drawing
   - all-techniques/drag-and-drop
   - all-techniques/marking-menu
