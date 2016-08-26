@@ -412,9 +412,11 @@ label{
     top: 10px;
 }
 
-#sidebar .remove_from_collection_btn{
+.remove{
     background-color: rgba(0,0,0,0);
     color: #ff9800;
+    position: absolute;
+    right: 20px;
 }
 .color-red{
     color: red;
@@ -553,6 +555,9 @@ hr{
     margin-bottom: 40px;
 }
 
+#search-form-exhibit, #search-input-exhibit{
+    color: white;
+}
 /* All styles */
 .style-thumbnail {
     font-size: 1em;

@@ -159,7 +159,7 @@ function appendTechnique(id, image, title){
     var techniqueInSidebar =
         "<li class='col-xs-12' style='display:none'>" +
             "<div id='" + id + "-sidebar' class='thumbnail'>" +    
-                "<button class='btn btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
+                "<button class='btn btn-danger remove_from_collection_btn remove' title='Remove from collection' type='submit'>" +
                     "<i class='glyphicon glyphicon-remove'></i>" +
                 "</button>" + 
                 "<a href='" + id + "'>" +
