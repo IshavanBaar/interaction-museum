@@ -29,6 +29,7 @@
         $tagArray = explode(',', $tags);
         $try_out = $page->try_out();
         $video = $page->movie();
+        $video_file = $page->movie_file()->toFile();
         $code_pen = "://codepen.io/";
 
         /* EXTRA IMAGES */
@@ -54,10 +55,9 @@
                         <?php endforeach ?>
                     </div>
                 <?php endif ?>	
-                
-                <h2>Options</h2>
                 <!-- Button to add to collection -->
-                <button id="btn_<?php echo $identifier?>" class="btn add_to_collection_btn_technique" title="Add to collection" type="submit">
+                <h2>Options</h2>
+                <button id="<?php echo $identifier?>-btn-technique" class="btn add_to_collection_btn technique_btn" title="Add to collection" type="submit">
                     <i class="glyphicon glyphicon-plus"></i> Add to collection
                 </button>
                 
@@ -97,7 +97,10 @@
                     <?php elseif (stripos($video, "vimeo") !== false): ?>
                         <div class='videoWrapper '><?php echo vimeo($video);?></div>
                     <?php endif; ?>
-
+                <?php elseif($page->movie_file()->isNotEmpty()): ?>
+                    <video controls name="media">
+                      <source src="<?php echo $video_file->url() ?>" type="<?php echo $video_file->mime() ?>">  
+                    </video>
                 <?php else: ?>
                     <div class='row'>
                         <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>

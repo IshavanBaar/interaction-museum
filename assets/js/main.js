@@ -2,7 +2,7 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
-    
+    console.log(sessionStorage);
     /* Toggle sidebar */
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
@@ -30,7 +30,13 @@ $(document).ready(function(){
     $('body').on('click', '.add_to_collection_btn', function (e) {
         e.preventDefault();
         toggleSidebar();
-        addedViaThumbnail = true;
+       if($(this).attr("id").indexOf("-technique")>-1){
+           addedViaThumbnail = false;
+           console.log('im in a technique');
+        }else{
+            addedViaThumbnail = true;
+            console.log('im not in a technique');
+        }
         addToCollection($(this));
     });
     
@@ -42,13 +48,23 @@ $(document).ready(function(){
         addToCollection($(this));
     });
     
-    $('body').on('click', '.remove_from_collection_btn_technique', function () {
-        var id = $(this).attr("id").replace("btn_","");
-        removeFromCollection(id);
-    });
+    // $('body').on('click', '.remove_from_collection_btn_technique', function () {
+    //     var id = $(this).attr("id").replace("-btn-technique","");
+    //     console.log('id is'+id);
+    //     removeFromCollection(id);
+    // });
     
     $('body').on('click', '.remove_from_collection_btn', function () {
-        var id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+        var id;
+        if($(this).attr("id").indexOf("-technique")>-1){
+            id = $(this).attr("id").replace("-btn-technique","");
+            addedViaThumbnail = false;
+            console.log('im in a technique');
+        }else{
+            id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+            addedViaThumbnail = true;
+            console.log('im not in a technique');
+        }
         removeFromCollection(id);
     });
     
@@ -119,6 +135,7 @@ $(document).ready(function(){
         for (key in techniques){
             appendTechnique(key, techniques[key].image, techniques[key].title);
             toggleButton($("#"+key+"-btn"), "remove");
+            toggleButton($("#"+key+"-btn-technique"), "remove");
         }
         toggleSidebar();
     } 

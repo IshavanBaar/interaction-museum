@@ -1,0 +1,63 @@
+Basics: 
+
+----
+
+Title: Selective Undo
+
+----
+
+Description: 
+
+Selective undo allows people to reverse actions regardless of the order in which they happened. 
+
+In the case of drawing applications, if you have changed the background color, you can draw a line and delete a polygon. Selective Undo allows you to delete the first action, changing the background color to the original one but keeping the line and the polygon actions.
+
+----
+
+Tags: undo,drawing
+
+----
+
+Media: 
+
+----
+
+Header-image: ezgif.com-crop-1.gif
+
+----
+
+Extra-images: 
+
+----
+
+Movie: https://www.youtube.com/watch?v=_EmbGg-b6Mo
+
+----
+
+Extra: 
+
+----
+
+Try-out: 
+
+----
+
+Related-publications: 
+
+- 
+  title: >
+    Selective Undo Support for Painting
+    Applications
+  link: >
+    http://dx.doi.org/10.1145/2702123.2702543
+  authors: >
+    Brad Myers, Ashley Lai, Tam Minh Le,
+    Youngseok Yoon, Andrew Faulring, Joel
+    Brandt
+  conference: CHI
+  year: "2015"
+  type: CHI
+
+----
+
+Styles: navigation

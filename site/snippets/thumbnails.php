@@ -18,7 +18,7 @@ foreach($entries as $technique):
                 <!-- Button to add to collection -->
                 <button title="Add to a Collection" id="<?php echo $identifier?>-btn" 
                         class="btn btn-default add_to_collection_btn" title="Add to collection" type="submit">
-                    <i class="glyphicon glyphicon-heart"></i>
+                    <i class="glyphicon glyphicon-plus"></i>
                 </button>
 
                 <a id="<?php echo $identifier ?>-link" href="<?php echo $identifier ?>" >

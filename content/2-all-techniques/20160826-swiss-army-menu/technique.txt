@@ -1,0 +1,44 @@
+Title: Swiss Army Menu
+
+----
+
+Description: 
+
+The Swiss Army Menu (SAM) is a radial menu that can display a lot of functions on a small screen, such as a smartphone. You control the menu with small thumb movements on a puck. You indirectly point to the menu items. This way, the Swiss Army Menu replaces commonly-used widgets such as buttons, checkboxes and scrollbars. 
+
+The Swiss Army Menu can be hierarchical .
+
+----
+
+Tags: Swiss Army,menu,radial,indirect pointing
+
+----
+
+Header-image: swiss-army.gif
+
+----
+
+Extra-images: swiss-army-menu-extra-image.png
+
+----
+
+Movie: 
+
+----
+
+Try-out: http://bonnet.cc/sam/
+
+----
+
+Related-publications: 
+
+- 
+  title: 'SAM: the Swiss Army Menu'
+  link: 'https://dl.acm.org/citation.cfm?id=2044361&CFID=806323658&CFTOKEN=19163248'
+  type: "IHM '11"
+  authors: David Bonnet, Caroline Appert
+  year: "2011"
+
+----
+
+Styles: menus

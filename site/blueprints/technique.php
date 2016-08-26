@@ -20,7 +20,7 @@ fields:
     label: Basics
     type: headline
   title:
-    label: Name 
+    label: Name vid
     type:  text
     placeholder: Enter the name of the technique... 
     required: true
