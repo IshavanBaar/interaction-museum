@@ -1,3 +1,9 @@
+function windowSizeCheck(sidebarSize){
+    if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 891)){
+        //to do
+    }
+}
+
 // Toggles sidebar
 function toggleSidebar() {
     if($("#wrapper").hasClass("toggled")) {
@@ -98,19 +104,28 @@ function saveCollection(element) {
         showTooltip("#save_collection_btn", "Your collection doesn't have a title");
     }
     else {
+        // Check if request URL needs to be changed, because of current open page.
+        var requestURL = "collection-creator";
+        if (currentlyOnCollection() === true) { requestURL = "../" + requestURL; }
+        
+        // Makes request to create collection
         $.ajax({
-            url: 'collection-creator',
+            url: requestURL,
+            type: 'POST',
             data: collection,
             success : function(response) {
                 if (response.indexOf("Created collection:") > -1) {
-                    //remove all techniques from collection and reset session Storage
+                    // Remove all techniques from collection and reset session Storage
                     for (key in techniques){
                         removeFromCollection(key);
                     }
                     sessionStorage.title = "";
                     
+                    // Go to the new collection page
                     var collection_uid = response.replace("Created collection:", "");
-                    window.location.href = "all-collections/" + collection_uid;
+                    var windowLocation = "all-collections/" + collection_uid;
+                    if (currentlyOnCollection() === true) { windowLocation = "../" + windowLocation; }
+                    window.location.href = windowLocation;
                 } 
                 // If not logged in, log in.
                 else if(response === "Login to save collections") {
@@ -122,10 +137,27 @@ function saveCollection(element) {
         });
     } 
 }
+
+// Returns if the user is currently on a collection page
+function currentlyOnCollection() {
+    var currentURL = window.location.href;
+
+    // URL for request needs to be different if you are on a collection page 
+    var folder = "all-collections/";
+    var indexInURL = currentURL.lastIndexOf(folder);
+    var everythingAfter = currentURL.substring(indexInURL + folder.length, currentURL.length);
+    
+    // For example: all-collections/menus
+    if (indexInURL > -1 && everythingAfter.length > 0) {
+        return true;
+    }
+    return false;
+}
+
  
 function appendTechnique(id, image, title){
-    $("#sidebar").append(
-        "<li class='col-xs-12'>" +
+    var techniqueInSidebar =
+        "<li class='col-xs-12' style='display:none'>" +
             "<div id='" + id + "-sidebar' class='thumbnail'>" +    
                 "<button class='btn btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
                     "<i class='glyphicon glyphicon-remove'></i>" +
@@ -135,8 +167,8 @@ function appendTechnique(id, image, title){
                     "<p class='caption'>" + title + "</p>" +
                 "</a>" +
             "</div>" +
-        "</li>"
-    ); 
+        "</li>";
+    $(techniqueInSidebar).appendTo("#sidebar").fadeIn('fast');
 }
 
 // Toggles +/- button to be set to the addOrRemove value.

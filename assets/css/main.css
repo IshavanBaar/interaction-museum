@@ -268,6 +268,17 @@ a:hover d{
     font-weight: 300;
     color: #E5E5E5;
     text-align: center;
+    margin: 0 !important;
+}
+
+/* Exhibit editor caption */
+figcaption {
+    color: #333333 !important;
+    font-size: 9pt !important;
+}
+
+.medium-insert-images-wide img {
+    width: 100% !important;
 }
 
 .thumbnail-image{

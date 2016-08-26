@@ -2,8 +2,20 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
-    console.log(sessionStorage);
-    /* Toggle sidebar */
+
+    /* ------- Menu & Account ------- */
+    
+    $('body').on('hover', '#user', function (e) {
+        $(".submenu").toggle();
+    });
+    
+        
+    $(".logout-btn").click(function(e) {
+        window.location.href = "/interaction-museum/Logout";
+    });
+    
+    /* ------- Add to Collection Buttons ------- */
+
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
         $(this).find("#" + identifier + "-btn").css("display", "inline-block");
@@ -12,18 +24,6 @@ $(document).ready(function(){
     $('body').on('mouseout', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
         $(this).find("#" + identifier + "-btn").css("display", "none");
-    });
-    
-    /* Toggle sidebar */
-    $('body').on('click', '#new_collection', function (e) {
-        // if it's on the collections page, go to techniques 
-        e.preventDefault();
-        emptyCollecton();
-        toggleSidebar();
-    });
-
-    $('body').on('hover', '#user', function (e) {
-        $(".submenu").toggle();
     });
     
     // Add to/Remove from sidebar from thumbnail
@@ -40,6 +40,11 @@ $(document).ready(function(){
         addToCollection($(this));
     });
     
+    $('body').on('click', '.remove_from_collection_btn', function () {
+        var id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
+        removeFromCollection(id);
+    });
+    
     // Add to/Remove from sidebar from technique
     $('body').on('click', '.add_to_collection_btn_technique', function (e) {
         addedViaThumbnail = false;
@@ -54,6 +59,7 @@ $(document).ready(function(){
     //     removeFromCollection(id);
     // });
     
+
     $('body').on('click', '.remove_from_collection_btn', function () {
         var id;
         if($(this).attr("id").indexOf("-technique")>-1){
@@ -66,6 +72,7 @@ $(document).ready(function(){
             console.log('im not in a technique');
         }
         removeFromCollection(id);
+
     });
     
     $('body').on('click', '#save_collection_btn', function () {
@@ -75,8 +82,9 @@ $(document).ready(function(){
     $('body').on('click', '#empty_collection_btn', function (e) {
       emptyCollecton();
     });
+    
+    /* ------- Sidebar ------- */
 	
-
     $('body').on('click', '.close_sidebar_btn', function (e) {
         e.preventDefault();
         closeSidebar();
@@ -86,31 +94,12 @@ $(document).ready(function(){
         e.preventDefault();
         toggleSidebar();
     });
-    
+
     $(".logout-btn").click(function(e) {
         window.location.href = "/interaction-museum/Logout";
     });
-    
-   /* Video / GIF hover */
-    $("#video-hover").hide();
 
-    $("#header_image").hover(function() {
-        $("#video-hover").toggle();
-        console.log("i'm in here");
-    });
-
-    $("#video-hover").hover(function() {
-        $("#video-hover").toggle();
-
-    });
-
-    $("#header_image").click(function() {
-        $("#gif").hide();
-    });
-
-    $("#video-hover").click(function() {
-        $("#gif").hide();
-    });
+    /* ------- Exhibit Editor ------- */
     
     $("#add_interaction_btn").click(function() {
         $("#pop-up").show();
@@ -123,6 +112,8 @@ $(document).ready(function(){
     $("#publish_exhibit_btn").click(function() {
         publishExhibit();    
     });
+    
+    /* ------- Session Storage for Collections ------- */
     
     $('.sidebar-brand').bind('input', function(){
         sessionStorage.title = $(this).val();
