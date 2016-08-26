@@ -41,24 +41,10 @@ $(document).ready(function(){
     });
 
     
-    // Add to/Remove from sidebar from technique
-    $('body').on('click', '.add_to_collection_btn_technique', function (e) {
-        addedViaThumbnail = false;
-        e.preventDefault();
-        toggleSidebar();
-        addToCollection($(this));
-    });
-    
-    // $('body').on('click', '.remove_from_collection_btn_technique', function () {
-    //     var id = $(this).attr("id").replace("-btn-technique","");
-    //     console.log('id is'+id);
-    //     removeFromCollection(id);
-    // });
-    
 
     $('body').on('click', '.remove_from_collection_btn', function () {
         var id;
-        if($(this).attr("id").indexOf("-technique")>-1){
+        if($(this).hasClass("technique_btn")){
             id = $(this).attr("id").replace("-btn-technique","");
             addedViaThumbnail = false;
             console.log('im in a technique');
