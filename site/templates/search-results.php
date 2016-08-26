@@ -11,14 +11,11 @@
             <!-- Menu -->
             <?php snippet('menu')?>
 
-            
             <?php snippet('search-bar') ?>
-
         </div>
+        
         <!-- Search results -->
-            <?php snippet('search') ?>
-
-
+        <?php snippet('search') ?>
 
 <!-- Footer -->
 <?php snippet('footer') ?>

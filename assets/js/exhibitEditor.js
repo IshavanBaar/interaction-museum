@@ -1,4 +1,3 @@
-var selectedText = "";
 var selectedElement = "";
 
 var AddTechniqueButton = MediumEditor.Extension.extend({
@@ -11,10 +10,9 @@ var AddTechniqueButton = MediumEditor.Extension.extend({
         this.button.title = 'Add technique';
         this.button.id = 'search-technique-btn';
         this.button.addEventListener('click', function() {
-            selectedText = getSelectionText();
+            var selectedText = getSelectionText();
             selectedElement = window.getSelection().anchorNode.parentNode;
-            searchTechniques();
-            showPopUp(selectedText);
+            searchTechniques(selectedText);
         });
     },
 
@@ -44,13 +42,14 @@ $('body').on('click', '.add-to-exhibit-btn', function (e) {
     $('#pop-up').hide();
 });
 
-function searchTechniques() {
+function searchTechniques(selectedText) {
+    $("#search-results").empty();
     $.ajax({
         url: 'exhibit-search',
         data: selectedText,
         success : function(response) {
-            $("#search-results").empty();
             $("#search-results").append(response);
+            showPopUp(selectedText);
         } 
     });
 }
@@ -114,13 +113,16 @@ function publishExhibit() {
         // TODO rewrite so that this is a function for both collection/exhibit creator
         $.ajax({
             url: 'exhibit-creator',
+            type: 'POST',
             data: exhibit,
             success : function(response) {
                 if (response.indexOf("Created exhibit:") > -1) {
+                    console.log('test');
                     // TODO Empty title and content of editor here
 
                     var exhibit_uid = response.replace("Created exhibit:", "");
-                    window.location.href = "all-exhibits/" + exhibit_uid;
+                    console.log(exhibit_uid);
+                    window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
                 } 
                 // Show tooltip if something went wrong
                 else {

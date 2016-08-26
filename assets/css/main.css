@@ -261,7 +261,7 @@ a:hover d{
     
 }
 
-.caption {
+.thumbnail .caption {
     font-family: Roboto, sans-serif;
     background: #333333;
     font-size: 1.5em;

@@ -1,23 +1,14 @@
 <?php 
+    if(kirby()->request()->ajax()) {
+        $array =  kirby()->request()->data();
+        $newArray = array_keys($array);
+        // Replace underscores with spaces again
+        $query  = str_replace('_', ' ', $newArray[0]);
 
-
-if(kirby()->request()->ajax()) {
-    
-    $array =  kirby()->request()->data();
-
-	$newArray = array_keys($array);
-	$query  = $newArray[0];
-
-
-    $results = page('all-techniques')->search($query);
-
-    // return array(
-	   //  'query'      => $query,
-	   //  'results'    => $results
-    // );
-} else{
-	go('/');
-}
+        $results = page('all-techniques')->search($query);
+    } else{
+        go('/');
+    }
 ?>
 
 <div class="container-fluid">

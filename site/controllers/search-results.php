@@ -4,8 +4,7 @@ return function($site, $pages, $page) {
 
     $query = get('q');
     
-    // Only search the techniques
-    // TODO search the collections
+    // TODO search the collections too, and group
     $results = page('all-techniques')->search($query);
 
     return array(
