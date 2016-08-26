@@ -3,6 +3,10 @@
 title: Technique
 pages: false
 files:
+  fields:
+    caption:
+      label: Caption
+      type: textarea
   type: 
     - image
     - video

@@ -68,3 +68,15 @@ Cropper:
 ----
 
 Styles: pointing-and-selection
+
+----
+
+Movie-file: 
+
+----
+
+Techniques: 
+
+----
+
+Relatedpage: 
