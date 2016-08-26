@@ -39,11 +39,7 @@ $(document).ready(function(){
         }
         addToCollection($(this));
     });
-    
-    $('body').on('click', '.remove_from_collection_btn', function () {
-        var id = $(this).parent().attr('id').replace("-thumbnail","").replace("-sidebar","");
-        removeFromCollection(id);
-    });
+
     
     // Add to/Remove from sidebar from technique
     $('body').on('click', '.add_to_collection_btn_technique', function (e) {
