@@ -70,7 +70,7 @@ function removeFromCollection(id) {
     
     // Remove from sidebar
     // TODO Diana nice toggle visibility animation doesn't work
-    $("#" + id + "-sidebar").remove().toggle("fast");
+    $("#" + id + "-sidebar").parent().remove().toggle("fast");
 }
 
 // Empties collection

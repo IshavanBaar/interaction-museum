@@ -1,0 +1,76 @@
+Info: 
+
+----
+
+Title: Speech as Search Input
+
+----
+
+Description: Speech as Search Input is the use of oral commands to input a search query. You ask the computer to find you an answer. The technique often uses Artificial Intelligence technology, which can be difficult to implement.
+
+----
+
+Tags: Text,Input,Speech,Recognition,Entry
+
+----
+
+Header-image: speech-as-search-input.gif
+
+----
+
+Trade-off-image: 
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: >
+    Speech for Multimedia Information
+    Retrieval
+  link: 'http://repository.cmu.edu/cgi/viewcontent.cgi?article=2407&context=compsci'
+  type: "UIST Proceedings '95"
+  authors: >
+    Alexander Hauptmann, Michael Witbrock,
+    Alexander Rudnicky, Stephen Reed
+  year: "1995"
+
+----
+
+Video: 
+
+----
+
+Styles: conversational, multimodal
+
+----
+
+Extra-images: speech-as-search-input.gif
+
+----
+
+Movie: 
+
+----
+
+Movie-file: 
+
+----
+
+Technology: speech technology,artificial intelligence
+
+----
+
+Usability: 
+
+----
+
+User-task: 
