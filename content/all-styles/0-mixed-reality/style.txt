@@ -1,5 +1,0 @@
-Title: Mixed Reality
-
-----
-
-Description: Techniques in Virtual or Augmented Reality.

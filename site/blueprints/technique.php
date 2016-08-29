@@ -67,7 +67,6 @@ fields:
     label: Additional Images
     type: selector
     mode: multiple
-    autoselect: last
     help: Select an image file to turn it visible
     types: 
       - image
@@ -118,9 +117,3 @@ fields:
   user_task:
     label: ...helps the user to
     type: tags
-  styles:
-    label: Interaction Styles
-    type: checkboxes
-    options: query
-    query:
-      page: all-styles

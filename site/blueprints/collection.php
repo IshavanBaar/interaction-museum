@@ -21,13 +21,9 @@ fields:
     label: Techniques in this collection
     type: structure
     entry: >
-      {{technique}}<br />
+      {{technique}}
     fields:
       technique:
         label: Technique
         type: page
         parent: all-techniques
-  relatedPage:
-    label: Related Page
-    type: subpage
-    parent: all-techniques

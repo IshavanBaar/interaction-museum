@@ -27,15 +27,19 @@
 
             <!-- YOUR COLLECTIONS -->
             <div class="account-section">
-                <h2>My Collections</h2>
-                <hr>
-                 <?php snippet('show-collections', array('limit' => 100, 'technique' => 'none',  'user' => $site->user()))?>
-
-            <!-- YOUR COLLECTIONS -->
-
-                <h2>My Exhibits</h2>  
-                <hr>
-                <?php snippet('show-exhibits', array('limit' => 100, 'user' => $site->user()))?>
+                <div class="row">
+                    <h2>My Collections</h2>
+                    <hr>
+                    <?php $collections = page('all-collections')->children()->visible()->filterBy('creator', $site->user());
+                    snippet('show-collections', array('limit' => 100, 'collections' => $collections, 'width' => 'half')); ?>
+                </div>
+                
+                <div class="row">
+                    <!-- YOUR EXHIBITS -->
+                    <h2>My Exhibits</h2>  
+                    <hr>
+                    <?php snippet('show-exhibits', array('limit' => 100, 'user' => $site->user()))?>
+                </div>
             </div>
         </div>
     </div>

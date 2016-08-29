@@ -49,7 +49,7 @@ Cropper:
 
 ----
 
-Extra-images: anchored-menu-virtual-scene.gif
+Extra-images: 
 
 ----
 
@@ -61,7 +61,7 @@ Styles: menus, mixed-reality
 
 ----
 
-Movie-file: p39-wloka.mov
+Movie-file: 
 
 ----
 

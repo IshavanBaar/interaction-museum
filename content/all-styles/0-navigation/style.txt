@@ -1,5 +1,0 @@
-Title: Navigation
-
-----
-
-Description: All techniques that involve user and object navigation.
