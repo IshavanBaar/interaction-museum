@@ -1,0 +1,61 @@
+Basics: 
+
+----
+
+Title: Drag-and-Drop
+
+----
+
+Description: Drag-and-Drop is a popular direct manipulation techniques to move an object to another context. You grab the object and drag it to another location or object. It is commonly used replace commands, such as copy-past. Drag-and-Drop is also useful on touch-screen devices.
+
+----
+
+Tags: drag-and-drop,Fitts' law,feedback,touch screen,direct manipulation
+
+----
+
+Media: 
+
+----
+
+Header-image: drag-and-drop.gif
+
+----
+
+Extra-images: drag-and-drop-2.gif
+
+----
+
+Movie: 
+
+----
+
+Extra: 
+
+----
+
+Try-out: http://codepen.io/acauamontiel/pen/NPBWyM
+
+----
+
+Related-publications: 
+
+----
+
+Styles: direct-manipulation
+
+----
+
+Movie-file: 
+
+----
+
+Technology: 
+
+----
+
+Usability: 
+
+----
+
+User-task: 

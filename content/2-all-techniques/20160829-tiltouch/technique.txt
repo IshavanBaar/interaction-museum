@@ -1,0 +1,70 @@
+Info: 
+
+----
+
+Title: TilTouch
+
+----
+
+Description: TilTouch gestures enhance navigation on touch screen mobile devices by combining motion tilt with directional touch. By tilting the phone and swiping a finger in the same time the user can quickly trigger commands on her phone.
+
+----
+
+Tags: gestures,smart phone,touch screen,tilt,swipe
+
+----
+
+Header-image: tilttouch.gif
+
+----
+
+Trade-off-image: tiltouch-01.jpg
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: >
+    Coordination of Tilt and Touch in
+    One-and Two-Handed Use
+  link: 'http://dl.acm.org/citation.cfm?id=2557088&CFID=758120638&CFTOKEN=26555240'
+  type: "CHI '14 Proceedings"
+  authors: 'Theophanis Tsandilas, Caroline Appert,  Anastasia Bezerianos, David Bonnet'
+  year: "2014"
+
+----
+
+Extra-images: tiltouch-01.jpg
+
+----
+
+Movie: 
+
+----
+
+Styles: gesture-base, navigation
+
+----
+
+Technology: mobile screens,touch screens,smart phone,mid-air gestures
+
+----
+
+Movie-file: 
+
+----
+
+Usability: 
+
+----
+
+User-task: 
