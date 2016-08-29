@@ -56,6 +56,14 @@ $(document).ready(function(){
         removeFromCollection(id);
 
     });
+
+    /* ------- New/Save/Empty Collections ------- */
+    $('body').on('click', '#new_collection', function (e) {
+        // if it's on the collections page, go to techniques 
+        e.preventDefault();
+        emptyCollecton();
+        toggleSidebar();
+    });
     
     $('body').on('click', '#save_collection_btn', function () {
         saveCollection($(this));
