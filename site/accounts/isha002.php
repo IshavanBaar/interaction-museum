@@ -8,9 +8,9 @@ language: en
 role: admin
 history:
   - all-techniques/boomerang
-  - all-techniques/arpege
   - all-techniques/anchored-menu-vr
-  - all-techniques/virtual-pointing-ray
-  - all-techniques/tiltouch
+  - all-collections/picked-collections
+  - all-collections/drag-and-drop-and-alternatives
+  - all-techniques/arpege
 firstname: Isha
 lastname: van Baar

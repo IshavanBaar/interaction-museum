@@ -1,0 +1,26 @@
+Title: Picked Techniques
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- 
+  technique: bubble-cursor
+- 
+  technique: drag-and-drop
+- 
+  technique: octopocus
+- 
+  technique: pie-menu
+- 
+  technique: thumbrock
+- 
+  technique: grabbing-the-air
+
+----
+
+Relatedpage: 

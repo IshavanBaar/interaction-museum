@@ -56,35 +56,43 @@
                     </div>
                 <?php endif ?>	
                 <!-- Button to add to collection -->
-                <h2>Options</h2>
+                <h5>Options</h5>
                 <button id="<?php echo $identifier?>-btn-technique" class="btn add_to_collection_btn technique_btn" title="Add to collection" type="submit">
                     <i class="glyphicon glyphicon-plus"></i> Add to collection
                 </button>
                 
                 <!-- RELATED PUBLICATIONS-->
                 <?php if($page->related_publications()->isNotEmpty()): ?>
-                    <h2>Related Publications</h2>
+                    <h5>Related publications</h5>
                     <?php foreach($page->related_publications()->toStructure() as $publication): ?>
                         <div class="publication">
                             <h3><a href="<?php echo $publication->link() ?>" target="_blank"> <?php echo $publication->title() ?> </a> </h3>		
-                            <span><em><?php echo $publication->type() ?></em></span>
+                            <span>
+                                <strong>Conference:</strong>
+                                <span><?php echo $publication->type() . ', ' . $publication->year()?><span>
+                            </span>
                             <br>
                             <span>
-                                <strong>Year:</strong>
-                                <?php echo $publication->year() ?>
+                                <strong>By:</strong>
+                                <span><?php echo $publication->authors(); ?></span>  
                             </span>
-
-                            <?php
-                            $authors = $publication->authors();
-                            $authorsArray = explode(',', $authors);
-                            ?>
-                            <!-- <strong>Authors:</strong><br/> -->
-                            <?php foreach($authorsArray as $author): ?>
-                                <br/><span><?php echo $author ?></span> 
-                            <?php endforeach ?>	
                         </div>
                     <?php endforeach ?>
                 <?php endif ?>			
+                
+                <!-- FEATURED IN COLLECTION: -->                
+                <h5>Also featured in</h5>
+                <?php 
+                $collections = array();
+                foreach(page('all-collections')->children()->visible() as $collection) {
+                    foreach($collection->techniques()->toStructure() as $collectionItem) {
+                        if (strcmp($collectionItem, $page->uid()) == 0) {     
+                            array_push($collections, $collection);
+                        }
+                    }
+                }
+                snippet('show-collections', array('limit' => 100, 'collections' => $collections, 'width' => 'whole')) ?>
+                
             </div> <!-- end first column -->
 
             <div class="col-md-8">	
@@ -144,11 +152,6 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="row section">
-            <h2>Featured in</h2>
-            <hr>
-            <?php snippet('show-collections', array('limit' => 100, 'technique' => $page->uid(), 'user' => 'none'))?>
         </div>
     </div>
 </div>

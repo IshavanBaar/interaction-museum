@@ -1,5 +1,0 @@
-Title: Gesture-based
-
-----
-
-Description: Techniques that are based on the gestures.

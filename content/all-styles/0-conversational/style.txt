@@ -1,5 +1,0 @@
-Title: Conversational
-
-----
-
-Description: Techniques where the user converses with the computer.

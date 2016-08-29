@@ -6,11 +6,13 @@
     </div>
 
 <div id="sidebar-buttons">
-    <button data-toggle="tooltip" id="save_collection_btn" class="btn btn-default btn-primary" type="submit">
-        <span>Save</span>
-    </button>
-    <button id="empty_collection_btn" class="btn btn-default btn-warning" type="submit">
-        <span>Empty</span>
-    </button>
+    <div class="input-group">
+        <button id="empty_collection_btn" class="btn btn-default btn-warning" type="submit">
+            <span>Empty</span>
+        </button>
+        <button data-toggle="tooltip" id="save_collection_btn" class="btn btn-default btn-primary" type="submit">
+            <span>Save</span>
+        </button>
+    </div>
 </div>
 </ul>

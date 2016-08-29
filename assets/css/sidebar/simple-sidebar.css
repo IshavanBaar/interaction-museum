@@ -89,6 +89,7 @@
     line-height: 60px;
     padding-left: 15px;
 }
+
 .sidebar-brand{
     height: 60px;
     color: white;
@@ -105,31 +106,26 @@
     background: none;
 }
 
-#sidebar-buttons {
-
+#empty_collection_btn{
+    width: 40%;
+    display: none;
+    z-index: 5;
+    margin: 0px 10px 20px 10px;
 }
 
 #save_collection_btn{
-    bottom: 34px;
-    width: 300px;
-    display: none;
-    line-height: 40px;
-    z-index: 5;
-}
-
-#empty_collection_btn{
-    bottom: 0px;
-    width: 300px;
-    /*bottom: 25px;*/
+    width: 50%;
     display: none;
     z-index: 5;
+    margin: 0px 10px 20px 0px;
 }
 
 .collection-title{
     line-height: 60px !important;
     color: white;
-    margin-bottom: 0;
-    width: 90%;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-right: 30px;
 }
 
 .sidebar-brand[type=text]:focus {
@@ -151,7 +147,7 @@
     background-color: #333333;
     cursor: pointer;    
     top: 0.8em;
-    right: -1em;
+    right: 0.1em;
     z-index: 5;
     padding: 1em;
 }

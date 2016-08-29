@@ -1,0 +1,18 @@
+Title: Picked Collections
+
+----
+
+Creator: isha002
+
+----
+
+Techniques: 
+
+- 
+  technique: fittss-law
+- 
+  technique: drawing
+- 
+  technique: outside-the-desktop-interface
+- 
+  technique: drag-and-drop-and-alternatives

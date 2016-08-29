@@ -60,7 +60,7 @@ Cropper:
 
 ----
 
-Extra-images: ezgif.com-crop-1.gif
+Extra-images: 
 
 ----
 

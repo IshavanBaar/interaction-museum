@@ -17,7 +17,8 @@
         <h1>All <?php echo $page->title()?></h1>
 
         <!-- All collections -->
-        <?php snippet('show-collections', array('limit' => 100, 'technique' => 'none', 'user' => 'all'))?>
+        <?php $collections = page('all-collections')->children()->visible();
+        snippet('show-collections', array('limit' => 100, 'collections' => $collections, 'width' => 'half')) ?>
     </div>
 </div>
 
