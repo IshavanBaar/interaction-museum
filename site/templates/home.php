@@ -14,11 +14,10 @@
             <div class="intro row">
                 <div class="col-sm-12 ">
                     <h1>A Collection of Innovative Interactions</h1>
-                    <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3">
                         <p>Find interaction techniques that inspire new designs. Design with cutting edge interactions, developed by Human-Computer Interaction research.</p>
-                    </div>
                 </div>
             </div>
+            <?php snippet('filters', array('filter_on' => 'technology', 'limit' => 10)) ?>
             <?php snippet('search-bar') ?>
 
         </div>
