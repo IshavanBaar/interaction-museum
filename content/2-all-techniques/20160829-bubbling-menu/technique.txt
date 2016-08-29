@@ -50,6 +50,7 @@ Styles:
 
 ----
 
+Technology: mouse,desktop screens
 
 ----
 

@@ -107,20 +107,20 @@ fields:
         validate:
           - num
   extra:
-    label: Extra
+    label: This technique...
     type: headline
+  technology:
+    label: ...uses the technology of
+    type: tags
+  usability:
+    label: ...solves the design/usability problem of
+    type: tags
+  user_task:
+    label: ...helps the user to
+    type: tags
   styles:
     label: Interaction Styles
     type: checkboxes
     options: query
     query:
       page: all-styles
-  techniques:
-    label: Techniques in this collection
-    type: structure
-    entry: >
-        {{technique}}
-  relatedPage:
-    label: Related Page
-    type: subpage
-    parent: all-techniques
