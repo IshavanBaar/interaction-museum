@@ -158,8 +158,8 @@ function currentlyOnCollection() {
  
 function appendTechnique(id, image, title){
     var techniqueInSidebar =
-        "<li id='" + id + "-sidebar' class='col-xs-12' style='display:none'>" +
-            "<div class='thumbnail'>" +    
+        "<li class='col-xs-12' style='display:none'>" +
+            "<div id='" + id + "-sidebar' class='thumbnail'>" +    
                 "<button class='btn btn-danger remove_from_collection_btn' title='Remove from collection' type='submit'>" +
                     "<i class='glyphicon glyphicon-remove'></i>" +
                 "</button>" + 

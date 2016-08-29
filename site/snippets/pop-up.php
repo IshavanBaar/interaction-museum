@@ -1,8 +1,8 @@
 <div id="pop-up">
 
     <!-- Button to add to collection -->
-    <button id="close_popup" title="Close Search" >
-        <i class="glyphicons-remove-sign"></i>
+    <button id="close_popup" title="Close Search" class="btn remove">
+        <i class="glyphicon glyphicon-remove"></i>
     </button>
 
     <?php snippet('search-bar-exhibit') ?>
