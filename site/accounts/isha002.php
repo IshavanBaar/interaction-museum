@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - all-techniques/bubble-cursor
   - all-collections/fittss-law
   - all-techniques/marking-menu
   - all-techniques/pie-menu
   - all-techniques/bubbling-menu
-  - all-techniques/knotty-gestures
 firstname: Isha
 lastname: van Baar
