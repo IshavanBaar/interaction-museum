@@ -1,0 +1,76 @@
+Info: 
+
+----
+
+Title: Knotty Gestures
+
+----
+
+Description: Knotty Gestures are a simple yet powerful technique for interacting with paper. Knots are tiny circles that can be added to any gesture. By creating these subtle marks, users can trigger immediate interaction. For example one can record a spoken message at a particular place on the page and then come back later to the same place to access it.
+
+----
+
+Tags: gestures,pen input,interactive paper,tangible interfaces
+
+----
+
+Header-image: knotty-gestures-preview.gif
+
+----
+
+Trade-off-image: knotty-gestures.jpg
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: 'Knotty Gestures: Subtle Traces to Support Interactive Use of Paper'
+  link: 'http://dl.acm.org/citation.cfm?id=1843020&CFID=758120638&CFTOKEN=26555240'
+  type: "AVI '10 Proceedings"
+  authors: Theophanis Tsandilas, Wendy E. Mackay
+  year: "2010"
+
+----
+
+Video: https://vimeo.com/8418158
+
+----
+
+Movie: https://vimeo.com/8418158
+
+----
+
+Extra-images: knotty-gestures-explanation.jpg
+
+----
+
+Cropper: 
+
+----
+
+Styles: gesture-base
+
+----
+
+Movie-file: 
+
+----
+
+Technology: pen
+
+----
+
+Usability: 
+
+----
+
+User-task: 

@@ -1,0 +1,72 @@
+Info: 
+
+----
+
+Title: Grabbing the Air
+
+----
+
+Description: Grabbing the Air is a gestural interaction technique to navigate in a virtual environment. With your hand, you reach for an arbitrary point in space. Then, you can grab to push and pull yourself away, or towards them.
+
+----
+
+Tags: grab,air,gestures,navigation,VR,push,pull
+
+----
+
+Header-image: grabbing-the-air.gif
+
+----
+
+Trade-off-image: 
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: 'The Virtual Tricorder: A Uniform Interface for Virtual Reality'
+  link: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.39.9815&rep=rep1&type=pdf'
+  type: "UIST Proceedings '95"
+  authors: Matthias Wloka, Eliot Greenfield
+  year: "1995"
+
+----
+
+Video: 
+
+----
+
+Styles: gesture-base, mixed-reality, navigation
+
+----
+
+Extra-images: grabbing-the-air.gif
+
+----
+
+Movie: 
+
+----
+
+Movie-file: 
+
+----
+
+Technology: VR controller,VR display
+
+----
+
+Usability: 
+
+----
+
+User-task: 
