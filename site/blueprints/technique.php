@@ -112,10 +112,10 @@ fields:
   technology:
     label: ...uses the technology of
     type: tags
-  usability:
+  problem:
     label: ...solves the design/usability problem of
     type: tags
-  user_task:
+  task:
     label: ...helps the user to
     type: tags
   styles:

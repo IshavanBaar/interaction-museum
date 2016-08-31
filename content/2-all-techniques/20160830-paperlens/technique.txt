@@ -1,0 +1,72 @@
+Basics: 
+
+----
+
+Title: PaperLens
+
+----
+
+Description: PaperLens is a physical (link: ../toolglass text: Toolglass ) using a sheet of paper. You hold and move the paper above a tabletop screen. The paper then acts as a Magic Lens, revealing data based on its distance in 3D space to the screen. For example, a PaperLens can be used to zoom or show layers of information.
+
+----
+
+Tags: paper,toolglass,magic lens,visualization
+
+----
+
+Media: 
+
+----
+
+Header-image: ezgif.com-crop.gif
+
+----
+
+Extra-images: ezgif.com-crop.gif
+
+----
+
+Movie: https://www.youtube.com/watch?v=z5KIqDt71Zg
+
+----
+
+Extra: 
+
+----
+
+Try-out: 
+
+----
+
+Related-publications: 
+
+- 
+  title: 'PaperLens: Advanced Magic Lens Interaction Above the Tabletop'
+  link: >
+    http://dl.acm.org/citation.cfm?doid=1731903.1731920
+  authors: >
+    Martin Spindler, Sophie Stellmach,
+    Raimund Dachselt
+  conference: ITS
+  year: "2009"
+  type: ITS
+
+----
+
+Styles: direct-manipulation
+
+----
+
+Movie-file: 
+
+----
+
+Technology: tabletop,projector
+
+----
+
+Usability: 
+
+----
+
+User-task: 

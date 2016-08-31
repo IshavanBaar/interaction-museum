@@ -359,10 +359,19 @@ label{
 .dropdown-toggle:hover, .dropdown-toggle:focus {
     color: #336E7B;
 }
-.sentence-select{
-   max-width: 200px !important;
-   display: inline !important;
+.sentence-select, .sentence-element{
+     max-width: 200px;
+    clear: none;
+    float: left;
+    padding: 20px 20px;
+    line-height: 60px;
+
 }
+.longer{
+     max-width: 340px !important;
+     margin-left: 20px;
+}
+
 /*.left-column{
 	position: fixed;
 	display: block;

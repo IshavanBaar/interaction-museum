@@ -17,7 +17,7 @@
                         <p>Find interaction techniques that inspire new designs. Design with cutting edge interactions, developed by Human-Computer Interaction research.</p>
                 </div>
             </div>
-            <?php snippet('filters', array('filter_on' => 'technology', 'limit' => 10)) ?>
+            
             <?php snippet('search-bar') ?>
 
         </div>
