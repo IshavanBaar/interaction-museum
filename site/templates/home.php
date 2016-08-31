@@ -17,6 +17,7 @@
                     <p>Find interaction techniques from Human-Computer Interaction research that inspire new designs.
                 </div>
             </div>
+
             <?php snippet('search-bar') ?>
 
         </div>

@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - all-techniques/thumbrock
-  - all-techniques/anchored-menu-vr
-  - all-collections/drawing
-  - all-techniques/drag-and-drop
-  - all-techniques/marking-menu
+  - all-techniques/boomerang
+  - all-techniques/arpege
+  - all-techniques/virtual-pointing-ray
+  - all-techniques/toolglass-vr
+  - all-techniques/toolglass

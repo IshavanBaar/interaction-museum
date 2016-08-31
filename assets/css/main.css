@@ -309,10 +309,10 @@ figcaption {
 label{
     text-align: center !important;
 }
-.input-group{
+/*.input-group{
 	width: 100%;
 }
-
+*/
 .trade-img {
     display: block;
     margin: 1.5em 0 42px;
@@ -330,7 +330,7 @@ label{
     color: #336E7B;
 }
 
-#searchBar {
+#searchBar{
     border-style: solid !important;
     border-width: 1px !important;
     border-color: #336E7B !important;
@@ -345,6 +345,34 @@ label{
 #searchBar {
     padding-left: 15px;
     /*margin-left: 10%;*/
+}
+
+#semantic-search{
+    font-size: 28px;
+    color: #EFEFEF;
+}
+.dropdown-toggle{
+    background-color: rgba(0,0,0,0);
+    text-transform: none;
+    border: none;
+    font-size: 28px;
+    border-bottom-style: solid;
+    border-bottom-color: #336E7B;
+}
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    color: #336E7B;
+}
+.sentence-select, .sentence-element{
+     max-width: 200px;
+    clear: none;
+    float: left;
+    padding: 20px 20px;
+    line-height: 60px;
+
+}
+.longer{
+     max-width: 340px !important;
+     margin-left: 20px;
 }
 
 /*.left-column{

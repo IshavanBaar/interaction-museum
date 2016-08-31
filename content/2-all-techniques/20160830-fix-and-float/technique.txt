@@ -1,0 +1,77 @@
+Info: 
+
+----
+
+Title: Fix and Float
+
+----
+
+Description: 
+
+Fix and Float is an object movement technique where you can decide to fix objects to your viewpoint. When you move and navigate your viewpoint, the objects moves with you, implicitly.
+
+Unlike other techniques such as Dragging, you can do other things while moving. It can be used in virtual scenes, but also in text editors.
+
+----
+
+Tags: VR,viewpoint,gaze,drag-and-drop
+
+----
+
+Header-image: fix-and-float.gif
+
+----
+
+Video: 
+
+----
+
+Trade-off-image: 
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: 'Fix and Float: Object Movement By Egocentric Navigation'
+  link: >
+    http://dx.doi.org.focus.lib.kth.se/10.1145/263407.263535
+  type: "UIST Proceedings '97"
+  authors: George Robertson, Stuart Card
+  year: "1997"
+
+----
+
+Styles: mixed-reality, navigation
+
+----
+
+Extra-images: fix-and-float.gif
+
+----
+
+Movie: 
+
+----
+
+Movie-file: 
+
+----
+
+Technology: VR display
+
+----
+
+Usability: 
+
+----
+
+User-task: 

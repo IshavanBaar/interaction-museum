@@ -1,0 +1,77 @@
+Info: 
+
+----
+
+Title: Pick-and-Drop
+
+----
+
+Description: 
+
+Pick-and-Drop is a direct manipulation technique. It extends drag-and-drop so that you can transfer objects using a pen. You touch an object to pick it up. If you hover the pen over the screen, the object floats under the pen, adding a shadow. You drop it by touching again.
+
+You can transfer objects between multiple devices and users. For example, you pick up a video from a tablet, and drop it on a whiteboard. With a additional camera installation, you can move icons from paper to computer.
+
+----
+
+Tags: direct manipulation,pen input,multi-computer,drag-and-drop
+
+----
+
+Header-image: pick-and-drop.gif
+
+----
+
+Video: https://www.youtube.com/watch?v=rFw9aMubL-Y
+
+----
+
+Trade-off-image: pick-and-drop-explanation.png
+
+----
+
+Try-out: 
+
+----
+
+Related-work: 
+
+----
+
+Related-publications: 
+
+- 
+  title: 'Pick-and-drop: a direct manipulation technique for multiple computer environments'
+  link: >
+    http://dl.acm.org/citation.cfm?doid=263407.263505
+  type: "UIST Proceedings '97"
+  authors: Jun Rekimoto
+  year: "1997"
+
+----
+
+Extra-images: pick-and-drop-explanation.png
+
+----
+
+Movie: 
+
+----
+
+Styles: direct-manipulation, multimodal
+
+----
+
+Movie-file: 
+
+----
+
+Technology: pen,desktop,screen,tabletop,wall-sized display,touch screen
+
+----
+
+Usability: 
+
+----
+
+User-task: 
