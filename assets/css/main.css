@@ -213,47 +213,6 @@ a:hover d{
     display: block;
     overflow: hidden;
 }
-/*.submenu {
-  position: absolute;
-  z-index: 1;
-  display: none;
-  left: 1em;
-  padding-left: 0;
-}
-.submenu:before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  top: -.5em;
-  left: 0;
-  border-top: .5em solid transparent;
-  border-bottom: .5em solid transparent;
-  border-left: .5em solid #336E7B;
-}
-
-.submenu li {
-   //border-bottom: 1px solid;
-   list-style: none;
-   min-width: 200px;
-   padding-bottom: 2px;
-}
-
-.submenu a {
-    display: block;
-    padding: .5em 1.5em;
-    font-size: .9em;
-    font-weight: 300;
-    color: #fff;
-    background: #336E7B;
-    white-space: nowrap;
-    margin-top: -1px;
-    width: 110px !important;
-
-}
-.submenu a:hover {
-  background: #333;
-  color: #fff;
-}*/
 
 /* Container  */
 

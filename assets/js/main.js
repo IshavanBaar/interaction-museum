@@ -2,20 +2,9 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
-
-    /* ------- Menu & Account ------- */
-    
-    $('body').on('hover', '#user', function (e) {
-        $(".submenu").toggle();
-    });
-    
-        
     $(".logout-btn").click(function(e) {
-        window.location.href = "/interaction-museum/Logout";
-    });
     
     /* ------- Add to Collection Buttons ------- */
-
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
         $(this).find("#" + identifier + "-btn").css("display", "inline-block");
@@ -86,6 +75,7 @@ $(document).ready(function(){
     });
 
     $(".logout-btn").click(function(e) {
+        // TODO Michel: change URL here to make it work on another website.
         window.location.href = "/interaction-museum/Logout";
     });
 
