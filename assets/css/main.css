@@ -268,7 +268,7 @@ a:hover d{
     
 }
 
-.thumbnail .caption {
+.thumbnail-caption {
     font-family: Roboto, sans-serif;
     background: #333333;
     font-size: 1.5em;
@@ -276,6 +276,7 @@ a:hover d{
     color: #E5E5E5;
     text-align: center;
     margin: 0 !important;
+    padding: 9px;
 }
 
 /* Exhibit editor caption */
