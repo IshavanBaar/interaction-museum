@@ -74,8 +74,8 @@ $(document).ready(function(){
     });
 
     $(".logout-btn").click(function(e) {
-        // TODO Michel: change URL here to make it work on another website.
-        window.location.href = "/interaction-museum/Logout";
+        // TODO should URL include /interaction-museum/ before?
+        window.location.href = "Logout";
     });
 
     /* ------- Exhibit Editor ------- */

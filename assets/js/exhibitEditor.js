@@ -119,8 +119,8 @@ function publishExhibit() {
                 if (response.indexOf("Created exhibit:") > -1) {
                     var exhibit_uid = response.replace("Created exhibit:", "");
                     
-                    // TODO Michel: change URL here to make it work on another website.
-                    window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
+                    // TODO should URL include /interaction-museum/ before?
+                    window.location.href = "all-exhibits/" + exhibit_uid;
                 } 
                 // Show tooltip if something went wrong
                 else {
