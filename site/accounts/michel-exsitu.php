@@ -9,11 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - all-techniques/pinch-to-zoom
   - all-techniques/knotty-gestures
-  - >
-    all-exhibits/why-pie-menus-are-better-than-traditional-menus
-  - >
-    all-exhibits/how-to-design-for-virtual-reality
+  - all-exhibits/why-pie-menus-are-better-than-traditional-menus
+  - all-exhibits/how-to-design-for-virtual-reality
   - all-exhibits/how-to-create-a-good-form
-  - >
-    all-exhibits/are-gestures-still-the-future

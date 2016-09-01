@@ -1,0 +1,57 @@
+Basics: 
+
+----
+
+Title: Pinch to Zoom
+
+----
+
+Description: A Pinch to Zoom is a multi-touch gesture where the user zooms in by touching the screen with two fingers and spreading them. Generally, the thumb and index are used for this.
+
+----
+
+Header-image: pinch-to-zoom.png
+
+----
+
+Tags: gestures
+
+----
+
+Media: 
+
+----
+
+Movie: 
+
+----
+
+Movie-file: 
+
+----
+
+Extra-images: 
+
+----
+
+Try-out: 
+
+----
+
+Related-publications: 
+
+----
+
+Extra: 
+
+----
+
+Technology: 
+
+----
+
+Problem: 
+
+----
+
+Task: 

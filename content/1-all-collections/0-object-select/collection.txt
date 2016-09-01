@@ -1,0 +1,12 @@
+Title: Object select
+
+----
+
+Creator: michel-exsitu
+
+----
+
+Techniques: 
+
+- technique: bubble-cursor
+- technique: crossing
