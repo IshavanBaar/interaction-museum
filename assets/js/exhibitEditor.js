@@ -117,11 +117,9 @@ function publishExhibit() {
             data: exhibit,
             success : function(response) {
                 if (response.indexOf("Created exhibit:") > -1) {
-                    console.log('test');
-                    // TODO Empty title and content of editor here
-
                     var exhibit_uid = response.replace("Created exhibit:", "");
-                    console.log(exhibit_uid);
+                    
+                    // TODO Michel: change URL here to make it work on another website.
                     window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
                 } 
                 // Show tooltip if something went wrong

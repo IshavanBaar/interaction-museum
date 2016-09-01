@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - all-exhibits/an-overview-of-menus
   - all-techniques/boomerang
   - all-techniques/anchored-menu-vr
   - all-collections/picked-collections
   - all-collections/drag-and-drop-and-alternatives
-  - all-techniques/arpege
 firstname: Isha
 lastname: van Baar
