@@ -18,7 +18,7 @@
 </div>
 
 <div class="row">
-  <div id="semantic-search" class="col-lg-6 col-lg-offset-3">
+  <div id="semantic-search" class="col-lg-12 col-lg-offset-3 text-center">
     <span class="sentence-element">Show me </span>
     <div class="sentence-select">
       <div class="input-group-btn dropdown-input">
