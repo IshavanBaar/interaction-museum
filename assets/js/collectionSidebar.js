@@ -1,9 +1,3 @@
-function windowSizeCheck(sidebarSize){
-    if(($("#page-content-wrapper").width()!=null) && (($("#page-content-wrapper").outerWidth() - sidebarSize) <= 891)){
-        //to do
-    }
-}
-
 // Toggles sidebar
 function toggleSidebar() {
     if($("#wrapper").hasClass("toggled")) {
@@ -12,7 +6,6 @@ function toggleSidebar() {
         $("#empty_collection_btn").toggle();
         $(".close_sidebar_btn").toggle();
         $(".open_sidebar_btn").toggle();
-        windowSizeCheck(300);
     }
 }
 
@@ -23,7 +16,6 @@ function closeSidebar() {
     $("#empty_collection_btn").toggle();
     $(".close_sidebar_btn").toggle();
     $(".open_sidebar_btn").toggle();
-    windowSizeCheck(300); 
 }
 
 // Adds technique to sidebar from thumbnail/technique page.
@@ -155,7 +147,7 @@ function currentlyOnCollection() {
     return false;
 }
 
- 
+// Appends technique to the sidebar. 
 function appendTechnique(id, image, title){
     var techniqueInSidebar =
         "<li class='col-xs-12' style='display:none'>" +
