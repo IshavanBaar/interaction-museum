@@ -371,7 +371,6 @@ label{
 /* Header image*/
 
 .header_image, .header_image_noclick{
-    margin-bottom: 1.5em;
     display: block;
     height: 100%;
 }

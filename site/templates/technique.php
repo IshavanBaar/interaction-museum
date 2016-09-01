@@ -97,28 +97,15 @@
 
             <div class="col-md-8">	
 
-                <!-- VIDEO or PREVIEW IMAGE -->             
-                <?php if($video->isNotEmpty()): ?>
-                    <!-- VIDEO -->
-                    <?php if(stripos($video, "youtube") !== false): ?>
-                        <div class='videoWrapper'><?php echo youtube($video);?></div>
-                    <?php elseif (stripos($video, "vimeo") !== false): ?>
-                        <div class='videoWrapper '><?php echo vimeo($video);?></div>
-                    <?php endif; ?>
-                <?php elseif($page->movie_file()->isNotEmpty()): ?>
-                    <video controls name="media">
-                      <source src="<?php echo $video_file->url() ?>" type="<?php echo $video_file->mime() ?>">  
-                    </video>
-                <?php else: ?>
-                    <div class='row'>
+                <!-- PREVIEW IMAGE -->
+                <div class='row'>
                         <figure><img id="header_image_<?php echo $identifier?>" class="header_image_noclick col-xs-12" src="<?php echo $header_image->url()?>" alt="" class="col-xs-12"></figure>
-                    </div>
-                <?php endif; ?> 
+                </div> 
                 
                 <div class="media">
                     <!-- TRY OUT -->
                     <?php if($try_out->isNotEmpty()): ?>
-                        <h2>Try It Out</h2>
+                        <h5>Try it out</h5>
                         <!-- If the try out is a code pen, use a different link to embed it nicely. -->
                         <?php if(strpos($try_out, $code_pen) !== false) : 
                             $try_out = str_replace("/pen/", "/embed/", $try_out); ?>
@@ -132,25 +119,41 @@
                         <?php endif; 
                     endif; ?>
 
-                    <!-- EXTRA IMAGES -->	
-                    <?php if ($page->extra_images()->isNotEmpty()) : ?>
-                        <h2>More images</h2>
-                        <?php foreach($files as $file) : ?>
-                            <figure>
-                                <img src="<?php echo $file->url()?>" alt="" class="col-xs-12 trade-img">
-                                <?php if ($file->caption() != ''): ?>
-                                    <!-- TODO Diana styling of caption -->
-                                    <figcaption>
-                                        <span>
-                                          <?php echo html($file->caption()) ?>
-                                        </span>
-                                    </figcaption>
-                                <?php endif; ?>
-                            </figure>
-                        <?php endforeach; ?>
+                    <!-- EXTRA VIDEO / IMAGES -->	
+                    <?php if ($page->extra_images()->isNotEmpty() || $video->isNotEmpty()): ?>
+                        <h5>More</h5>
+                    
+                        <!-- VIDEO -->
+                        <?php if($video->isNotEmpty()): ?>
+                            <?php if(stripos($video, "youtube") !== false): ?>
+                                <div class='videoWrapper'><?php echo youtube($video);?></div>
+                            <?php elseif (stripos($video, "vimeo") !== false): ?>
+                                <div class='videoWrapper '><?php echo vimeo($video);?></div>
+                            <?php endif; ?>
+                        <?php elseif($page->movie_file()->isNotEmpty()): ?>
+                            <video controls name="media">
+                              <source src="<?php echo $video_file->url() ?>" type="<?php echo $video_file->mime() ?>">  
+                            </video>
+                        <?php endif; ?>
+                    
+                        <!-- IMAGES -->
+                        <?php if ($page->extra_images()->isNotEmpty()):
+                            foreach($files as $file) : ?>
+                                <figure>
+                                    <img src="<?php echo $file->url()?>" alt="" class="col-xs-12 trade-img">
+                                    <?php if ($file->caption() != ''): ?>
+                                        <!-- TODO Diana styling of caption -->
+                                        <figcaption>
+                                            <span>
+                                              <?php echo html($file->caption()) ?>
+                                            </span>
+                                        </figcaption>
+                                    <?php endif; ?>
+                                </figure>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
-                
             </div>
         </div>
     </div>

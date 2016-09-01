@@ -124,7 +124,7 @@ function publishExhibit() {
 }
 
 // From a pop up, search for another technique.
-$('body').on('click', '#startSearch',(function(){
+$('body').on('click', '#startSearch', function(){
     var query = $("#search-input-exhibit").val();
     searchTechniques(query);
 });
