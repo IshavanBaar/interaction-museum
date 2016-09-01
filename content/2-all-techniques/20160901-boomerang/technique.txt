@@ -20,7 +20,7 @@ Tags: gestures,throw-and-catch,drag-and-drop,WIMP
 
 ----
 
-Header-image: ezgif.com-crop-1.gif
+Header-image: boomerang.gif
 
 ----
 

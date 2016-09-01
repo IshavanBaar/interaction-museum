@@ -106,18 +106,25 @@
     background: none;
 }
 
+.collection-buttons {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
 #empty_collection_btn{
-    width: 40%;
+    width: 30%;
     display: none;
     z-index: 5;
-    margin: 0px 10px 20px 10px;
+    margin-right: 10px;
+   /* margin: 0px 10px 20px 10px;*/
 }
 
 #save_collection_btn{
-    width: 50%;
+    width: 65%;
     display: none;
     z-index: 5;
-    margin: 0px 10px 20px 0px;
+    /*margin: 0px 10px 20px 0px;*/
 }
 
 .collection-title{
