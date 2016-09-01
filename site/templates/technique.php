@@ -51,7 +51,7 @@
                 <?php if($tags->isNotEmpty()): ?>
                     <div class="row tags">
                         <?php foreach($tagArray as $tag): ?>
-                            <a href="../interaction-museum/?q=<?php echo $tag ?>" class="label label-info"><?php echo $tag ?></a>
+                            <a href="<?php echo page('home')->url() . '/q=' . $tag ?>" class="label label-info"><?php echo $tag ?></a>
                         <?php endforeach ?>
                     </div>
                 <?php endif ?>	

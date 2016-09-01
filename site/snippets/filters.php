@@ -8,7 +8,7 @@
     //find first of the array 
     $counter = 0;?>
     <div class="sentence-select secondaryFilter" value="<?php echo $filter_on; ?>">
-      <div class="input-group-btn">
+      <div class="input-group-btn dropdown-input">
         <button class="btn dropdown-toggle <?php echo $filter_on; ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="<?php echo $first?>"><?php echo $first?></button><span class="caret"></span>
     <ul class="options dropdown-menu" id="<?php echo $filter_on ?>">
     <?php foreach ($duplicates as $key => $value) :

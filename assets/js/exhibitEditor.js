@@ -81,7 +81,7 @@ function addToExhibit(element){
         "<div class='medium-insert-images medium-insert-active medium-insert-images-wide'>" +
             "<figure contenteditable='false'>" +
                 "<img src='" + techniqueImage + "'>" +
-                "<p class='caption'>" + techniqueTitle + "</p>" + 
+                "<p class='thumbnail-caption'>" + techniqueTitle + "</p>" + 
                 "<figcaption contenteditable='true' class='medium-insert-caption-placeholder' data-placeholder='Type caption for image (optional)'></figcaption>" +
             "</figure>" +
         "</div>" 

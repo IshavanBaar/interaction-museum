@@ -18,10 +18,10 @@
 </div>
 
 <div class="row">
-  <div id="semantic-search" class="col-lg-8 col-lg-offset-3">
+  <div id="semantic-search" class="col-lg-12 col-lg-offset-3 text-center">
     <span class="sentence-element">Show me </span>
     <div class="sentence-select">
-      <div class="input-group-btn">
+      <div class="input-group-btn dropdown-input">
         <button class="btn dropdown-toggle filterObject" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">techniques </button><span class="caret"></span>
          <ul class="options dropdown-menu" id="filterObject">
           <li class="option"><a href="#">techniques</a></li>
@@ -32,9 +32,9 @@
       </div><!-- /btn-group -->
     </div><!-- /input-group -->
    
-    <span  class="sentence-element"> that </span>
+    <span class="sentence-element">that</span>
      <div class="sentence-select longer">
-      <div class="input-group-btn">
+      <div class="input-group-btn dropdown-input">
         <button class="btn dropdown-toggle filterType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="technology">use the technology of </button><span class="caret"></span>
          <ul class="options dropdown-menu" id="filterType">
           <li class="option" value="technology"><a href="#">use the technology of</a></li>
