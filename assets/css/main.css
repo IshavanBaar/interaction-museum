@@ -275,7 +275,7 @@ a:hover d{
     font-weight: 300;
     color: #E5E5E5;
     text-align: center;
-    margin: 0 !important;
+    margin: 0 0 1em !important;
     padding: 9px;
 }
 
@@ -283,6 +283,9 @@ a:hover d{
 figcaption {
     color: #333333 !important;
     font-size: 9pt !important;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .medium-insert-images-wide img {
