@@ -2,6 +2,19 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
+    /* ------- Filtering options ------- */
+    $('body').on('click', '.option', function (e) {
+        e.preventDefault();
+        var optionText = $(this).text();
+        var optionValue = $(this).attr('value');
+        var buttonClass = $(this).parent().attr('id');
+        $('.'+buttonClass).text(optionText);
+        $('.'+buttonClass).val(optionValue);
+        showFilter();
+    });
+
+    showFilter();
+    
     /* ------- Add to Collection Buttons ------- */
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
@@ -13,7 +26,6 @@ $(document).ready(function(){
         $(this).find("#" + identifier + "-btn").css("display", "none");
     });
     
-    // Add to/Remove from sidebar from thumbnail
     $('body').on('click', '.add_to_collection_btn', function (e) {
         e.preventDefault();
         toggleSidebar();
@@ -94,6 +106,8 @@ $(document).ready(function(){
         sessionStorage.title = $(this).val();
     });
     
+    
+    
     // If a collection was in the making
     // TODO line below gives error in console on technique page.
     if(!isEmpty(JSON.parse(sessionStorage['techniques']))){
@@ -111,3 +125,14 @@ $(document).ready(function(){
         $(".sidebar-brand").val(sessionStorage.title);
     }
 });
+
+// Shows secondarys filters depending on what has been chosen.
+function showFilter() {
+    $('.secondaryFilter').each(function(){
+      if($('.filterType').val() !== $(this).attr('value')){
+            $(this).hide();
+      }else{
+            $(this).show();
+         }
+    });
+}

@@ -4,9 +4,7 @@ Title: About
 
 Text: 
 
-The Interaction Museum is an online collection of interaction techniques. It assists HCI researchers and interaction designers  to explore innovative interactions, and inspires to build them. The Museum aims to overcome the granularity problem of describing small interactions with a community of contributing and curating HCI researchers. The design is minimal, but provides features to go in depth.
-
-The Interaction Museum was originally proposed in 2005 by Wendy Mackay, head of the ExSitu group at Inria Research Lab.
+The Interaction Museum is an online collection of interaction techniques developed by HCI research. It was originally proposed in 2005 by Wendy Mackay, head of the ExSitu group at Inria Research Lab.
 
 ####Idea####
 
@@ -17,4 +15,13 @@ The Interaction Museum was originally proposed in 2005 by Wendy Mackay, head of 
 * Isha van Baar
 * Diana Lipcanu
 
-####Contributors####
+####Workshop Contributors####
+* Brennan Jones
+* Dimitri Belopopsky
+* Francesco Vitale
+* Ignacio Avellino
+* Midas Nouwens
+* Nam Giang
+* Niels Mourette
+* Philip Tchernavskij
+* Stacy Hsueh

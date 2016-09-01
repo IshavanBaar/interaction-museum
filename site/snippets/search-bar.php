@@ -3,7 +3,6 @@
 <div class="row">
 
   <div id="search-bar" class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-
       <form class="navbar-form search row" role="search" action="<?php echo url('search-results')?>" method="get" >
        <!-- <label for="#search-bar">Search for interaction techniques</label> -->
         <div class="input-group col-xs-12">
@@ -14,7 +13,6 @@
         </div>
       </form>
   </div>
-  
 </div>
 
 <div class="row">
@@ -42,7 +40,7 @@
           <li class="option" value="problem"><a href="#">solve the design problem of</a></li>
         </ul>
       </div><!-- /btn-group -->
-  </div>
+    </div>
     <?php snippet('filters', array('filter_on' => 'technology', 'limit' => 10)) ?>
     <?php snippet('filters', array('filter_on' => 'task', 'limit' => 10)) ?>
     <?php snippet('filters', array('filter_on' => 'problem', 'limit' => 10)) ?>
@@ -50,28 +48,7 @@
 </div>  <!-- end row -->
 </div>
 <script type="text/javascript">
-   $('body').on('click', '.option', function (e) {
-        e.preventDefault();
-        var optionText = $(this).text();
-        var optionValue = $(this).attr('value');
-        var buttonClass = $(this).parent().attr('id');
-        $('.'+buttonClass).text(optionText);
-        $('.'+buttonClass).val(optionValue);
-        showFilter();
-    });
-
-  function showFilter() {
-    $('.secondaryFilter').each(function(){
-      if($('.filterType').val() !== $(this).attr('value')){
-            $(this).hide();
-      }else{
-            $(this).show();
-         }
-    });
-  }
- showFilter();
-
- 
-
+    // TODO do this in another HTML and script, and make filters not first all appear (flash).
+    showFilter();
 </script>
 
