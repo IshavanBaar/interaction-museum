@@ -2,7 +2,6 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
-    $(".logout-btn").click(function(e) {
     
     /* ------- Add to Collection Buttons ------- */
     $('body').on('mouseover', '.thumbnail', function () {
