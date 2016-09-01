@@ -2,7 +2,6 @@ var addedViaThumbnail = true;
 var techniques = {}; 
 
 $(document).ready(function(){
-    
     /* ------- Add to Collection Buttons ------- */
     $('body').on('mouseover', '.thumbnail', function () {
         var identifier = $(this).attr('id').replace("-thumbnail","");
@@ -28,8 +27,6 @@ $(document).ready(function(){
         addToCollection($(this));
     });
 
-    
-
     $('body').on('click', '.remove_from_collection_btn', function () {
         var id;
         if($(this).hasClass("technique_btn")){
@@ -42,7 +39,6 @@ $(document).ready(function(){
             console.log('im not in a technique');
         }
         removeFromCollection(id);
-
     });
 
     /* ------- New/Save/Empty Collections ------- */
