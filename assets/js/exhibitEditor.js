@@ -1,5 +1,8 @@
 var selectedElement = "";
 
+/* MEDIUM EDITOR CODE AND DOCUMENTATION FROM: https://github.com/yabwe/medium-editor */
+
+// Extend the button panel.
 var AddTechniqueButton = MediumEditor.Extension.extend({
     name: 'addtechnique',
 
@@ -21,6 +24,7 @@ var AddTechniqueButton = MediumEditor.Extension.extend({
     }
 });
 
+// Create the editor
 var editor = new MediumEditor('.editable', {
     toolbar: {
         buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote', 'addtechnique']
@@ -30,18 +34,14 @@ var editor = new MediumEditor('.editable', {
     }
 });
 
- $("#startSearch").click(function(){
-    var query = $("#search-input-exhibit").val();
-    searchTechniques(query);
-});
+// Initialize the editor.
+$(function () {
+    $('.editable').mediumInsert({
+        editor: editor
+    });
+});   
 
- // Add to exhibit
-$('body').on('click', '.add-to-exhibit-btn', function (e) {
-    e.preventDefault();
-    addToExhibit($(this));
-    $('#pop-up').hide();
-});
-
+// Search the museum for the selectedText.
 function searchTechniques(selectedText) {
     $("#search-results").empty();
     $.ajax({
@@ -49,11 +49,12 @@ function searchTechniques(selectedText) {
         data: selectedText,
         success : function(response) {
             $("#search-results").append(response);
-            showPopUp(selectedText);
+            $('#pop-up').show();
         } 
     });
 }
 
+// Get text that is selected in the editor.
 function getSelectionText() {
     var text = "";
     if (window.getSelection) {
@@ -63,13 +64,7 @@ function getSelectionText() {
     }
     return text;
 }
-
-function showPopUp(text) {
-    // $('#search-input-exhibit').val(text); 
-    // $('#search-form-exhibit').submit();
-    $('#pop-up').show();
-}
-
+// Insert the found technique in the exhibit.
 function addToExhibit(element){
     // Get information of clicked thumbnail.
     var thumbnail = element.parent().parent();
@@ -86,14 +81,9 @@ function addToExhibit(element){
             "</figure>" +
         "</div>" 
     ); 
-}
+}    
 
-$(function () {
-    $('.editable').mediumInsert({
-        editor: editor
-    });
-});        
-
+// Publishes exhibit.
 function publishExhibit() {
     var title = $('#editor-title').val(); 
     var contents = $('#editor-content').clone().text().replace(/ /g,'').replace(/(\r\n|\n|\r)/gm,'');
@@ -119,8 +109,8 @@ function publishExhibit() {
                 if (response.indexOf("Created exhibit:") > -1) {
                     var exhibit_uid = response.replace("Created exhibit:", "");
                     
-                    // TODO Michel: change URL here to make it work on another website.
-                    window.location.href = "/interaction-museum/all-exhibits/" + exhibit_uid;
+                    // TODO should URL include /interaction-museum/ before?
+                    window.location.href = "all-exhibits/" + exhibit_uid;
                 } 
                 // Show tooltip if something went wrong
                 else {
@@ -132,3 +122,16 @@ function publishExhibit() {
         showTooltip("#publish_exhibit_btn", "Please fill in a title and text");
     }
 }
+
+// From a pop up, search for another technique.
+$('body').on('click', '#startSearch',(function(){
+    var query = $("#search-input-exhibit").val();
+    searchTechniques(query);
+});
+
+// From a pop up, add the technique to the editor.
+$('body').on('click', '.add-to-exhibit-btn', function (e) {
+    e.preventDefault();
+    addToExhibit($(this));
+    $('#pop-up').hide();
+});
